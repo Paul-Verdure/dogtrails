@@ -9,7 +9,7 @@ Entries reviewed by Paul: 0/33.
 
 ## Disagreements
 
-- **AKIT** (akita): origin: FCI "JAPAN" (JP), Wikidata P495 United States (US), Japan (JP)
+- **AKIT** (american-akita): origin: FCI "JAPAN" (JP), Wikidata P495 United States (US)
 - **PUG** (pug): origin: FCI "CHINA" (CN), Wikidata P495 China (no ISO)
 - **SPOO** (poodle): no P495 on Wikidata
 - **MPOO** (poodle): no P495 on Wikidata
@@ -26,12 +26,12 @@ Entries reviewed by Paul: 0/33.
 
 | Parker | id | QID | FCI n° | FCI group | FCI country | Wikidata FCI | Wikidata P495 | PLAN group | PLAN country | |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| AKIT | akita | Q29164 | 255 | 5 | JAPAN | — | United States (US), Japan (JP) | 5 | Japon | ⚠ |
+| AKIT | american-akita | Q37534 | 344 | 5 | JAPAN | — | United States (US) | 5 | Japon | ⚠ |
 | CHOW | chow-chow | Q29013 | 205 | 5 | CHINA | 205 | People's Republic of China (CN) | 5 | Chine |  |
 | SHIH | shih-tzu | Q39357 | 208 | 9 | Tibet (China) | — | People's Republic of China (CN) | 9 | Tibet |  |
 | PUG | pug | Q38698 | 253 | 9 | CHINA | 253 | China (no ISO) | 9 | Chine | ⚠ |
 | BRUS | brussels-griffon | Q38889 | 80 | 9 | BELGIUM | 82, 80, 81 | Belgium (BE) | 9 | Belgique |  |
-| POM | pomeranian | Q39579 | 97 | 5 | GERMANY | — | Germany (DE) | 5 | Allemagne |  |
+| POM | german-spitz (pomeranian) | Q38655 | 97 | 5 | GERMANY | 97 | Germany (DE) | 5 | Allemagne |  |
 | ICES | icelandic-sheepdog | Q38710 | 289 | 5 | ICELAND | 289 | Iceland (IS) | 5 | Islande |  |
 | MSNZ | miniature-schnauzer | Q38999 | 183 | 2 | GERMANY | 183 | Germany (DE) | 2 | Allemagne |  |
 | MPIN | miniature-pinscher | Q38990 | 185 | 2 | GERMANY | 185 | Germany (DE) | 2 | Allemagne |  |
@@ -62,19 +62,19 @@ Entries reviewed by Paul: 0/33.
 
 ## Open doubts (from breed-names.json)
 
-- **AKIT** (akita):
-  - Parker dogs come from GSE90441 (US samples). In the US the AKC "Akita" is the American type, which the FCI recognises separately as 344 "AMERICAN AKITA". Which one did Parker sample? Check the article methods.
-  - Wikidata Q29164 gives two countries of origin (P495): United States and Japan.
+- **AKIT** (american-akita):
+  - Parker never says whether its Akitas are of the Japanese or the American type: the attachment to 344 is an inference.
+  - FCI country of 344 is JAPAN; Wikidata Q37534 P495 is United States.
 - **BRUS** (brussels-griffon):
-  - The FCI splits this dog into three breeds: 80 Griffon bruxellois, 81 Griffon belge, 82 Petit brabançon (section "Small Belgian Dogs"). The AKC "Brussels Griffon" covers the three coats. Parker has 2 dogs; their coat is unknown. Attach to 80 only, or to the three?
+  - Kept on FCI 80 only (Paul, 2026-11-04); 81 and 82 stay as alternatives because the coat of the 2 dogs is unknown.
+  - The FCI splits this dog into three breeds: 80 Griffon bruxellois, 81 Griffon belge, 82 Petit brabançon (section "Small Belgian Dogs"). The AKC "Brussels Griffon" covers the three coats.
   - Wikidata Q38889 carries the three FCI codes 080, 081 and 082 at once, while Q38055 (Griffon belge) and Q13631411 (Petit brabançon) exist as separate items without FCI code.
-- **POM** (pomeranian):
-  - FCI 97 is the whole German Spitz (several sizes); Pomeranian is only one of them. The site id "pomeranian" then shares an FCI number with no other Parker entry today, but would collide with a future "german-spitz". Separate breed or variant of german-spitz?
-  - Wikidata Q39579 "Pomeranian" carries no FCI code; Q38655 "German Spitz" carries FCI code 097.
+- **POM** (german-spitz):
+  - Variant label "pomeranian" is the Parker (AKC) name; the FCI standard names this size Zwergspitz / Pomeranian.
 - **SPOO** (poodle):
   - Parker leaf prefix StP (Vaysse) is attached to SPOO in parker-leaf-prefixes.json, not yet reviewed.
 - **MPOO** (poodle):
-  - FCI has four sizes (toy, miniature, medium, standard); the AKC has three. Which FCI size(s) the AKC "Miniature" covers is not settled here.
+  - Variant labels are Parker (AKC) names (Paul, 2026-11-04); no equivalence with the four FCI sizes (toy, miniature, medium, standard) is claimed.
   - Not in the 30-breed sample: no leaf in tree.json yet.
 - **TPOO** (poodle):
   - Not in the 30-breed sample: no leaf in tree.json yet.
@@ -84,14 +84,14 @@ Entries reviewed by Paul: 0/33.
   - Parker leaf prefix GSh (Vaysse) is attached to GSD in parker-leaf-prefixes.json, not yet reviewed.
 - **XOLO** (xoloitzcuintle):
   - Clade marked * (< 50 % bootstrap) in supplement 1.
-  - The FCI standard defines three sizes (standard, intermediate, miniature); Parker has two. Variant label "standard" assumed for the unqualified Parker entry: to check.
+  - Variant labels are Parker (AKC) names (Paul, 2026-11-04); the FCI standard defines three sizes (standard, intermediate, miniature). Label "standard" for the unqualified Parker entry is an assumption.
 - **MXOL** (xoloitzcuintle):
   - Its 5 dogs form 4 fragments in the full Parker tree, 2 of them next to XOLO: grouping the variants does not make the breed one subtree.
   - Clade written "NewWorld*" (no space) in supplement 1.
   - Not in the 30-breed sample: no leaf in tree.json yet.
 - **SALU** (saluki):
-  - FCI country is "MIDDLE EAST", a region and not a country: origin will need kind "region" on the map.
-  - Wikidata P495 is "Arabian Peninsula", FCI says "MIDDLE EAST": two different regions.
+  - Origin on the map: region "Middle East" as written by the FCI (Paul, 2026-11-04); Wikidata P495 "Arabian Peninsula" is only reported.
+  - Parker: 9 of the 19 Salukis were collected in the country of origin (COO column); those from the Middle East form several paraphyletic groups.
 - **BEAG** (beagle):
   - Parker leaf prefix Bgl (Vaysse) is attached to BEAG in parker-leaf-prefixes.json, not yet reviewed.
 - **GOLD** (golden-retriever):

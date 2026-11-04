@@ -21,22 +21,22 @@
 		{
 			"abbrev": "AKIT",
 			"parkerName": "Akita",
-			"id": "akita",
+			"id": "american-akita",
 			"variant": null,
-			"wikidata": "Q29164",
+			"wikidata": "Q37534",
 			"fci": {
-				"number": 255
+				"number": 344
 			},
-			"basis": "Parker \"Akita\" = FCI 255 \"AKITA\" (same name). Q29164 \"Akita (Japanese dog breed)\" found by label search: it carries no FCI catalogue code on Wikidata.",
+			"basis": "Parker \"Akita\" attached to FCI 344 \"AMERICAN AKITA\" (Paul, 2026-11-04). Inferred, not written in the article: 152 of the 161 Parker breeds are AKC breeds, samples were collected by NHGRI (US) at dog events and by mail, and the COO column of supplement 1 (dogs collected in the country of origin) is empty for AKIT, so the 10 dogs were collected in the US. Q37534 \"American Akita\" found by label search: it carries no FCI catalogue code on Wikidata.",
 			"doubts": [
-				"Parker dogs come from GSE90441 (US samples). In the US the AKC \"Akita\" is the American type, which the FCI recognises separately as 344 \"AMERICAN AKITA\". Which one did Parker sample? Check the article methods.",
-				"Wikidata Q29164 gives two countries of origin (P495): United States and Japan."
+				"Parker never says whether its Akitas are of the Japanese or the American type: the attachment to 344 is an inference.",
+				"FCI country of 344 is JAPAN; Wikidata Q37534 P495 is United States."
 			],
 			"alternatives": [
 				{
-					"wikidata": "Q37534",
-					"fci": 344,
-					"note": "American Akita, if the Parker dogs are AKC Akitas"
+					"wikidata": "Q29164",
+					"fci": 255,
+					"note": "Akita (Japanese type), same name as Parker"
 				}
 			],
 			"reviewed": false
@@ -94,7 +94,8 @@
 			},
 			"basis": "Parker \"Brussels Griffon\" closest to FCI 80 \"GRIFFON BRUXELLOIS\". Q38889 \"Griffon Bruxellois\" found by label search (\"Brussels Griffon\" leads to it).",
 			"doubts": [
-				"The FCI splits this dog into three breeds: 80 Griffon bruxellois, 81 Griffon belge, 82 Petit brabançon (section \"Small Belgian Dogs\"). The AKC \"Brussels Griffon\" covers the three coats. Parker has 2 dogs; their coat is unknown. Attach to 80 only, or to the three?",
+				"Kept on FCI 80 only (Paul, 2026-11-04); 81 and 82 stay as alternatives because the coat of the 2 dogs is unknown.",
+				"The FCI splits this dog into three breeds: 80 Griffon bruxellois, 81 Griffon belge, 82 Petit brabançon (section \"Small Belgian Dogs\"). The AKC \"Brussels Griffon\" covers the three coats.",
 				"Wikidata Q38889 carries the three FCI codes 080, 081 and 082 at once, while Q38055 (Griffon belge) and Q13631411 (Petit brabançon) exist as separate items without FCI code."
 			],
 			"alternatives": [
@@ -114,22 +115,20 @@
 		{
 			"abbrev": "POM",
 			"parkerName": "Pomeranian",
-			"id": "pomeranian",
-			"variant": null,
-			"wikidata": "Q39579",
+			"id": "german-spitz",
+			"variant": "pomeranian",
+			"wikidata": "Q38655",
 			"fci": {
 				"number": 97
 			},
-			"basis": "Parker \"Pomeranian\": no FCI breed of that name. FCI 97 \"GERMAN SPITZ\" includes the Zwergspitz / Pomeranian size. Q39579 \"Pomeranian\" found by label search.",
+			"basis": "Parker \"Pomeranian\" = size \"Zwergspitz / Pomeranian\" of FCI 97 \"GERMAN SPITZ\". Treated as a variant of german-spitz, like the poodle sizes (Paul, 2026-11-04). Q38655 \"German Spitz\" carries FCI catalogue code 097.",
 			"doubts": [
-				"FCI 97 is the whole German Spitz (several sizes); Pomeranian is only one of them. The site id \"pomeranian\" then shares an FCI number with no other Parker entry today, but would collide with a future \"german-spitz\". Separate breed or variant of german-spitz?",
-				"Wikidata Q39579 \"Pomeranian\" carries no FCI code; Q38655 \"German Spitz\" carries FCI code 097."
+				"Variant label \"pomeranian\" is the Parker (AKC) name; the FCI standard names this size Zwergspitz / Pomeranian."
 			],
 			"alternatives": [
 				{
-					"wikidata": "Q38655",
-					"fci": 97,
-					"note": "German Spitz, the FCI breed as a whole"
+					"wikidata": "Q39579",
+					"note": "Wikidata item \"Pomeranian\" (no FCI code), for labels and image of the variety"
 				}
 			],
 			"reviewed": false
@@ -217,7 +216,7 @@
 			},
 			"basis": "Parker \"Poodle - Miniature\" = a size of FCI 172 \"POODLE\". Grouped under id \"poodle\" (Paul, 2026-11-04). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 172.",
 			"doubts": [
-				"FCI has four sizes (toy, miniature, medium, standard); the AKC has three. Which FCI size(s) the AKC \"Miniature\" covers is not settled here.",
+				"Variant labels are Parker (AKC) names (Paul, 2026-11-04); no equivalence with the four FCI sizes (toy, miniature, medium, standard) is claimed.",
 				"Not in the 30-breed sample: no leaf in tree.json yet."
 			],
 			"alternatives": [
@@ -287,7 +286,7 @@
 				"number": null,
 				"reason": "No FCI breed of that name or close to it in the FCI nomenclature (fci-breeds export, commit 88aaca5)."
 			},
-			"basis": "Parker \"Rat Terrier\". Q38431 \"Rat Terrier\" (dog breed) found by label search.",
+			"basis": "Parker \"Rat Terrier\". Q38431 \"Rat Terrier\" (dog breed) found by label search. Origin from Wikidata P495 only, no other classification (Paul, 2026-11-04).",
 			"doubts": [
 				"Origin and recognition will have to come from Wikidata or another source than the FCI. Wikidata also has Q5441578 \"Feist\" (dog type), the ancestor named in PLAN.md."
 			],
@@ -336,7 +335,7 @@
 			"basis": "Parker \"Xoloitzcuintle\" = size \"standard\" of FCI 234 \"XOLOITZCUINTLE\". Grouped under id \"xoloitzcuintle\" with MXOL (Paul, 2026-11-04). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 234.",
 			"doubts": [
 				"Clade marked * (< 50 % bootstrap) in supplement 1.",
-				"The FCI standard defines three sizes (standard, intermediate, miniature); Parker has two. Variant label \"standard\" assumed for the unqualified Parker entry: to check."
+				"Variant labels are Parker (AKC) names (Paul, 2026-11-04); the FCI standard defines three sizes (standard, intermediate, miniature). Label \"standard\" for the unqualified Parker entry is an assumption."
 			],
 			"alternatives": [],
 			"reviewed": false
@@ -370,8 +369,8 @@
 			},
 			"basis": "Parker \"Saluki\" = FCI 269 \"SALUKI\" (same name). Q39108 found by label search: it carries no FCI catalogue code on Wikidata.",
 			"doubts": [
-				"FCI country is \"MIDDLE EAST\", a region and not a country: origin will need kind \"region\" on the map.",
-				"Wikidata P495 is \"Arabian Peninsula\", FCI says \"MIDDLE EAST\": two different regions."
+				"Origin on the map: region \"Middle East\" as written by the FCI (Paul, 2026-11-04); Wikidata P495 \"Arabian Peninsula\" is only reported.",
+				"Parker: 9 of the 19 Salukis were collected in the country of origin (COO column); those from the Middle East form several paraphyletic groups."
 			],
 			"alternatives": [],
 			"reviewed": false

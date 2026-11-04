@@ -57,4 +57,7 @@ npm run validate       Zod + cross-checks on generated JSON
 - `data/manual/breed-names.json`: one entry per Parker abbreviation; size varieties (SPOO/MPOO/TPOO,
   XOLO/MXOL) share one site `id` and carry a `variant`. Wikidata stores FCI numbers as P528 + P972=Q38603,
   zero-padded (`055`).
+- Origin rule (Paul, 2026-11-04): `origin` = FCI country; Wikidata P495 only cross-checks, its
+  disagreements are reported, never turned into `development` automatically. FCI regions stay regions
+  (Saluki: "Middle East"). Breeds without FCI number (Rat Terrier) take their origin from Wikidata P495.
 - `*` after a clade in supplement 1 = in that clade with < 50 % bootstrap: kept as `cladeLowSupport`.

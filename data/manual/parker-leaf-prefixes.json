@@ -31,6 +31,6 @@
 		{ "prefix": "EBD", "abbrev": "BULD", "leaves": 5, "basis": "English Bulldog; 5 + 5 = 10", "reviewed": false },
 		{ "prefix": "NSD", "abbrev": "NSDT", "leaves": 7, "basis": "Nova Scotia Duck Tolling Retriever; 7 + 3 = 10, Vaysse column 7", "reviewed": false },
 		{ "prefix": "JRT", "abbrev": "JACK", "leaves": 10, "basis": "Jack Russell Terrier; 10 = 10", "reviewed": false },
-		{ "prefix": "KMUN", "abbrev": "LMUN", "leaves": 3, "basis": "DOUBT: count matches Large Munsterlander (3), but 'K' suggests Kleiner (Small) Münsterländer. Check against the article", "reviewed": false }
+		{ "prefix": "KMUN", "abbrev": "LMUN", "leaves": 3, "basis": "Large Munsterlander: only Münsterländer entry of supplement 1 (LMUN, 3 dogs from Parker's own samples, GSE96736, no Vaysse dogs); the tree has no LMUN_ leaf and 3 KMUN_ leaves (27292, 27295, 27296): 3 = 3. Kept on LMUN (Paul, 2026-11-04). DOUBT kept: 'K' could stand for Kleiner (Small) Münsterländer, absent from supplement 1", "reviewed": false }
 	]
 }
