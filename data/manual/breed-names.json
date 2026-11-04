@@ -199,9 +199,7 @@
 				"number": 172
 			},
 			"basis": "Parker \"Poodle - Standard\" = size \"standard\" of FCI 172 \"POODLE\" (one breed, four sizes). Grouped under id \"poodle\" with MPOO and TPOO (Paul, 2026-11-04). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 172.",
-			"doubts": [
-				"Parker leaf prefix StP (Vaysse) is attached to SPOO in parker-leaf-prefixes.json, not yet reviewed."
-			],
+			"doubts": [],
 			"alternatives": [],
 			"reviewed": false
 		},
@@ -317,9 +315,7 @@
 				"number": 166
 			},
 			"basis": "Parker \"German Shepherd Dog\" = FCI 166 \"GERMAN SHEPHERD DOG\" (same name). Q38280 found by label search: it carries no FCI catalogue code on Wikidata.",
-			"doubts": [
-				"Parker leaf prefix GSh (Vaysse) is attached to GSD in parker-leaf-prefixes.json, not yet reviewed."
-			],
+			"doubts": [],
 			"alternatives": [],
 			"reviewed": false
 		},
@@ -399,9 +395,7 @@
 				"number": 161
 			},
 			"basis": "Parker \"Beagle\" = FCI 161 \"BEAGLE\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 161.",
-			"doubts": [
-				"Parker leaf prefix Bgl (Vaysse) is attached to BEAG in parker-leaf-prefixes.json, not yet reviewed."
-			],
+			"doubts": [],
 			"alternatives": [],
 			"reviewed": false
 		},
@@ -429,9 +423,7 @@
 				"number": 111
 			},
 			"basis": "Parker \"Golden Retriever\" = FCI 111 \"GOLDEN RETRIEVER\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 111.",
-			"doubts": [
-				"Parker leaf prefix GRe (Vaysse) is attached to GOLD in parker-leaf-prefixes.json, not yet reviewed."
-			],
+			"doubts": [],
 			"alternatives": [],
 			"reviewed": false
 		},
@@ -445,9 +437,7 @@
 				"number": 312
 			},
 			"basis": "Parker \"Nova Scotia Duck Tolling Retriever\" = FCI 312 \"NOVA SCOTIA DUCK TOLLING RETRIEVER\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 312.",
-			"doubts": [
-				"Parker leaf prefix NSD (Vaysse) is attached to NSDT in parker-leaf-prefixes.json, not yet reviewed."
-			],
+			"doubts": [],
 			"alternatives": [],
 			"reviewed": false
 		},
@@ -503,9 +493,7 @@
 				"number": 297
 			},
 			"basis": "Parker \"Border Collie\" = FCI 297 \"BORDER COLLIE\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 297.",
-			"doubts": [
-				"Parker leaf prefix BoC (Vaysse) is attached to BORD in parker-leaf-prefixes.json, not yet reviewed."
-			],
+			"doubts": [],
 			"alternatives": [],
 			"reviewed": false
 		},
@@ -519,9 +507,7 @@
 				"number": 147
 			},
 			"basis": "Parker \"Rottweiler\" = FCI 147 \"ROTTWEILER\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 147.",
-			"doubts": [
-				"Parker leaf prefix Rtw (Vaysse) is attached to ROTT in parker-leaf-prefixes.json, not yet reviewed."
-			],
+			"doubts": [],
 			"alternatives": [],
 			"reviewed": false
 		},
