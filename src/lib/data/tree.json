@@ -1,0 +1,1107 @@
+{
+	"source": {
+		"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+		"doi": "10.1016/j.celrep.2017.03.079",
+		"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+		"files": [
+			"NIHMS866262-supplement-5 (NEXUS tree, one leaf per dog)",
+			"NIHMS866262-supplement-1 (breed table: name, abbreviation, clade)"
+		],
+		"notes": [
+			"Restricted to the breeds of data/sample-30.json; every dog of each breed is kept.",
+			"support = bootstrap of the same node in the full tree; on the pruned tree it does not measure the displayed grouping exactly.",
+			"Leaf prefixes from the Vaysse 2011 dataset mapped through data/manual/parker-leaf-prefixes.json."
+		]
+	},
+	"generatedBy": "scripts/parse-tree.ts",
+	"breeds": [
+		{
+			"abbrev": "AKIT",
+			"name": "Akita",
+			"clade": "Asian Spitz",
+			"cladeId": "asian-spitz",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "CHOW",
+			"name": "Chow Chow",
+			"clade": "Asian Spitz",
+			"cladeId": "asian-spitz",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "SHIH",
+			"name": "Shih Tzu",
+			"clade": "Asian Toy",
+			"cladeId": "asian-toy",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "PUG",
+			"name": "Pug Dog",
+			"clade": "Toy Spitz",
+			"cladeId": "toy-spitz",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "BRUS",
+			"name": "Brussels Griffon",
+			"clade": "Toy Spitz",
+			"cladeId": "toy-spitz",
+			"cladeLowSupport": false,
+			"dogs": 2,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "POM",
+			"name": "Pomeranian",
+			"clade": "Small Spitz",
+			"cladeId": "small-spitz",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "ICES",
+			"name": "Icelandic Sheepdog",
+			"clade": "Nordic Spitz",
+			"cladeId": "nordic-spitz",
+			"cladeLowSupport": false,
+			"dogs": 2,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "MSNZ",
+			"name": "Miniature Schnauzer",
+			"clade": "Schnauzer",
+			"cladeId": "schnauzer",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "MPIN",
+			"name": "Miniature Pinscher",
+			"clade": "Pinscher",
+			"cladeId": "pinscher",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "PULI",
+			"name": "Puli",
+			"clade": "Hungarian",
+			"cladeId": "hungarian",
+			"cladeLowSupport": false,
+			"dogs": 4,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "SPOO",
+			"name": "Poodle - Standard",
+			"clade": "Poodle",
+			"cladeId": "poodle",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": [
+				"MPOO",
+				"TPOO"
+			]
+		},
+		{
+			"abbrev": "CHIH",
+			"name": "Chihuahua",
+			"clade": "American Toy",
+			"cladeId": "american-toy",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "CRES",
+			"name": "Chinese Crested",
+			"clade": "American Toy",
+			"cladeId": "american-toy",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "RATT",
+			"name": "Rat Terrier",
+			"clade": "American Terrier",
+			"cladeId": "american-terrier",
+			"cladeLowSupport": false,
+			"dogs": 2,
+			"fragments": {
+				"sample": 1,
+				"full": 2
+			},
+			"fullTreeIntruders": [
+				"AHRT",
+				"TYFX"
+			],
+			"variants": []
+		},
+		{
+			"abbrev": "IRIT",
+			"name": "Irish Terrier",
+			"clade": "Terrier",
+			"cladeId": "terrier",
+			"cladeLowSupport": false,
+			"dogs": 7,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "GSD",
+			"name": "German Shepherd Dog",
+			"clade": "New World",
+			"cladeId": "new-world",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "XOLO",
+			"name": "Xoloitzcuintle",
+			"clade": "New World",
+			"cladeId": "new-world",
+			"cladeLowSupport": true,
+			"dogs": 5,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": [
+				"MXOL"
+			]
+		},
+		{
+			"abbrev": "SALU",
+			"name": "Saluki",
+			"clade": "Mediterranean",
+			"cladeId": "mediterranean",
+			"cladeLowSupport": false,
+			"dogs": 19,
+			"fragments": {
+				"sample": 1,
+				"full": 4
+			},
+			"fullTreeIntruders": [
+				"AFGH",
+				"SLOU"
+			],
+			"variants": []
+		},
+		{
+			"abbrev": "BASS",
+			"name": "Basset Hound",
+			"clade": "Scent Hound",
+			"cladeId": "scent-hound",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "BEAG",
+			"name": "Beagle",
+			"clade": "Scent Hound",
+			"cladeId": "scent-hound",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "ACKR",
+			"name": "American Cocker Spaniel",
+			"clade": "Spaniel",
+			"cladeId": "spaniel",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "GOLD",
+			"name": "Golden Retriever",
+			"clade": "Retriever",
+			"cladeId": "retriever",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "NSDT",
+			"name": "Nova Scotia Duck Tolling Retriever",
+			"clade": "Retriever",
+			"cladeId": "retriever",
+			"cladeLowSupport": true,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "GSHP",
+			"name": "German Shorthaired Pointer",
+			"clade": "Pointer Setter",
+			"cladeId": "pointer-setter",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "BRIA",
+			"name": "Briard",
+			"clade": "Continental Herder",
+			"cladeId": "continental-herder",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "SSHP",
+			"name": "Shetland Sheepdog",
+			"clade": "UK Rural",
+			"cladeId": "uk-rural",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "BORD",
+			"name": "Border Collie",
+			"clade": "UK Rural",
+			"cladeId": "uk-rural",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "ROTT",
+			"name": "Rottweiler",
+			"clade": "Drover",
+			"cladeId": "drover",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "STBD",
+			"name": "Saint Bernard",
+			"clade": "Alpine",
+			"cladeId": "alpine",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		},
+		{
+			"abbrev": "MAST",
+			"name": "English Mastiff",
+			"clade": "European Mastiff",
+			"cladeId": "european-mastiff",
+			"cladeLowSupport": false,
+			"dogs": 10,
+			"fragments": {
+				"sample": 1,
+				"full": 1
+			},
+			"fullTreeIntruders": [],
+			"variants": []
+		}
+	],
+	"splitBreeds": [],
+	"root": {
+		"support": 100,
+		"children": [
+			{
+				"support": 80,
+				"children": [
+					{
+						"support": 73,
+						"children": [
+							{
+								"support": 52,
+								"children": [
+									{
+										"support": 30,
+										"children": [
+											{
+												"support": 47,
+												"children": [
+													{
+														"support": 21,
+														"children": [
+															{
+																"support": 7,
+																"children": [
+																	{
+																		"support": 9,
+																		"children": [
+																			{
+																				"support": 12,
+																				"children": [
+																					{
+																						"support": 36,
+																						"children": [
+																							{
+																								"support": 16,
+																								"children": [
+																									{
+																										"support": 42,
+																										"children": [
+																											{
+																												"support": 88,
+																												"children": [
+																													{
+																														"name": "Saint Bernard",
+																														"abbrev": "STBD",
+																														"cladeId": "alpine",
+																														"dogs": 10,
+																														"dogIds": [
+																															"STBD_27062",
+																															"STBD_12748",
+																															"STBD_06463",
+																															"STBD_06460",
+																															"STBD_12750",
+																															"STBD_27082",
+																															"STBD_27063",
+																															"STBD_12747",
+																															"STBD_12749",
+																															"STBD_01075"
+																														]
+																													},
+																													{
+																														"name": "English Mastiff",
+																														"abbrev": "MAST",
+																														"cladeId": "european-mastiff",
+																														"dogs": 10,
+																														"dogIds": [
+																															"MAST_21270",
+																															"MAST_15585",
+																															"MAST_02298",
+																															"MAST_24147",
+																															"MAST_05512",
+																															"MAST_02299",
+																															"MAST_01016",
+																															"MAST_00991",
+																															"MAST_06392",
+																															"MAST_02297"
+																														]
+																													}
+																												]
+																											},
+																											{
+																												"name": "Rottweiler",
+																												"abbrev": "ROTT",
+																												"cladeId": "drover",
+																												"dogs": 10,
+																												"dogIds": [
+																													"ROTT_27544",
+																													"ROTT_13005",
+																													"ROTT_15437",
+																													"ROTT_01014",
+																													"Rtw_0GT353",
+																													"Rtw_0GT352",
+																													"Rtw_0GT355",
+																													"ROTT_21895",
+																													"Rtw_0GT351",
+																													"Rtw_0GT354"
+																												]
+																											}
+																										]
+																									},
+																									{
+																										"support": 99,
+																										"children": [
+																											{
+																												"name": "Border Collie",
+																												"abbrev": "BORD",
+																												"cladeId": "uk-rural",
+																												"dogs": 10,
+																												"dogIds": [
+																													"BORD_28463",
+																													"BORD_27579",
+																													"BORD_12713",
+																													"BoC_00GT62",
+																													"BoC_00GT56",
+																													"BoC_00GT65",
+																													"BoC_00GT64",
+																													"BORD_28461",
+																													"BORD_11125",
+																													"BoC_00GT66"
+																												]
+																											},
+																											{
+																												"name": "Shetland Sheepdog",
+																												"abbrev": "SSHP",
+																												"cladeId": "uk-rural",
+																												"dogs": 10,
+																												"dogIds": [
+																													"SSHP_27148",
+																													"SSHP_27150",
+																													"SSHP_27147",
+																													"SSHP_28479",
+																													"SSHP_27126",
+																													"SSHP_26992",
+																													"SSHP_27440",
+																													"SSHP_28480",
+																													"SSHP_11617",
+																													"SSHP_28528"
+																												]
+																											}
+																										]
+																									}
+																								]
+																							},
+																							{
+																								"name": "Briard",
+																								"abbrev": "BRIA",
+																								"cladeId": "continental-herder",
+																								"dogs": 10,
+																								"dogIds": [
+																									"BRIA_14565",
+																									"BRIA_27587",
+																									"BRIA_14502",
+																									"BRIA_07780",
+																									"BRIA_20022",
+																									"BRIA_20217",
+																									"BRIA_20240",
+																									"BRIA_20026",
+																									"BRIA_20212",
+																									"BRIA_20268"
+																								]
+																							}
+																						]
+																					},
+																					{
+																						"support": 35,
+																						"children": [
+																							{
+																								"support": 26,
+																								"children": [
+																									{
+																										"support": 13,
+																										"children": [
+																											{
+																												"support": 30,
+																												"children": [
+																													{
+																														"name": "Golden Retriever",
+																														"abbrev": "GOLD",
+																														"cladeId": "retriever",
+																														"dogs": 10,
+																														"dogIds": [
+																															"GOLD_07286",
+																															"GOLD_26997",
+																															"GRe_0GT212",
+																															"GRe_0GT218",
+																															"GOLD_27004",
+																															"GOLD_27014",
+																															"GOLD_27005",
+																															"GRe_0GT220",
+																															"GRe_0GT217",
+																															"GRe_0GT219"
+																														]
+																													},
+																													{
+																														"name": "Nova Scotia Duck Tolling Retriever",
+																														"abbrev": "NSDT",
+																														"cladeId": "retriever",
+																														"dogs": 10,
+																														"dogIds": [
+																															"NSD_0GT293",
+																															"NSD_0GT294",
+																															"NSD_0GT292",
+																															"NSDT_26994",
+																															"NSD_0GT296",
+																															"NSDT_29586",
+																															"NSDT_29588",
+																															"NSD_0GT295",
+																															"NSD_0GT289",
+																															"NSD_0GT291"
+																														]
+																													}
+																												]
+																											},
+																											{
+																												"name": "German Shorthaired Pointer",
+																												"abbrev": "GSHP",
+																												"cladeId": "pointer-setter",
+																												"dogs": 10,
+																												"dogIds": [
+																													"GSHP_29549",
+																													"GSHP_03069",
+																													"GSHP_29550",
+																													"GSHP_28771",
+																													"GSHP_27023",
+																													"GSHP_29551",
+																													"GSHP_15392",
+																													"GSHP_13151",
+																													"GSHP_15394",
+																													"GSHP_29548"
+																												]
+																											}
+																										]
+																									},
+																									{
+																										"name": "American Cocker Spaniel",
+																										"abbrev": "ACKR",
+																										"cladeId": "spaniel",
+																										"dogs": 10,
+																										"dogIds": [
+																											"ACKR_09007",
+																											"ACKR_12453",
+																											"ACKR_09032",
+																											"ACKR_11414",
+																											"ACKR_12452",
+																											"ACKR_12451",
+																											"ACKR_09030",
+																											"ACKR_09991",
+																											"ACKR_09110",
+																											"ACKR_27116"
+																										]
+																									}
+																								]
+																							},
+																							{
+																								"support": 83,
+																								"children": [
+																									{
+																										"name": "Beagle",
+																										"abbrev": "BEAG",
+																										"cladeId": "scent-hound",
+																										"dogs": 10,
+																										"dogIds": [
+																											"BEAG_07862",
+																											"BEAG_07907",
+																											"BEAG_01327",
+																											"Bgl_000GT5",
+																											"Bgl_000GT6",
+																											"Bgl_000GT7",
+																											"Bgl_000GT9",
+																											"BEAG_07870",
+																											"Bgl_000GT8",
+																											"BEAG_01324"
+																										]
+																									},
+																									{
+																										"name": "Basset Hound",
+																										"abbrev": "BASS",
+																										"cladeId": "scent-hound",
+																										"dogs": 10,
+																										"dogIds": [
+																											"BASS_10375",
+																											"BASS_10366",
+																											"BASS_10342",
+																											"BASS_10351",
+																											"BASS_10335",
+																											"BASS_10333",
+																											"BASS_10355",
+																											"BASS_10340",
+																											"BASS_10350",
+																											"BASS_10372"
+																										]
+																									}
+																								]
+																							}
+																						]
+																					}
+																				]
+																			},
+																			{
+																				"name": "Saluki",
+																				"abbrev": "SALU",
+																				"cladeId": "mediterranean",
+																				"dogs": 19,
+																				"dogIds": [
+																					"SALU_22847",
+																					"SALU_22848",
+																					"SALU_23362",
+																					"SALU_23361",
+																					"SALU_27302",
+																					"SALU_27932",
+																					"SALU_28384",
+																					"SALU_27314",
+																					"SALU_27317",
+																					"SALU_27308",
+																					"SALU_27311",
+																					"SALU_27301",
+																					"SALU_28391",
+																					"SALU_27915",
+																					"SALU_13122",
+																					"SALU_24403",
+																					"SALU_24402",
+																					"SALU_24003",
+																					"SALU_24265"
+																				]
+																			}
+																		]
+																	},
+																	{
+																		"support": 46,
+																		"children": [
+																			{
+																				"name": "German Shepherd Dog",
+																				"abbrev": "GSD",
+																				"cladeId": "new-world",
+																				"dogs": 10,
+																				"dogIds": [
+																					"GSD_004371",
+																					"GSD_004181",
+																					"GSh_0GT205",
+																					"GSh_0GT209",
+																					"GSD_013191",
+																					"GSh_0GT206",
+																					"GSh_0GT208",
+																					"GSh_0GT207",
+																					"GSD_014567",
+																					"GSD_028486"
+																				]
+																			},
+																			{
+																				"name": "Xoloitzcuintle",
+																				"abbrev": "XOLO",
+																				"cladeId": "new-world",
+																				"dogs": 5,
+																				"dogIds": [
+																					"XOLO_Z2A01",
+																					"XOLO_Z1H01",
+																					"XOLO_Z2F01",
+																					"XOLO_Z1G01",
+																					"XOLO_Z1E01"
+																				]
+																			}
+																		]
+																	}
+																]
+															},
+															{
+																"support": 35,
+																"children": [
+																	{
+																		"support": 44,
+																		"children": [
+																			{
+																				"name": "Irish Terrier",
+																				"abbrev": "IRIT",
+																				"cladeId": "terrier",
+																				"dogs": 7,
+																				"dogIds": [
+																					"IRIT_27175",
+																					"IRIT_27176",
+																					"IRIT_27162",
+																					"IRIT_27165",
+																					"IRIT_27163",
+																					"IRIT_27164",
+																					"IRIT_27166"
+																				]
+																			},
+																			{
+																				"name": "Miniature Pinscher",
+																				"abbrev": "MPIN",
+																				"cladeId": "pinscher",
+																				"dogs": 10,
+																				"dogIds": [
+																					"MPIN_12873",
+																					"MPIN_12867",
+																					"MPIN_12866",
+																					"MPIN_12869",
+																					"MPIN_12872",
+																					"MPIN_12874",
+																					"MPIN_12877",
+																					"MPIN_13229",
+																					"MPIN_12876",
+																					"MPIN_12870"
+																				]
+																			}
+																		]
+																	},
+																	{
+																		"support": 36,
+																		"children": [
+																			{
+																				"name": "Rat Terrier",
+																				"abbrev": "RATT",
+																				"cladeId": "american-terrier",
+																				"dogs": 2,
+																				"dogIds": [
+																					"RATT_28508",
+																					"RATT_28509"
+																				]
+																			},
+																			{
+																				"support": 100,
+																				"children": [
+																					{
+																						"name": "Chihuahua",
+																						"abbrev": "CHIH",
+																						"cladeId": "american-toy",
+																						"dogs": 10,
+																						"dogIds": [
+																							"CHIH_01202",
+																							"CHIH_01204",
+																							"CHIH_13132",
+																							"CHIH_01205",
+																							"CHIH_01206",
+																							"CHIH_27201",
+																							"CHIH_13167",
+																							"CHIH_13129",
+																							"CHIH_13131",
+																							"CHIH_14923"
+																						]
+																					},
+																					{
+																						"name": "Chinese Crested",
+																						"abbrev": "CRES",
+																						"cladeId": "american-toy",
+																						"dogs": 10,
+																						"dogIds": [
+																							"CRES_Z4D01",
+																							"CRES_Z5F09",
+																							"CRES_Z5A12",
+																							"CRES_Z4B01",
+																							"CRES_Z5H11",
+																							"CRES_Z5G11",
+																							"CRES_Z4C01",
+																							"CRES_Z4A01",
+																							"CRES_Z4H01",
+																							"CRES_Z5B12"
+																						]
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
+															}
+														]
+													},
+													{
+														"name": "Poodle - Standard",
+														"abbrev": "SPOO",
+														"cladeId": "poodle",
+														"dogs": 10,
+														"dogIds": [
+															"StP_0GT378",
+															"SPOO_27151",
+															"SPOO_27225",
+															"SPOO_28536",
+															"StP_0GT376",
+															"SPOO_27219",
+															"SPOO_27218",
+															"StP_0GT377",
+															"StP_0GT375",
+															"StP_0GT379"
+														]
+													}
+												]
+											},
+											{
+												"name": "Puli",
+												"abbrev": "PULI",
+												"cladeId": "hungarian",
+												"dogs": 4,
+												"dogIds": [
+													"PULI_14E05",
+													"PULI_14F06",
+													"PULI_27429",
+													"PULI_27129"
+												]
+											}
+										]
+									},
+									{
+										"support": 36,
+										"children": [
+											{
+												"support": 39,
+												"children": [
+													{
+														"name": "Pomeranian",
+														"abbrev": "POM",
+														"cladeId": "small-spitz",
+														"dogs": 10,
+														"dogIds": [
+															"POM_006435",
+															"POM_006433",
+															"POM_001235",
+															"POM_006410",
+															"POM_001271",
+															"POM_006421",
+															"POM_008522",
+															"POM_008520",
+															"POM_008521",
+															"POM_012763"
+														]
+													},
+													{
+														"support": 100,
+														"children": [
+															{
+																"name": "Brussels Griffon",
+																"abbrev": "BRUS",
+																"cladeId": "toy-spitz",
+																"dogs": 2,
+																"dogIds": [
+																	"BRUS_Z5H09",
+																	"BRUS_Z4F02"
+																]
+															},
+															{
+																"name": "Pug Dog",
+																"abbrev": "PUG",
+																"cladeId": "toy-spitz",
+																"dogs": 10,
+																"dogIds": [
+																	"PUG_001021",
+																	"PUG_001018",
+																	"PUG_001026",
+																	"PUG_001027",
+																	"PUG_001069",
+																	"PUG_001030",
+																	"PUG_001025",
+																	"PUG_001022",
+																	"PUG_001104",
+																	"PUG_001183"
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"name": "Miniature Schnauzer",
+												"abbrev": "MSNZ",
+												"cladeId": "schnauzer",
+												"dogs": 10,
+												"dogIds": [
+													"MSNZ_07671",
+													"MSNZ_12930",
+													"MSNZ_12928",
+													"MSNZ_24693",
+													"MSNZ_07530",
+													"MSNZ_25440",
+													"MSNZ_24692",
+													"MSNZ_07672",
+													"MSNZ_24656",
+													"MSNZ_12929"
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"name": "Icelandic Sheepdog",
+								"abbrev": "ICES",
+								"cladeId": "nordic-spitz",
+								"dogs": 2,
+								"dogIds": [
+									"ICES_Z4E02",
+									"ICES_21B07"
+								]
+							}
+						]
+					},
+					{
+						"name": "Shih Tzu",
+						"abbrev": "SHIH",
+						"cladeId": "asian-toy",
+						"dogs": 10,
+						"dogIds": [
+							"SHIH_03614",
+							"SHIH_03616",
+							"SHIH_03615",
+							"SHIH_03590",
+							"SHIH_03576",
+							"SHIH_03166",
+							"SHIH_03593",
+							"SHIH_03613",
+							"SHIH_03591",
+							"SHIH_03191"
+						]
+					}
+				]
+			},
+			{
+				"support": 99,
+				"children": [
+					{
+						"name": "Chow Chow",
+						"abbrev": "CHOW",
+						"cladeId": "asian-spitz",
+						"dogs": 10,
+						"dogIds": [
+							"CHOW_23372",
+							"CHOW_15628",
+							"CHOW_28871",
+							"CHOW_28872",
+							"CHOW_22802",
+							"CHOW_28874",
+							"CHOW_13802",
+							"CHOW_28880",
+							"CHOW_28885",
+							"CHOW_15630"
+						]
+					},
+					{
+						"name": "Akita",
+						"abbrev": "AKIT",
+						"cladeId": "asian-spitz",
+						"dogs": 10,
+						"dogIds": [
+							"AKIT_01278",
+							"AKIT_01131",
+							"AKIT_01101",
+							"AKIT_01130",
+							"AKIT_12755",
+							"AKIT_01134",
+							"AKIT_01132",
+							"AKIT_12692",
+							"AKIT_12342",
+							"AKIT_01273"
+						]
+					}
+				]
+			}
+		]
+	}
+}

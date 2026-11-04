@@ -1,0 +1,182 @@
+[
+  {
+    "abbrev": "AKIT",
+    "name": "Akita",
+    "clade": "Asian Spitz",
+    "leaf_used": "AKIT_01278"
+  },
+  {
+    "abbrev": "CHOW",
+    "name": "Chow Chow",
+    "clade": "Asian Spitz",
+    "leaf_used": "CHOW_23372"
+  },
+  {
+    "abbrev": "SHIH",
+    "name": "Shih Tzu",
+    "clade": "Asian Toy",
+    "leaf_used": "SHIH_03614"
+  },
+  {
+    "abbrev": "PUG",
+    "name": "Pug Dog",
+    "clade": "Toy Spitz",
+    "leaf_used": "PUG_001021"
+  },
+  {
+    "abbrev": "BRUS",
+    "name": "Brussels Griffon",
+    "clade": "Toy Spitz",
+    "leaf_used": "BRUS_Z5H09"
+  },
+  {
+    "abbrev": "POM",
+    "name": "Pomeranian",
+    "clade": "Small Spitz",
+    "leaf_used": "POM_006435"
+  },
+  {
+    "abbrev": "ICES",
+    "name": "Icelandic Sheepdog",
+    "clade": "Nordic Spitz",
+    "leaf_used": "ICES_Z4E02"
+  },
+  {
+    "abbrev": "MSNZ",
+    "name": "Miniature Schnauzer",
+    "clade": "Schnauzer",
+    "leaf_used": "MSNZ_07671"
+  },
+  {
+    "abbrev": "MPIN",
+    "name": "Miniature Pinscher",
+    "clade": "Pinscher",
+    "leaf_used": "MPIN_12873"
+  },
+  {
+    "abbrev": "PULI",
+    "name": "Puli",
+    "clade": "Hungarian",
+    "leaf_used": "PULI_14E05"
+  },
+  {
+    "abbrev": "SPOO",
+    "name": "Poodle - Standard",
+    "clade": "Poodle",
+    "leaf_used": "SPOO_27151"
+  },
+  {
+    "abbrev": "CHIH",
+    "name": "Chihuahua",
+    "clade": "American Toy",
+    "leaf_used": "CHIH_01202"
+  },
+  {
+    "abbrev": "CRES",
+    "name": "Chinese Crested",
+    "clade": "American Toy",
+    "leaf_used": "CRES_Z4D01"
+  },
+  {
+    "abbrev": "RATT",
+    "name": "Rat Terrier",
+    "clade": "American Terrier",
+    "leaf_used": "RATT_28508"
+  },
+  {
+    "abbrev": "IRIT",
+    "name": "Irish Terrier",
+    "clade": "Terrier",
+    "leaf_used": "IRIT_27175"
+  },
+  {
+    "abbrev": "GSD",
+    "name": "German Shepherd Dog",
+    "clade": "New World",
+    "leaf_used": "GSD_004371"
+  },
+  {
+    "abbrev": "XOLO",
+    "name": "Xoloitzcuintle",
+    "clade": "New World",
+    "leaf_used": "XOLO_Z2A01"
+  },
+  {
+    "abbrev": "SALU",
+    "name": "Saluki",
+    "clade": "Mediterranean",
+    "leaf_used": "SALU_22847"
+  },
+  {
+    "abbrev": "BASS",
+    "name": "Basset Hound",
+    "clade": "Scent Hound",
+    "leaf_used": "BASS_10375"
+  },
+  {
+    "abbrev": "BEAG",
+    "name": "Beagle",
+    "clade": "Scent Hound",
+    "leaf_used": "BEAG_07862"
+  },
+  {
+    "abbrev": "ACKR",
+    "name": "American Cocker Spaniel",
+    "clade": "Spaniel",
+    "leaf_used": "ACKR_09007"
+  },
+  {
+    "abbrev": "GOLD",
+    "name": "Golden Retriever",
+    "clade": "Retriever",
+    "leaf_used": "GOLD_07286"
+  },
+  {
+    "abbrev": "NSDT",
+    "name": "Nova Scotia Duck Tolling Retriever",
+    "clade": "Retriever",
+    "leaf_used": "NSDT_26994"
+  },
+  {
+    "abbrev": "GSHP",
+    "name": "German Shorthaired Pointer",
+    "clade": "Pointer Setter",
+    "leaf_used": "GSHP_29549"
+  },
+  {
+    "abbrev": "BRIA",
+    "name": "Briard",
+    "clade": "Continental Herder",
+    "leaf_used": "BRIA_14565"
+  },
+  {
+    "abbrev": "SSHP",
+    "name": "Shetland Sheepdog",
+    "clade": "UK Rural",
+    "leaf_used": "SSHP_27148"
+  },
+  {
+    "abbrev": "BORD",
+    "name": "Border Collie",
+    "clade": "UK Rural",
+    "leaf_used": "BORD_28463"
+  },
+  {
+    "abbrev": "ROTT",
+    "name": "Rottweiler",
+    "clade": "Drover",
+    "leaf_used": "ROTT_27544"
+  },
+  {
+    "abbrev": "STBD",
+    "name": "Saint Bernard",
+    "clade": "Alpine",
+    "leaf_used": "STBD_27062"
+  },
+  {
+    "abbrev": "MAST",
+    "name": "English Mastiff",
+    "clade": "European Mastiff",
+    "leaf_used": "MAST_21270"
+  }
+]

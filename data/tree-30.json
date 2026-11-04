@@ -1,0 +1,295 @@
+{
+  "support": 100.0,
+  "children": [
+    {
+      "support": 80.0,
+      "children": [
+        {
+          "support": 73.0,
+          "children": [
+            {
+              "support": 52.0,
+              "children": [
+                {
+                  "support": 30.0,
+                  "children": [
+                    {
+                      "support": 47.0,
+                      "children": [
+                        {
+                          "support": 21.0,
+                          "children": [
+                            {
+                              "support": 7.0,
+                              "children": [
+                                {
+                                  "support": 9.0,
+                                  "children": [
+                                    {
+                                      "support": 12.0,
+                                      "children": [
+                                        {
+                                          "support": 36.0,
+                                          "children": [
+                                            {
+                                              "support": 16.0,
+                                              "children": [
+                                                {
+                                                  "support": 42.0,
+                                                  "children": [
+                                                    {
+                                                      "support": 88.0,
+                                                      "children": [
+                                                        {
+                                                          "id": "STBD",
+                                                          "name": "Saint Bernard",
+                                                          "clade": "Alpine"
+                                                        },
+                                                        {
+                                                          "id": "MAST",
+                                                          "name": "English Mastiff",
+                                                          "clade": "European Mastiff"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "ROTT",
+                                                      "name": "Rottweiler",
+                                                      "clade": "Drover"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "support": 99.0,
+                                                  "children": [
+                                                    {
+                                                      "id": "BORD",
+                                                      "name": "Border Collie",
+                                                      "clade": "UK Rural"
+                                                    },
+                                                    {
+                                                      "id": "SSHP",
+                                                      "name": "Shetland Sheepdog",
+                                                      "clade": "UK Rural"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "id": "BRIA",
+                                              "name": "Briard",
+                                              "clade": "Continental Herder"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "support": 35.0,
+                                          "children": [
+                                            {
+                                              "support": 26.0,
+                                              "children": [
+                                                {
+                                                  "support": 13.0,
+                                                  "children": [
+                                                    {
+                                                      "support": 30.0,
+                                                      "children": [
+                                                        {
+                                                          "id": "GOLD",
+                                                          "name": "Golden Retriever",
+                                                          "clade": "Retriever"
+                                                        },
+                                                        {
+                                                          "id": "NSDT",
+                                                          "name": "Nova Scotia Duck Tolling Retriever",
+                                                          "clade": "Retriever"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "GSHP",
+                                                      "name": "German Shorthaired Pointer",
+                                                      "clade": "Pointer Setter"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "id": "ACKR",
+                                                  "name": "American Cocker Spaniel",
+                                                  "clade": "Spaniel"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "support": 83.0,
+                                              "children": [
+                                                {
+                                                  "id": "BEAG",
+                                                  "name": "Beagle",
+                                                  "clade": "Scent Hound"
+                                                },
+                                                {
+                                                  "id": "BASS",
+                                                  "name": "Basset Hound",
+                                                  "clade": "Scent Hound"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "SALU",
+                                      "name": "Saluki",
+                                      "clade": "Mediterranean"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "support": 46.0,
+                                  "children": [
+                                    {
+                                      "id": "GSD",
+                                      "name": "German Shepherd Dog",
+                                      "clade": "New World"
+                                    },
+                                    {
+                                      "id": "XOLO",
+                                      "name": "Xoloitzcuintle",
+                                      "clade": "New World"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "support": 35.0,
+                              "children": [
+                                {
+                                  "support": 44.0,
+                                  "children": [
+                                    {
+                                      "id": "IRIT",
+                                      "name": "Irish Terrier",
+                                      "clade": "Terrier"
+                                    },
+                                    {
+                                      "id": "MPIN",
+                                      "name": "Miniature Pinscher",
+                                      "clade": "Pinscher"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "support": 36.0,
+                                  "children": [
+                                    {
+                                      "id": "RATT",
+                                      "name": "Rat Terrier",
+                                      "clade": "American Terrier"
+                                    },
+                                    {
+                                      "support": 100.0,
+                                      "children": [
+                                        {
+                                          "id": "CHIH",
+                                          "name": "Chihuahua",
+                                          "clade": "American Toy"
+                                        },
+                                        {
+                                          "id": "CRES",
+                                          "name": "Chinese Crested",
+                                          "clade": "American Toy"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "SPOO",
+                          "name": "Poodle - Standard",
+                          "clade": "Poodle"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "PULI",
+                      "name": "Puli",
+                      "clade": "Hungarian"
+                    }
+                  ]
+                },
+                {
+                  "support": 36.0,
+                  "children": [
+                    {
+                      "support": 39.0,
+                      "children": [
+                        {
+                          "id": "POM",
+                          "name": "Pomeranian",
+                          "clade": "Small Spitz"
+                        },
+                        {
+                          "support": 100.0,
+                          "children": [
+                            {
+                              "id": "BRUS",
+                              "name": "Brussels Griffon",
+                              "clade": "Toy Spitz"
+                            },
+                            {
+                              "id": "PUG",
+                              "name": "Pug Dog",
+                              "clade": "Toy Spitz"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "MSNZ",
+                      "name": "Miniature Schnauzer",
+                      "clade": "Schnauzer"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "ICES",
+              "name": "Icelandic Sheepdog",
+              "clade": "Nordic Spitz"
+            }
+          ]
+        },
+        {
+          "id": "SHIH",
+          "name": "Shih Tzu",
+          "clade": "Asian Toy"
+        }
+      ]
+    },
+    {
+      "support": 99.0,
+      "children": [
+        {
+          "id": "CHOW",
+          "name": "Chow Chow",
+          "clade": "Asian Spitz"
+        },
+        {
+          "id": "AKIT",
+          "name": "Akita",
+          "clade": "Asian Spitz"
+        }
+      ]
+    }
+  ]
+}

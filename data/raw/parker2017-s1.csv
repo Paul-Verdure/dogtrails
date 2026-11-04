@@ -1,0 +1,175 @@
+Breed,Abrev.,Clade,Samples,Vayasse-1,Hayward-2,Mizzou-3,Total,COO,BioProject
+American Cocker Spaniel,ACKR,Spaniel,10,,,,10,,"GSE90441, GSE96736"
+American Eskimo Dog,AESK,Nordic Spitz,,,6,,6,,
+Afghan Hound,AFGH,Mediterranean,10,,,,10,,GSE90441
+American Hairless Terrier,AHRT,American Terrier,10,,,,10,,GSE96736
+Airedale Terrier,AIRT,Terrier,3,,,,3,,GSE96736
+Akita,AKIT,Asian Spitz,10,,,,10,,GSE90441
+Alaskan Malamute,AMAL,Asian Spitz,10,,,,10,,GSE70454
+American Staffordshire Terrier,AMST,European Mastiff,2,,4,,6,,GSE96736
+Anatolian Shepherd,ANAT,Mediterranean,6,,,,6,,GSE83160
+Australian Cattle Dog,AUCD,UK Rural,2,,8,,10,,GSE96736
+Australian Shepherd,AUSS,UK Rural,10,,,,10,,GSE90441
+Australian Terrier,AUST,Terrier,10,,,,10,,GSE90441
+Azawakh,AZWK,Mediterranean,5,,,,5,5,GSE83160
+Basset Hound,BASS,Scent Hound,10,,,,10,,GSE90441
+Beagle,BEAG,Scent Hound,5,5,,,10,,GSE90441
+Bedlington Terrier,BEDT,Terrier,4,,3,,7,,GSE96736
+Belgian Sheepdog,BELS,Continental Herder,10,,,,10,,"GSE90441, GSE96736"
+Bearded Collie,BERD,UK Rural,,,3,,3,,
+Bichon Frise,BICH,Poodle,,,10,,10,,
+Bloodhound,BLDH,Scent Hound,10,,,,10,,"GSE90441, GSE96736"
+Belgian Malenois,BMAL,Continental Herder,,,6,,6,,
+Bernese Mountain Dog,BMD,Alpine,5,5,,,10,,GSE96736
+Boerboel,BOER,European Mastiff,,,3,,3,,
+Border Collie,BORD,UK Rural,5,5,,,10,,GSE90441
+Border Terrier,BORT,Terrier,4,6,,,10,,GSE96736
+Borzoi,BORZ,UK Rural,10,,,,10,,GSE90441
+Boston Terrier,BOST,European Mastiff,10,,,,10,,GSE90441
+Bouvier des Flandres,BOUV,Continental Herder,,,8,,8,,
+Boxer,BOX,European Mastiff,10,,,,10,,GSE90441
+Berger Picard,BPIC,New World,,,,3,3,,
+Briard,BRIA,Continental Herder,10,,,,10,,GSE90441
+Brittany,BRIT,Pointer Setter,5,5,,,10,,GSE90441
+Black Russian Terrier,BRTR,Drover,4,,,,4,,GSE90441
+Brussels Griffon,BRUS,Toy Spitz,,,2,,2,,
+Basenji,BSJI,,10,,,,10,,GSE90441
+Bulldog,BULD,European Mastiff,5,5,,,10,,GSE90441
+Bulmastiff,BULM,European Mastiff,10,,,,10,,GSE90441
+Bull Terrier,BULT,European Mastiff,10,,,,10,,GSE90441
+Cairn Terrier,CAIR,Terrier,10,,,,10,,GSE90441
+Cane Corso,CANE,European Mastiff,9,,,,9,5,GSE83160
+Cardigan Welsh Corgi,CARD,UK Rural,10,,,,10,,GSE90441
+Curly Coated Retriever,CCRT,Retriever,4,,2,,6,,GSE96736
+Chihuahua,CHIH,American Toy,10,,,,10,,"GSE90441, GSE96736"
+Japanese Chin,CHIN,Asian Toy,,,4,,4,,
+Chow Chow,CHOW,Asian Spitz,10,,,,10,,"GSE90441, GSE96736"
+Cirneco dell'Etna,CIRN,Mediterranean,5,,,,5,5,GSE83160
+Cavalier King Charles Spaniel,CKCS,Spaniel,10,,,,10,,GSE90441
+Collie,COLL,UK Rural,10,,,,10,,GSE90441
+Chinook,COOK,New World,,,10,,10,,GSE96736
+Coton du Tulear,COTO,Poodle*,,,2,,2,,
+Cane Paratore,CPAT,New World,2,,,,2,2,GSE83160
+Chinese Crested,CRES,American Toy,,,10,,10,,
+Dachshund,DACH,Scent Hound,5,5,,,10,,GSE90441
+Dalmatian,DALM,Pointer Setter*,4,,5,,9,,GSE96736
+Great Dane,DANE,European Mastiff,10,,,,10,,"GSE90441, GSE96736"
+Dogue de Bordeaux,DDBX,European Mastiff,6,,,,6,,GSE90441
+Scottish Deerhound,DEER,UK Rural,10,,,,10,,GSE90441
+Doberman Pinscher,DOBP,Drover,5,5,,,10,,GSE90441
+English Cocker Spaniel,ECKR,Spaniel,5,5,,,10,,GSE90441
+English Setter,ESET,Pointer Setter,,10,,,10,,
+English Springer Spaniel,ESSP,Spaniel,10,,,,10,,GSE90441
+Eurasier,EURA,,,10,,,10,,
+French Bulldog,FBUL,European Mastiff,10,,,,10,,GSE90441
+Flat-coated Retriever,FCR,Retriever,10,,,,10,,GSE96736
+Field Spaniel,FIEL,Spaniel,4,,,,4,,GSE96736
+Finish Spitz,FINS,,,10,,,10,,
+Foxhound,FOXH,Scent Hound,10,,,,10,,GSE96736
+Glen of Imaal Terrier,GLEN,Terrier,9,,,,9,,GSE90441
+Golden Retriever,GOLD,Retriever,5,5,,,10,,GSE90441
+Gordon Setter,GORD,Pointer Setter,2,8,,,10,,
+Great Pyrenees,GPYR,Mediterranean,10,,,,10,,GSE83160
+Greenland Sledge Dog,GREE,Asian Spitz,,10,,,10,,
+Greyhound,GREY,UK Rural,5,5,,,10,,GSE90441
+German Shepherd Dog,GSD,New World,5,5,,,10,,GSE96736
+German Shorthaired Pointer,GSHP,Pointer Setter,10,,,,10,,GSE90441
+Greater Swiss Mountain Dog,GSMD,Alpine,6,,,,6,,GSE90441
+Giant Schnauzer,GSNZ,Drover,10,,,,10,,GSE90441
+German Wirehaired Pointer,GWHP,Pointer Setter,,,2,,2,,
+Havanese,HAVA,Poodle,10,,,,10,,GSE90441
+Siberian Husky,HUSK,Asian Spitz,10,,,,10,,GSE70454
+Ibizan Hound,IBIZ,Mediterranean,10,,,,10,,GSE83160
+Icelandic Sheepdog,ICES,Nordic Spitz,,,2,,2,,
+Peruvian Hairless dog,INCA,New World*,,,10,,10,,
+Irish Terrier,IRIT,Terrier,7,,,,7,,GSE96736
+Irish Setter,ISET,Pointer Setter,3,,6,,9,,GSE96736
+Italian Greyhound,ITGY,UK Rural,10,,,,10,,GSE83160
+Irish Wolfhound,IWOF,UK Rural,5,5,,,10,,"GSE90441, new"
+Irish Water Spaniel,IWSP,Retriever,10,,,,10,,GSE90441
+Jack Russell Terrier,JACK,Terrier,,10,,,10,,
+Keeshond,KEES,NordicSpitz,10,,,,10,,GSE96736
+Kelpie,KELP,UK Rural,2,,,,2,,GSE96736
+Kerry Blue Terrier,KERY,Terrier,4,,,,4,,GSE96736
+Komondor,KOMO,Mediterranean,,,2,,2,,
+Kuvasz,KUVZ,Mediterranean,10,,,,10,,GSE90441
+Labrador Retriever,LAB,Retriever,5,5,,,10,,GSE90441
+Large Munsterlander,LMUN,Pointer Setter,3,,,,3,,GSE96736
+Leonberger,LEON,Mediterranean,10,,,,10,,GSE90441
+Lhasa Apso,LHSA,Asian Toy,,,10,,10,,
+Levriero Meridionale,LVMD,Mediterranean,2,,,,2,2,GSE83160
+Mastino Abruzzese,MAAB,Mediterranean,2,,,,2,2,GSE83160
+Maltese,MALT,Poodle,2,,8,,10,,GSE96736
+English Mastiff,MAST,European Mastiff,10,,,,10,,"GSE90441, GSE96736"
+Miniature Bull Terrier,MBLT,European Mastiff,10,,,,10,,GSE90441
+Toy Mnachester Terrier,MNTY,Pinscher,,,2,,2,,
+Miniature Pinscher,MPIN,Pinscher,10,,,,10,,GSE90441
+Miniature Schnauzer,MSNZ,Schnauzer,10,,,,10,,GSE90441
+Neapolitan Mastiff,NEAP,European Mastiff,6,,,,6,,GSE83160
+Norwegian Elkhound,NELK,Nordic Spitz,1,9,,,10,,GSE96736
+Newfoundland,NEWF,Retriever,5,5,,,10,,GSE90441
+Norfolk Terrier,NORF,Terrier,,,10,,10,,
+Norwich Terrier,NOWT,Terrier,10,,,,10,,GSE90441
+Nova Scotia Duck Tolling Retriever,NSDT,Retriever*,3,7,,,10,,GSE96736
+Old English Sheepdog,OES,UK Rural,10,,,,10,,GSE90441
+Otter Hound,OTTR,Scent Hound,,,9,,9,,
+Papillon,PAPI,Toy Spitz,10,,,,10,,GSE90441
+Parsons Russell Terrier,PARS,Terrier,2,,,,2,,GSE96736
+Petit Basset Greffon Vendeen,PBGV,Scent Hound,10,,,,10,,GSE90441
+Pekingese,PEKE,Asian Toy,10,,,,10,,"GSE90441, GSE96736"
+Pembroke Welsh Corgi,PEMB,UK Rural,10,,,,10,,GSE90441
+Pharoah Hound,PHAR,Mediterranean,,,2,,2,,
+Pomeranian,POM,Small Spitz,10,,,,10,,GSE90441
+Poodle - Miniature,MPOO,Poodle,10,,,,10,,GSE90441
+Poodle - Standard,SPOO,Poodle,5,5,,,10,,GSE90441
+Poodle - Toy,TPOO,Poodle,10,,,,10,,"GSE90441, GSE96736"
+Portuguese Water Dog,PTWD,Poodle*,10,,,,10,,GSE83160
+Pug Dog,PUG,Toy Spitz,10,,,,10,,GSE90441
+Puli,PULI,Hungarian,2,,2,,4,,GSE96736
+Pumi,PUMI,Hungarian,5,,,,5,,GSE96736
+Rat Terrier,RATT,American Terrier,2,,,,2,,GSE96736
+Redbone Coonhound,REDB,Scent Hound,,,2,,2,,
+Rhodesian Ridgeback,RHOD,European Mastiff,,,9,,9,,
+Rottweiler,ROTT,Drover,5,5,,,10,,"GSE90441, GSE96736"
+Saluki,SALU,Mediterranean,19,,,,19,9,GSE83160
+Samoyed,SAMO,,10,,,,10,,GSE90441
+Scottish Terrier,SCOT,Terrier,10,,,,10,,"GSE90441, GSE96736"
+Soft Coated Wheaten Terrier,SCWT,Terrier,4,,,,4,,GSE96736
+Chinese Shar-pei,SHAR,Asian Spitz,5,5,,,10,,GSE90441
+Shiba Inu,SHIB,Asian Spitz,,,8,,8,,
+Shih Tzu,SHIH,Asian Toy,10,,,,10,,GSE90441
+Silky Terrier,SILK,Terrier,,,4,,4,,
+Schipperke,SKIP,Toy Spitz,,10,,,10,,
+Sloughi,SLOU,Mediterranean,5,,,,5,5,GSE83160
+Spinone Italiano,SPIN,Pointer Setter,,,2,,2,,
+Shetland Sheepdog,SSHP,UK Rural,10,,,,10,,"GSE90441, GSE96736"
+Standard Schnauzer,SSNZ,Schnauzer,10,,,,10,,GSE83160
+Stafforshire Bull Terrier,STAF,European Mastiff,10,,,,10,,GSE90441
+Saint Bernard,STBD,Alpine,10,,,,10,,GSE83160
+Swedish Valhund,SVAL,Nordic Spitz,6,,,,6,,GSE96736
+Tibetan Mastiff,TIBM,Asian Spitz,10,,,,10,5,"GSE90441, GSE96736"
+Tibetan Spaniel,TIBS,Asian Toy,5,,5,,10,,GSE96736
+Tibetan Terrier,TIBT,,5,,5,,10,,GSE96736
+Belgian Tervuren,TURV,Continental Herder,5,5,,,10,,"GSE90441, GSE96736"
+Toy Fox Terrier,TYFX,American Terrier,,,4,,4,,
+Vizsla,VIZS,Pointer Setter,7,,,,7,,GSE96736
+Volpino Italiano,VPIN,Small Spitz,4,,,,4,4,GSE83160
+Weimaraner,WEIM,Pointer Setter,,10,,,10,,
+Wire Fox Terrier,WFOX,Terrier,,,10,,10,,
+Whippet,WHIP,UK Rural,10,,,,10,,GSE90441
+Wirehaired Pointing Griffon,WHPG,Pointer Setter,6,,,,6,,GSE96736
+West Highland White Terrier,WHWT,Terrier,10,,,,10,,GSE90441
+Xigou,XIGO,Asian Spitz,5,,,,5,5,GSE96736
+Xoloitzcuintle,XOLO,New World*,,,5,,5,,
+Xoloitzcuintle - Miniature,MXOL,NewWorld*,,,5,,5,,
+Yorkshire Terrier,YORK,Terrier,5,5,,,10,,GSE90441
+TOTAL BREED DOGS,,,938,195,210,3,1346,49,
+TOTAL BREEDS,164,,127,30,39,1,164,,
+,167,,,,,,,,
+Grey Wolf,WOLF,,7,,,,7,,GSE90441
+Golden Jackal,GDJK,,2,,,,2,,GSE90441
+* - breeds included in the clade with <50% bootstrap support,,,,,,,,,
+"1 - Vaysse A, et al. (2011) Identification of genomic regions associated with phenotypic variation between dog breeds using lelection mapping, PLoS Genet. 7(10): e1002316",,,,,,,,,
+"2 - Hayward JJ, et al. (2016) Complex disease and phenotype mapping in the domestic dog, Nature Commun. 7:10460",,,,,,,,,
+"3 - Mizzou Comparative Canine Resequencing: BioProject PRJNA263947; samples 86405, 88986, 91180",,,,,,,,,
+"COO = dogs collected in the country from which the breed originated, other than the United States",,,,,,,,,
