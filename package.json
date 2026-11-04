@@ -13,6 +13,9 @@
 		"prebuild": "npm run validate",
 		"data:extract": "node scripts/extract-parker.ts",
 		"data:tree": "node scripts/parse-tree.ts",
+		"data:fci": "node scripts/fetch-fci.ts",
+		"data:wikidata": "node scripts/fetch-wikidata.ts",
+		"data:names-report": "node scripts/report-names.ts",
 		"validate": "node scripts/validate.ts"
 	},
 	"devDependencies": {

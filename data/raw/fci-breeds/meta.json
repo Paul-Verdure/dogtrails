@@ -1,0 +1,23 @@
+{
+	"source": "Unofficial CSV export of the FCI nomenclature (Pavel Ivashkov), MIT licence",
+	"repository": "https://github.com/paiv/fci-breeds",
+	"commit": "88aaca5c0726b2a4c6cf6aa06a1ffb359f9262f2",
+	"fetchedAt": "2026-11-04T09:32:24.223Z",
+	"reference": "https://fci.be/en/nomenclature/",
+	"files": [
+		{
+			"file": "fci-breeds.csv",
+			"url": "https://raw.githubusercontent.com/paiv/fci-breeds/88aaca5c0726b2a4c6cf6aa06a1ffb359f9262f2/fci-breeds.csv",
+			"rows": 360
+		},
+		{
+			"file": "fci-breeds-fr.csv",
+			"url": "https://raw.githubusercontent.com/paiv/fci-breeds/88aaca5c0726b2a4c6cf6aa06a1ffb359f9262f2/fci-breeds-fr.csv",
+			"rows": 360
+		}
+	],
+	"notes": [
+		"Files are stored verbatim. Group and country are names, not numbers; scripts map group names to FCI group numbers 1-10.",
+		"No standard text is copied; the pdf column only links to fci.be."
+	]
+}

@@ -1,0 +1,560 @@
+{
+	"_about": "Parker 2017 supplement-1 abbreviation -> site breed id, Wikidata QID, FCI number. Drafted with Claude Code on 2026-11-04 from the sources below; every entry is reviewed=false until Paul checks it. Size varieties share one id and carry a variant (Paul, 2026-11-04). Ids are slugs of the usual English name. Doubts are listed per entry, never resolved silently.",
+	"sources": [
+		{
+			"id": "parker2017-s1",
+			"citation": "Parker et al. 2017, Cell Reports 19(4):697-708, supplement 1 (data/raw/parker2017-s1.csv)",
+			"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993"
+		},
+		{
+			"id": "fci-breeds",
+			"citation": "Unofficial FCI nomenclature export, paiv/fci-breeds, commit 88aaca5c0726b2a4c6cf6aa06a1ffb359f9262f2 (data/raw/fci-breeds/)",
+			"url": "https://github.com/paiv/fci-breeds"
+		},
+		{
+			"id": "wikidata",
+			"citation": "Wikidata, query and date in data/raw/wikidata-breeds.json",
+			"url": "https://www.wikidata.org/"
+		}
+	],
+	"entries": [
+		{
+			"abbrev": "AKIT",
+			"parkerName": "Akita",
+			"id": "akita",
+			"variant": null,
+			"wikidata": "Q29164",
+			"fci": {
+				"number": 255
+			},
+			"basis": "Parker \"Akita\" = FCI 255 \"AKITA\" (same name). Q29164 \"Akita (Japanese dog breed)\" found by label search: it carries no FCI catalogue code on Wikidata.",
+			"doubts": [
+				"Parker dogs come from GSE90441 (US samples). In the US the AKC \"Akita\" is the American type, which the FCI recognises separately as 344 \"AMERICAN AKITA\". Which one did Parker sample? Check the article methods.",
+				"Wikidata Q29164 gives two countries of origin (P495): United States and Japan."
+			],
+			"alternatives": [
+				{
+					"wikidata": "Q37534",
+					"fci": 344,
+					"note": "American Akita, if the Parker dogs are AKC Akitas"
+				}
+			],
+			"reviewed": false
+		},
+		{
+			"abbrev": "CHOW",
+			"parkerName": "Chow Chow",
+			"id": "chow-chow",
+			"variant": null,
+			"wikidata": "Q29013",
+			"fci": {
+				"number": 205
+			},
+			"basis": "Parker \"Chow Chow\" = FCI 205 \"CHOW CHOW\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 205.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "SHIH",
+			"parkerName": "Shih Tzu",
+			"id": "shih-tzu",
+			"variant": null,
+			"wikidata": "Q39357",
+			"fci": {
+				"number": 208
+			},
+			"basis": "Parker \"Shih Tzu\" = FCI 208 \"SHIH TZU\" (same name). Q39357 found by label search: it carries no FCI catalogue code on Wikidata.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "PUG",
+			"parkerName": "Pug Dog",
+			"id": "pug",
+			"variant": null,
+			"wikidata": "Q38698",
+			"fci": {
+				"number": 253
+			},
+			"basis": "Parker \"Pug Dog\" = FCI 253 \"PUG\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 253.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "BRUS",
+			"parkerName": "Brussels Griffon",
+			"id": "brussels-griffon",
+			"variant": null,
+			"wikidata": "Q38889",
+			"fci": {
+				"number": 80
+			},
+			"basis": "Parker \"Brussels Griffon\" closest to FCI 80 \"GRIFFON BRUXELLOIS\". Q38889 \"Griffon Bruxellois\" found by label search (\"Brussels Griffon\" leads to it).",
+			"doubts": [
+				"The FCI splits this dog into three breeds: 80 Griffon bruxellois, 81 Griffon belge, 82 Petit brabançon (section \"Small Belgian Dogs\"). The AKC \"Brussels Griffon\" covers the three coats. Parker has 2 dogs; their coat is unknown. Attach to 80 only, or to the three?",
+				"Wikidata Q38889 carries the three FCI codes 080, 081 and 082 at once, while Q38055 (Griffon belge) and Q13631411 (Petit brabançon) exist as separate items without FCI code."
+			],
+			"alternatives": [
+				{
+					"wikidata": "Q38055",
+					"fci": 81,
+					"note": "Griffon belge (rough, black)"
+				},
+				{
+					"wikidata": "Q13631411",
+					"fci": 82,
+					"note": "Petit brabançon (smooth coat)"
+				}
+			],
+			"reviewed": false
+		},
+		{
+			"abbrev": "POM",
+			"parkerName": "Pomeranian",
+			"id": "pomeranian",
+			"variant": null,
+			"wikidata": "Q39579",
+			"fci": {
+				"number": 97
+			},
+			"basis": "Parker \"Pomeranian\": no FCI breed of that name. FCI 97 \"GERMAN SPITZ\" includes the Zwergspitz / Pomeranian size. Q39579 \"Pomeranian\" found by label search.",
+			"doubts": [
+				"FCI 97 is the whole German Spitz (several sizes); Pomeranian is only one of them. The site id \"pomeranian\" then shares an FCI number with no other Parker entry today, but would collide with a future \"german-spitz\". Separate breed or variant of german-spitz?",
+				"Wikidata Q39579 \"Pomeranian\" carries no FCI code; Q38655 \"German Spitz\" carries FCI code 097."
+			],
+			"alternatives": [
+				{
+					"wikidata": "Q38655",
+					"fci": 97,
+					"note": "German Spitz, the FCI breed as a whole"
+				}
+			],
+			"reviewed": false
+		},
+		{
+			"abbrev": "ICES",
+			"parkerName": "Icelandic Sheepdog",
+			"id": "icelandic-sheepdog",
+			"variant": null,
+			"wikidata": "Q38710",
+			"fci": {
+				"number": 289
+			},
+			"basis": "Parker \"Icelandic Sheepdog\" = FCI 289 \"ICELANDIC SHEEPDOG\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 289.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "MSNZ",
+			"parkerName": "Miniature Schnauzer",
+			"id": "miniature-schnauzer",
+			"variant": null,
+			"wikidata": "Q38999",
+			"fci": {
+				"number": 183
+			},
+			"basis": "Parker \"Miniature Schnauzer\" = FCI 183 \"MINIATURE SCHNAUZER\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 183.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "MPIN",
+			"parkerName": "Miniature Pinscher",
+			"id": "miniature-pinscher",
+			"variant": null,
+			"wikidata": "Q38990",
+			"fci": {
+				"number": 185
+			},
+			"basis": "Parker \"Miniature Pinscher\" = FCI 185 \"MINIATURE PINSCHER\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 185.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "PULI",
+			"parkerName": "Puli",
+			"id": "puli",
+			"variant": null,
+			"wikidata": "Q38864",
+			"fci": {
+				"number": 55
+			},
+			"basis": "Parker \"Puli\" = FCI 55 \"PULI\" (same name). Q38864 found by SPARQL on English labels of dog breeds (Q39367); it carries FCI catalogue code 055.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "SPOO",
+			"parkerName": "Poodle - Standard",
+			"id": "poodle",
+			"variant": "standard",
+			"wikidata": "Q38904",
+			"fci": {
+				"number": 172
+			},
+			"basis": "Parker \"Poodle - Standard\" = size \"standard\" of FCI 172 \"POODLE\" (one breed, four sizes). Grouped under id \"poodle\" with MPOO and TPOO (Paul, 2026-11-04). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 172.",
+			"doubts": [
+				"Parker leaf prefix StP (Vaysse) is attached to SPOO in parker-leaf-prefixes.json, not yet reviewed."
+			],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "MPOO",
+			"parkerName": "Poodle - Miniature",
+			"id": "poodle",
+			"variant": "miniature",
+			"wikidata": "Q38904",
+			"fci": {
+				"number": 172
+			},
+			"basis": "Parker \"Poodle - Miniature\" = a size of FCI 172 \"POODLE\". Grouped under id \"poodle\" (Paul, 2026-11-04). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 172.",
+			"doubts": [
+				"FCI has four sizes (toy, miniature, medium, standard); the AKC has three. Which FCI size(s) the AKC \"Miniature\" covers is not settled here.",
+				"Not in the 30-breed sample: no leaf in tree.json yet."
+			],
+			"alternatives": [
+				{
+					"wikidata": "Q3514138",
+					"note": "Wikidata item \"Miniature Poodle\" for the variety"
+				}
+			],
+			"reviewed": false
+		},
+		{
+			"abbrev": "TPOO",
+			"parkerName": "Poodle - Toy",
+			"id": "poodle",
+			"variant": "toy",
+			"wikidata": "Q38904",
+			"fci": {
+				"number": 172
+			},
+			"basis": "Parker \"Poodle - Toy\" = size \"toy\" of FCI 172 \"POODLE\". Grouped under id \"poodle\" (Paul, 2026-11-04). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 172.",
+			"doubts": [
+				"Not in the 30-breed sample: no leaf in tree.json yet."
+			],
+			"alternatives": [
+				{
+					"wikidata": "Q11831662",
+					"note": "Wikidata item \"Toy Poodle\" for the variety"
+				}
+			],
+			"reviewed": false
+		},
+		{
+			"abbrev": "CHIH",
+			"parkerName": "Chihuahua",
+			"id": "chihuahua",
+			"variant": null,
+			"wikidata": "Q653",
+			"fci": {
+				"number": 218
+			},
+			"basis": "Parker \"Chihuahua\" = FCI 218 \"CHIHUAHUA\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 218.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "CRES",
+			"parkerName": "Chinese Crested",
+			"id": "chinese-crested-dog",
+			"variant": null,
+			"wikidata": "Q37892",
+			"fci": {
+				"number": 288
+			},
+			"basis": "Parker \"Chinese Crested\" = FCI 288 \"CHINESE CRESTED DOG\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 288.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "RATT",
+			"parkerName": "Rat Terrier",
+			"id": "rat-terrier",
+			"variant": null,
+			"wikidata": "Q38431",
+			"fci": {
+				"number": null,
+				"reason": "No FCI breed of that name or close to it in the FCI nomenclature (fci-breeds export, commit 88aaca5)."
+			},
+			"basis": "Parker \"Rat Terrier\". Q38431 \"Rat Terrier\" (dog breed) found by label search.",
+			"doubts": [
+				"Origin and recognition will have to come from Wikidata or another source than the FCI. Wikidata also has Q5441578 \"Feist\" (dog type), the ancestor named in PLAN.md."
+			],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "IRIT",
+			"parkerName": "Irish Terrier",
+			"id": "irish-terrier",
+			"variant": null,
+			"wikidata": "Q38644",
+			"fci": {
+				"number": 139
+			},
+			"basis": "Parker \"Irish Terrier\" = FCI 139 \"IRISH TERRIER\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 139.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "GSD",
+			"parkerName": "German Shepherd Dog",
+			"id": "german-shepherd",
+			"variant": null,
+			"wikidata": "Q38280",
+			"fci": {
+				"number": 166
+			},
+			"basis": "Parker \"German Shepherd Dog\" = FCI 166 \"GERMAN SHEPHERD DOG\" (same name). Q38280 found by label search: it carries no FCI catalogue code on Wikidata.",
+			"doubts": [
+				"Parker leaf prefix GSh (Vaysse) is attached to GSD in parker-leaf-prefixes.json, not yet reviewed."
+			],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "XOLO",
+			"parkerName": "Xoloitzcuintle",
+			"id": "xoloitzcuintle",
+			"variant": "standard",
+			"wikidata": "Q38856",
+			"fci": {
+				"number": 234
+			},
+			"basis": "Parker \"Xoloitzcuintle\" = size \"standard\" of FCI 234 \"XOLOITZCUINTLE\". Grouped under id \"xoloitzcuintle\" with MXOL (Paul, 2026-11-04). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 234.",
+			"doubts": [
+				"Clade marked * (< 50 % bootstrap) in supplement 1.",
+				"The FCI standard defines three sizes (standard, intermediate, miniature); Parker has two. Variant label \"standard\" assumed for the unqualified Parker entry: to check."
+			],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "MXOL",
+			"parkerName": "Xoloitzcuintle - Miniature",
+			"id": "xoloitzcuintle",
+			"variant": "miniature",
+			"wikidata": "Q38856",
+			"fci": {
+				"number": 234
+			},
+			"basis": "Parker \"Xoloitzcuintle - Miniature\" = size \"miniature\" of FCI 234 \"XOLOITZCUINTLE\". Grouped under id \"xoloitzcuintle\" (Paul, 2026-11-04). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 234.",
+			"doubts": [
+				"Its 5 dogs form 4 fragments in the full Parker tree, 2 of them next to XOLO: grouping the variants does not make the breed one subtree.",
+				"Clade written \"NewWorld*\" (no space) in supplement 1.",
+				"Not in the 30-breed sample: no leaf in tree.json yet."
+			],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "SALU",
+			"parkerName": "Saluki",
+			"id": "saluki",
+			"variant": null,
+			"wikidata": "Q39108",
+			"fci": {
+				"number": 269
+			},
+			"basis": "Parker \"Saluki\" = FCI 269 \"SALUKI\" (same name). Q39108 found by label search: it carries no FCI catalogue code on Wikidata.",
+			"doubts": [
+				"FCI country is \"MIDDLE EAST\", a region and not a country: origin will need kind \"region\" on the map.",
+				"Wikidata P495 is \"Arabian Peninsula\", FCI says \"MIDDLE EAST\": two different regions."
+			],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "BASS",
+			"parkerName": "Basset Hound",
+			"id": "basset-hound",
+			"variant": null,
+			"wikidata": "Q37716",
+			"fci": {
+				"number": 163
+			},
+			"basis": "Parker \"Basset Hound\" = FCI 163 \"BASSET HOUND\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 163.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "BEAG",
+			"parkerName": "Beagle",
+			"id": "beagle",
+			"variant": null,
+			"wikidata": "Q21102",
+			"fci": {
+				"number": 161
+			},
+			"basis": "Parker \"Beagle\" = FCI 161 \"BEAGLE\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 161.",
+			"doubts": [
+				"Parker leaf prefix Bgl (Vaysse) is attached to BEAG in parker-leaf-prefixes.json, not yet reviewed."
+			],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "ACKR",
+			"parkerName": "American Cocker Spaniel",
+			"id": "american-cocker-spaniel",
+			"variant": null,
+			"wikidata": "Q38063",
+			"fci": {
+				"number": 167
+			},
+			"basis": "Parker \"American Cocker Spaniel\" = FCI 167 \"AMERICAN COCKER SPANIEL\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 167.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "GOLD",
+			"parkerName": "Golden Retriever",
+			"id": "golden-retriever",
+			"variant": null,
+			"wikidata": "Q38686",
+			"fci": {
+				"number": 111
+			},
+			"basis": "Parker \"Golden Retriever\" = FCI 111 \"GOLDEN RETRIEVER\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 111.",
+			"doubts": [
+				"Parker leaf prefix GRe (Vaysse) is attached to GOLD in parker-leaf-prefixes.json, not yet reviewed."
+			],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "NSDT",
+			"parkerName": "Nova Scotia Duck Tolling Retriever",
+			"id": "nova-scotia-duck-tolling-retriever",
+			"variant": null,
+			"wikidata": "Q38824",
+			"fci": {
+				"number": 312
+			},
+			"basis": "Parker \"Nova Scotia Duck Tolling Retriever\" = FCI 312 \"NOVA SCOTIA DUCK TOLLING RETRIEVER\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 312.",
+			"doubts": [
+				"Parker leaf prefix NSD (Vaysse) is attached to NSDT in parker-leaf-prefixes.json, not yet reviewed."
+			],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "GSHP",
+			"parkerName": "German Shorthaired Pointer",
+			"id": "german-shorthaired-pointer",
+			"variant": null,
+			"wikidata": "Q38084",
+			"fci": {
+				"number": 119
+			},
+			"basis": "Parker \"German Shorthaired Pointer\" = FCI 119 \"GERMAN SHORT- HAIRED POINTING DOG\" (English name differs, same breed: Deutsch Kurzhaar). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 119.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "BRIA",
+			"parkerName": "Briard",
+			"id": "briard",
+			"variant": null,
+			"wikidata": "Q37821",
+			"fci": {
+				"number": 113
+			},
+			"basis": "Parker \"Briard\" = FCI 113 \"BRIARD\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 113.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "SSHP",
+			"parkerName": "Shetland Sheepdog",
+			"id": "shetland-sheepdog",
+			"variant": null,
+			"wikidata": "Q39058",
+			"fci": {
+				"number": 88
+			},
+			"basis": "Parker \"Shetland Sheepdog\" = FCI 88 \"SHETLAND SHEEPDOG\" (same name). Q39058 found by label search: it carries no FCI catalogue code on Wikidata.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "BORD",
+			"parkerName": "Border Collie",
+			"id": "border-collie",
+			"variant": null,
+			"wikidata": "Q37710",
+			"fci": {
+				"number": 297
+			},
+			"basis": "Parker \"Border Collie\" = FCI 297 \"BORDER COLLIE\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 297.",
+			"doubts": [
+				"Parker leaf prefix BoC (Vaysse) is attached to BORD in parker-leaf-prefixes.json, not yet reviewed."
+			],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "ROTT",
+			"parkerName": "Rottweiler",
+			"id": "rottweiler",
+			"variant": null,
+			"wikidata": "Q39093",
+			"fci": {
+				"number": 147
+			},
+			"basis": "Parker \"Rottweiler\" = FCI 147 \"ROTTWEILER\" (same name). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 147.",
+			"doubts": [
+				"Parker leaf prefix Rtw (Vaysse) is attached to ROTT in parker-leaf-prefixes.json, not yet reviewed."
+			],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "STBD",
+			"parkerName": "Saint Bernard",
+			"id": "saint-bernard",
+			"variant": null,
+			"wikidata": "Q38090",
+			"fci": {
+				"number": 61
+			},
+			"basis": "Parker \"Saint Bernard\" = FCI 61 \"ST. BERNARD\" (same breed). Q38090 \"St. Bernard\" found by label search: it carries no FCI catalogue code on Wikidata.",
+			"doubts": [],
+			"alternatives": [],
+			"reviewed": false
+		},
+		{
+			"abbrev": "MAST",
+			"parkerName": "English Mastiff",
+			"id": "mastiff",
+			"variant": null,
+			"wikidata": "Q38418",
+			"fci": {
+				"number": 264
+			},
+			"basis": "Parker \"English Mastiff\" = FCI 264 \"MASTIFF\" (English name differs, same breed). Wikidata item carrying FCI catalogue code (P528, qualifier P972=Q38603) 264.",
+			"doubts": [
+				"Wikidata P495 is England (no ISO code), FCI says GREAT BRITAIN: the map will need GB."
+			],
+			"alternatives": [],
+			"reviewed": false
+		}
+	]
+}
