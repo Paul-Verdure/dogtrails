@@ -68,6 +68,7 @@ npm run data:tree      -> src/lib/data/tree.json (+ report: splits, variants, wa
 npm run data:fci       paiv/fci-breeds CSV at a pinned commit -> data/raw/fci-breeds/
 npm run data:wikidata  SPARQL on the QIDs of breed-names.json -> data/raw/wikidata-breeds.json
 npm run data:names-report  -> data/reports/breed-names.md (FCI vs Wikidata vs docs/PLAN.md)
+npm run data:merge     -> src/lib/data/breeds.json + data/reports/breeds.md (flags, DESIGN.md §10 status)
 npm run validate       Zod + cross-checks on generated JSON
 npm run maps           -> static/maps/{world,atlantic}-{night,day}.svg (Natural Earth via world-atlas)
 ```
@@ -82,6 +83,7 @@ npm run maps           -> static/maps/{world,atlantic}-{night,day}.svg (Natural 
 - Origin rule (Paul, 2026-11-04): `origin` = FCI country; Wikidata P495 only cross-checks, its
   disagreements are reported, never turned into `development` automatically. FCI regions stay regions
   (Saluki: "Middle East"). Breeds without FCI number (Rat Terrier) take their origin from Wikidata P495.
+- `data/manual/origin-places.json`: FCI country -> place (ISO, Wikidata item whose P625 is the map point).
 - `*` after a clade in supplement 1 = in that clade with < 50 % bootstrap: kept as `cladeLowSupport`.
 
 ## Conventions

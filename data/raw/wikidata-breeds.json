@@ -1,7 +1,7 @@
 {
 	"source": "Wikidata Query Service",
 	"endpoint": "https://query.wikidata.org/sparql",
-	"fetchedAt": "2026-11-04T09:35:31.630Z",
+	"fetchedAt": "2026-11-04T12:38:12.960Z",
 	"licence": "CC0 1.0 (Wikidata structured data)",
 	"qids": [
 		"Q653",

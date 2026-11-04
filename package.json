@@ -16,6 +16,7 @@
 		"data:fci": "node scripts/fetch-fci.ts",
 		"data:wikidata": "node scripts/fetch-wikidata.ts",
 		"data:names-report": "node scripts/report-names.ts",
+		"data:merge": "node scripts/merge-fci.ts",
 		"validate": "node scripts/validate.ts",
 		"maps": "node scripts/make-maps.ts"
 	},

@@ -10,44 +10,13 @@
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { breedNamesFileSchema } from '../src/lib/data/schemas/breed-names.ts';
 import { parseCsv } from './lib/csv.ts';
+import { FCI_GROUPS, PLAN_COUNTRY, readPlanSample } from './lib/sources.ts';
 
 const NAMES = 'data/manual/breed-names.json';
 const WIKIDATA = 'data/raw/wikidata-breeds.json';
 const FCI_DIR = 'data/raw/fci-breeds';
 const PLAN = 'docs/PLAN.md';
 const OUT = 'data/reports/breed-names.md';
-
-/** FCI group names as written in the export, in group order 1-10. */
-const FCI_GROUPS = [
-	'Sheepdogs and Cattledogs',
-	'Pinscher and Schnauzer',
-	'Terriers',
-	'Dachshunds',
-	'Spitz and primitive types',
-	'Scent hounds and related breeds',
-	'Pointing Dogs',
-	'Retrievers',
-	'Companion and Toy Dogs',
-	'Sighthounds'
-];
-/** French country names of PLAN.md -> country as written in the FCI export. */
-const PLAN_COUNTRY: Record<string, string> = {
-	Japon: 'JAPAN',
-	Chine: 'CHINA',
-	Tibet: 'Tibet (China)',
-	Belgique: 'BELGIUM',
-	Allemagne: 'GERMANY',
-	Islande: 'ICELAND',
-	Hongrie: 'HUNGARY',
-	France: 'FRANCE',
-	Mexique: 'MEXICO',
-	'États-Unis': 'UNITED STATES OF AMERICA',
-	Irlande: 'IRELAND',
-	'Moyen-Orient': 'MIDDLE EAST',
-	'Royaume-Uni': 'GREAT BRITAIN',
-	Canada: 'CANADA',
-	Suisse: 'SWITZERLAND'
-};
 
 /** FCI export country -> ISO 3166-1 alpha-2, to compare with Wikidata P495. Regions have none. */
 const FCI_ISO: Record<string, string> = {
@@ -85,12 +54,7 @@ for (const b of wd.results.results.bindings) {
 	wdItems.set(q, it);
 }
 
-// the 30-breed table of PLAN.md: | Race | Abrév. Parker | Clade | Groupe FCI | Pays d'origine (FCI) | Pourquoi |
-const plan = new Map<string, { group: string; country: string }>();
-for (const line of readFileSync(PLAN, 'utf8').split('\n')) {
-	const cells = line.split('|').map((c) => c.trim());
-	if (cells.length === 8 && /^[A-Z0-9]+$/.test(cells[2])) plan.set(cells[2], { group: cells[4], country: cells[5] });
-}
+const plan = readPlanSample(PLAN);
 
 const lines: string[] = [];
 const flags: string[] = [];

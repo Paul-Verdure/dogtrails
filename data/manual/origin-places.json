@@ -1,0 +1,163 @@
+{
+	"_about": "FCI country (or Wikidata P495 value) -> place on the map: kind, ISO 3166-1 alpha-2, Wikidata item whose P625 gives the point and P30 the continent. Drafted with Claude Code on 2026-11-04; reviewed=false until Paul checks it.",
+	"entries": [
+		{
+			"fciCountry": "JAPAN",
+			"label": "Japan",
+			"kind": "country",
+			"iso": "JP",
+			"wikidata": "Q17",
+			"basis": "FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "CHINA",
+			"label": "China",
+			"kind": "country",
+			"iso": "CN",
+			"wikidata": "Q148",
+			"basis": "FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [
+				"Wikidata P495 of the Pug points to a \"China\" item without ISO code (historical China), not to Q148."
+			],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "Tibet (China)",
+			"label": "Tibet (China)",
+			"kind": "country",
+			"iso": "CN",
+			"wikidata": "Q17269",
+			"basis": "FCI writes \"Tibet (China)\": ISO code of China (CN), point from Q17269 Tibet Autonomous Region (P625).",
+			"doubts": [
+				"Country CN but point in Tibet: the label keeps the FCI wording. Tibet as a region (no ISO) would be the alternative."
+			],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "BELGIUM",
+			"label": "Belgium",
+			"kind": "country",
+			"iso": "BE",
+			"wikidata": "Q31",
+			"basis": "FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "GERMANY",
+			"label": "Germany",
+			"kind": "country",
+			"iso": "DE",
+			"wikidata": "Q183",
+			"basis": "FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "ICELAND",
+			"label": "Iceland",
+			"kind": "country",
+			"iso": "IS",
+			"wikidata": "Q189",
+			"basis": "FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "HUNGARY",
+			"label": "Hungary",
+			"kind": "country",
+			"iso": "HU",
+			"wikidata": "Q28",
+			"basis": "FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "FRANCE",
+			"label": "France",
+			"kind": "country",
+			"iso": "FR",
+			"wikidata": "Q142",
+			"basis": "FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "MEXICO",
+			"label": "Mexico",
+			"kind": "country",
+			"iso": "MX",
+			"wikidata": "Q96",
+			"basis": "FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "UNITED STATES OF AMERICA",
+			"label": "United States",
+			"kind": "country",
+			"iso": "US",
+			"wikidata": "Q30",
+			"basis": "FCI country name; also the Wikidata P495 of the Rat Terrier (Q30). P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "IRELAND",
+			"label": "Ireland",
+			"kind": "country",
+			"iso": "IE",
+			"wikidata": "Q27",
+			"basis": "FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "GREAT BRITAIN",
+			"label": "Great Britain",
+			"kind": "country",
+			"iso": "GB",
+			"wikidata": "Q145",
+			"basis": "FCI writes GREAT BRITAIN; ISO GB belongs to the United Kingdom (Q145), whose P625 gives the point.",
+			"doubts": [
+				"Wikidata Q23666 \"Great Britain\" is the island (no ISO code, point -2.42, 53.83); Q145 is the United Kingdom. Label kept as written by the FCI."
+			],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "CANADA",
+			"label": "Canada",
+			"kind": "country",
+			"iso": "CA",
+			"wikidata": "Q16",
+			"basis": "FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "SWITZERLAND",
+			"label": "Switzerland",
+			"kind": "country",
+			"iso": "CH",
+			"wikidata": "Q39",
+			"basis": "FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "MIDDLE EAST",
+			"label": "Middle East",
+			"kind": "region",
+			"iso": null,
+			"wikidata": "Q7204",
+			"basis": "FCI writes MIDDLE EAST (Saluki): kept as a region (Paul, 2026-11-04). Q7204 \"Middle East\", P625 gives the point.",
+			"doubts": [
+				"Wikidata P30 of Q7204 lists Africa, Asia, Europe and Afro-Eurasia: no single continent."
+			],
+			"reviewed": false
+		}
+	]
+}

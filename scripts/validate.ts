@@ -14,12 +14,23 @@
  *   - every QID is in data/raw/wikidata-breeds.json, every FCI number in data/raw/fci-breeds/;
  *   - warnings (non-fatal): Wikidata FCI code differs from the table, unreviewed entries, doubts.
  *
+ * data/manual/origin-places.json: matches its schema; every place has one P625 point in data/raw.
+ *
+ * src/lib/data/breeds.json:
+ *   - matches the Zod schema: every factual field carries a sourceId naming one of the breed's sources;
+ *   - every breed has a leaf in tree.json and every leaf belongs to exactly one breed;
+ *   - id, QID, FCI number and variants agree with breed-names.json; family agrees with docs/DESIGN.md §2;
+ *   - origin coordinates are the P625 point of the place in data/raw/wikidata-places.json.
+ *
  * usage: node scripts/validate.ts [sample.json] [tree.json]
  */
 import { readFileSync } from 'node:fs';
 import { isLeaf, treeFileSchema, type TreeLeaf, type TreeNode } from '../src/lib/data/schemas/tree.ts';
 import { breedNamesFileSchema } from '../src/lib/data/schemas/breed-names.ts';
+import { breedsFileSchema } from '../src/lib/data/schemas/breeds.ts';
+import { originPlacesFileSchema } from '../src/lib/data/schemas/places.ts';
 import { parseCsv } from './lib/csv.ts';
+import { qidOf, readDesignFamilies, readWikidata } from './lib/sources.ts';
 
 const SAMPLE = process.argv[2] ?? 'data/sample-30.json';
 const TREE = process.argv[3] ?? 'src/lib/data/tree.json';
@@ -27,6 +38,9 @@ const NAMES = 'data/manual/breed-names.json';
 const WIKIDATA = 'data/raw/wikidata-breeds.json';
 const FCI_CSV = 'data/raw/fci-breeds/fci-breeds.csv';
 const PREFIXES = 'data/manual/parker-leaf-prefixes.json';
+const PLACES = 'data/manual/origin-places.json';
+const WD_PLACES = 'data/raw/wikidata-places.json';
+const BREEDS = 'src/lib/data/breeds.json';
 
 type SampleRow = { abbrev: string; name: string; clade: string };
 const sample = new Map(
@@ -128,6 +142,65 @@ const prefixes = JSON.parse(readFileSync(PREFIXES, 'utf8')) as { aliases: { revi
 const unreviewedPrefixes = prefixes.aliases.filter((a) => !a.reviewed).length;
 if (unreviewedPrefixes) warnings.push(`${PREFIXES}: ${unreviewedPrefixes}/${prefixes.aliases.length} aliases not reviewed`);
 
+// ---------------------------------------------------------------- origin-places.json
+const points = new Map<string, Set<string>>();
+for (const b of readWikidata(WD_PLACES).results.results.bindings) {
+	const q = qidOf(b.item!.value);
+	const set = points.get(q) ?? new Set<string>();
+	if (b.coord) set.add(b.coord.value);
+	points.set(q, set);
+}
+const placesParsed = originPlacesFileSchema.safeParse(JSON.parse(readFileSync(PLACES, 'utf8')));
+if (!placesParsed.success) errors.push(...placesParsed.error.issues.map((i) => `${PLACES}: ${i.path.join('.')}: ${i.message}`));
+else {
+	for (const p of placesParsed.data.entries)
+		if (points.get(p.wikidata)?.size !== 1) errors.push(`${PLACES}: ${p.label} (${p.wikidata}) needs exactly one P625 point in ${WD_PLACES}`);
+	const unreviewed = placesParsed.data.entries.filter((p) => !p.reviewed).length;
+	if (unreviewed) warnings.push(`${PLACES}: ${unreviewed}/${placesParsed.data.entries.length} places not reviewed`);
+}
+
+// ---------------------------------------------------------------- breeds.json
+const breedsParsed = breedsFileSchema.safeParse(JSON.parse(readFileSync(BREEDS, 'utf8')));
+if (!breedsParsed.success) errors.push(...breedsParsed.error.issues.map((i) => `${BREEDS}: ${i.path.join('.')}: ${i.message}`));
+else if (namesParsed.success) {
+	const nameEntries = new Map(namesParsed.data.entries.map((e) => [e.abbrev, e]));
+	const families = readDesignFamilies();
+	const owner = new Map<string, string>();
+	for (const b of breedsParsed.data.breeds) {
+		const where = `${BREEDS}: ${b.id}`;
+		for (const pe of b.parker.entries) {
+			const ne = nameEntries.get(pe.abbrev);
+			if (!ne) {
+				errors.push(`${where}: ${pe.abbrev} not in ${NAMES}`);
+				continue;
+			}
+			if (ne.id !== b.id) errors.push(`${where}: ${pe.abbrev} belongs to "${ne.id}" in ${NAMES}`);
+			if (ne.wikidata !== b.wikidata) errors.push(`${where}: QID ${b.wikidata}, ${NAMES} says ${ne.wikidata}`);
+			if (ne.fci.number !== b.fci.number) errors.push(`${where}: FCI ${b.fci.number}, ${NAMES} says ${ne.fci.number}`);
+			if (ne.variant !== pe.variant) errors.push(`${where}: ${pe.abbrev} variant ${pe.variant}, ${NAMES} says ${ne.variant}`);
+			if (pe.inTree !== leavesByBreed.has(pe.abbrev)) errors.push(`${where}: ${pe.abbrev} inTree=${pe.inTree} disagrees with ${TREE}`);
+			if (pe.inTree) {
+				if (owner.has(pe.abbrev)) errors.push(`${where}: leaf ${pe.abbrev} already belongs to ${owner.get(pe.abbrev)}`);
+				owner.set(pe.abbrev, b.id);
+				if (families.get(pe.abbrev) !== b.family.id) errors.push(`${where}: family ${b.family.id}, docs/DESIGN.md §2 says ${families.get(pe.abbrev)}`);
+				if (summaries.get(pe.abbrev)?.cladeId !== b.parker.cladeId) errors.push(`${where}: clade ${b.parker.cladeId} disagrees with ${TREE}`);
+			}
+		}
+		for (const ne of nameEntries.values())
+			if (ne.id === b.id && !b.parker.entries.some((pe) => pe.abbrev === ne.abbrev)) errors.push(`${where}: misses Parker entry ${ne.abbrev}`);
+		const coordsSource = b.sources.find((s) => s.id === b.origin.coords.sourceId);
+		const pq = coordsSource?.url ? qidOf(coordsSource.url) : undefined;
+		const [lon, lat] = b.origin.coords.lonLat;
+		const pt = pq ? [...(points.get(pq) ?? [])][0] : undefined;
+		const m = pt ? /^Point\((-?[\d.]+) (-?[\d.]+)\)$/.exec(pt) : null;
+		if (!m || Number(m[1]) !== lon || Number(m[2]) !== lat)
+			errors.push(`${where}: origin ${lon}, ${lat} is not the P625 point of ${pq ?? 'its source'} (${pt ?? 'none'})`);
+		const used = new Set(JSON.stringify(b).match(/"sourceId":"[^"]+"/g)?.map((m) => m.slice(12, -1)));
+		for (const s of b.sources) if (!used.has(s.id)) warnings.push(`${where}: source ${s.id} is never cited`);
+	}
+	for (const ab of leavesByBreed.keys()) if (!owner.has(ab)) errors.push(`${BREEDS}: tree leaf ${ab} belongs to no breed`);
+}
+
 if (warnings.length) console.warn(`warnings (${warnings.length})\n  ${warnings.join('\n  ')}`);
 if (errors.length) {
 	console.error(`${errors.length} error(s)\n  ${errors.join('\n  ')}`);
@@ -135,3 +208,4 @@ if (errors.length) {
 }
 console.log(`${TREE}: OK (${leaves.length} leaves, ${sample.size} breeds, ${seenDogs.size} dogs, split: ${tree.splitBreeds.join(', ') || 'none'})`);
 console.log(`${NAMES}: OK (every tree leaf and variant has an entry; QIDs and FCI numbers found in data/raw)`);
+console.log(`${BREEDS}: OK (${breedsParsed.data?.breeds.length} breeds, one per tree leaf, every fact sourced)`);

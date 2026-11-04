@@ -1,0 +1,2821 @@
+{
+	"source": {
+		"description": "Breeds of the Parker 2017 sample with their FCI classification, Wikidata names and image, Parker clade, origin point and editorial colour family. Each fact names its source in sources[].",
+		"inputs": [
+			"data/manual/breed-names.json",
+			"data/manual/origin-places.json",
+			"src/lib/data/tree.json",
+			"data/raw/fci-breeds/fci-breeds.csv",
+			"data/raw/wikidata-breeds.json",
+			"data/raw/wikidata-places.json",
+			"docs/DESIGN.md §2"
+		],
+		"notes": [
+			"origin = FCI country (Paul, 2026-11-04); Wikidata P495 is a cross-check only, its disagreements are in data/reports/breeds.md.",
+			"Names are Wikidata labels with the first letter upper-cased.",
+			"family is an editorial choice (docs/DESIGN.md §2), not genetic data.",
+			"development and fixedAround stay empty until a source gives them."
+		]
+	},
+	"generatedBy": "scripts/merge-fci.ts",
+	"generatedAt": "2026-11-04T12:41:40.636Z",
+	"breeds": [
+		{
+			"id": "american-akita",
+			"names": {
+				"en": "American Akita",
+				"fr": "Akita américain",
+				"nl": "Amerikaanse akita",
+				"sourceId": "wikidata-q37534"
+			},
+			"wikidata": "Q37534",
+			"fci": {
+				"number": 344,
+				"group": 5,
+				"section": "Asian Spitz and related breeds",
+				"provisional": null,
+				"sourceId": "fci-344"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "AKIT",
+						"name": "Akita",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Asian Spitz",
+				"cladeId": "asian-spitz",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "ancient",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "JP",
+					"label": "Japan",
+					"sourceId": "fci-344"
+				},
+				"coords": {
+					"lonLat": [
+						136,
+						35
+					],
+					"sourceId": "wikidata-q17"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Akita Americano v3.jpg",
+				"sourceId": "wikidata-q37534"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q37534",
+					"kind": "wikidata",
+					"citation": "Wikidata Q37534 (American Akita)",
+					"url": "https://www.wikidata.org/wiki/Q37534",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-344",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 344 \"AMERICAN AKITA\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/AMERICAN-AKITA-344.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q17",
+					"kind": "wikidata",
+					"citation": "Wikidata Q17 (Japan, P625)",
+					"url": "https://www.wikidata.org/wiki/Q17",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "american-cocker-spaniel",
+			"names": {
+				"en": "American Cocker Spaniel",
+				"fr": "Cocker américain",
+				"nl": "Amerikaanse cockerspaniël",
+				"sourceId": "wikidata-q38063"
+			},
+			"wikidata": "Q38063",
+			"fci": {
+				"number": 167,
+				"group": 8,
+				"section": "Flushing Dogs",
+				"provisional": null,
+				"sourceId": "fci-167"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "ACKR",
+						"name": "American Cocker Spaniel",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Spaniel",
+				"cladeId": "spaniel",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "hunting",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "US",
+					"label": "United States",
+					"sourceId": "fci-167"
+				},
+				"coords": {
+					"lonLat": [
+						-98.5795,
+						39.828175
+					],
+					"sourceId": "wikidata-q30"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "AmericanCockerSpaniel wb.jpg",
+				"sourceId": "wikidata-q38063"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38063",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38063 (American Cocker Spaniel)",
+					"url": "https://www.wikidata.org/wiki/Q38063",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-167",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 167 \"AMERICAN COCKER SPANIEL\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/AMERICAN-COCKER-SPANIEL-167.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q30",
+					"kind": "wikidata",
+					"citation": "Wikidata Q30 (United States, P625)",
+					"url": "https://www.wikidata.org/wiki/Q30",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "basset-hound",
+			"names": {
+				"en": "Basset hound",
+				"fr": "Basset hound",
+				"nl": "Basset hound",
+				"sourceId": "wikidata-q37716"
+			},
+			"wikidata": "Q37716",
+			"fci": {
+				"number": 163,
+				"group": 6,
+				"section": "Scent hounds",
+				"provisional": null,
+				"sourceId": "fci-163"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "BASS",
+						"name": "Basset Hound",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Scent Hound",
+				"cladeId": "scent-hound",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "hunting",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "GB",
+					"label": "Great Britain",
+					"sourceId": "fci-163"
+				},
+				"coords": {
+					"lonLat": [
+						-2,
+						54.6
+					],
+					"sourceId": "wikidata-q145"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Basset Hound 600.jpg",
+				"sourceId": "wikidata-q37716"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q37716",
+					"kind": "wikidata",
+					"citation": "Wikidata Q37716 (basset hound)",
+					"url": "https://www.wikidata.org/wiki/Q37716",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-163",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 163 \"BASSET HOUND\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/BASSET-HOUND-163.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q145",
+					"kind": "wikidata",
+					"citation": "Wikidata Q145 (United Kingdom, P625)",
+					"url": "https://www.wikidata.org/wiki/Q145",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "beagle",
+			"names": {
+				"en": "Beagle",
+				"fr": "Beagle",
+				"nl": "Beagle",
+				"sourceId": "wikidata-q21102"
+			},
+			"wikidata": "Q21102",
+			"fci": {
+				"number": 161,
+				"group": 6,
+				"section": "Scent hounds",
+				"provisional": null,
+				"sourceId": "fci-161"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "BEAG",
+						"name": "Beagle",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Scent Hound",
+				"cladeId": "scent-hound",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "hunting",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "GB",
+					"label": "Great Britain",
+					"sourceId": "fci-161"
+				},
+				"coords": {
+					"lonLat": [
+						-2,
+						54.6
+					],
+					"sourceId": "wikidata-q145"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "MiloSmet.JPG",
+				"sourceId": "wikidata-q21102"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q21102",
+					"kind": "wikidata",
+					"citation": "Wikidata Q21102 (beagle)",
+					"url": "https://www.wikidata.org/wiki/Q21102",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-161",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 161 \"BEAGLE\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/BEAGLE-161.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q145",
+					"kind": "wikidata",
+					"citation": "Wikidata Q145 (United Kingdom, P625)",
+					"url": "https://www.wikidata.org/wiki/Q145",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "border-collie",
+			"names": {
+				"en": "Border collie",
+				"fr": "Border Collie",
+				"nl": "Bordercollie",
+				"sourceId": "wikidata-q37710"
+			},
+			"wikidata": "Q37710",
+			"fci": {
+				"number": 297,
+				"group": 1,
+				"section": "Sheepdogs",
+				"provisional": null,
+				"sourceId": "fci-297"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "BORD",
+						"name": "Border Collie",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "UK Rural",
+				"cladeId": "uk-rural",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "herding",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "GB",
+					"label": "Great Britain",
+					"sourceId": "fci-297"
+				},
+				"coords": {
+					"lonLat": [
+						-2,
+						54.6
+					],
+					"sourceId": "wikidata-q145"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Argentine border collie.jpg",
+				"sourceId": "wikidata-q37710"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q37710",
+					"kind": "wikidata",
+					"citation": "Wikidata Q37710 (border collie)",
+					"url": "https://www.wikidata.org/wiki/Q37710",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-297",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 297 \"BORDER COLLIE\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/BORDER-COLLIE-297.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q145",
+					"kind": "wikidata",
+					"citation": "Wikidata Q145 (United Kingdom, P625)",
+					"url": "https://www.wikidata.org/wiki/Q145",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "briard",
+			"names": {
+				"en": "Briard",
+				"fr": "Berger de Brie",
+				"nl": "Briard",
+				"sourceId": "wikidata-q37821"
+			},
+			"wikidata": "Q37821",
+			"fci": {
+				"number": 113,
+				"group": 1,
+				"section": "Sheepdogs",
+				"provisional": null,
+				"sourceId": "fci-113"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "BRIA",
+						"name": "Briard",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Continental Herder",
+				"cladeId": "continental-herder",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "herding",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "FR",
+					"label": "France",
+					"sourceId": "fci-113"
+				},
+				"coords": {
+					"lonLat": [
+						2,
+						47
+					],
+					"sourceId": "wikidata-q142"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Briard fauve.JPG",
+				"sourceId": "wikidata-q37821"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q37821",
+					"kind": "wikidata",
+					"citation": "Wikidata Q37821 (Briard)",
+					"url": "https://www.wikidata.org/wiki/Q37821",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-113",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 113 \"BRIARD\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/BRIARD-113.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q142",
+					"kind": "wikidata",
+					"citation": "Wikidata Q142 (France, P625)",
+					"url": "https://www.wikidata.org/wiki/Q142",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "brussels-griffon",
+			"names": {
+				"en": "Griffon Bruxellois",
+				"fr": "Griffon bruxellois",
+				"nl": "Griffon bruxellois",
+				"sourceId": "wikidata-q38889"
+			},
+			"wikidata": "Q38889",
+			"fci": {
+				"number": 80,
+				"group": 9,
+				"section": "Small Belgian Dogs",
+				"provisional": null,
+				"sourceId": "fci-80"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "BRUS",
+						"name": "Brussels Griffon",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Toy Spitz",
+				"cladeId": "toy-spitz",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "companion",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "BE",
+					"label": "Belgium",
+					"sourceId": "fci-80"
+				},
+				"coords": {
+					"lonLat": [
+						4.668055555,
+						50.641111111
+					],
+					"sourceId": "wikidata-q31"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Monkey Bizniz Drama Queen.jpg",
+				"sourceId": "wikidata-q38889"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38889",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38889 (Griffon Bruxellois)",
+					"url": "https://www.wikidata.org/wiki/Q38889",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-80",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 80 \"GRIFFON BRUXELLOIS\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/GRIFFON-BRUXELLOIS-80.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q31",
+					"kind": "wikidata",
+					"citation": "Wikidata Q31 (Belgium, P625)",
+					"url": "https://www.wikidata.org/wiki/Q31",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "chihuahua",
+			"names": {
+				"en": "Chihuahua",
+				"fr": "Chihuahua",
+				"nl": "Chihuahua",
+				"sourceId": "wikidata-q653"
+			},
+			"wikidata": "Q653",
+			"fci": {
+				"number": 218,
+				"group": 9,
+				"section": "Chihuahueno",
+				"provisional": null,
+				"sourceId": "fci-218"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "CHIH",
+						"name": "Chihuahua",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "American Toy",
+				"cladeId": "american-toy",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "companion",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "MX",
+					"label": "Mexico",
+					"sourceId": "fci-218"
+				},
+				"coords": {
+					"lonLat": [
+						-102,
+						23
+					],
+					"sourceId": "wikidata-q96"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Chihuahuas- Holly, Nina, Doralice.jpg",
+				"sourceId": "wikidata-q653"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q653",
+					"kind": "wikidata",
+					"citation": "Wikidata Q653 (Chihuahua)",
+					"url": "https://www.wikidata.org/wiki/Q653",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-218",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 218 \"CHIHUAHUA\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/CHIHUAHUA-218.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q96",
+					"kind": "wikidata",
+					"citation": "Wikidata Q96 (Mexico, P625)",
+					"url": "https://www.wikidata.org/wiki/Q96",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "chinese-crested-dog",
+			"names": {
+				"en": "Chinese Crested Dog",
+				"fr": "Chien chinois à crête",
+				"nl": "Chinese gekuifde naakthond",
+				"sourceId": "wikidata-q37892"
+			},
+			"wikidata": "Q37892",
+			"fci": {
+				"number": 288,
+				"group": 9,
+				"section": "Hairless Dogs",
+				"provisional": null,
+				"sourceId": "fci-288"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "CRES",
+						"name": "Chinese Crested",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "American Toy",
+				"cladeId": "american-toy",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "companion",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "CN",
+					"label": "China",
+					"sourceId": "fci-288"
+				},
+				"coords": {
+					"lonLat": [
+						103.451944444,
+						35.844722222
+					],
+					"sourceId": "wikidata-q148"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "IndyStands.jpg",
+				"sourceId": "wikidata-q37892"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q37892",
+					"kind": "wikidata",
+					"citation": "Wikidata Q37892 (Chinese Crested Dog)",
+					"url": "https://www.wikidata.org/wiki/Q37892",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-288",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 288 \"CHINESE CRESTED DOG\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/CHINESE-CRESTED-DOG-288.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q148",
+					"kind": "wikidata",
+					"citation": "Wikidata Q148 (People's Republic of China, P625)",
+					"url": "https://www.wikidata.org/wiki/Q148",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "chow-chow",
+			"names": {
+				"en": "Chow Chow",
+				"fr": "Chow-chow",
+				"nl": "Chowchow",
+				"sourceId": "wikidata-q29013"
+			},
+			"wikidata": "Q29013",
+			"fci": {
+				"number": 205,
+				"group": 5,
+				"section": "Asian Spitz and related breeds",
+				"provisional": null,
+				"sourceId": "fci-205"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "CHOW",
+						"name": "Chow Chow",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Asian Spitz",
+				"cladeId": "asian-spitz",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "ancient",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "CN",
+					"label": "China",
+					"sourceId": "fci-205"
+				},
+				"coords": {
+					"lonLat": [
+						103.451944444,
+						35.844722222
+					],
+					"sourceId": "wikidata-q148"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "01 Chow Chow.jpg",
+				"sourceId": "wikidata-q29013"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q29013",
+					"kind": "wikidata",
+					"citation": "Wikidata Q29013 (Chow Chow)",
+					"url": "https://www.wikidata.org/wiki/Q29013",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-205",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 205 \"CHOW CHOW\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/CHOW-CHOW-205.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q148",
+					"kind": "wikidata",
+					"citation": "Wikidata Q148 (People's Republic of China, P625)",
+					"url": "https://www.wikidata.org/wiki/Q148",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "german-shepherd",
+			"names": {
+				"en": "German Shepherd",
+				"fr": "Berger allemand",
+				"nl": "Duitse herder",
+				"sourceId": "wikidata-q38280"
+			},
+			"wikidata": "Q38280",
+			"fci": {
+				"number": 166,
+				"group": 1,
+				"section": "Sheepdogs",
+				"provisional": null,
+				"sourceId": "fci-166"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "GSD",
+						"name": "German Shepherd Dog",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "New World",
+				"cladeId": "new-world",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "herding",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "DE",
+					"label": "Germany",
+					"sourceId": "fci-166"
+				},
+				"coords": {
+					"lonLat": [
+						10,
+						51
+					],
+					"sourceId": "wikidata-q183"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Pastor aleman a.jpg",
+				"sourceId": "wikidata-q38280"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38280",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38280 (German Shepherd)",
+					"url": "https://www.wikidata.org/wiki/Q38280",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-166",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 166 \"GERMAN SHEPHERD DOG\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/GERMAN-SHEPHERD-DOG-166.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q183",
+					"kind": "wikidata",
+					"citation": "Wikidata Q183 (Germany, P625)",
+					"url": "https://www.wikidata.org/wiki/Q183",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "german-shorthaired-pointer",
+			"names": {
+				"en": "German Shorthaired Pointer",
+				"fr": "Braque allemand",
+				"nl": "Duitse staande hond",
+				"sourceId": "wikidata-q38084"
+			},
+			"wikidata": "Q38084",
+			"fci": {
+				"number": 119,
+				"group": 7,
+				"section": "Continental Pointing Dogs",
+				"provisional": null,
+				"sourceId": "fci-119"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "GSHP",
+						"name": "German Shorthaired Pointer",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Pointer Setter",
+				"cladeId": "pointer-setter",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "hunting",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "DE",
+					"label": "Germany",
+					"sourceId": "fci-119"
+				},
+				"coords": {
+					"lonLat": [
+						10,
+						51
+					],
+					"sourceId": "wikidata-q183"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Duitse staande korthaar 10-10-1.jpg",
+				"sourceId": "wikidata-q38084"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38084",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38084 (German Shorthaired Pointer)",
+					"url": "https://www.wikidata.org/wiki/Q38084",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-119",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 119 \"GERMAN SHORT- HAIRED POINTING DOG\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/GERMAN-SHORT-HAIRED-POINTING-DOG-119.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q183",
+					"kind": "wikidata",
+					"citation": "Wikidata Q183 (Germany, P625)",
+					"url": "https://www.wikidata.org/wiki/Q183",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "german-spitz",
+			"names": {
+				"en": "German Spitz",
+				"fr": "Spitz allemand",
+				"nl": "German Spitz",
+				"sourceId": "wikidata-q38655"
+			},
+			"wikidata": "Q38655",
+			"fci": {
+				"number": 97,
+				"group": 5,
+				"section": "European Spitz",
+				"provisional": null,
+				"sourceId": "fci-97"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "POM",
+						"name": "Pomeranian",
+						"variant": "pomeranian",
+						"inTree": true
+					}
+				],
+				"clade": "Small Spitz",
+				"cladeId": "small-spitz",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "spitz",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "DE",
+					"label": "Germany",
+					"sourceId": "fci-97"
+				},
+				"coords": {
+					"lonLat": [
+						10,
+						51
+					],
+					"sourceId": "wikidata-q183"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Un chien Spitz allemand.jpg",
+				"sourceId": "wikidata-q38655"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38655",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38655 (German Spitz)",
+					"url": "https://www.wikidata.org/wiki/Q38655",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-97",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 97 \"GERMAN SPITZ\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/GERMAN-SPITZ-97.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q183",
+					"kind": "wikidata",
+					"citation": "Wikidata Q183 (Germany, P625)",
+					"url": "https://www.wikidata.org/wiki/Q183",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "golden-retriever",
+			"names": {
+				"en": "Golden Retriever",
+				"fr": "Golden retriever",
+				"nl": "Golden retriever",
+				"sourceId": "wikidata-q38686"
+			},
+			"wikidata": "Q38686",
+			"fci": {
+				"number": 111,
+				"group": 8,
+				"section": "Retrievers",
+				"provisional": null,
+				"sourceId": "fci-111"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "GOLD",
+						"name": "Golden Retriever",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Retriever",
+				"cladeId": "retriever",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "hunting",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "GB",
+					"label": "Great Britain",
+					"sourceId": "fci-111"
+				},
+				"coords": {
+					"lonLat": [
+						-2,
+						54.6
+					],
+					"sourceId": "wikidata-q145"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Golden Retriever Dukedestiny01 drvd.jpg",
+				"sourceId": "wikidata-q38686"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38686",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38686 (Golden Retriever)",
+					"url": "https://www.wikidata.org/wiki/Q38686",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-111",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 111 \"GOLDEN RETRIEVER\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/GOLDEN-RETRIEVER-111.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q145",
+					"kind": "wikidata",
+					"citation": "Wikidata Q145 (United Kingdom, P625)",
+					"url": "https://www.wikidata.org/wiki/Q145",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "icelandic-sheepdog",
+			"names": {
+				"en": "Icelandic Sheepdog",
+				"fr": "Berger islandais",
+				"nl": "IJslandse hond",
+				"sourceId": "wikidata-q38710"
+			},
+			"wikidata": "Q38710",
+			"fci": {
+				"number": 289,
+				"group": 5,
+				"section": "Nordic Watchdogs and Herders",
+				"provisional": null,
+				"sourceId": "fci-289"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "ICES",
+						"name": "Icelandic Sheepdog",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Nordic Spitz",
+				"cladeId": "nordic-spitz",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "spitz",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "IS",
+					"label": "Iceland",
+					"sourceId": "fci-289"
+				},
+				"coords": {
+					"lonLat": [
+						-19,
+						65
+					],
+					"sourceId": "wikidata-q189"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Ulfur.jpg",
+				"sourceId": "wikidata-q38710"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38710",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38710 (Icelandic Sheepdog)",
+					"url": "https://www.wikidata.org/wiki/Q38710",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-289",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 289 \"ICELANDIC SHEEPDOG\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/ICELANDIC-SHEEPDOG-289.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q189",
+					"kind": "wikidata",
+					"citation": "Wikidata Q189 (Iceland, P625)",
+					"url": "https://www.wikidata.org/wiki/Q189",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "irish-terrier",
+			"names": {
+				"en": "Irish Terrier",
+				"fr": "Terrier irlandais",
+				"nl": "Ierse terriër",
+				"sourceId": "wikidata-q38644"
+			},
+			"wikidata": "Q38644",
+			"fci": {
+				"number": 139,
+				"group": 3,
+				"section": "Large and medium sized Terriers",
+				"provisional": null,
+				"sourceId": "fci-139"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "IRIT",
+						"name": "Irish Terrier",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Terrier",
+				"cladeId": "terrier",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "terrier",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "IE",
+					"label": "Ireland",
+					"sourceId": "fci-139"
+				},
+				"coords": {
+					"lonLat": [
+						-8,
+						53
+					],
+					"sourceId": "wikidata-q27"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Irish Terrier P1060074.jpg",
+				"sourceId": "wikidata-q38644"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38644",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38644 (Irish Terrier)",
+					"url": "https://www.wikidata.org/wiki/Q38644",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-139",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 139 \"IRISH TERRIER\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/IRISH-TERRIER-139.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q27",
+					"kind": "wikidata",
+					"citation": "Wikidata Q27 (Ireland, P625)",
+					"url": "https://www.wikidata.org/wiki/Q27",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "mastiff",
+			"names": {
+				"en": "English Mastiff",
+				"fr": "Mastiff",
+				"nl": "Mastiff",
+				"sourceId": "wikidata-q38418"
+			},
+			"wikidata": "Q38418",
+			"fci": {
+				"number": 264,
+				"group": 2,
+				"section": "Molossian type",
+				"provisional": null,
+				"sourceId": "fci-264"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "MAST",
+						"name": "English Mastiff",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "European Mastiff",
+				"cladeId": "european-mastiff",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "mastiff",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "GB",
+					"label": "Great Britain",
+					"sourceId": "fci-264"
+				},
+				"coords": {
+					"lonLat": [
+						-2,
+						54.6
+					],
+					"sourceId": "wikidata-q145"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Mastif angielski pregowany nn.jpg",
+				"sourceId": "wikidata-q38418"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38418",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38418 (English Mastiff)",
+					"url": "https://www.wikidata.org/wiki/Q38418",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-264",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 264 \"MASTIFF\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/MASTIFF-264.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q145",
+					"kind": "wikidata",
+					"citation": "Wikidata Q145 (United Kingdom, P625)",
+					"url": "https://www.wikidata.org/wiki/Q145",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "miniature-pinscher",
+			"names": {
+				"en": "Miniature Pinscher",
+				"fr": "Pinscher nain",
+				"nl": "Dwergpinscher",
+				"sourceId": "wikidata-q38990"
+			},
+			"wikidata": "Q38990",
+			"fci": {
+				"number": 185,
+				"group": 2,
+				"section": "Pinscher and Schnauzer type",
+				"provisional": null,
+				"sourceId": "fci-185"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "MPIN",
+						"name": "Miniature Pinscher",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Pinscher",
+				"cladeId": "pinscher",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "terrier",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "DE",
+					"label": "Germany",
+					"sourceId": "fci-185"
+				},
+				"coords": {
+					"lonLat": [
+						10,
+						51
+					],
+					"sourceId": "wikidata-q183"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Grupp 2 DVÄRGPINCHER, Pincerella’s Rinaldo Rosso (24260846206).jpg",
+				"sourceId": "wikidata-q38990"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38990",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38990 (Miniature Pinscher)",
+					"url": "https://www.wikidata.org/wiki/Q38990",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-185",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 185 \"MINIATURE PINSCHER\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/MINIATURE-PINSCHER-185.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q183",
+					"kind": "wikidata",
+					"citation": "Wikidata Q183 (Germany, P625)",
+					"url": "https://www.wikidata.org/wiki/Q183",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "miniature-schnauzer",
+			"names": {
+				"en": "Miniature Schnauzer",
+				"fr": "Schnauzer miniature",
+				"nl": "Miniature Schnauzer",
+				"sourceId": "wikidata-q38999"
+			},
+			"wikidata": "Q38999",
+			"fci": {
+				"number": 183,
+				"group": 2,
+				"section": "Pinscher and Schnauzer type",
+				"provisional": null,
+				"sourceId": "fci-183"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "MSNZ",
+						"name": "Miniature Schnauzer",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Schnauzer",
+				"cladeId": "schnauzer",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "terrier",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "DE",
+					"label": "Germany",
+					"sourceId": "fci-183"
+				},
+				"coords": {
+					"lonLat": [
+						10,
+						51
+					],
+					"sourceId": "wikidata-q183"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Питомник \"Ассон Ари\" Цвергшнауцеры белые и черные с серебром 12.jpg",
+				"sourceId": "wikidata-q38999"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38999",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38999 (Miniature Schnauzer)",
+					"url": "https://www.wikidata.org/wiki/Q38999",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-183",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 183 \"MINIATURE SCHNAUZER\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/MINIATURE-SCHNAUZER-183.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q183",
+					"kind": "wikidata",
+					"citation": "Wikidata Q183 (Germany, P625)",
+					"url": "https://www.wikidata.org/wiki/Q183",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "nova-scotia-duck-tolling-retriever",
+			"names": {
+				"en": "Nova Scotia Duck Tolling Retriever",
+				"fr": "Retriever de la Nouvelle-Écosse",
+				"nl": "Nova Scotia duck tolling retriever",
+				"sourceId": "wikidata-q38824"
+			},
+			"wikidata": "Q38824",
+			"fci": {
+				"number": 312,
+				"group": 8,
+				"section": "Retrievers",
+				"provisional": null,
+				"sourceId": "fci-312"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "NSDT",
+						"name": "Nova Scotia Duck Tolling Retriever",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Retriever",
+				"cladeId": "retriever",
+				"cladeLowSupport": true,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "hunting",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "CA",
+					"label": "Canada",
+					"sourceId": "fci-312"
+				},
+				"coords": {
+					"lonLat": [
+						-109,
+						56
+					],
+					"sourceId": "wikidata-q16"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Duck Toller.jpg",
+				"sourceId": "wikidata-q38824"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38824",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38824 (Nova Scotia Duck Tolling Retriever)",
+					"url": "https://www.wikidata.org/wiki/Q38824",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-312",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 312 \"NOVA SCOTIA DUCK TOLLING RETRIEVER\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/NOVA-SCOTIA-DUCK-TOLLING-RETRIEVER-312.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q16",
+					"kind": "wikidata",
+					"citation": "Wikidata Q16 (Canada, P625)",
+					"url": "https://www.wikidata.org/wiki/Q16",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "poodle",
+			"names": {
+				"en": "Poodle",
+				"fr": "Caniche",
+				"nl": "Franse poedel",
+				"sourceId": "wikidata-q38904"
+			},
+			"wikidata": "Q38904",
+			"fci": {
+				"number": 172,
+				"group": 9,
+				"section": "Poodle",
+				"provisional": null,
+				"sourceId": "fci-172"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "SPOO",
+						"name": "Poodle - Standard",
+						"variant": "standard",
+						"inTree": true
+					},
+					{
+						"abbrev": "MPOO",
+						"name": "Poodle - Miniature",
+						"variant": "miniature",
+						"inTree": false
+					},
+					{
+						"abbrev": "TPOO",
+						"name": "Poodle - Toy",
+						"variant": "toy",
+						"inTree": false
+					}
+				],
+				"clade": "Poodle",
+				"cladeId": "poodle",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "companion",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "FR",
+					"label": "France",
+					"sourceId": "fci-172"
+				},
+				"coords": {
+					"lonLat": [
+						2,
+						47
+					],
+					"sourceId": "wikidata-q142"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Miniature Poodle (Hungary).jpg",
+				"sourceId": "wikidata-q38904"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38904",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38904 (poodle)",
+					"url": "https://www.wikidata.org/wiki/Q38904",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-172",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 172 \"POODLE\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/POODLE-172.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q142",
+					"kind": "wikidata",
+					"citation": "Wikidata Q142 (France, P625)",
+					"url": "https://www.wikidata.org/wiki/Q142",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "pug",
+			"names": {
+				"en": "Pug",
+				"fr": "Carlin",
+				"nl": "Mopshond",
+				"sourceId": "wikidata-q38698"
+			},
+			"wikidata": "Q38698",
+			"fci": {
+				"number": 253,
+				"group": 9,
+				"section": "Small Molossian type Dogs",
+				"provisional": null,
+				"sourceId": "fci-253"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "PUG",
+						"name": "Pug Dog",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Toy Spitz",
+				"cladeId": "toy-spitz",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "companion",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "CN",
+					"label": "China",
+					"sourceId": "fci-253"
+				},
+				"coords": {
+					"lonLat": [
+						103.451944444,
+						35.844722222
+					],
+					"sourceId": "wikidata-q148"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "2.5-year-old fawn male pug.jpg",
+				"sourceId": "wikidata-q38698"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38698",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38698 (pug)",
+					"url": "https://www.wikidata.org/wiki/Q38698",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-253",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 253 \"PUG\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/PUG-253.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q148",
+					"kind": "wikidata",
+					"citation": "Wikidata Q148 (People's Republic of China, P625)",
+					"url": "https://www.wikidata.org/wiki/Q148",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "puli",
+			"names": {
+				"en": "Puli",
+				"fr": "Puli",
+				"nl": "Puli",
+				"sourceId": "wikidata-q38864"
+			},
+			"wikidata": "Q38864",
+			"fci": {
+				"number": 55,
+				"group": 1,
+				"section": "Sheepdogs",
+				"provisional": null,
+				"sourceId": "fci-55"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "PULI",
+						"name": "Puli",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Hungarian",
+				"cladeId": "hungarian",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "herding",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "HU",
+					"label": "Hungary",
+					"sourceId": "fci-55"
+				},
+				"coords": {
+					"lonLat": [
+						19,
+						47
+					],
+					"sourceId": "wikidata-q28"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Puli 600.jpg",
+				"sourceId": "wikidata-q38864"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38864",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38864 (Puli)",
+					"url": "https://www.wikidata.org/wiki/Q38864",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-55",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 55 \"PULI\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/PULI-55.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q28",
+					"kind": "wikidata",
+					"citation": "Wikidata Q28 (Hungary, P625)",
+					"url": "https://www.wikidata.org/wiki/Q28",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "rat-terrier",
+			"names": {
+				"en": "Rat Terrier",
+				"fr": "Rat Terrier",
+				"nl": "Rat Terrier",
+				"sourceId": "wikidata-q38431"
+			},
+			"wikidata": "Q38431",
+			"fci": {
+				"number": null,
+				"reason": "No FCI breed of that name or close to it in the FCI nomenclature (fci-breeds export, commit 88aaca5)."
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "RATT",
+						"name": "Rat Terrier",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "American Terrier",
+				"cladeId": "american-terrier",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "terrier",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "US",
+					"label": "United States",
+					"sourceId": "wikidata-q38431"
+				},
+				"coords": {
+					"lonLat": [
+						-98.5795,
+						39.828175
+					],
+					"sourceId": "wikidata-q30"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "AmRatTerr11 fx wb.jpg",
+				"sourceId": "wikidata-q38431"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38431",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38431 (Rat Terrier)",
+					"url": "https://www.wikidata.org/wiki/Q38431",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q30",
+					"kind": "wikidata",
+					"citation": "Wikidata Q30 (United States, P625)",
+					"url": "https://www.wikidata.org/wiki/Q30",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "rottweiler",
+			"names": {
+				"en": "Rottweiler",
+				"fr": "Rottweiler",
+				"nl": "Rottweiler",
+				"sourceId": "wikidata-q39093"
+			},
+			"wikidata": "Q39093",
+			"fci": {
+				"number": 147,
+				"group": 2,
+				"section": "Molossian type",
+				"provisional": null,
+				"sourceId": "fci-147"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "ROTT",
+						"name": "Rottweiler",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Drover",
+				"cladeId": "drover",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "mastiff",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "DE",
+					"label": "Germany",
+					"sourceId": "fci-147"
+				},
+				"coords": {
+					"lonLat": [
+						10,
+						51
+					],
+					"sourceId": "wikidata-q183"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Rottweiler Moletai May 2014.2.jpg",
+				"sourceId": "wikidata-q39093"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q39093",
+					"kind": "wikidata",
+					"citation": "Wikidata Q39093 (Rottweiler)",
+					"url": "https://www.wikidata.org/wiki/Q39093",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-147",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 147 \"ROTTWEILER\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/ROTTWEILER-147.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q183",
+					"kind": "wikidata",
+					"citation": "Wikidata Q183 (Germany, P625)",
+					"url": "https://www.wikidata.org/wiki/Q183",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "saint-bernard",
+			"names": {
+				"en": "St. Bernard",
+				"fr": "Saint-bernard",
+				"nl": "Sint-Bernard",
+				"sourceId": "wikidata-q38090"
+			},
+			"wikidata": "Q38090",
+			"fci": {
+				"number": 61,
+				"group": 2,
+				"section": "Molossian type",
+				"provisional": null,
+				"sourceId": "fci-61"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "STBD",
+						"name": "Saint Bernard",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Alpine",
+				"cladeId": "alpine",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "mastiff",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "CH",
+					"label": "Switzerland",
+					"sourceId": "fci-61"
+				},
+				"coords": {
+					"lonLat": [
+						8.231973,
+						46.798562
+					],
+					"sourceId": "wikidata-q39"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Rey nieve.jpg",
+				"sourceId": "wikidata-q38090"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38090",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38090 (St. Bernard)",
+					"url": "https://www.wikidata.org/wiki/Q38090",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-61",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 61 \"ST. BERNARD\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/ST-BERNARD-61.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q39",
+					"kind": "wikidata",
+					"citation": "Wikidata Q39 (Switzerland, P625)",
+					"url": "https://www.wikidata.org/wiki/Q39",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "saluki",
+			"names": {
+				"en": "Saluki",
+				"fr": "Lévrier persan",
+				"nl": "Saluki",
+				"sourceId": "wikidata-q39108"
+			},
+			"wikidata": "Q39108",
+			"fci": {
+				"number": 269,
+				"group": 10,
+				"section": "Long-haired or fringed Sighthounds",
+				"provisional": null,
+				"sourceId": "fci-269"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "SALU",
+						"name": "Saluki",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Mediterranean",
+				"cladeId": "mediterranean",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "sighthound",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "region",
+					"label": "Middle East",
+					"sourceId": "fci-269"
+				},
+				"coords": {
+					"lonLat": [
+						45,
+						28
+					],
+					"sourceId": "wikidata-q7204"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Red Smooth Saluki.jpg",
+				"sourceId": "wikidata-q39108"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q39108",
+					"kind": "wikidata",
+					"citation": "Wikidata Q39108 (Saluki)",
+					"url": "https://www.wikidata.org/wiki/Q39108",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-269",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 269 \"SALUKI\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/SALUKI-269.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q7204",
+					"kind": "wikidata",
+					"citation": "Wikidata Q7204 (Middle East, P625)",
+					"url": "https://www.wikidata.org/wiki/Q7204",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "shetland-sheepdog",
+			"names": {
+				"en": "Shetland Sheepdog",
+				"fr": "Shetland",
+				"nl": "Shetland Sheepdog",
+				"sourceId": "wikidata-q39058"
+			},
+			"wikidata": "Q39058",
+			"fci": {
+				"number": 88,
+				"group": 1,
+				"section": "Sheepdogs",
+				"provisional": null,
+				"sourceId": "fci-88"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "SSHP",
+						"name": "Shetland Sheepdog",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "UK Rural",
+				"cladeId": "uk-rural",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "herding",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "GB",
+					"label": "Great Britain",
+					"sourceId": "fci-88"
+				},
+				"coords": {
+					"lonLat": [
+						-2,
+						54.6
+					],
+					"sourceId": "wikidata-q145"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "ShetlandShpdogBlue2 wb.jpg",
+				"sourceId": "wikidata-q39058"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q39058",
+					"kind": "wikidata",
+					"citation": "Wikidata Q39058 (Shetland Sheepdog)",
+					"url": "https://www.wikidata.org/wiki/Q39058",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-88",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 88 \"SHETLAND SHEEPDOG\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/SHETLAND-SHEEPDOG-88.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q145",
+					"kind": "wikidata",
+					"citation": "Wikidata Q145 (United Kingdom, P625)",
+					"url": "https://www.wikidata.org/wiki/Q145",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "shih-tzu",
+			"names": {
+				"en": "Shih Tzu",
+				"fr": "Shih Tzu",
+				"nl": "Shih tzu",
+				"sourceId": "wikidata-q39357"
+			},
+			"wikidata": "Q39357",
+			"fci": {
+				"number": 208,
+				"group": 9,
+				"section": "Tibetan breeds",
+				"provisional": null,
+				"sourceId": "fci-208"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "SHIH",
+						"name": "Shih Tzu",
+						"variant": null,
+						"inTree": true
+					}
+				],
+				"clade": "Asian Toy",
+				"cladeId": "asian-toy",
+				"cladeLowSupport": false,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "companion",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "CN",
+					"label": "Tibet (China)",
+					"sourceId": "fci-208"
+				},
+				"coords": {
+					"lonLat": [
+						86.940278,
+						31.705556
+					],
+					"sourceId": "wikidata-q17269"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "Shih Tzu portrait show dog.jpg",
+				"sourceId": "wikidata-q39357"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q39357",
+					"kind": "wikidata",
+					"citation": "Wikidata Q39357 (Shih Tzu)",
+					"url": "https://www.wikidata.org/wiki/Q39357",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-208",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 208 \"SHIH TZU\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/SHIH-TZU-208.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q17269",
+					"kind": "wikidata",
+					"citation": "Wikidata Q17269 (Tibet Autonomous Region, P625)",
+					"url": "https://www.wikidata.org/wiki/Q17269",
+					"retrieved": "2026-11-04"
+				}
+			]
+		},
+		{
+			"id": "xoloitzcuintle",
+			"names": {
+				"en": "Xoloitzcuintle",
+				"fr": "Chien nu mexicain",
+				"nl": "Mexicaanse naakthond",
+				"sourceId": "wikidata-q38856"
+			},
+			"wikidata": "Q38856",
+			"fci": {
+				"number": 234,
+				"group": 5,
+				"section": "Primitive type",
+				"provisional": null,
+				"sourceId": "fci-234"
+			},
+			"parker": {
+				"entries": [
+					{
+						"abbrev": "XOLO",
+						"name": "Xoloitzcuintle",
+						"variant": "standard",
+						"inTree": true
+					},
+					{
+						"abbrev": "MXOL",
+						"name": "Xoloitzcuintle - Miniature",
+						"variant": "miniature",
+						"inTree": false
+					}
+				],
+				"clade": "New World",
+				"cladeId": "new-world",
+				"cladeLowSupport": true,
+				"sourceId": "parker2017"
+			},
+			"family": {
+				"id": "ancient",
+				"sourceId": "dogtrails-design-families"
+			},
+			"origin": {
+				"place": {
+					"kind": "country",
+					"iso": "MX",
+					"label": "Mexico",
+					"sourceId": "fci-234"
+				},
+				"coords": {
+					"lonLat": [
+						-102,
+						23
+					],
+					"sourceId": "wikidata-q96"
+				}
+			},
+			"development": [],
+			"fixedAround": null,
+			"image": {
+				"commonsFile": "XoloLarge1.jpg",
+				"sourceId": "wikidata-q38856"
+			},
+			"sources": [
+				{
+					"id": "parker2017",
+					"kind": "parker2017",
+					"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
+					"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "dogtrails-design-families",
+					"kind": "editorial",
+					"citation": "Dogtrails visual system, docs/DESIGN.md §2 \"Attribution des 30 races\": editorial choice by breed, not a datum",
+					"path": "docs/DESIGN.md",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q38856",
+					"kind": "wikidata",
+					"citation": "Wikidata Q38856 (Xoloitzcuintle)",
+					"url": "https://www.wikidata.org/wiki/Q38856",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "fci-234",
+					"kind": "fci",
+					"citation": "FCI nomenclature, standard n° 234 \"XOLOITZCUINTLE\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
+					"url": "https://www.fci.be/en/nomenclature/XOLOITZCUINTLE-234.html",
+					"retrieved": "2026-11-04"
+				},
+				{
+					"id": "wikidata-q96",
+					"kind": "wikidata",
+					"citation": "Wikidata Q96 (Mexico, P625)",
+					"url": "https://www.wikidata.org/wiki/Q96",
+					"retrieved": "2026-11-04"
+				}
+			]
+		}
+	]
+}
