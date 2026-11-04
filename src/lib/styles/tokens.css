@@ -1,0 +1,176 @@
+/* Dogtrails — design tokens, direction B+ "a star atlas read by lantern light"
+   Generated from the Claude Design canvas, 4 Nov 2026.
+   Night is the default for the story; day follows the visitor's choice or OS setting.
+   Contrast: every text token ≥ 4.5:1 on its ground; every family colour ≥ 3:1 as a mark.
+   Families tested under deuteranomaly, protanomaly, tritanomaly (CAM02-UCS ΔE ≥ 8.7 for every pair). */
+
+/* Fonts are self-hosted via @fontsource (OFL-1.1), imported in src/routes/+layout.svelte:
+   no request to Google Fonts. */
+
+:root,
+[data-theme="night"] {
+  /* grounds */
+  --dt-bg: #0C1424;
+  --dt-surface: #111D30;
+  --dt-surface-raised: #15233A;
+  --dt-line: #22314C;
+  --dt-line-strong: #2E4262;
+  /* ink */
+  --dt-ink: #F1E6D2;          /* 16.0:1 */
+  --dt-ink-2: #C9D1DE;        /* body copy */
+  --dt-ink-3: #8F9BB0;        /* captions, 6.6:1 */
+  --dt-place: #B7C3D6;        /* italic place names */
+  /* the lantern */
+  --dt-accent: #F3B867;       /* fills, selection halo, accent text */
+  --dt-accent-text: #F3B867;
+  --dt-on-accent: #1A1206;
+  --dt-lantern: radial-gradient(circle, rgba(243, 184, 103, .18) 0, rgba(243, 184, 103, .05) 9%, transparent 14%);
+  --dt-rest-veil: rgba(12, 20, 36, .5);   /* what sits outside the light */
+  /* evidence strokes */
+  --dt-ev-genetic: #F1E6D2;
+  --dt-ev-historical: #F3B867;
+  --dt-ev-oral: #C9D1DE;
+  /* eight families */
+  --dt-fam-herding: #5A86CF;
+  --dt-fam-sighthound: #F2C14E;
+  --dt-fam-spitz: #A6E0F0;
+  --dt-fam-mastiff: #D95F6E;
+  --dt-fam-terrier: #5FC79E;
+  --dt-fam-hunting: #F08A4B;
+  --dt-fam-companion: #E88DC4;
+  --dt-fam-ancient: #B9A0F4;
+  --dt-star-stroke: none;
+  --dt-star-glow: 1;          /* blurred glow behind stars */
+  --dt-star-shadow: #6F7D93;  /* star "in the shadow" */
+  --dt-star-shadow-opacity: .4;
+  --dt-select-ring: #F3B867;  /* dotted ring of the chosen star */
+}
+
+[data-theme="day"] {
+  --dt-bg: #F4EEE3;
+  --dt-surface: #FAF6EE;
+  --dt-surface-raised: #FFFBF4;
+  --dt-line: #DCD0BC;
+  --dt-line-strong: #C9BDA8;
+  --dt-ink: #14223A;          /* 13.8:1 */
+  --dt-ink-2: #34425A;
+  --dt-ink-3: #5A6780;        /* 4.9:1 */
+  --dt-place: #4A5A75;
+  --dt-accent: #E8A048;       /* fills only: ink on it is 7.2:1 */
+  --dt-accent-text: #8A4F08;  /* 5.7:1 */
+  --dt-on-accent: #14223A;
+  --dt-lantern: radial-gradient(circle, rgba(232, 160, 72, .20) 0, rgba(232, 160, 72, .07) 10%, transparent 15%);
+  --dt-rest-veil: rgba(244, 238, 227, .55);  /* low sun: the rest fades to paper */
+  --dt-ev-genetic: #14223A;
+  --dt-ev-historical: #B4690E;
+  --dt-ev-oral: #4A5A75;
+  --dt-fam-herding: #24477F;
+  --dt-fam-sighthound: #B07C00;
+  --dt-fam-spitz: #2F80B8;
+  --dt-fam-mastiff: #8A2435;
+  --dt-fam-terrier: #1E7A55;
+  --dt-fam-hunting: #A9411A;
+  --dt-fam-companion: #B0408A;
+  --dt-fam-ancient: #6A4FB0;
+  --dt-star-stroke: #14223A;  /* printed stars: ink outline, no glow */
+  --dt-star-glow: 0;
+  --dt-star-shadow: currentColor;  /* day: the family colour itself, faded */
+  --dt-star-shadow-opacity: .3;
+  --dt-select-ring: #B4690E;
+}
+
+:root:not([data-theme]), [data-theme="night"] { color-scheme: dark; }
+[data-theme="day"] { color-scheme: light; }
+
+/* No explicit choice: follow the OS. KEEP IN SYNC with [data-theme="day"] above. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+    --dt-bg: #F4EEE3;
+    --dt-surface: #FAF6EE;
+    --dt-surface-raised: #FFFBF4;
+    --dt-line: #DCD0BC;
+    --dt-line-strong: #C9BDA8;
+    --dt-ink: #14223A;          /* 13.8:1 */
+    --dt-ink-2: #34425A;
+    --dt-ink-3: #5A6780;        /* 4.9:1 */
+    --dt-place: #4A5A75;
+    --dt-accent: #E8A048;       /* fills only: ink on it is 7.2:1 */
+    --dt-accent-text: #8A4F08;  /* 5.7:1 */
+    --dt-on-accent: #14223A;
+    --dt-lantern: radial-gradient(circle, rgba(232, 160, 72, .20) 0, rgba(232, 160, 72, .07) 10%, transparent 15%);
+    --dt-rest-veil: rgba(244, 238, 227, .55);  /* low sun: the rest fades to paper */
+    --dt-ev-genetic: #14223A;
+    --dt-ev-historical: #B4690E;
+    --dt-ev-oral: #4A5A75;
+    --dt-fam-herding: #24477F;
+    --dt-fam-sighthound: #B07C00;
+    --dt-fam-spitz: #2F80B8;
+    --dt-fam-mastiff: #8A2435;
+    --dt-fam-terrier: #1E7A55;
+    --dt-fam-hunting: #A9411A;
+    --dt-fam-companion: #B0408A;
+    --dt-fam-ancient: #6A4FB0;
+    --dt-star-stroke: #14223A;  /* printed stars: ink outline, no glow */
+    --dt-star-glow: 0;
+    --dt-star-shadow: currentColor;  /* day: the family colour itself, faded */
+    --dt-star-shadow-opacity: .3;
+    --dt-select-ring: #B4690E;
+  }
+}
+
+:root {
+  /* type */
+  --dt-font-serif: "Instrument Serif", Georgia, serif;
+  --dt-font-sans: "DM Sans Variable", "DM Sans", "Helvetica Neue", Arial, sans-serif;
+  --dt-text-display: clamp(48px, 7vw, 104px);  /* line-height .95 */
+  --dt-text-h1: clamp(40px, 5vw, 64px);        /* 1.0 */
+  --dt-text-h2: 40px;                          /* 1.05 */
+  --dt-text-h3: 26px;                          /* 1.15 */
+  --dt-text-lede: 19px;                        /* 1.6 */
+  --dt-text-body: 16px;                        /* 1.6 */
+  --dt-text-small: 14px;                       /* 1.55 */
+  --dt-text-label: 12px;                       /* caps, tracking .18em, weight 600 */
+  --dt-tracking-label: .18em;
+
+  /* space (4-based) */
+  --dt-space-1: 4px;
+  --dt-space-2: 8px;
+  --dt-space-3: 12px;
+  --dt-space-4: 16px;
+  --dt-space-5: 24px;
+  --dt-space-6: 32px;
+  --dt-space-7: 48px;
+  --dt-space-8: 64px;
+  --dt-space-9: 96px;
+  --dt-gutter-mobile: 16px;
+
+  /* radii */
+  --dt-radius-sm: 6px;     /* legend, tooltips */
+  --dt-radius-md: 10px;    /* cards, panels */
+  --dt-radius-lg: 14px;    /* map frames, photos */
+  --dt-radius-pill: 999px; /* buttons, chips */
+
+  /* motion — never longer than 600 ms */
+  --dt-ease: cubic-bezier(.22, 1, .36, 1);       /* soft settle */
+  --dt-ease-spring: cubic-bezier(.34, 1.4, .64, 1); /* small overshoot, stars only */
+  --dt-dur-fast: 160ms;   /* hover, focus ring */
+  --dt-dur-base: 320ms;   /* panels, tooltips, mode switch */
+  --dt-dur-slow: 600ms;   /* lantern glide, map/tree re-layout */
+
+  /* evidence strokes (stroke-dasharray, use stroke-linecap: round) */
+  --dt-dash-genetic: none;
+  --dt-dash-historical: 7 5;
+  --dt-dash-oral: 0.1 5.5;
+  --dt-stroke-trail: 2px;
+
+  /* targets */
+  --dt-hit: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dt-dur-fast: 0ms; --dt-dur-base: 0ms; --dt-dur-slow: 0ms; }
+}
+
+/* The breed star: four points, drawn at 20×20 around (0,0). Scale 0.42–0.62 on the map. */
+/* <path d="M0,-10L2.2,-2.2L10,0L2.2,2.2L0,10L-2.2,2.2L-10,0L-2.2,-2.2Z"/> */

@@ -14,7 +14,7 @@ import { parseCsv } from './lib/csv.ts';
 const NAMES = 'data/manual/breed-names.json';
 const WIKIDATA = 'data/raw/wikidata-breeds.json';
 const FCI_DIR = 'data/raw/fci-breeds';
-const PLAN = 'PLAN.md';
+const PLAN = 'docs/PLAN.md';
 const OUT = 'data/reports/breed-names.md';
 
 /** FCI group names as written in the export, in group order 1-10. */
