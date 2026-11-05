@@ -71,7 +71,7 @@ Les constellations n'apparaissent **jamais** sous forme de lignes sur la carte :
 ## 3. L'étoile
 
 - Tracé de 20 × 20 centré sur (0,0) : `M0,-10L2.2,-2.2L10,0L2.2,2.2L0,10L-2.2,2.2L-10,0L-2.2,-2.2Z`.
-- Échelle sur la carte : 0,62 en zone dégagée, 0,42 en zone dense (Europe). Arbre : 0,45 au repos, 0,55 allumée. Zone cliquable de 44 px dans tous les cas.
+- Échelle sur la carte : 0,62 en zone dégagée, 0,42 en zone dense (Europe). Arbre : 0,55 au repos, 0,65 allumée (Paul, 2026-11-05 : branches colorées par famille, les étoiles à 0,45 se perdaient). Zone cliquable de 44 px dans tous les cas.
 - Quatre états :
   - **repos** : couleur de famille.
   - **allumée** (survol ou famille sélectionnée) : légèrement plus grande, avec un flou de nuit.
