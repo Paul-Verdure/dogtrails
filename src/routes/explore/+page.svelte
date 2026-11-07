@@ -14,7 +14,7 @@
 	<meta name="description" content="A radial genetic tree of 30 dog breeds (Parker et al. 2017), coloured by family." />
 </svelte:head>
 
-<main>
+<div class="page">
 	<header>
 		<p class="eyebrow">Explorer</p>
 		<h1>The family tree</h1>
@@ -24,10 +24,10 @@
 		<TreeView />
 		<aside><SelectionCard /></aside>
 	</div>
-</main>
+</div>
 
 <style>
-	main {
+	.page {
 		max-width: 1360px;
 		margin: 0 auto;
 		padding: var(--dt-space-6) var(--dt-gutter-mobile) var(--dt-space-8);

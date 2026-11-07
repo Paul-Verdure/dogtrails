@@ -3,6 +3,7 @@
 	import { breedById } from '$lib/data';
 	import { families, STAR_PATH } from '$lib/data/families';
 	import { getExplore } from '$lib/state/explore.svelte';
+	import { resolve } from '$app/paths';
 
 	const explore = getExplore();
 	const breed = $derived(explore.selectedBreed ? breedById.get(explore.selectedBreed) : undefined);
@@ -28,6 +29,7 @@
 			<dt>Clade</dt>
 			<dd>{breed.parker.clade}{breed.parker.cladeLowSupport ? ' (low support)' : ''}</dd>
 		</dl>
+		<p class="more"><a href={resolve('/breed/[id]', { id: breed.id })}>Open the {breed.names.en} page</a></p>
 		<h3>Sources</h3>
 		<ul class="sources">
 			{#each breed.sources as s (s.id)}
@@ -130,6 +132,15 @@
 	}
 	a {
 		color: var(--dt-accent-text);
+	}
+	.more {
+		margin: var(--dt-space-3) 0 0;
+	}
+	.more a {
+		display: inline-flex;
+		align-items: center;
+		min-height: var(--dt-hit);
+		font-weight: 500;
 	}
 	button {
 		margin-top: var(--dt-space-5);
