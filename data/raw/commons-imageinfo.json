@@ -1,0 +1,2139 @@
+{
+	"source": "Wikimedia Commons API (imageinfo, extmetadata)",
+	"endpoint": "https://commons.wikimedia.org/w/api.php",
+	"fetchedAt": "2026-11-07T14:03:15.871Z",
+	"params": {
+		"action": "query",
+		"format": "json",
+		"formatversion": "2",
+		"prop": "imageinfo",
+		"iiprop": "url|size|extmetadata",
+		"iiurlwidth": "640",
+		"iiextmetadatafilter": "Artist|Attribution|AttributionRequired|Credit|LicenseShortName|LicenseUrl|License|UsageTerms|Copyrighted|Restrictions"
+	},
+	"responses": [
+		{
+			"batchcomplete": true,
+			"query": {
+				"pages": [
+					{
+						"pageid": 56905,
+						"ns": 6,
+						"title": "File:Briard fauve.JPG",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 877080,
+								"width": 1600,
+								"height": 1200,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Briard_fauve.JPG/960px-Briard_fauve.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 480,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Briard_fauve.JPG/1280px-Briard_fauve.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Briard_fauve.JPG/960px-Briard_fauve.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 480,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Briard_fauve.JPG/1280px-Briard_fauve.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Briard_fauve.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Briard_fauve.JPG",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=56905",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "Birgit Balzer, Deutschland (uploaded by <a href=\"//commons.wikimedia.org/wiki/User:Caronna\" title=\"User:Caronna\">Caronna</a> 17:00, 10 Feb 2005 (UTC))",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 68549,
+						"ns": 6,
+						"title": "File:Un chien Spitz allemand.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 337623,
+								"width": 1336,
+								"height": 1146,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Un_chien_Spitz_allemand.jpg/960px-Un_chien_Spitz_allemand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 549,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Un_chien_Spitz_allemand.jpg/1280px-Un_chien_Spitz_allemand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Un_chien_Spitz_allemand.jpg/960px-Un_chien_Spitz_allemand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 549,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Un_chien_Spitz_allemand.jpg/1280px-Un_chien_Spitz_allemand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Un_chien_Spitz_allemand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Un_chien_Spitz_allemand.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=68549",
+								"extmetadata": {
+									"Credit": {
+										"value": "<bdi lang=\"en\" dir=\"ltr\">Transferred from <span class=\"plainlinks\"><a class=\"external text\" data-mw-original-href=\"//fr.wikipedia.org\" href=\"https://fr.wikipedia.org\">fr.wikipedia</a></span> to Commons.</bdi>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<p>The original uploader was <a href=\"https://en.wikipedia.org/wiki/fr:User:Teuteul\" class=\"extiw\" title=\"w:fr:User:Teuteul\">Teuteul</a> at <a href=\"https://en.wikipedia.org/wiki/fr:\" class=\"extiw\" title=\"w:fr:\">French Wikipedia</a>.\n</p>\nLater versions were uploaded by <a href=\"https://fr.wikipedia.org/wiki/User:Tornad\" class=\"extiw\" title=\"fr:User:Tornad\">Tornad</a> at <a class=\"external text\" data-mw-original-href=\"http://fr.wikipedia.org\" href=\"https://fr.wikipedia.org\">fr.wikipedia</a>.",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 319346,
+						"ns": 6,
+						"title": "File:Basset Hound 600.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 97546,
+								"width": 600,
+								"height": 400,
+								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Basset_Hound_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+								"thumbwidth": 640,
+								"thumbheight": 427,
+								"thumbattribs": {
+									"src": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Basset_Hound_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 427
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Basset_Hound_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Basset_Hound_600.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=319346",
+								"extmetadata": {
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 386365,
+						"ns": 6,
+						"title": "File:ShetlandShpdogBlue2 wb.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 94998,
+								"width": 500,
+								"height": 411,
+								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/6/62/ShetlandShpdogBlue2_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+								"thumbwidth": 640,
+								"thumbheight": 526,
+								"thumbattribs": {
+									"src": "https://upload.wikimedia.org/wikipedia/commons/6/62/ShetlandShpdogBlue2_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 526
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/6/62/ShetlandShpdogBlue2_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:ShetlandShpdogBlue2_wb.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=386365",
+								"extmetadata": {
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 580091,
+						"ns": 6,
+						"title": "File:AmericanCockerSpaniel wb.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 117018,
+								"width": 569,
+								"height": 569,
+								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/AmericanCockerSpaniel_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+								"thumbwidth": 640,
+								"thumbheight": 640,
+								"thumbattribs": {
+									"src": "https://upload.wikimedia.org/wikipedia/commons/a/aa/AmericanCockerSpaniel_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 640
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/AmericanCockerSpaniel_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:AmericanCockerSpaniel_wb.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=580091",
+								"extmetadata": {
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 900724,
+						"ns": 6,
+						"title": "File:Puli 600.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 97885,
+								"width": 600,
+								"height": 505,
+								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Puli_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+								"thumbwidth": 640,
+								"thumbheight": 539,
+								"thumbattribs": {
+									"src": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Puli_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 539
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Puli_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Puli_600.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=900724",
+								"extmetadata": {
+									"Credit": {
+										"value": "Photo by <a href=\"https://en.wikipedia.org/wiki/en:User:Sannse\" class=\"extiw\" title=\"w:en:User:Sannse\">w:en:User:Sannse</a>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"https://en.wikipedia.org/wiki/User:Sannse\" class=\"extiw\" title=\"en:User:Sannse\">Sannse</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Attribution": {
+										"value": "<a href=\"https://en.wikipedia.org/wiki/User:Sannse\" class=\"extiw\" title=\"en:User:Sannse\">Sannse</a> at the <a href=\"https://en.wikipedia.org/wiki/\" class=\"extiw\" title=\"w:\">English-language Wikipedia</a>",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 1094767,
+						"ns": 6,
+						"title": "File:Ulfur.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 157978,
+								"width": 583,
+								"height": 465,
+								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Ulfur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+								"thumbwidth": 640,
+								"thumbheight": 510,
+								"thumbattribs": {
+									"src": "https://upload.wikimedia.org/wikipedia/commons/4/44/Ulfur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 510
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Ulfur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Ulfur.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1094767",
+								"extmetadata": {
+									"Credit": {
+										"value": "Photo Arni Einarsson.",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "User <a href=\"https://en.wikipedia.org/wiki/User:Zonjah\" class=\"extiw\" title=\"en:User:Zonjah\">Zonjah</a> on <a class=\"external text\" data-mw-original-href=\"http://en.wikipedia.org\" href=\"https://en.wikipedia.org\">en.wikipedia</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Attribution": {
+										"value": "<a href=\"https://en.wikipedia.org/wiki/User:Zonjah\" class=\"extiw\" title=\"en:User:Zonjah\">Zonjah</a>",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 1252970,
+						"ns": 6,
+						"title": "File:Mastif angielski pregowany nn.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 605264,
+								"width": 1500,
+								"height": 1674,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Mastif_angielski_pregowany_nn.jpg/960px-Mastif_angielski_pregowany_nn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 714,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Mastif_angielski_pregowany_nn.jpg/1280px-Mastif_angielski_pregowany_nn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Mastif_angielski_pregowany_nn.jpg/960px-Mastif_angielski_pregowany_nn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 714,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Mastif_angielski_pregowany_nn.jpg/1280px-Mastif_angielski_pregowany_nn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Mastif_angielski_pregowany_nn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Mastif_angielski_pregowany_nn.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1252970",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/wiki/User:Pleple2000\" title=\"User:Pleple2000\">Pleple2000</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 1446187,
+						"ns": 6,
+						"title": "File:IndyStands.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 3001883,
+								"width": 3008,
+								"height": 2000,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/IndyStands.jpg/960px-IndyStands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 426,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/IndyStands.jpg/1280px-IndyStands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/IndyStands.jpg/960px-IndyStands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 426,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/IndyStands.jpg/1280px-IndyStands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/9/97/IndyStands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:IndyStands.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1446187",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/wiki/User:TommyG\" title=\"User:TommyG\">Tommy Gildseth</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by/3.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 1745398,
+						"ns": 6,
+						"title": "File:Duitse staande korthaar 10-10-1.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 76145,
+								"width": 332,
+								"height": 500,
+								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Duitse_staande_korthaar_10-10-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+								"thumbwidth": 640,
+								"thumbheight": 964,
+								"thumbattribs": {
+									"src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Duitse_staande_korthaar_10-10-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 964
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Duitse_staande_korthaar_10-10-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Duitse_staande_korthaar_10-10-1.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1745398",
+								"extmetadata": {
+									"Credit": {
+										"value": "<bdi lang=\"en\" dir=\"ltr\">Transferred from <span class=\"plainlinks\"><a class=\"external text\" data-mw-original-href=\"//nl.wikipedia.org\" href=\"https://nl.wikipedia.org\">nl.wikipedia</a></span> to Commons.</bdi>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "Bonnie van den Born, <a rel=\"nofollow\" class=\"external free\" href=\"http://www.bonfoto.nl\">http://www.bonfoto.nl</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 2043481,
+						"ns": 6,
+						"title": "File:Duck Toller.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 61634,
+								"width": 666,
+								"height": 532,
+								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Duck_Toller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+								"thumbwidth": 640,
+								"thumbheight": 511,
+								"thumbattribs": {
+									"src": "https://upload.wikimedia.org/wikipedia/commons/6/67/Duck_Toller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 511
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Duck_Toller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Duck_Toller.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2043481",
+								"extmetadata": {
+									"Credit": {
+										"value": "<bdi lang=\"en\" dir=\"ltr\">Transferred from <span class=\"plainlinks\"><a class=\"external text\" data-mw-original-href=\"//en.wikipedia.org\" href=\"https://en.wikipedia.org\">en.wikipedia</a></span> to Commons.</bdi>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"https://en.wikipedia.org/wiki/User:Cal119\" class=\"extiw\" title=\"wikipedia:User:Cal119\">Cal119</a> at <a href=\"https://en.wikipedia.org/wiki/\" class=\"extiw\" title=\"wikipedia:\">English Wikipedia</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "Public domain",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Public domain",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "false",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Copyrighted": {
+										"value": "False",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "pd",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 2200696,
+						"ns": 6,
+						"title": "File:Shih Tzu portrait show dog.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 189235,
+								"width": 665,
+								"height": 1000,
+								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Shih_Tzu_portrait_show_dog.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+								"thumbwidth": 640,
+								"thumbheight": 962,
+								"thumbattribs": {
+									"src": "https://upload.wikimedia.org/wikipedia/commons/0/01/Shih_Tzu_portrait_show_dog.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 962
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Shih_Tzu_portrait_show_dog.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Shih_Tzu_portrait_show_dog.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2200696",
+								"extmetadata": {
+									"Credit": {
+										"value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/21528622@N00/528078008\">Flickr</a>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/21528622@N00\">danny O.</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY 2.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution 2.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by/2.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-2.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 6444046,
+						"ns": 6,
+						"title": "File:Golden Retriever Dukedestiny01 drvd.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 165000,
+								"width": 652,
+								"height": 515,
+								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_Retriever_Dukedestiny01_drvd.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+								"thumbwidth": 640,
+								"thumbheight": 506,
+								"thumbattribs": {
+									"src": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_Retriever_Dukedestiny01_drvd.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 506
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_Retriever_Dukedestiny01_drvd.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Golden_Retriever_Dukedestiny01_drvd.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6444046",
+								"extmetadata": {
+									"Credit": {
+										"value": "<ul><li><a href=\"//commons.wikimedia.org/wiki/File:Dukedestiny01.jpg\" class=\"mw-redirect\" title=\"File:Dukedestiny01.jpg\">Dukedestiny01.jpg</a></li></ul>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<ul><li><a href=\"//commons.wikimedia.org/wiki/File:Dukedestiny01.jpg\" class=\"mw-redirect\" title=\"File:Dukedestiny01.jpg\">Dukedestiny01.jpg</a>: \"Janneke Vreugdenhil\"</li>\n<li>derivative work: <a href=\"//commons.wikimedia.org/wiki/User:Anka_Friedrich\" title=\"User:Anka Friedrich\">Anka Friedrich</a> ([[User talk:Ankaaswe</li></ul>\nTrix Friedrich|<span class=\"signature-talk\">talk</span>]])",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "Public domain",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Public domain",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "false",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Copyrighted": {
+										"value": "False",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "pd",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 6578074,
+						"ns": 6,
+						"title": "File:AmRatTerr11 fx wb.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 119171,
+								"width": 419,
+								"height": 500,
+								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/6/63/AmRatTerr11_fx_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+								"thumbwidth": 640,
+								"thumbheight": 764,
+								"thumbattribs": {
+									"src": "https://upload.wikimedia.org/wikipedia/commons/6/63/AmRatTerr11_fx_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 764
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/6/63/AmRatTerr11_fx_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:AmRatTerr11_fx_wb.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=6578074",
+								"extmetadata": {
+									"Credit": {
+										"value": "<bdi lang=\"en\" dir=\"ltr\">Transferred from <span class=\"plainlinks\"><a class=\"external text\" data-mw-original-href=\"//en.wikipedia.org\" href=\"https://en.wikipedia.org\">en.wikipedia</a></span> to Commons by <a href=\"//commons.wikimedia.org/wiki/User:BokicaK\" title=\"User:BokicaK\">BokicaK</a> using <a href=\"https://iw.toolforge.org/commonshelper/\" class=\"extiw\" title=\"toollabs:commonshelper/\">CommonsHelper</a>.</bdi>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"https://en.wikipedia.org/wiki/User:Elf\" class=\"extiw\" title=\"wikipedia:User:Elf\">Elf</a> at <a href=\"https://en.wikipedia.org/wiki/\" class=\"extiw\" title=\"wikipedia:\">English Wikipedia</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 11026341,
+						"ns": 6,
+						"title": "File:Monkey Bizniz Drama Queen.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 76392,
+								"width": 300,
+								"height": 250,
+								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Monkey_Bizniz_Drama_Queen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+								"thumbwidth": 640,
+								"thumbheight": 533,
+								"thumbattribs": {
+									"src": "https://upload.wikimedia.org/wikipedia/commons/2/23/Monkey_Bizniz_Drama_Queen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 533
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Monkey_Bizniz_Drama_Queen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Monkey_Bizniz_Drama_Queen.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=11026341",
+								"extmetadata": {
+									"Credit": {
+										"value": "E-Mail",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "Arne Fagerholt",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by/3.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 16102441,
+						"ns": 6,
+						"title": "File:Red Smooth Saluki.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 460040,
+								"width": 2266,
+								"height": 1843,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Red_Smooth_Saluki.jpg/960px-Red_Smooth_Saluki.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 521,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Red_Smooth_Saluki.jpg/1280px-Red_Smooth_Saluki.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Red_Smooth_Saluki.jpg/960px-Red_Smooth_Saluki.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 521,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Red_Smooth_Saluki.jpg/1280px-Red_Smooth_Saluki.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Red_Smooth_Saluki.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Red_Smooth_Saluki.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=16102441",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "r.",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by-sa/3.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 17385646,
+						"ns": 6,
+						"title": "File:2.5-year-old fawn male pug.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 1418541,
+								"width": 2274,
+								"height": 1988,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/2.5-year-old_fawn_male_pug.jpg/960px-2.5-year-old_fawn_male_pug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 560,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/2.5-year-old_fawn_male_pug.jpg/1280px-2.5-year-old_fawn_male_pug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/2.5-year-old_fawn_male_pug.jpg/960px-2.5-year-old_fawn_male_pug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 560,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/2.5-year-old_fawn_male_pug.jpg/1280px-2.5-year-old_fawn_male_pug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/8/85/2.5-year-old_fawn_male_pug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:2.5-year-old_fawn_male_pug.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=17385646",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/wiki/User:Abuk_SABUK\" title=\"User:Abuk SABUK\">Abuk SABUK</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by-sa/3.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 19466948,
+						"ns": 6,
+						"title": "File:Питомник \"Ассон Ари\" Цвергшнауцеры белые и черные с серебром 12.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 3915995,
+								"width": 3501,
+								"height": 2576,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg/960px-%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 471,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg/1280px-%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg/960px-%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 471,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg/1280px-%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/3/36/%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=19466948",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Zorik07&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Zorik07 (page does not exist)\">Zorik07</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by-sa/3.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 23109910,
+						"ns": 6,
+						"title": "File:MiloSmet.JPG",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 2293805,
+								"width": 3008,
+								"height": 2000,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/MiloSmet.JPG/960px-MiloSmet.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 426,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/MiloSmet.JPG/1280px-MiloSmet.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/MiloSmet.JPG/960px-MiloSmet.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 426,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/MiloSmet.JPG/1280px-MiloSmet.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/MiloSmet.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:MiloSmet.JPG",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=23109910",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Jonatan_De_Geest&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Jonatan De Geest (page does not exist)\">Jonatan De Geest</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by-sa/3.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 24067098,
+						"ns": 6,
+						"title": "File:Chihuahuas- Holly, Nina, Doralice.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 981120,
+								"width": 1650,
+								"height": 1276,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg/960px-Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 495,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg/1280px-Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg/960px-Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 495,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg/1280px-Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Chihuahuas-_Holly,_Nina,_Doralice.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=24067098",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Caterinarufo&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Caterinarufo (page does not exist)\">Caterinarufo</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "Public domain",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Public domain",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "false",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Copyrighted": {
+										"value": "False",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "pd",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 31676018,
+						"ns": 6,
+						"title": "File:01 Chow Chow.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 2157259,
+								"width": 2952,
+								"height": 3690,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/01_Chow_Chow.jpg/960px-01_Chow_Chow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 800,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/01_Chow_Chow.jpg/1280px-01_Chow_Chow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/01_Chow_Chow.jpg/960px-01_Chow_Chow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 800,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/01_Chow_Chow.jpg/1280px-01_Chow_Chow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/01_Chow_Chow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:01_Chow_Chow.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=31676018",
+								"extmetadata": {
+									"Credit": {
+										"value": "<a href=\"//commons.wikimedia.org/wiki/Flickr\" class=\"mw-redirect\" title=\"Flickr\">Flickr</a>: <a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/34128007@N04/8573315697\">Chow Chow</a>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//www.flickr.com/people/34128007@N04\" class=\"extiw\" title=\"flickruser:34128007@N04\">Prayitno/more than 2.5 millions views: thank you!</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY 2.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution 2.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by/2.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-2.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 47878865,
+						"ns": 6,
+						"title": "File:Grupp 2 DVÄRGPINCHER, Pincerella’s Rinaldo Rosso (24260846206).jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 227526,
+								"width": 1656,
+								"height": 1104,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg/960px-Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 427,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg/1280px-Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg/960px-Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 427,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg/1280px-Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Grupp_2_DV%C3%84RGPINCHER,_Pincerella%E2%80%99s_Rinaldo_Rosso_(24260846206).jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=47878865",
+								"extmetadata": {
+									"Credit": {
+										"value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/svenskamassan/24260846206/\">Grupp 2 DVÄRGPINCHER, Pincerella’s Rinaldo Rosso</a>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/36333395@N06\">Svenska Mässan</a> from Sweden",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY 2.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution 2.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by/2.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-2.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 49204903,
+						"ns": 6,
+						"title": "File:Pastor aleman a.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 197414,
+								"width": 1000,
+								"height": 800,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Pastor_aleman_a.jpg/960px-Pastor_aleman_a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 512,
+								"responsiveUrls": {
+									"2": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Pastor_aleman_a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Pastor_aleman_a.jpg/960px-Pastor_aleman_a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 512,
+									"srcset": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Pastor_aleman_a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Pastor_aleman_a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Pastor_aleman_a.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=49204903",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Erick_Drumss_Hern%C3%A1ndez&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Erick Drumss Hernández (page does not exist)\">Erick Drumss Hernández</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 4.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 4.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by-sa/4.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-4.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 50681345,
+						"ns": 6,
+						"title": "File:Rottweiler Moletai May 2014.2.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 79988,
+								"width": 346,
+								"height": 506,
+								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Rottweiler_Moletai_May_2014.2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+								"thumbwidth": 640,
+								"thumbheight": 936,
+								"thumbattribs": {
+									"src": "https://upload.wikimedia.org/wikipedia/commons/6/62/Rottweiler_Moletai_May_2014.2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 936
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Rottweiler_Moletai_May_2014.2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Rottweiler_Moletai_May_2014.2.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=50681345",
+								"extmetadata": {
+									"Credit": {
+										"value": "<a href=\"//commons.wikimedia.org/wiki/File:Rottweiler_Moletai_May_2014.jpg\" title=\"File:Rottweiler Moletai May 2014.jpg\">File:Rottweiler_Moletai_May_2014.jpg</a>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/w/index.php?title=%D0%A2%D0%BE%D0%BC%D0%B0%D1%81%D0%B8%D0%BD%D0%B0&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"Томасина (page does not exist)\">Томасина</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 4.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 4.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by-sa/4.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-4.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 76958187,
+						"ns": 6,
+						"title": "File:Rey nieve.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 259592,
+								"width": 1200,
+								"height": 1219,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Rey_nieve.jpg/960px-Rey_nieve.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 650,
+								"responsiveUrls": {
+									"2": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Rey_nieve.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Rey_nieve.jpg/960px-Rey_nieve.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 650,
+									"srcset": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Rey_nieve.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Rey_nieve.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Rey_nieve.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=76958187",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Yosoychicho&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Yosoychicho (page does not exist)\">Rafael Dominguez Rodriguez</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 4.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 4.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by-sa/4.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-4.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 107262576,
+						"ns": 6,
+						"title": "File:XoloLarge1.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 734972,
+								"width": 2032,
+								"height": 1707,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/XoloLarge1.jpg/960px-XoloLarge1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 538,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/XoloLarge1.jpg/1280px-XoloLarge1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/XoloLarge1.jpg/960px-XoloLarge1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 538,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/XoloLarge1.jpg/1280px-XoloLarge1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/8/85/XoloLarge1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:XoloLarge1.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=107262576",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/wiki/User:Canarian\" title=\"User:Canarian\">Canarian</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 4.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 4.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by-sa/4.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-4.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 126705657,
+						"ns": 6,
+						"title": "File:Irish Terrier P1060074.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 760019,
+								"width": 1948,
+								"height": 1330,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Irish_Terrier_P1060074.jpg/960px-Irish_Terrier_P1060074.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 437,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Irish_Terrier_P1060074.jpg/1280px-Irish_Terrier_P1060074.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Irish_Terrier_P1060074.jpg/960px-Irish_Terrier_P1060074.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 437,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Irish_Terrier_P1060074.jpg/1280px-Irish_Terrier_P1060074.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Irish_Terrier_P1060074.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Irish_Terrier_P1060074.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=126705657",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/wiki/User:Goldmull\" title=\"User:Goldmull\">Goldmull</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 4.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 4.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by-sa/4.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-4.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 142331277,
+						"ns": 6,
+						"title": "File:Akita Americano v3.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 277159,
+								"width": 1600,
+								"height": 1482,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Akita_Americano_v3.jpg/960px-Akita_Americano_v3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 593,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Akita_Americano_v3.jpg/1280px-Akita_Americano_v3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Akita_Americano_v3.jpg/960px-Akita_Americano_v3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 593,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Akita_Americano_v3.jpg/1280px-Akita_Americano_v3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Akita_Americano_v3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Akita_Americano_v3.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=142331277",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "Edwin Campos",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Zero, Public Domain Dedication",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "false",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 185442505,
+						"ns": 6,
+						"title": "File:Argentine border collie.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 2971694,
+								"width": 4000,
+								"height": 3000,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Argentine_border_collie.jpg/960px-Argentine_border_collie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 480,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Argentine_border_collie.jpg/1280px-Argentine_border_collie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Argentine_border_collie.jpg/960px-Argentine_border_collie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 480,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Argentine_border_collie.jpg/1280px-Argentine_border_collie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Argentine_border_collie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Argentine_border_collie.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=185442505",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/wiki/User:Tubby3\" title=\"User:Tubby3\">Horacio Cambeiro</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 4.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 4.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by-sa/4.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-4.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 187406982,
+						"ns": 6,
+						"title": "File:Miniature Poodle (Hungary).jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 3288545,
+								"width": 4284,
+								"height": 5712,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Miniature_Poodle_%28Hungary%29.jpg/960px-Miniature_Poodle_%28Hungary%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 853,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Miniature_Poodle_%28Hungary%29.jpg/1280px-Miniature_Poodle_%28Hungary%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Miniature_Poodle_%28Hungary%29.jpg/960px-Miniature_Poodle_%28Hungary%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 853,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Miniature_Poodle_%28Hungary%29.jpg/1280px-Miniature_Poodle_%28Hungary%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Miniature_Poodle_%28Hungary%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Miniature_Poodle_(Hungary).jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=187406982",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:UszkarFoto92&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:UszkarFoto92 (page does not exist)\">UszkarFoto92</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Zero, Public Domain Dedication",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "false",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}

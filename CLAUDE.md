@@ -69,6 +69,7 @@ npm run data:fci       paiv/fci-breeds CSV at a pinned commit -> data/raw/fci-br
 npm run data:wikidata  SPARQL on the QIDs of breed-names.json -> data/raw/wikidata-breeds.json
 npm run data:names-report  -> data/reports/breed-names.md (FCI vs Wikidata vs docs/PLAN.md)
 npm run data:merge     -> src/lib/data/breeds.json + data/reports/breeds.md (flags, DESIGN.md §10 status)
+npm run data:credits   Commons API on breeds.json images -> src/lib/data/images.json + data/reports/images.md
 npm run validate       Zod + cross-checks on generated JSON
 npm run maps           -> static/maps/{world,atlantic}-{night,day}.svg (Natural Earth via world-atlas)
 ```

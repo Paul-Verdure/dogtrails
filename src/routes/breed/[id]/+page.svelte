@@ -1,10 +1,11 @@
 <!--
 	Breed page: facts only (no FCI standard text), each one tied to a numbered source of the breed.
-	Empty fields say "Not yet sourced" instead of guessing. No photo until Commons credits are generated.
+	Empty fields say "Not yet sourced" instead of guessing. The photo comes with its generated Commons credit;
+	without a credited free file (images.json), no photo is shown.
 -->
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import { tree, breedByAbbrev, breeds } from '$lib/data';
+	import { tree, breedByAbbrev, breeds, imageByBreed } from '$lib/data';
 	import { families } from '$lib/data/families';
 	import type { Breed } from '$lib/data/schemas/breeds';
 	import { layoutTree } from '$lib/views/tree-layout';
@@ -14,6 +15,9 @@
 
 	let { data }: PageProps = $props();
 	const breed = $derived(data.breed);
+	const photo = $derived(imageByBreed.get(breed.id));
+	/** Tallest a photo is drawn; its width follows from the ratio so the box is known before loading. */
+	const PHOTO_MAX_HEIGHT = 360;
 
 	const layout = layoutTree(tree, (a) => breedByAbbrev.get(a));
 
@@ -71,7 +75,7 @@
 {/snippet}
 
 <article class="page">
-	<header class="head">
+	<header class="head" class:with-photo={!!photo}>
 		<div class="emblem"><FamilyEmblem family={breed.family.id} /></div>
 		<div>
 			<p class="eyebrow">{families[breed.family.id].label} · {families[breed.family.id].constellation}</p>
@@ -83,6 +87,25 @@
 				<a class="pill" href="{resolve('/explore')}?breed={breed.id}">See it in the tree</a>
 			</p>
 		</div>
+		{#if photo}
+			<figure class="photo">
+				<img
+					src={photo.thumb.url}
+					width={photo.thumb.width}
+					height={photo.thumb.height}
+					style:width="min(100%, {Math.round((PHOTO_MAX_HEIGHT * photo.thumb.width) / photo.thumb.height)}px)"
+					alt="Photograph of the {breed.names.en} breed"
+					loading="lazy"
+					decoding="async"
+				/>
+				<figcaption>
+					Photo: {photo.author},
+					{#if photo.licence.url}<a href={photo.licence.url} rel="external noopener license">{photo.licence.name}</a
+						>{:else}{photo.licence.name}{/if}, via
+					<a href={photo.filePage} rel="external noopener">Wikimedia Commons</a>
+				</figcaption>
+			</figure>
+		{/if}
 	</header>
 
 	<div class="grid">
@@ -222,6 +245,32 @@
 		gap: var(--dt-space-5);
 		align-items: center;
 		margin-bottom: var(--dt-space-7);
+	}
+	.photo {
+		grid-column: 1 / -1;
+		margin: 0;
+		max-width: 480px;
+	}
+	@media (min-width: 900px) {
+		.head.with-photo {
+			grid-template-columns: 96px minmax(0, 1fr) minmax(0, 400px);
+		}
+		.photo {
+			grid-column: auto;
+		}
+	}
+	.photo img {
+		display: block;
+		height: auto;
+		border-radius: var(--dt-radius-lg);
+		border: 1px solid var(--dt-line);
+		background: var(--dt-surface-raised);
+	}
+	.photo figcaption {
+		margin-top: var(--dt-space-2);
+		color: var(--dt-ink-3);
+		font-size: var(--dt-text-small);
+		overflow-wrap: anywhere;
 	}
 	.eyebrow {
 		margin: 0;

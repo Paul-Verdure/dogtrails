@@ -22,6 +22,11 @@
  *   - id, QID, FCI number and variants agree with breed-names.json; family agrees with docs/DESIGN.md §2;
  *   - origin coordinates are the P625 point of the place in data/raw/wikidata-places.json.
  *
+ * src/lib/data/images.json:
+ *   - matches the Zod schema: free licence, author, file page and Wikimedia thumbnail for every image;
+ *   - every image belongs to a known breed and is that breed's `image.commonsFile`;
+ *   - every file is in data/raw/commons-imageinfo.json.
+ *
  * usage: node scripts/validate.ts [sample.json] [tree.json]
  */
 import { readFileSync } from 'node:fs';
@@ -29,6 +34,7 @@ import { isLeaf, treeFileSchema, type TreeLeaf, type TreeNode } from '../src/lib
 import { breedNamesFileSchema } from '../src/lib/data/schemas/breed-names.ts';
 import { breedsFileSchema } from '../src/lib/data/schemas/breeds.ts';
 import { originPlacesFileSchema } from '../src/lib/data/schemas/places.ts';
+import { imagesFileSchema } from '../src/lib/data/schemas/images.ts';
 import { parseCsv } from './lib/csv.ts';
 import { qidOf, readDesignFamilies, readWikidata } from './lib/sources.ts';
 
@@ -41,6 +47,8 @@ const PREFIXES = 'data/manual/parker-leaf-prefixes.json';
 const PLACES = 'data/manual/origin-places.json';
 const WD_PLACES = 'data/raw/wikidata-places.json';
 const BREEDS = 'src/lib/data/breeds.json';
+const IMAGES = 'src/lib/data/images.json';
+const COMMONS = 'data/raw/commons-imageinfo.json';
 
 type SampleRow = { abbrev: string; name: string; clade: string };
 const sample = new Map(
@@ -201,6 +209,23 @@ else if (namesParsed.success) {
 	for (const ab of leavesByBreed.keys()) if (!owner.has(ab)) errors.push(`${BREEDS}: tree leaf ${ab} belongs to no breed`);
 }
 
+// ---------------------------------------------------------------- images.json
+const imagesParsed = imagesFileSchema.safeParse(JSON.parse(readFileSync(IMAGES, 'utf8')));
+if (!imagesParsed.success) errors.push(...imagesParsed.error.issues.map((i) => `${IMAGES}: ${i.path.join('.')}: ${i.message}`));
+else if (breedsParsed.success) {
+	const byId = new Map(breedsParsed.data.breeds.map((b) => [b.id, b]));
+	const commons = JSON.parse(readFileSync(COMMONS, 'utf8')) as { responses: { query: { pages: { title: string }[] } }[] };
+	const fetched = new Set(commons.responses.flatMap((r) => r.query.pages.map((p) => p.title.replace(/^File:/, ''))));
+	for (const im of imagesParsed.data.images) {
+		const b = byId.get(im.breedId);
+		if (!b) errors.push(`${IMAGES}: unknown breed ${im.breedId}`);
+		else if (b.image?.commonsFile !== im.file) errors.push(`${IMAGES}: ${im.breedId} shows "${im.file}", ${BREEDS} says "${b.image?.commonsFile ?? 'no image'}"`);
+		if (!fetched.has(im.file.replace(/_/g, ' '))) errors.push(`${IMAGES}: ${im.file} not in ${COMMONS} (run npm run data:credits)`);
+	}
+	const missing = breedsParsed.data.breeds.length - imagesParsed.data.images.length;
+	if (missing) warnings.push(`${IMAGES}: ${missing} breed(s) without a credited photo, see data/reports/images.md`);
+}
+
 if (warnings.length) console.warn(`warnings (${warnings.length})\n  ${warnings.join('\n  ')}`);
 if (errors.length) {
 	console.error(`${errors.length} error(s)\n  ${errors.join('\n  ')}`);
@@ -209,3 +234,4 @@ if (errors.length) {
 console.log(`${TREE}: OK (${leaves.length} leaves, ${sample.size} breeds, ${seenDogs.size} dogs, split: ${tree.splitBreeds.join(', ') || 'none'})`);
 console.log(`${NAMES}: OK (every tree leaf and variant has an entry; QIDs and FCI numbers found in data/raw)`);
 console.log(`${BREEDS}: OK (${breedsParsed.data?.breeds.length} breeds, one per tree leaf, every fact sourced)`);
+console.log(`${IMAGES}: OK (${imagesParsed.data?.images.length} credited photos, free licences only)`);

@@ -10,8 +10,10 @@ import { treeFileSchema } from '$lib/data/schemas/tree';
 import { breedsFileSchema, type BreedSource } from '$lib/data/schemas/breeds';
 import { breedNamesFileSchema } from '$lib/data/schemas/breed-names';
 import { originPlacesFileSchema } from '$lib/data/schemas/places';
+import { imagesFileSchema } from '$lib/data/schemas/images';
 import treeJson from '$lib/data/tree.json';
 import breedsJson from '$lib/data/breeds.json';
+import imagesJson from '$lib/data/images.json';
 import fciMetaJson from '../../../data/raw/fci-breeds/meta.json';
 import wikidataBreedsJson from '../../../data/raw/wikidata-breeds.json';
 import wikidataPlacesJson from '../../../data/raw/wikidata-places.json';
@@ -53,6 +55,8 @@ export const load: PageServerLoad = () => {
 	const names = breedNamesFileSchema.parse(breedNamesJson);
 	const places = originPlacesFileSchema.parse(originPlacesJson);
 	const prefixes = leafPrefixesSchema.parse(leafPrefixesJson);
+	const imagesFile = imagesFileSchema.parse(imagesJson);
+	const nameOf = new Map(breedsFile.breeds.map((b) => [b.id, b.names.en]));
 
 	const allSources = breedsFile.breeds.flatMap((b) => b.sources);
 	const byKind = (kind: BreedSource['kind']) => allSources.filter((s) => s.kind === kind);
@@ -114,6 +118,18 @@ export const load: PageServerLoad = () => {
 				notes: []
 			},
 			{
+				id: 'commons',
+				title: 'Wikimedia Commons, photos',
+				gives: `One photo per breed, ${imagesFile.images.length} of ${breedsFile.breeds.length} breeds (images.json). Each photo keeps its own licence and author.`,
+				citation: 'Wikimedia Commons API: imageinfo and extmetadata of each file',
+				url: imagesFile.source.api,
+				version: null,
+				licence: 'Per file: CC0, public domain, CC BY or CC BY-SA only',
+				accessed: [...new Set(imagesFile.images.map((i) => i.retrieved))].sort(),
+				files: ['data/raw/commons-imageinfo.json'],
+				notes: imagesFile.source.notes
+			},
+			{
 				id: 'natural-earth',
 				title: 'Natural Earth, engraved base maps',
 				gives: 'Land shapes of the engraved maps (static/maps).',
@@ -134,6 +150,14 @@ export const load: PageServerLoad = () => {
 				description: `Parker 2017 tree restricted to ${tree.breeds.length} breeds, every dog kept.`,
 				inputs: tree.source.files,
 				notes: tree.splitBreeds.length ? [`Breeds split across subtrees: ${tree.splitBreeds.join(', ')}`] : []
+			},
+			{
+				file: 'src/lib/data/images.json',
+				generatedBy: imagesFile.generatedBy,
+				generatedAt: day(imagesFile.generatedAt),
+				description: imagesFile.source.description,
+				inputs: imagesFile.source.inputs,
+				notes: []
 			},
 			{
 				file: 'src/lib/data/breeds.json',
@@ -169,6 +193,13 @@ export const load: PageServerLoad = () => {
 		],
 		editorial,
 		fonts,
+		photos: imagesFile.images
+			.map((i) => ({ ...i, name: nameOf.get(i.breedId) ?? i.breedId }))
+			.sort((a, b) => a.name.localeCompare(b.name)),
+		withoutPhoto: breedsFile.breeds
+			.filter((b) => !imagesFile.images.some((i) => i.breedId === b.id))
+			.map((b) => ({ id: b.id, name: b.names.en }))
+			.sort((a, b) => a.name.localeCompare(b.name)),
 		breeds: breedsFile.breeds
 			.map((b) => ({ id: b.id, name: b.names.en, sources: b.sources }))
 			.sort((a, b) => a.name.localeCompare(b.name))

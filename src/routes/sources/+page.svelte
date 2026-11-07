@@ -143,6 +143,33 @@
 		</ul>
 	</section>
 
+	<section aria-labelledby="photos">
+		<h2 id="photos">Photos</h2>
+		<p class="intro">
+			Every photo comes from Wikimedia Commons under a free licence. The credit below is generated from each file's
+			metadata. Photos are shown as Wikimedia thumbnails, loaded from Wikimedia servers, and are not modified.
+		</p>
+		<ul class="list photos">
+			{#each data.photos as p (p.breedId)}
+				<li>
+					<a href={resolve('/breed/[id]', { id: p.breedId })}>{p.name}</a>:
+					<a href={p.filePage} rel="external noopener">{p.file}</a> by {p.author},
+					{#if p.licence.url}<a href={p.licence.url} rel="external noopener license">{p.licence.name}</a
+						>{:else}{p.licence.name}{/if}
+					<span class="none">read {p.retrieved}</span>
+				</li>
+			{/each}
+		</ul>
+		{#if data.withoutPhoto.length}
+			<p class="intro">
+				No photo yet, because no free file with a named author was found:
+				{#each data.withoutPhoto as b, i (b.id)}{i > 0 ? ', ' : ''}<a href={resolve('/breed/[id]', { id: b.id })}
+						>{b.name}</a
+					>{/each}.
+			</p>
+		{/if}
+	</section>
+
 	<section aria-labelledby="type">
 		<h2 id="type">Typefaces</h2>
 		<ul class="list">
@@ -255,6 +282,13 @@
 	.list {
 		max-width: 80ch;
 		padding-left: var(--dt-space-5);
+	}
+	.photos {
+		overflow-wrap: anywhere;
+		font-size: var(--dt-text-small);
+	}
+	.photos li + li {
+		margin-top: var(--dt-space-2);
 	}
 	.breeds {
 		display: grid;
