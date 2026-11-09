@@ -9,19 +9,19 @@ Wikidata P495 and docs/PLAN.md are cross-checks only. Places of data/manual/orig
 
 - **american-akita**: P495 United States (US) differs from FCI "JAPAN"; AKIT: 2 open doubt(s) in data/manual/breed-names.json
 - **american-cocker-spaniel**: 2 P18 images, first one kept: AmericanCockerSpaniel wb.jpg, Cocker Spaniel Puppy.jpg
-- **basset-hound**: display name "Basset Hound" not reviewed (data/manual/display-names.json); P495 France (FR) differs from FCI "GREAT BRITAIN"
-- **border-collie**: display name "Border Collie" not reviewed (data/manual/display-names.json); P495 United Kingdom (GB), Scotland (no ISO), England (no ISO) differs from FCI "GREAT BRITAIN"
-- **brussels-griffon**: display name "Brussels Griffon" not reviewed (data/manual/display-names.json); BRUS: 3 open doubt(s) in data/manual/breed-names.json
+- **basset-hound**: P495 France (FR) differs from FCI "GREAT BRITAIN"
+- **border-collie**: P495 United Kingdom (GB), Scotland (no ISO), England (no ISO) differs from FCI "GREAT BRITAIN"
+- **brussels-griffon**: BRUS: 3 open doubt(s) in data/manual/breed-names.json
 - **german-shorthaired-pointer**: 2 P18 images, first one kept: Duitse staande korthaar 10-10-1.jpg, Duitse staande korthaar 10-10-2.jpg
-- **german-spitz**: display name "Pomeranian (German Spitz)" not reviewed (data/manual/display-names.json); POM: 1 open doubt(s) in data/manual/breed-names.json
+- **german-spitz**: POM: 1 open doubt(s) in data/manual/breed-names.json
 - **golden-retriever**: P495 United Kingdom (GB), Scotland (no ISO) differs from FCI "GREAT BRITAIN"
 - **irish-terrier**: no P495 on Wikidata
-- **mastiff**: display name "Mastiff" not reviewed (data/manual/display-names.json); P495 England (no ISO) differs from FCI "GREAT BRITAIN"; MAST: 1 open doubt(s) in data/manual/breed-names.json
+- **mastiff**: P495 England (no ISO) differs from FCI "GREAT BRITAIN"; MAST: 1 open doubt(s) in data/manual/breed-names.json
 - **miniature-pinscher**: 2 P18 images, first one kept: Grupp 2 DVÄRGPINCHER, Pincerella’s Rinaldo Rosso (24260846206).jpg, Zwergpinscher adult Ch. Mirzan del Piervez.jpg
 - **poodle**: 2 P18 images, first one kept: Miniature Poodle (Hungary).jpg, Miniature poodle.jpg; no P495 on Wikidata; MPOO: 2 open doubt(s) in data/manual/breed-names.json; TPOO: 1 open doubt(s) in data/manual/breed-names.json
 - **pug**: P495 China (no ISO) differs from FCI "CHINA"
 - **rat-terrier**: no FCI number: origin from Wikidata P495; RATT: 1 open doubt(s) in data/manual/breed-names.json
-- **saint-bernard**: display name "Saint Bernard" not reviewed (data/manual/display-names.json); no P495 on Wikidata
+- **saint-bernard**: no P495 on Wikidata
 - **saluki**: P495 Arabian Peninsula (no ISO) differs from FCI "MIDDLE EAST"; SALU: 2 open doubt(s) in data/manual/breed-names.json
 - **xoloitzcuintle**: XOLO: 2 open doubt(s) in data/manual/breed-names.json; MXOL: 3 open doubt(s) in data/manual/breed-names.json
 
