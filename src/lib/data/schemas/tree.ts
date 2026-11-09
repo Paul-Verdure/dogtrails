@@ -9,6 +9,8 @@ export const sourceSchema = z.strictObject({
 	citation: z.string().min(1),
 	doi: z.string().min(1),
 	url: z.url(),
+	/** Licence of the published article and its supplements, with where it was read. */
+	licence: z.strictObject({ name: z.string().min(1), url: z.url(), basis: z.string().min(1), checked: z.iso.date() }),
 	files: z.array(z.string().min(1)).min(1),
 	notes: z.array(z.string())
 });

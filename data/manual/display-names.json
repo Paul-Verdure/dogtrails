@@ -1,0 +1,11 @@
+{
+	"_about": "English display names that replace the Wikidata label on the site (Paul, 2026-11-09: usual name and title case). Drafted with Claude Code on 2026-11-09 from the Parker 2017 supplement-1 name (AKC usage) and the FCI English name; reviewed=false until Paul checks it. The Wikidata label stays in breeds.json as names.wikidataEn.",
+	"entries": [
+		{ "id": "basset-hound", "en": "Basset Hound", "basis": "Casing only. Wikidata label \"Basset hound\"; Parker and FCI 163: Basset Hound.", "doubts": [], "reviewed": false },
+		{ "id": "border-collie", "en": "Border Collie", "basis": "Casing only. Wikidata label \"Border collie\"; Parker and FCI 297: Border Collie.", "doubts": [], "reviewed": false },
+		{ "id": "brussels-griffon", "en": "Brussels Griffon", "basis": "Wikidata label \"Griffon Bruxellois\" (FCI 80 name, French). Parker name, AKC name and site id: Brussels Griffon.", "doubts": ["The FCI splits the AKC Brussels Griffon into 80, 81 and 82; the page is attached to 80 (see breed-names.json BRUS)."], "reviewed": false },
+		{ "id": "saint-bernard", "en": "Saint Bernard", "basis": "Wikidata label \"St. Bernard\". Parker name and site id: Saint Bernard (FCI 61 writes \"St. Bernhardshund\" / \"St. Bernard\").", "doubts": [], "reviewed": false },
+		{ "id": "mastiff", "en": "Mastiff", "basis": "Wikidata label \"English Mastiff\". FCI 264 and site id: Mastiff; Parker: English Mastiff.", "doubts": ["\"Mastiff\" alone also names a breed type; Parker and Wikidata say English Mastiff."], "reviewed": false },
+		{ "id": "german-spitz", "en": "Pomeranian (German Spitz)", "basis": "The Parker dogs are Pomeranians (POM), which the FCI files under 97 German Spitz (size Zwergspitz / Pomeranian). Wikidata label: German Spitz.", "doubts": ["Alternative: keep \"German Spitz\" and name the Pomeranian in the page text only."], "reviewed": false }
+	]
+}

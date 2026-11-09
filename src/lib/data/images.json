@@ -4,29 +4,34 @@
 		"api": "https://commons.wikimedia.org/w/api.php",
 		"inputs": [
 			"src/lib/data/breeds.json",
+			"data/manual/photos.json",
 			"data/raw/commons-imageinfo.json"
 		],
 		"notes": [
 			"Only CC0, public domain, CC BY and CC BY-SA files are kept; rejected files are listed in data/reports/images.md.",
-			"author is the plain text of the extmetadata Attribution field, else Artist.",
-			"Thumbnails are 640 px wide and hotlinked from Wikimedia (thumb.wikimedia.org, or upload.wikimedia.org for originals narrower than that), URL kept as the API gives it."
+			"The file is the Wikidata P18 image of breeds.json unless data/manual/photos.json picks another (chosenBy).",
+			"author is the plain text of the extmetadata Attribution field, else Artist, unless data/manual/photos.json gives a credit read from the file page (authorFrom).",
+			"Thumbnails (640 px requested) are downloaded unmodified to static/photos/ and served by the site; sourceUrl is the Wikimedia URL without utm_* parameters."
 		]
 	},
 	"generatedBy": "scripts/fetch-credits.ts",
-	"generatedAt": "2026-11-07T14:03:40.760Z",
+	"generatedAt": "2026-11-09T09:40:50.854Z",
 	"images": [
 		{
 			"breedId": "american-akita",
 			"file": "Akita Americano v3.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Akita_Americano_v3.jpg",
 			"author": "Edwin Campos",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc0",
 				"name": "CC0",
 				"url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Akita_Americano_v3.jpg/960px-Akita_Americano_v3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/american-akita.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Akita_Americano_v3.jpg/960px-Akita_Americano_v3.jpg",
 				"width": 640,
 				"height": 593
 			},
@@ -34,20 +39,71 @@
 				"width": 1600,
 				"height": 1482
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
+		},
+		{
+			"breedId": "american-cocker-spaniel",
+			"file": "American Cocker Spaniel buff portrait.jpg",
+			"chosenBy": "data/manual/photos.json",
+			"filePage": "https://commons.wikimedia.org/wiki/File:American_Cocker_Spaniel_buff_portrait.jpg",
+			"author": "\"Mike\" Michael L. Baird",
+			"authorFrom": "commons-extmetadata",
+			"licence": {
+				"kind": "cc-by",
+				"name": "CC BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0"
+			},
+			"thumb": {
+				"path": "photos/american-cocker-spaniel.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/American_Cocker_Spaniel_buff_portrait.jpg/960px-American_Cocker_Spaniel_buff_portrait.jpg",
+				"width": 640,
+				"height": 427
+			},
+			"original": {
+				"width": 3280,
+				"height": 2187
+			},
+			"retrieved": "2026-11-09"
+		},
+		{
+			"breedId": "basset-hound",
+			"file": "Basset Hound (Havlíčkův Brod) 02.jpg",
+			"chosenBy": "data/manual/photos.json",
+			"filePage": "https://commons.wikimedia.org/wiki/File:Basset_Hound_(Havl%C3%AD%C4%8Dk%C5%AFv_Brod)_02.jpg",
+			"author": "Pohled 111",
+			"authorFrom": "commons-extmetadata",
+			"licence": {
+				"kind": "cc-by-sa",
+				"name": "CC BY-SA 4.0",
+				"url": "https://creativecommons.org/licenses/by-sa/4.0"
+			},
+			"thumb": {
+				"path": "photos/basset-hound.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Basset_Hound_%28Havl%C3%AD%C4%8Dk%C5%AFv_Brod%29_02.jpg/960px-Basset_Hound_%28Havl%C3%AD%C4%8Dk%C5%AFv_Brod%29_02.jpg",
+				"width": 640,
+				"height": 480
+			},
+			"original": {
+				"width": 3264,
+				"height": 2448
+			},
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "beagle",
 			"file": "MiloSmet.JPG",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:MiloSmet.JPG",
 			"author": "Jonatan De Geest",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 3.0",
 				"url": "https://creativecommons.org/licenses/by-sa/3.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/MiloSmet.JPG/960px-MiloSmet.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/beagle.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/MiloSmet.JPG/960px-MiloSmet.JPG",
 				"width": 640,
 				"height": 426
 			},
@@ -55,20 +111,23 @@
 				"width": 3008,
 				"height": 2000
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "border-collie",
 			"file": "Argentine border collie.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Argentine_border_collie.jpg",
 			"author": "Horacio Cambeiro",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 4.0",
 				"url": "https://creativecommons.org/licenses/by-sa/4.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Argentine_border_collie.jpg/960px-Argentine_border_collie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/border-collie.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Argentine_border_collie.jpg/960px-Argentine_border_collie.jpg",
 				"width": 640,
 				"height": 480
 			},
@@ -76,20 +135,23 @@
 				"width": 4000,
 				"height": 3000
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "briard",
 			"file": "Briard fauve.JPG",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Briard_fauve.JPG",
-			"author": "Birgit Balzer, Deutschland (uploaded by Caronna 17:00, 10 Feb 2005 (UTC))",
+			"author": "Birgit Balzer",
+			"authorFrom": "data/manual/photos.json",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 3.0",
 				"url": "http://creativecommons.org/licenses/by-sa/3.0/"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Briard_fauve.JPG/960px-Briard_fauve.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/briard.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Briard_fauve.JPG/960px-Briard_fauve.JPG",
 				"width": 640,
 				"height": 480
 			},
@@ -97,20 +159,23 @@
 				"width": 1600,
 				"height": 1200
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "brussels-griffon",
 			"file": "Monkey Bizniz Drama Queen.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Monkey_Bizniz_Drama_Queen.jpg",
 			"author": "Arne Fagerholt",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by",
 				"name": "CC BY 3.0",
 				"url": "https://creativecommons.org/licenses/by/3.0"
 			},
 			"thumb": {
-				"url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Monkey_Bizniz_Drama_Queen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+				"path": "photos/brussels-griffon.jpg",
+				"sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Monkey_Bizniz_Drama_Queen.jpg",
 				"width": 300,
 				"height": 250
 			},
@@ -118,20 +183,23 @@
 				"width": 300,
 				"height": 250
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "chihuahua",
 			"file": "Chihuahuas- Holly, Nina, Doralice.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Chihuahuas-_Holly,_Nina,_Doralice.jpg",
 			"author": "Caterinarufo",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "pd",
 				"name": "Public domain",
 				"url": null
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg/960px-Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/chihuahua.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg/960px-Chihuahuas-_Holly%2C_Nina%2C_Doralice.jpg",
 				"width": 640,
 				"height": 495
 			},
@@ -139,20 +207,23 @@
 				"width": 1650,
 				"height": 1276
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "chinese-crested-dog",
 			"file": "IndyStands.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:IndyStands.jpg",
 			"author": "Tommy Gildseth",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by",
 				"name": "CC BY 3.0",
 				"url": "https://creativecommons.org/licenses/by/3.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/IndyStands.jpg/960px-IndyStands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/chinese-crested-dog.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/IndyStands.jpg/960px-IndyStands.jpg",
 				"width": 640,
 				"height": 426
 			},
@@ -160,20 +231,23 @@
 				"width": 3008,
 				"height": 2000
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "chow-chow",
 			"file": "01 Chow Chow.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:01_Chow_Chow.jpg",
-			"author": "Prayitno/more than 2.5 millions views: thank you!",
+			"author": "Prayitno (Flickr)",
+			"authorFrom": "data/manual/photos.json",
 			"licence": {
 				"kind": "cc-by",
 				"name": "CC BY 2.0",
 				"url": "https://creativecommons.org/licenses/by/2.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/01_Chow_Chow.jpg/960px-01_Chow_Chow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/chow-chow.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/01_Chow_Chow.jpg/960px-01_Chow_Chow.jpg",
 				"width": 640,
 				"height": 800
 			},
@@ -181,20 +255,23 @@
 				"width": 2952,
 				"height": 3690
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "german-shepherd",
 			"file": "Pastor aleman a.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Pastor_aleman_a.jpg",
 			"author": "Erick Drumss Hernández",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 4.0",
 				"url": "https://creativecommons.org/licenses/by-sa/4.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Pastor_aleman_a.jpg/960px-Pastor_aleman_a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/german-shepherd.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Pastor_aleman_a.jpg/960px-Pastor_aleman_a.jpg",
 				"width": 640,
 				"height": 512
 			},
@@ -202,20 +279,23 @@
 				"width": 1000,
 				"height": 800
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "german-shorthaired-pointer",
 			"file": "Duitse staande korthaar 10-10-1.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Duitse_staande_korthaar_10-10-1.jpg",
 			"author": "Bonnie van den Born, http://www.bonfoto.nl",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 3.0",
 				"url": "http://creativecommons.org/licenses/by-sa/3.0/"
 			},
 			"thumb": {
-				"url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Duitse_staande_korthaar_10-10-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+				"path": "photos/german-shorthaired-pointer.jpg",
+				"sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Duitse_staande_korthaar_10-10-1.jpg",
 				"width": 332,
 				"height": 500
 			},
@@ -223,20 +303,23 @@
 				"width": 332,
 				"height": 500
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "german-spitz",
 			"file": "Un chien Spitz allemand.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Un_chien_Spitz_allemand.jpg",
-			"author": "The original uploader was Teuteul at French Wikipedia. Later versions were uploaded by Tornad at fr.wikipedia.",
+			"author": "Teuteul (French Wikipedia)",
+			"authorFrom": "data/manual/photos.json",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 3.0",
 				"url": "http://creativecommons.org/licenses/by-sa/3.0/"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Un_chien_Spitz_allemand.jpg/960px-Un_chien_Spitz_allemand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/german-spitz.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Un_chien_Spitz_allemand.jpg/960px-Un_chien_Spitz_allemand.jpg",
 				"width": 640,
 				"height": 549
 			},
@@ -244,20 +327,23 @@
 				"width": 1336,
 				"height": 1146
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "golden-retriever",
 			"file": "Golden Retriever Dukedestiny01 drvd.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Golden_Retriever_Dukedestiny01_drvd.jpg",
-			"author": "Dukedestiny01.jpg: \"Janneke Vreugdenhil\" derivative work: Anka Friedrich ([[User talk:Ankaaswe Trix Friedrich|talk]])",
+			"author": "Janneke Vreugdenhil; derivative work by Anka Friedrich",
+			"authorFrom": "data/manual/photos.json",
 			"licence": {
 				"kind": "pd",
 				"name": "Public domain",
 				"url": null
 			},
 			"thumb": {
-				"url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_Retriever_Dukedestiny01_drvd.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+				"path": "photos/golden-retriever.jpg",
+				"sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_Retriever_Dukedestiny01_drvd.jpg",
 				"width": 640,
 				"height": 506
 			},
@@ -265,20 +351,23 @@
 				"width": 652,
 				"height": 515
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "icelandic-sheepdog",
 			"file": "Ulfur.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Ulfur.jpg",
 			"author": "Zonjah",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 3.0",
 				"url": "http://creativecommons.org/licenses/by-sa/3.0/"
 			},
 			"thumb": {
-				"url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Ulfur.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+				"path": "photos/icelandic-sheepdog.jpg",
+				"sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Ulfur.jpg",
 				"width": 583,
 				"height": 465
 			},
@@ -286,20 +375,23 @@
 				"width": 583,
 				"height": 465
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "irish-terrier",
 			"file": "Irish Terrier P1060074.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Irish_Terrier_P1060074.jpg",
 			"author": "Goldmull",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 4.0",
 				"url": "https://creativecommons.org/licenses/by-sa/4.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Irish_Terrier_P1060074.jpg/960px-Irish_Terrier_P1060074.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/irish-terrier.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Irish_Terrier_P1060074.jpg/960px-Irish_Terrier_P1060074.jpg",
 				"width": 640,
 				"height": 437
 			},
@@ -307,20 +399,23 @@
 				"width": 1948,
 				"height": 1330
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "mastiff",
 			"file": "Mastif angielski pregowany nn.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Mastif_angielski_pregowany_nn.jpg",
 			"author": "Pleple2000",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 3.0",
 				"url": "http://creativecommons.org/licenses/by-sa/3.0/"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Mastif_angielski_pregowany_nn.jpg/960px-Mastif_angielski_pregowany_nn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/mastiff.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Mastif_angielski_pregowany_nn.jpg/960px-Mastif_angielski_pregowany_nn.jpg",
 				"width": 640,
 				"height": 714
 			},
@@ -328,20 +423,23 @@
 				"width": 1500,
 				"height": 1674
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "miniature-pinscher",
 			"file": "Grupp 2 DVÄRGPINCHER, Pincerella’s Rinaldo Rosso (24260846206).jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Grupp_2_DV%C3%84RGPINCHER,_Pincerella%E2%80%99s_Rinaldo_Rosso_(24260846206).jpg",
 			"author": "Svenska Mässan from Sweden",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by",
 				"name": "CC BY 2.0",
 				"url": "https://creativecommons.org/licenses/by/2.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg/960px-Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/miniature-pinscher.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg/960px-Grupp_2_DV%C3%84RGPINCHER%2C_Pincerella%E2%80%99s_Rinaldo_Rosso_%2824260846206%29.jpg",
 				"width": 640,
 				"height": 427
 			},
@@ -349,20 +447,23 @@
 				"width": 1656,
 				"height": 1104
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "miniature-schnauzer",
 			"file": "Питомник \"Ассон Ари\" Цвергшнауцеры белые и черные с серебром 12.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg",
 			"author": "Zorik07",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 3.0",
 				"url": "https://creativecommons.org/licenses/by-sa/3.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg/960px-%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/miniature-schnauzer.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg/960px-%D0%9F%D0%B8%D1%82%D0%BE%D0%BC%D0%BD%D0%B8%D0%BA_%22%D0%90%D1%81%D1%81%D0%BE%D0%BD_%D0%90%D1%80%D0%B8%22_%D0%A6%D0%B2%D0%B5%D1%80%D0%B3%D1%88%D0%BD%D0%B0%D1%83%D1%86%D0%B5%D1%80%D1%8B_%D0%B1%D0%B5%D0%BB%D1%8B%D0%B5_%D0%B8_%D1%87%D0%B5%D1%80%D0%BD%D1%8B%D0%B5_%D1%81_%D1%81%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D0%BE%D0%BC_12.jpg",
 				"width": 640,
 				"height": 471
 			},
@@ -370,20 +471,23 @@
 				"width": 3501,
 				"height": 2576
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "nova-scotia-duck-tolling-retriever",
 			"file": "Duck Toller.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Duck_Toller.jpg",
 			"author": "Cal119 at English Wikipedia",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "pd",
 				"name": "Public domain",
 				"url": null
 			},
 			"thumb": {
-				"url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Duck_Toller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+				"path": "photos/nova-scotia-duck-tolling-retriever.jpg",
+				"sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Duck_Toller.jpg",
 				"width": 640,
 				"height": 511
 			},
@@ -391,41 +495,47 @@
 				"width": 666,
 				"height": 532
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "poodle",
-			"file": "Miniature Poodle (Hungary).jpg",
-			"filePage": "https://commons.wikimedia.org/wiki/File:Miniature_Poodle_(Hungary).jpg",
-			"author": "UszkarFoto92",
+			"file": "Standard Poodle cream standing.jpg",
+			"chosenBy": "data/manual/photos.json",
+			"filePage": "https://commons.wikimedia.org/wiki/File:Standard_Poodle_cream_standing.jpg",
+			"author": "John Leslie from London, UK",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
-				"kind": "cc0",
-				"name": "CC0",
-				"url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+				"kind": "cc-by",
+				"name": "CC BY 2.0",
+				"url": "https://creativecommons.org/licenses/by/2.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Miniature_Poodle_%28Hungary%29.jpg/960px-Miniature_Poodle_%28Hungary%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/poodle.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Standard_Poodle_cream_standing.jpg/960px-Standard_Poodle_cream_standing.jpg",
 				"width": 640,
-				"height": 853
+				"height": 427
 			},
 			"original": {
-				"width": 4284,
-				"height": 5712
+				"width": 3888,
+				"height": 2592
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "pug",
 			"file": "2.5-year-old fawn male pug.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:2.5-year-old_fawn_male_pug.jpg",
 			"author": "Abuk SABUK",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 3.0",
 				"url": "https://creativecommons.org/licenses/by-sa/3.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/2.5-year-old_fawn_male_pug.jpg/960px-2.5-year-old_fawn_male_pug.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/pug.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/2.5-year-old_fawn_male_pug.jpg/960px-2.5-year-old_fawn_male_pug.jpg",
 				"width": 640,
 				"height": 560
 			},
@@ -433,20 +543,23 @@
 				"width": 2274,
 				"height": 1988
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "puli",
 			"file": "Puli 600.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Puli_600.jpg",
 			"author": "Sannse at the English-language Wikipedia",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 3.0",
 				"url": "http://creativecommons.org/licenses/by-sa/3.0/"
 			},
 			"thumb": {
-				"url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Puli_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+				"path": "photos/puli.jpg",
+				"sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Puli_600.jpg",
 				"width": 600,
 				"height": 505
 			},
@@ -454,20 +567,23 @@
 				"width": 600,
 				"height": 505
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "rat-terrier",
 			"file": "AmRatTerr11 fx wb.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:AmRatTerr11_fx_wb.jpg",
 			"author": "Elf at English Wikipedia",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 3.0",
 				"url": "http://creativecommons.org/licenses/by-sa/3.0/"
 			},
 			"thumb": {
-				"url": "https://upload.wikimedia.org/wikipedia/commons/6/63/AmRatTerr11_fx_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+				"path": "photos/rat-terrier.jpg",
+				"sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/AmRatTerr11_fx_wb.jpg",
 				"width": 419,
 				"height": 500
 			},
@@ -475,20 +591,23 @@
 				"width": 419,
 				"height": 500
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "rottweiler",
 			"file": "Rottweiler Moletai May 2014.2.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Rottweiler_Moletai_May_2014.2.jpg",
 			"author": "Томасина",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 4.0",
 				"url": "https://creativecommons.org/licenses/by-sa/4.0"
 			},
 			"thumb": {
-				"url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Rottweiler_Moletai_May_2014.2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+				"path": "photos/rottweiler.jpg",
+				"sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Rottweiler_Moletai_May_2014.2.jpg",
 				"width": 346,
 				"height": 506
 			},
@@ -496,20 +615,23 @@
 				"width": 346,
 				"height": 506
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "saint-bernard",
 			"file": "Rey nieve.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Rey_nieve.jpg",
 			"author": "Rafael Dominguez Rodriguez",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 4.0",
 				"url": "https://creativecommons.org/licenses/by-sa/4.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Rey_nieve.jpg/960px-Rey_nieve.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/saint-bernard.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Rey_nieve.jpg/960px-Rey_nieve.jpg",
 				"width": 640,
 				"height": 650
 			},
@@ -517,20 +639,23 @@
 				"width": 1200,
 				"height": 1219
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "saluki",
 			"file": "Red Smooth Saluki.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Red_Smooth_Saluki.jpg",
-			"author": "r.",
+			"author": "r. (Redgunamo on Commons)",
+			"authorFrom": "data/manual/photos.json",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 3.0",
 				"url": "https://creativecommons.org/licenses/by-sa/3.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Red_Smooth_Saluki.jpg/960px-Red_Smooth_Saluki.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/saluki.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Red_Smooth_Saluki.jpg/960px-Red_Smooth_Saluki.jpg",
 				"width": 640,
 				"height": 521
 			},
@@ -538,20 +663,47 @@
 				"width": 2266,
 				"height": 1843
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
+		},
+		{
+			"breedId": "shetland-sheepdog",
+			"file": "Shetland Sheepdog female sable.jpg",
+			"chosenBy": "data/manual/photos.json",
+			"filePage": "https://commons.wikimedia.org/wiki/File:Shetland_Sheepdog_female_sable.jpg",
+			"author": "Linsenhejhej",
+			"authorFrom": "commons-extmetadata",
+			"licence": {
+				"kind": "cc-by-sa",
+				"name": "CC BY-SA 3.0",
+				"url": "https://creativecommons.org/licenses/by-sa/3.0"
+			},
+			"thumb": {
+				"path": "photos/shetland-sheepdog.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Shetland_Sheepdog_female_sable.jpg/960px-Shetland_Sheepdog_female_sable.jpg",
+				"width": 640,
+				"height": 430
+			},
+			"original": {
+				"width": 2896,
+				"height": 1944
+			},
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "shih-tzu",
 			"file": "Shih Tzu portrait show dog.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:Shih_Tzu_portrait_show_dog.jpg",
 			"author": "danny O.",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by",
 				"name": "CC BY 2.0",
 				"url": "https://creativecommons.org/licenses/by/2.0"
 			},
 			"thumb": {
-				"url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Shih_Tzu_portrait_show_dog.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+				"path": "photos/shih-tzu.jpg",
+				"sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Shih_Tzu_portrait_show_dog.jpg",
 				"width": 640,
 				"height": 962
 			},
@@ -559,20 +711,23 @@
 				"width": 665,
 				"height": 1000
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		},
 		{
 			"breedId": "xoloitzcuintle",
 			"file": "XoloLarge1.jpg",
+			"chosenBy": "wikidata-p18",
 			"filePage": "https://commons.wikimedia.org/wiki/File:XoloLarge1.jpg",
 			"author": "Canarian",
+			"authorFrom": "commons-extmetadata",
 			"licence": {
 				"kind": "cc-by-sa",
 				"name": "CC BY-SA 4.0",
 				"url": "https://creativecommons.org/licenses/by-sa/4.0"
 			},
 			"thumb": {
-				"url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/XoloLarge1.jpg/960px-XoloLarge1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+				"path": "photos/xoloitzcuintle.jpg",
+				"sourceUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/XoloLarge1.jpg/960px-XoloLarge1.jpg",
 				"width": 640,
 				"height": 538
 			},
@@ -580,7 +735,7 @@
 				"width": 2032,
 				"height": 1707
 			},
-			"retrieved": "2026-11-07"
+			"retrieved": "2026-11-09"
 		}
 	]
 }

@@ -9,6 +9,7 @@ import { z } from 'zod';
 import { treeFileSchema } from '$lib/data/schemas/tree';
 import { breedsFileSchema, type BreedSource } from '$lib/data/schemas/breeds';
 import { breedNamesFileSchema } from '$lib/data/schemas/breed-names';
+import { displayNamesFileSchema } from '$lib/data/schemas/display-names';
 import { originPlacesFileSchema } from '$lib/data/schemas/places';
 import { imagesFileSchema } from '$lib/data/schemas/images';
 import treeJson from '$lib/data/tree.json';
@@ -18,6 +19,7 @@ import fciMetaJson from '../../../data/raw/fci-breeds/meta.json';
 import wikidataBreedsJson from '../../../data/raw/wikidata-breeds.json';
 import wikidataPlacesJson from '../../../data/raw/wikidata-places.json';
 import breedNamesJson from '../../../data/manual/breed-names.json';
+import displayNamesJson from '../../../data/manual/display-names.json';
 import originPlacesJson from '../../../data/manual/origin-places.json';
 import leafPrefixesJson from '../../../data/manual/parker-leaf-prefixes.json';
 import type { PageServerLoad } from './$types';
@@ -53,6 +55,7 @@ export const load: PageServerLoad = () => {
 	const wdBreeds = wikidataRawSchema.parse(wikidataBreedsJson);
 	const wdPlaces = wikidataRawSchema.parse(wikidataPlacesJson);
 	const names = breedNamesFileSchema.parse(breedNamesJson);
+	const displayNames = displayNamesFileSchema.parse(displayNamesJson);
 	const places = originPlacesFileSchema.parse(originPlacesJson);
 	const prefixes = leafPrefixesSchema.parse(leafPrefixesJson);
 	const imagesFile = imagesFileSchema.parse(imagesJson);
@@ -88,7 +91,7 @@ export const load: PageServerLoad = () => {
 				citation: tree.source.citation,
 				url: tree.source.url,
 				version: `DOI ${tree.source.doi}`,
-				licence: null,
+				licence: tree.source.licence.name,
 				accessed: retrievedOf('parker2017'),
 				files: tree.source.files,
 				notes: tree.source.notes
@@ -175,6 +178,13 @@ export const load: PageServerLoad = () => {
 				entries: names.entries.length,
 				reviewed: names.entries.filter((e) => e.reviewed).length,
 				sources: names.sources
+			},
+			{
+				file: 'data/manual/display-names.json',
+				about: displayNames._about,
+				entries: displayNames.entries.length,
+				reviewed: displayNames.entries.filter((e) => e.reviewed).length,
+				sources: []
 			},
 			{
 				file: 'data/manual/origin-places.json',

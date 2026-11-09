@@ -147,13 +147,14 @@
 		<h2 id="photos">Photos</h2>
 		<p class="intro">
 			Every photo comes from Wikimedia Commons under a free licence. The credit below is generated from each file's
-			metadata. Photos are shown as Wikimedia thumbnails, loaded from Wikimedia servers, and are not modified.
+			metadata, or read by hand from its file page when the metadata is not a usable credit (marked *). Photos
+			are Wikimedia thumbnails, copied unmodified and served by this site.
 		</p>
 		<ul class="list photos">
 			{#each data.photos as p (p.breedId)}
 				<li>
 					<a href={resolve('/breed/[id]', { id: p.breedId })}>{p.name}</a>:
-					<a href={p.filePage} rel="external noopener">{p.file}</a> by {p.author},
+					<a href={p.filePage} rel="external noopener">{p.file}</a> by {p.author}{p.authorFrom === 'commons-extmetadata' ? '' : ' *'},
 					{#if p.licence.url}<a href={p.licence.url} rel="external noopener license">{p.licence.name}</a
 						>{:else}{p.licence.name}{/if}
 					<span class="none">read {p.retrieved}</span>

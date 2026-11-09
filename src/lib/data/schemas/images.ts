@@ -17,12 +17,16 @@ const httpsUrl = z.url({ protocol: /^https$/ });
 export const imageSchema = z
 	.strictObject({
 		breedId: breedIdSchema,
-		/** Commons file name without the `File:` prefix, as in breeds.json `image.commonsFile`. */
+		/** Commons file name without the `File:` prefix. */
 		file: z.string().min(1),
+		/** Who picked the file: the Wikidata P18 of breeds.json, or the hand-picked table. */
+		chosenBy: z.enum(['wikidata-p18', 'data/manual/photos.json']),
 		/** The file description page on Commons. */
 		filePage: z.url().refine((u) => new URL(u).hostname === 'commons.wikimedia.org', 'not a Commons page'),
 		/** Plain text (HTML stripped) from extmetadata `Attribution`, else `Artist`. */
 		author: z.string().min(1),
+		/** Where the credit text comes from: the Commons metadata, or the hand-checked table. */
+		authorFrom: z.enum(['commons-extmetadata', 'data/manual/photos.json']),
 		licence: z.strictObject({
 			kind: imageLicenceKindSchema,
 			/** extmetadata `LicenseShortName`, e.g. `CC BY-SA 4.0`. */
@@ -30,9 +34,12 @@ export const imageSchema = z
 			/** extmetadata `LicenseUrl`; Commons gives none for public-domain files. */
 			url: z.url().nullable()
 		}),
-		/** Hotlinked Wikimedia thumbnail; width/height are the box it is drawn in (never above the original). */
+		/** Self-hosted thumbnail; width/height are the box it is drawn in (never above the original). */
 		thumb: z.strictObject({
-			url: httpsUrl.refine((u) => WIKIMEDIA_FILE_HOSTS.includes(new URL(u).hostname), 'not a Wikimedia file host'),
+			/** Path under static/, served by the site. */
+			path: z.string().regex(/^photos\/[a-z0-9-]+\.(jpg|png|webp|gif)$/),
+			/** Where it was downloaded from, without tracking parameters. */
+			sourceUrl: httpsUrl.refine((u) => WIKIMEDIA_FILE_HOSTS.includes(new URL(u).hostname), 'not a Wikimedia file host'),
 			width: z.int().positive(),
 			height: z.int().positive()
 		}),

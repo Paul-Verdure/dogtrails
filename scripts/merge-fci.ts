@@ -8,6 +8,7 @@
  *   data/raw/wikidata-breeds.json    labels EN/FR/NL, P495 (cross-check only), P18 image
  *   data/raw/wikidata-places.json    P625 point of each origin place
  *   docs/DESIGN.md §2                family (editorial choice, not a datum)
+ *   data/manual/display-names.json   English display name when the Wikidata label is not the usual one
  *
  * Origin rule (Paul, 2026-11-04): origin = FCI country; Wikidata P495 only cross-checks; FCI regions
  * stay regions; a breed without FCI number takes its origin from P495. `development` and `fixedAround`
@@ -17,6 +18,7 @@
  */
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { breedNamesFileSchema, type BreedNameEntry } from '../src/lib/data/schemas/breed-names.ts';
+import { displayNamesFileSchema } from '../src/lib/data/schemas/display-names.ts';
 import { originPlacesFileSchema, type OriginPlace } from '../src/lib/data/schemas/places.ts';
 import { treeFileSchema } from '../src/lib/data/schemas/tree.ts';
 import { breedsFileSchema, familySchema, type Breed, type BreedSource } from '../src/lib/data/schemas/breeds.ts';
@@ -37,6 +39,7 @@ const TREE = 'src/lib/data/tree.json';
 const WD_BREEDS = 'data/raw/wikidata-breeds.json';
 const WD_PLACES = 'data/raw/wikidata-places.json';
 const DESIGN = 'docs/DESIGN.md';
+const DISPLAY = 'data/manual/display-names.json';
 const OUT = 'src/lib/data/breeds.json';
 const REPORT = 'data/reports/breeds.md';
 /** Parker supplements were added to data/raw in commit 52b4587. */
@@ -44,6 +47,7 @@ const PARKER_RETRIEVED = '2026-11-04';
 
 const errors: string[] = [];
 const names = breedNamesFileSchema.parse(JSON.parse(readFileSync(NAMES, 'utf8')));
+const display = new Map(displayNamesFileSchema.parse(JSON.parse(readFileSync(DISPLAY, 'utf8'))).entries.map((e) => [e.id, e]));
 const places = originPlacesFileSchema.parse(JSON.parse(readFileSync(PLACES, 'utf8')));
 const tree = treeFileSchema.parse(JSON.parse(readFileSync(TREE, 'utf8')));
 const fci = readFci();
@@ -110,6 +114,7 @@ const wdSource = (q: string, what: string): BreedSource => ({
 const treeBreeds = new Map(tree.breeds.map((b) => [b.abbrev, b]));
 const byId = new Map<string, BreedNameEntry[]>();
 for (const e of names.entries) byId.set(e.id, [...(byId.get(e.id) ?? []), e]);
+for (const id of display.keys()) if (!byId.has(id)) errors.push(`${DISPLAY}: unknown breed id ${id}`);
 for (const ab of treeBreeds.keys()) if (!names.entries.some((e) => e.abbrev === ab)) errors.push(`tree breed ${ab} has no entry in ${NAMES}`);
 
 type ReportRow = { id: string; abbrevs: string; family: string; fciCountry: string; origin: string; continents: string; p495: string; plan: string; flags: string[] };
@@ -146,6 +151,17 @@ for (const [id, entries] of byId) {
 	const w = wd.get(head.wikidata);
 	if (!w?.en) errors.push(`${id}: no English label for ${head.wikidata}`);
 	const wId = use(wdSource(head.wikidata, w?.en ?? ''));
+	const shown = display.get(id);
+	const enSourceId = shown
+		? use({
+				id: 'dogtrails-display-names',
+				kind: 'editorial',
+				citation: `Dogtrails display names, ${DISPLAY}: ${shown.basis}`,
+				path: DISPLAY,
+				retrieved: '2026-11-09'
+			})
+		: wId;
+	if (shown && !shown.reviewed) flags.push(`display name "${shown.en}" not reviewed (${DISPLAY})`);
 	const images = [...(w?.images ?? [])].sort();
 	if (images.length > 1) flags.push(`${images.length} P18 images, first one kept: ${images.join(', ')}`);
 
@@ -219,7 +235,14 @@ for (const [id, entries] of byId) {
 	if (!origin || !fam.success) continue;
 	breeds.push({
 		id,
-		names: { en: capitalise(w?.en)!, fr: capitalise(w?.fr), nl: capitalise(w?.nl), sourceId: wId },
+		names: {
+			en: shown?.en ?? capitalise(w?.en)!,
+			fr: capitalise(w?.fr),
+			nl: capitalise(w?.nl),
+			wikidataEn: shown ? capitalise(w?.en)! : null,
+			enSourceId,
+			sourceId: wId
+		},
 		wikidata: head.wikidata,
 		fci: fciField,
 		parker: {
@@ -260,10 +283,10 @@ const file = breedsFileSchema.parse({
 	source: {
 		description:
 			'Breeds of the Parker 2017 sample with their FCI classification, Wikidata names and image, Parker clade, origin point and editorial colour family. Each fact names its source in sources[].',
-		inputs: [NAMES, PLACES, TREE, 'data/raw/fci-breeds/fci-breeds.csv', WD_BREEDS, WD_PLACES, `${DESIGN} §2`],
+		inputs: [NAMES, DISPLAY, PLACES, TREE, 'data/raw/fci-breeds/fci-breeds.csv', WD_BREEDS, WD_PLACES, `${DESIGN} §2`],
 		notes: [
 			'origin = FCI country (Paul, 2026-11-04); Wikidata P495 is a cross-check only, its disagreements are in data/reports/breeds.md.',
-			'Names are Wikidata labels with the first letter upper-cased.',
+			'Names are Wikidata labels with the first letter upper-cased, except English names overridden by data/manual/display-names.json (editorial, Paul 2026-11-09).',
 			'family is an editorial choice (docs/DESIGN.md §2), not genetic data.',
 			'development and fixedAround stay empty until a source gives them.'
 		]

@@ -50,6 +50,10 @@ export const breedSchema = z.strictObject({
 		en: z.string().min(1),
 		fr: z.string().min(1).nullable(),
 		nl: z.string().min(1).nullable(),
+		/** Wikidata English label when `en` comes from data/manual/display-names.json, else `null`. */
+		wikidataEn: z.string().min(1).nullable(),
+		/** Source of `en`: the editorial display-names table when it overrides Wikidata. */
+		enSourceId: sourceIdSchema,
 		...sourced
 	}),
 	wikidata: qidSchema,
@@ -117,7 +121,7 @@ export const breedsFileSchema = z
 				if (Array.isArray(v)) v.forEach((x, j) => walk(x, [...path, j]));
 				else if (v && typeof v === 'object')
 					for (const [k, x] of Object.entries(v)) {
-						if (k === 'sourceId' && typeof x === 'string' && !known.has(x))
+						if (/^(sourceId|[a-z]+SourceId)$/.test(k) && typeof x === 'string' && !known.has(x))
 							ctx.addIssue({ code: 'custom', path: ['breeds', i, ...path, k], message: `unknown source "${x}"` });
 						else if (k !== 'sources') walk(x, [...path, k]);
 					}

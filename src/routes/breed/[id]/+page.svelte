@@ -4,7 +4,7 @@
 	without a credited free file (images.json), no photo is shown.
 -->
 <script lang="ts">
-	import { resolve } from '$app/paths';
+	import { asset, resolve } from '$app/paths';
 	import { tree, breedByAbbrev, breeds, imageByBreed } from '$lib/data';
 	import { families } from '$lib/data/families';
 	import type { Breed } from '$lib/data/schemas/breeds';
@@ -29,6 +29,7 @@
 	);
 	const otherNames = $derived(
 		[
+			{ lang: 'en', label: 'Wikidata', name: breed.names.wikidataEn },
 			{ lang: 'fr', label: 'French', name: breed.names.fr },
 			{ lang: 'nl', label: 'Dutch', name: breed.names.nl }
 		].filter(
@@ -79,7 +80,7 @@
 		<div class="emblem"><FamilyEmblem family={breed.family.id} /></div>
 		<div>
 			<p class="eyebrow">{families[breed.family.id].label} · {families[breed.family.id].constellation}</p>
-			<h1>{breed.names.en}{@render ref(breed.names.sourceId)}</h1>
+			<h1>{breed.names.en}{@render ref(breed.names.enSourceId)}</h1>
 			{#if parkerNames.length}
 				<p class="aside">In the Parker 2017 sample as {parkerNames.join(', ')}{@render ref(breed.parker.sourceId)}</p>
 			{/if}
@@ -90,7 +91,7 @@
 		{#if photo}
 			<figure class="photo">
 				<img
-					src={photo.thumb.url}
+					src={asset(`/${photo.thumb.path}`)}
 					width={photo.thumb.width}
 					height={photo.thumb.height}
 					style:width="min(100%, {Math.round((PHOTO_MAX_HEIGHT * photo.thumb.width) / photo.thumb.height)}px)"

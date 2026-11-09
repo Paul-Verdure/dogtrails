@@ -1,0 +1,14 @@
+{
+	"_about": "Hand-picked Commons photos and author credits (Paul, 2026-11-09). `file` replaces the Wikidata P18 image; `author` replaces the Commons metadata text when it is not a usable credit. Drafted with Claude Code on 2026-11-09 after looking at each photo and reading its Commons file page; reviewed=false until Paul checks it.",
+	"entries": [
+		{ "breedId": "american-cocker-spaniel", "file": "American Cocker Spaniel buff portrait.jpg", "basis": "P18 'AmericanCockerSpaniel wb.jpg' has no author on Commons; the other P18 'Cocker Spaniel Puppy.jpg' is a derivative whose photographer is not named. Replacement: buff adult, head and shoulders, Mike Baird (Flickr), CC BY 2.0.", "reviewed": false },
+		{ "breedId": "basset-hound", "file": "Basset Hound (Havlíčkův Brod) 02.jpg", "basis": "P18 'Basset Hound 600.jpg' has no author on Commons. Replacement: tricolour adult sitting, full body, Pohled 111, CC BY-SA 4.0.", "reviewed": false },
+		{ "breedId": "shetland-sheepdog", "file": "Shetland Sheepdog female sable.jpg", "basis": "P18 'ShetlandShpdogBlue2 wb.jpg' has no author on Commons. Replacement: sable female, head portrait, Linsenhejhej, CC BY-SA 3.0.", "reviewed": false },
+		{ "breedId": "poodle", "file": "Standard Poodle cream standing.jpg", "basis": "The P18 kept ('Miniature Poodle (Hungary).jpg') shows a miniature; the page covers every size and Parker's tree leaf is the standard poodle (SPOO). Replacement: cream standard poodle standing, full body, John Leslie (Flickr), CC BY 2.0.", "reviewed": false },
+		{ "breedId": "german-spitz", "author": "Teuteul (French Wikipedia)", "basis": "Commons Author field: {{original uploader|Teuteul|wikipedia|fr}}; the metadata text is an upload note.", "reviewed": false },
+		{ "breedId": "golden-retriever", "author": "Janneke Vreugdenhil; derivative work by Anka Friedrich", "basis": "Commons Author field names the original photographer of Dukedestiny01.jpg and the derivative; the metadata text keeps raw wiki markup.", "reviewed": false },
+		{ "breedId": "chow-chow", "author": "Prayitno (Flickr)", "basis": "Commons Author field links Flickr user 34128007@N04 with the display name 'Prayitno/more than 2.5 millions views: thank you!'; the name is kept, the message is dropped.", "reviewed": false },
+		{ "breedId": "saluki", "author": "r. (Redgunamo on Commons)", "basis": "Commons Author field is 'r.' ({{own}} work); the uploader account is Redgunamo. The chosen attribution 'r.' is kept, the account added so the credit can be traced.", "reviewed": false },
+		{ "breedId": "briard", "author": "Birgit Balzer", "basis": "Commons Author field: 'Birgit Balzer, Deutschland (uploaded by Caronna ...)'; the upload note is dropped.", "reviewed": false }
+	]
+}

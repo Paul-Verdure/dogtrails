@@ -1,7 +1,7 @@
 {
 	"source": "Wikimedia Commons API (imageinfo, extmetadata)",
 	"endpoint": "https://commons.wikimedia.org/w/api.php",
-	"fetchedAt": "2026-11-07T14:03:15.871Z",
+	"fetchedAt": "2026-11-09T09:40:50.849Z",
 	"params": {
 		"action": "query",
 		"format": "json",
@@ -125,189 +125,6 @@
 										"value": "<p>The original uploader was <a href=\"https://en.wikipedia.org/wiki/fr:User:Teuteul\" class=\"extiw\" title=\"w:fr:User:Teuteul\">Teuteul</a> at <a href=\"https://en.wikipedia.org/wiki/fr:\" class=\"extiw\" title=\"w:fr:\">French Wikipedia</a>.\n</p>\nLater versions were uploaded by <a href=\"https://fr.wikipedia.org/wiki/User:Tornad\" class=\"extiw\" title=\"fr:User:Tornad\">Tornad</a> at <a class=\"external text\" data-mw-original-href=\"http://fr.wikipedia.org\" href=\"https://fr.wikipedia.org\">fr.wikipedia</a>.",
 										"source": "commons-desc-page"
 									},
-									"LicenseShortName": {
-										"value": "CC BY-SA 3.0",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"UsageTerms": {
-										"value": "Creative Commons Attribution-Share Alike 3.0",
-										"source": "commons-desc-page"
-									},
-									"AttributionRequired": {
-										"value": "true",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"LicenseUrl": {
-										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
-										"source": "commons-desc-page"
-									},
-									"Copyrighted": {
-										"value": "True",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"Restrictions": {
-										"value": "",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"License": {
-										"value": "cc-by-sa-3.0",
-										"source": "commons-templates",
-										"hidden": ""
-									}
-								}
-							}
-						]
-					},
-					{
-						"pageid": 319346,
-						"ns": 6,
-						"title": "File:Basset Hound 600.jpg",
-						"imagerepository": "local",
-						"imageinfo": [
-							{
-								"size": 97546,
-								"width": 600,
-								"height": 400,
-								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Basset_Hound_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-								"thumbwidth": 640,
-								"thumbheight": 427,
-								"thumbattribs": {
-									"src": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Basset_Hound_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-									"decoding": "async",
-									"loading": "lazy",
-									"width": 640,
-									"height": 427
-								},
-								"url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Basset_Hound_600.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Basset_Hound_600.jpg",
-								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=319346",
-								"extmetadata": {
-									"LicenseShortName": {
-										"value": "CC BY-SA 3.0",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"UsageTerms": {
-										"value": "Creative Commons Attribution-Share Alike 3.0",
-										"source": "commons-desc-page"
-									},
-									"AttributionRequired": {
-										"value": "true",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"LicenseUrl": {
-										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
-										"source": "commons-desc-page"
-									},
-									"Copyrighted": {
-										"value": "True",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"Restrictions": {
-										"value": "",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"License": {
-										"value": "cc-by-sa-3.0",
-										"source": "commons-templates",
-										"hidden": ""
-									}
-								}
-							}
-						]
-					},
-					{
-						"pageid": 386365,
-						"ns": 6,
-						"title": "File:ShetlandShpdogBlue2 wb.jpg",
-						"imagerepository": "local",
-						"imageinfo": [
-							{
-								"size": 94998,
-								"width": 500,
-								"height": 411,
-								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/6/62/ShetlandShpdogBlue2_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-								"thumbwidth": 640,
-								"thumbheight": 526,
-								"thumbattribs": {
-									"src": "https://upload.wikimedia.org/wikipedia/commons/6/62/ShetlandShpdogBlue2_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-									"decoding": "async",
-									"loading": "lazy",
-									"width": 640,
-									"height": 526
-								},
-								"url": "https://upload.wikimedia.org/wikipedia/commons/6/62/ShetlandShpdogBlue2_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-								"descriptionurl": "https://commons.wikimedia.org/wiki/File:ShetlandShpdogBlue2_wb.jpg",
-								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=386365",
-								"extmetadata": {
-									"LicenseShortName": {
-										"value": "CC BY-SA 3.0",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"UsageTerms": {
-										"value": "Creative Commons Attribution-Share Alike 3.0",
-										"source": "commons-desc-page"
-									},
-									"AttributionRequired": {
-										"value": "true",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"LicenseUrl": {
-										"value": "http://creativecommons.org/licenses/by-sa/3.0/",
-										"source": "commons-desc-page"
-									},
-									"Copyrighted": {
-										"value": "True",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"Restrictions": {
-										"value": "",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"License": {
-										"value": "cc-by-sa-3.0",
-										"source": "commons-templates",
-										"hidden": ""
-									}
-								}
-							}
-						]
-					},
-					{
-						"pageid": 580091,
-						"ns": 6,
-						"title": "File:AmericanCockerSpaniel wb.jpg",
-						"imagerepository": "local",
-						"imageinfo": [
-							{
-								"size": 117018,
-								"width": 569,
-								"height": 569,
-								"thumburl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/AmericanCockerSpaniel_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-								"thumbwidth": 640,
-								"thumbheight": 640,
-								"thumbattribs": {
-									"src": "https://upload.wikimedia.org/wikipedia/commons/a/aa/AmericanCockerSpaniel_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-									"decoding": "async",
-									"loading": "lazy",
-									"width": 640,
-									"height": 640
-								},
-								"url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/AmericanCockerSpaniel_wb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-								"descriptionurl": "https://commons.wikimedia.org/wiki/File:AmericanCockerSpaniel_wb.jpg",
-								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=580091",
-								"extmetadata": {
 									"LicenseShortName": {
 										"value": "CC BY-SA 3.0",
 										"source": "commons-desc-page",
@@ -774,6 +591,157 @@
 						]
 					},
 					{
+						"pageid": 2062337,
+						"ns": 6,
+						"title": "File:Standard Poodle cream standing.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 6122016,
+								"width": 3888,
+								"height": 2592,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Standard_Poodle_cream_standing.jpg/960px-Standard_Poodle_cream_standing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 427,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Standard_Poodle_cream_standing.jpg/1280px-Standard_Poodle_cream_standing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Standard_Poodle_cream_standing.jpg/960px-Standard_Poodle_cream_standing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 427,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Standard_Poodle_cream_standing.jpg/1280px-Standard_Poodle_cream_standing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Standard_Poodle_cream_standing.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Standard_Poodle_cream_standing.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2062337",
+								"extmetadata": {
+									"Credit": {
+										"value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/92305862@N00/425539616/\">Bill, king of the squizzies</a>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/92305862@N00\">John Leslie</a> from London, UK",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY 2.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution 2.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by/2.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-2.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 2195540,
+						"ns": 6,
+						"title": "File:American Cocker Spaniel buff portrait.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 4583945,
+								"width": 3280,
+								"height": 2187,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/American_Cocker_Spaniel_buff_portrait.jpg/960px-American_Cocker_Spaniel_buff_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 427,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/American_Cocker_Spaniel_buff_portrait.jpg/1280px-American_Cocker_Spaniel_buff_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/American_Cocker_Spaniel_buff_portrait.jpg/960px-American_Cocker_Spaniel_buff_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 427,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/American_Cocker_Spaniel_buff_portrait.jpg/1280px-American_Cocker_Spaniel_buff_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/American_Cocker_Spaniel_buff_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:American_Cocker_Spaniel_buff_portrait.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2195540",
+								"extmetadata": {
+									"Credit": {
+										"value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/72825507@N00/527280883\">Flickr</a>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/photos/72825507@N00\">Mike Baird</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY 2.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution 2.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Attribution": {
+										"value": "<a rel=\"nofollow\" class=\"external text\" href=\"http://flickr.bairdphotos.com\">\"Mike\" Michael L. Baird</a>",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by/2.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-2.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
 						"pageid": 2200696,
 						"ns": 6,
 						"title": "File:Shih Tzu portrait show dog.jpg",
@@ -1038,6 +1006,79 @@
 									},
 									"License": {
 										"value": "cc-by-3.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
+						"pageid": 15221824,
+						"ns": 6,
+						"title": "File:Shetland Sheepdog female sable.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 1875169,
+								"width": 2896,
+								"height": 1944,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Shetland_Sheepdog_female_sable.jpg/960px-Shetland_Sheepdog_female_sable.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 430,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Shetland_Sheepdog_female_sable.jpg/1280px-Shetland_Sheepdog_female_sable.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Shetland_Sheepdog_female_sable.jpg/960px-Shetland_Sheepdog_female_sable.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 430,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Shetland_Sheepdog_female_sable.jpg/1280px-Shetland_Sheepdog_female_sable.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Shetland_Sheepdog_female_sable.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Shetland_Sheepdog_female_sable.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=15221824",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Linsenhejhej&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Linsenhejhej (page does not exist)\">Linsenhejhej</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 3.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 3.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by-sa/3.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-3.0",
 										"source": "commons-templates",
 										"hidden": ""
 									}
@@ -1768,6 +1809,79 @@
 						]
 					},
 					{
+						"pageid": 79655339,
+						"ns": 6,
+						"title": "File:Basset Hound (Havlíčkův Brod) 02.jpg",
+						"imagerepository": "local",
+						"imageinfo": [
+							{
+								"size": 3818908,
+								"width": 3264,
+								"height": 2448,
+								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Basset_Hound_%28Havl%C3%AD%C4%8Dk%C5%AFv_Brod%29_02.jpg/960px-Basset_Hound_%28Havl%C3%AD%C4%8Dk%C5%AFv_Brod%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+								"thumbwidth": 640,
+								"thumbheight": 480,
+								"responsiveUrls": {
+									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Basset_Hound_%28Havl%C3%AD%C4%8Dk%C5%AFv_Brod%29_02.jpg/1280px-Basset_Hound_%28Havl%C3%AD%C4%8Dk%C5%AFv_Brod%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
+								},
+								"thumbattribs": {
+									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Basset_Hound_%28Havl%C3%AD%C4%8Dk%C5%AFv_Brod%29_02.jpg/960px-Basset_Hound_%28Havl%C3%AD%C4%8Dk%C5%AFv_Brod%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+									"decoding": "async",
+									"loading": "lazy",
+									"width": 640,
+									"height": 480,
+									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Basset_Hound_%28Havl%C3%AD%C4%8Dk%C5%AFv_Brod%29_02.jpg/1280px-Basset_Hound_%28Havl%C3%AD%C4%8Dk%C5%AFv_Brod%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
+								},
+								"url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Basset_Hound_%28Havl%C3%AD%C4%8Dk%C5%AFv_Brod%29_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Basset_Hound_(Havl%C3%AD%C4%8Dk%C5%AFv_Brod)_02.jpg",
+								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=79655339",
+								"extmetadata": {
+									"Credit": {
+										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+										"source": "commons-desc-page"
+									},
+									"Artist": {
+										"value": "<a href=\"//commons.wikimedia.org/wiki/User:Pohled_111\" title=\"User:Pohled 111\">Pohled 111</a>",
+										"source": "commons-desc-page"
+									},
+									"LicenseShortName": {
+										"value": "CC BY-SA 4.0",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"UsageTerms": {
+										"value": "Creative Commons Attribution-Share Alike 4.0",
+										"source": "commons-desc-page"
+									},
+									"AttributionRequired": {
+										"value": "true",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"LicenseUrl": {
+										"value": "https://creativecommons.org/licenses/by-sa/4.0",
+										"source": "commons-desc-page"
+									},
+									"Copyrighted": {
+										"value": "True",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"Restrictions": {
+										"value": "",
+										"source": "commons-desc-page",
+										"hidden": ""
+									},
+									"License": {
+										"value": "cc-by-sa-4.0",
+										"source": "commons-templates",
+										"hidden": ""
+									}
+								}
+							}
+						]
+					},
+					{
 						"pageid": 107262576,
 						"ns": 6,
 						"title": "File:XoloLarge1.jpg",
@@ -2052,79 +2166,6 @@
 									},
 									"License": {
 										"value": "cc-by-sa-4.0",
-										"source": "commons-templates",
-										"hidden": ""
-									}
-								}
-							}
-						]
-					},
-					{
-						"pageid": 187406982,
-						"ns": 6,
-						"title": "File:Miniature Poodle (Hungary).jpg",
-						"imagerepository": "local",
-						"imageinfo": [
-							{
-								"size": 3288545,
-								"width": 4284,
-								"height": 5712,
-								"thumburl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Miniature_Poodle_%28Hungary%29.jpg/960px-Miniature_Poodle_%28Hungary%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-								"thumbwidth": 640,
-								"thumbheight": 853,
-								"responsiveUrls": {
-									"2": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Miniature_Poodle_%28Hungary%29.jpg/1280px-Miniature_Poodle_%28Hungary%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail"
-								},
-								"thumbattribs": {
-									"src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Miniature_Poodle_%28Hungary%29.jpg/960px-Miniature_Poodle_%28Hungary%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-									"decoding": "async",
-									"loading": "lazy",
-									"width": 640,
-									"height": 853,
-									"srcset": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Miniature_Poodle_%28Hungary%29.jpg/1280px-Miniature_Poodle_%28Hungary%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail 2x"
-								},
-								"url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Miniature_Poodle_%28Hungary%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-								"descriptionurl": "https://commons.wikimedia.org/wiki/File:Miniature_Poodle_(Hungary).jpg",
-								"descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=187406982",
-								"extmetadata": {
-									"Credit": {
-										"value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
-										"source": "commons-desc-page"
-									},
-									"Artist": {
-										"value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:UszkarFoto92&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:UszkarFoto92 (page does not exist)\">UszkarFoto92</a>",
-										"source": "commons-desc-page"
-									},
-									"LicenseShortName": {
-										"value": "CC0",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"UsageTerms": {
-										"value": "Creative Commons Zero, Public Domain Dedication",
-										"source": "commons-desc-page"
-									},
-									"AttributionRequired": {
-										"value": "false",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"LicenseUrl": {
-										"value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-										"source": "commons-desc-page"
-									},
-									"Copyrighted": {
-										"value": "True",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"Restrictions": {
-										"value": "",
-										"source": "commons-desc-page",
-										"hidden": ""
-									},
-									"License": {
-										"value": "cc0",
 										"source": "commons-templates",
 										"hidden": ""
 									}

@@ -3,6 +3,7 @@
 		"description": "Breeds of the Parker 2017 sample with their FCI classification, Wikidata names and image, Parker clade, origin point and editorial colour family. Each fact names its source in sources[].",
 		"inputs": [
 			"data/manual/breed-names.json",
+			"data/manual/display-names.json",
 			"data/manual/origin-places.json",
 			"src/lib/data/tree.json",
 			"data/raw/fci-breeds/fci-breeds.csv",
@@ -12,13 +13,13 @@
 		],
 		"notes": [
 			"origin = FCI country (Paul, 2026-11-04); Wikidata P495 is a cross-check only, its disagreements are in data/reports/breeds.md.",
-			"Names are Wikidata labels with the first letter upper-cased.",
+			"Names are Wikidata labels with the first letter upper-cased, except English names overridden by data/manual/display-names.json (editorial, Paul 2026-11-09).",
 			"family is an editorial choice (docs/DESIGN.md §2), not genetic data.",
 			"development and fixedAround stay empty until a source gives them."
 		]
 	},
 	"generatedBy": "scripts/merge-fci.ts",
-	"generatedAt": "2026-11-04T12:41:40.636Z",
+	"generatedAt": "2026-11-09T09:37:52.785Z",
 	"breeds": [
 		{
 			"id": "american-akita",
@@ -26,6 +27,8 @@
 				"en": "American Akita",
 				"fr": "Akita américain",
 				"nl": "Amerikaanse akita",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q37534",
 				"sourceId": "wikidata-q37534"
 			},
 			"wikidata": "Q37534",
@@ -119,6 +122,8 @@
 				"en": "American Cocker Spaniel",
 				"fr": "Cocker américain",
 				"nl": "Amerikaanse cockerspaniël",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38063",
 				"sourceId": "wikidata-q38063"
 			},
 			"wikidata": "Q38063",
@@ -209,9 +214,11 @@
 		{
 			"id": "basset-hound",
 			"names": {
-				"en": "Basset hound",
+				"en": "Basset Hound",
 				"fr": "Basset hound",
 				"nl": "Basset hound",
+				"wikidataEn": "Basset hound",
+				"enSourceId": "dogtrails-display-names",
 				"sourceId": "wikidata-q37716"
 			},
 			"wikidata": "Q37716",
@@ -284,6 +291,13 @@
 					"retrieved": "2026-11-04"
 				},
 				{
+					"id": "dogtrails-display-names",
+					"kind": "editorial",
+					"citation": "Dogtrails display names, data/manual/display-names.json: Casing only. Wikidata label \"Basset hound\"; Parker and FCI 163: Basset Hound.",
+					"path": "data/manual/display-names.json",
+					"retrieved": "2026-11-09"
+				},
+				{
 					"id": "fci-163",
 					"kind": "fci",
 					"citation": "FCI nomenclature, standard n° 163 \"BASSET HOUND\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
@@ -305,6 +319,8 @@
 				"en": "Beagle",
 				"fr": "Beagle",
 				"nl": "Beagle",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q21102",
 				"sourceId": "wikidata-q21102"
 			},
 			"wikidata": "Q21102",
@@ -395,9 +411,11 @@
 		{
 			"id": "border-collie",
 			"names": {
-				"en": "Border collie",
+				"en": "Border Collie",
 				"fr": "Border Collie",
 				"nl": "Bordercollie",
+				"wikidataEn": "Border collie",
+				"enSourceId": "dogtrails-display-names",
 				"sourceId": "wikidata-q37710"
 			},
 			"wikidata": "Q37710",
@@ -470,6 +488,13 @@
 					"retrieved": "2026-11-04"
 				},
 				{
+					"id": "dogtrails-display-names",
+					"kind": "editorial",
+					"citation": "Dogtrails display names, data/manual/display-names.json: Casing only. Wikidata label \"Border collie\"; Parker and FCI 297: Border Collie.",
+					"path": "data/manual/display-names.json",
+					"retrieved": "2026-11-09"
+				},
+				{
 					"id": "fci-297",
 					"kind": "fci",
 					"citation": "FCI nomenclature, standard n° 297 \"BORDER COLLIE\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
@@ -491,6 +516,8 @@
 				"en": "Briard",
 				"fr": "Berger de Brie",
 				"nl": "Briard",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q37821",
 				"sourceId": "wikidata-q37821"
 			},
 			"wikidata": "Q37821",
@@ -581,9 +608,11 @@
 		{
 			"id": "brussels-griffon",
 			"names": {
-				"en": "Griffon Bruxellois",
+				"en": "Brussels Griffon",
 				"fr": "Griffon bruxellois",
 				"nl": "Griffon bruxellois",
+				"wikidataEn": "Griffon Bruxellois",
+				"enSourceId": "dogtrails-display-names",
 				"sourceId": "wikidata-q38889"
 			},
 			"wikidata": "Q38889",
@@ -656,6 +685,13 @@
 					"retrieved": "2026-11-04"
 				},
 				{
+					"id": "dogtrails-display-names",
+					"kind": "editorial",
+					"citation": "Dogtrails display names, data/manual/display-names.json: Wikidata label \"Griffon Bruxellois\" (FCI 80 name, French). Parker name, AKC name and site id: Brussels Griffon.",
+					"path": "data/manual/display-names.json",
+					"retrieved": "2026-11-09"
+				},
+				{
 					"id": "fci-80",
 					"kind": "fci",
 					"citation": "FCI nomenclature, standard n° 80 \"GRIFFON BRUXELLOIS\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
@@ -677,6 +713,8 @@
 				"en": "Chihuahua",
 				"fr": "Chihuahua",
 				"nl": "Chihuahua",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q653",
 				"sourceId": "wikidata-q653"
 			},
 			"wikidata": "Q653",
@@ -770,6 +808,8 @@
 				"en": "Chinese Crested Dog",
 				"fr": "Chien chinois à crête",
 				"nl": "Chinese gekuifde naakthond",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q37892",
 				"sourceId": "wikidata-q37892"
 			},
 			"wikidata": "Q37892",
@@ -863,6 +903,8 @@
 				"en": "Chow Chow",
 				"fr": "Chow-chow",
 				"nl": "Chowchow",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q29013",
 				"sourceId": "wikidata-q29013"
 			},
 			"wikidata": "Q29013",
@@ -956,6 +998,8 @@
 				"en": "German Shepherd",
 				"fr": "Berger allemand",
 				"nl": "Duitse herder",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38280",
 				"sourceId": "wikidata-q38280"
 			},
 			"wikidata": "Q38280",
@@ -1049,6 +1093,8 @@
 				"en": "German Shorthaired Pointer",
 				"fr": "Braque allemand",
 				"nl": "Duitse staande hond",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38084",
 				"sourceId": "wikidata-q38084"
 			},
 			"wikidata": "Q38084",
@@ -1139,9 +1185,11 @@
 		{
 			"id": "german-spitz",
 			"names": {
-				"en": "German Spitz",
+				"en": "Pomeranian (German Spitz)",
 				"fr": "Spitz allemand",
 				"nl": "German Spitz",
+				"wikidataEn": "German Spitz",
+				"enSourceId": "dogtrails-display-names",
 				"sourceId": "wikidata-q38655"
 			},
 			"wikidata": "Q38655",
@@ -1214,6 +1262,13 @@
 					"retrieved": "2026-11-04"
 				},
 				{
+					"id": "dogtrails-display-names",
+					"kind": "editorial",
+					"citation": "Dogtrails display names, data/manual/display-names.json: The Parker dogs are Pomeranians (POM), which the FCI files under 97 German Spitz (size Zwergspitz / Pomeranian). Wikidata label: German Spitz.",
+					"path": "data/manual/display-names.json",
+					"retrieved": "2026-11-09"
+				},
+				{
 					"id": "fci-97",
 					"kind": "fci",
 					"citation": "FCI nomenclature, standard n° 97 \"GERMAN SPITZ\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
@@ -1235,6 +1290,8 @@
 				"en": "Golden Retriever",
 				"fr": "Golden retriever",
 				"nl": "Golden retriever",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38686",
 				"sourceId": "wikidata-q38686"
 			},
 			"wikidata": "Q38686",
@@ -1328,6 +1385,8 @@
 				"en": "Icelandic Sheepdog",
 				"fr": "Berger islandais",
 				"nl": "IJslandse hond",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38710",
 				"sourceId": "wikidata-q38710"
 			},
 			"wikidata": "Q38710",
@@ -1421,6 +1480,8 @@
 				"en": "Irish Terrier",
 				"fr": "Terrier irlandais",
 				"nl": "Ierse terriër",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38644",
 				"sourceId": "wikidata-q38644"
 			},
 			"wikidata": "Q38644",
@@ -1511,9 +1572,11 @@
 		{
 			"id": "mastiff",
 			"names": {
-				"en": "English Mastiff",
+				"en": "Mastiff",
 				"fr": "Mastiff",
 				"nl": "Mastiff",
+				"wikidataEn": "English Mastiff",
+				"enSourceId": "dogtrails-display-names",
 				"sourceId": "wikidata-q38418"
 			},
 			"wikidata": "Q38418",
@@ -1586,6 +1649,13 @@
 					"retrieved": "2026-11-04"
 				},
 				{
+					"id": "dogtrails-display-names",
+					"kind": "editorial",
+					"citation": "Dogtrails display names, data/manual/display-names.json: Wikidata label \"English Mastiff\". FCI 264 and site id: Mastiff; Parker: English Mastiff.",
+					"path": "data/manual/display-names.json",
+					"retrieved": "2026-11-09"
+				},
+				{
 					"id": "fci-264",
 					"kind": "fci",
 					"citation": "FCI nomenclature, standard n° 264 \"MASTIFF\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
@@ -1607,6 +1677,8 @@
 				"en": "Miniature Pinscher",
 				"fr": "Pinscher nain",
 				"nl": "Dwergpinscher",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38990",
 				"sourceId": "wikidata-q38990"
 			},
 			"wikidata": "Q38990",
@@ -1700,6 +1772,8 @@
 				"en": "Miniature Schnauzer",
 				"fr": "Schnauzer miniature",
 				"nl": "Miniature Schnauzer",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38999",
 				"sourceId": "wikidata-q38999"
 			},
 			"wikidata": "Q38999",
@@ -1793,6 +1867,8 @@
 				"en": "Nova Scotia Duck Tolling Retriever",
 				"fr": "Retriever de la Nouvelle-Écosse",
 				"nl": "Nova Scotia duck tolling retriever",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38824",
 				"sourceId": "wikidata-q38824"
 			},
 			"wikidata": "Q38824",
@@ -1886,6 +1962,8 @@
 				"en": "Poodle",
 				"fr": "Caniche",
 				"nl": "Franse poedel",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38904",
 				"sourceId": "wikidata-q38904"
 			},
 			"wikidata": "Q38904",
@@ -1991,6 +2069,8 @@
 				"en": "Pug",
 				"fr": "Carlin",
 				"nl": "Mopshond",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38698",
 				"sourceId": "wikidata-q38698"
 			},
 			"wikidata": "Q38698",
@@ -2084,6 +2164,8 @@
 				"en": "Puli",
 				"fr": "Puli",
 				"nl": "Puli",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38864",
 				"sourceId": "wikidata-q38864"
 			},
 			"wikidata": "Q38864",
@@ -2177,6 +2259,8 @@
 				"en": "Rat Terrier",
 				"fr": "Rat Terrier",
 				"nl": "Rat Terrier",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38431",
 				"sourceId": "wikidata-q38431"
 			},
 			"wikidata": "Q38431",
@@ -2260,6 +2344,8 @@
 				"en": "Rottweiler",
 				"fr": "Rottweiler",
 				"nl": "Rottweiler",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q39093",
 				"sourceId": "wikidata-q39093"
 			},
 			"wikidata": "Q39093",
@@ -2350,9 +2436,11 @@
 		{
 			"id": "saint-bernard",
 			"names": {
-				"en": "St. Bernard",
+				"en": "Saint Bernard",
 				"fr": "Saint-bernard",
 				"nl": "Sint-Bernard",
+				"wikidataEn": "St. Bernard",
+				"enSourceId": "dogtrails-display-names",
 				"sourceId": "wikidata-q38090"
 			},
 			"wikidata": "Q38090",
@@ -2425,6 +2513,13 @@
 					"retrieved": "2026-11-04"
 				},
 				{
+					"id": "dogtrails-display-names",
+					"kind": "editorial",
+					"citation": "Dogtrails display names, data/manual/display-names.json: Wikidata label \"St. Bernard\". Parker name and site id: Saint Bernard (FCI 61 writes \"St. Bernhardshund\" / \"St. Bernard\").",
+					"path": "data/manual/display-names.json",
+					"retrieved": "2026-11-09"
+				},
+				{
 					"id": "fci-61",
 					"kind": "fci",
 					"citation": "FCI nomenclature, standard n° 61 \"ST. BERNARD\" (unofficial export paiv/fci-breeds, commit 88aaca5)",
@@ -2446,6 +2541,8 @@
 				"en": "Saluki",
 				"fr": "Lévrier persan",
 				"nl": "Saluki",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q39108",
 				"sourceId": "wikidata-q39108"
 			},
 			"wikidata": "Q39108",
@@ -2538,6 +2635,8 @@
 				"en": "Shetland Sheepdog",
 				"fr": "Shetland",
 				"nl": "Shetland Sheepdog",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q39058",
 				"sourceId": "wikidata-q39058"
 			},
 			"wikidata": "Q39058",
@@ -2631,6 +2730,8 @@
 				"en": "Shih Tzu",
 				"fr": "Shih Tzu",
 				"nl": "Shih tzu",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q39357",
 				"sourceId": "wikidata-q39357"
 			},
 			"wikidata": "Q39357",
@@ -2724,6 +2825,8 @@
 				"en": "Xoloitzcuintle",
 				"fr": "Chien nu mexicain",
 				"nl": "Mexicaanse naakthond",
+				"wikidataEn": null,
+				"enSourceId": "wikidata-q38856",
 				"sourceId": "wikidata-q38856"
 			},
 			"wikidata": "Q38856",

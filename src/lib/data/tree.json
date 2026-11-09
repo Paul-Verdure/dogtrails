@@ -3,6 +3,12 @@
 		"citation": "Parker HG, Dreger DL, Rimbault M, et al. Genomic Analyses Reveal the Influence of Geographic Origin, Migration, and Hybridization on Modern Dog Breed Development. Cell Reports 19(4):697-708, 2017.",
 		"doi": "10.1016/j.celrep.2017.03.079",
 		"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5492993",
+		"licence": {
+			"name": "CC BY 4.0",
+			"url": "https://creativecommons.org/licenses/by/4.0/",
+			"basis": "Crossref metadata of DOI 10.1016/j.celrep.2017.03.079, licence of the version of record (content-version \"vor\")",
+			"checked": "2026-11-09"
+		},
 		"files": [
 			"NIHMS866262-supplement-5 (NEXUS tree, one leaf per dog)",
 			"NIHMS866262-supplement-1 (breed table: name, abbreviation, clade)"

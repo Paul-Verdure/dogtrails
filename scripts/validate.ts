@@ -29,11 +29,13 @@
  *
  * usage: node scripts/validate.ts [sample.json] [tree.json]
  */
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { isLeaf, treeFileSchema, type TreeLeaf, type TreeNode } from '../src/lib/data/schemas/tree.ts';
 import { breedNamesFileSchema } from '../src/lib/data/schemas/breed-names.ts';
 import { breedsFileSchema } from '../src/lib/data/schemas/breeds.ts';
+import { displayNamesFileSchema } from '../src/lib/data/schemas/display-names.ts';
 import { originPlacesFileSchema } from '../src/lib/data/schemas/places.ts';
+import { photosFileSchema } from '../src/lib/data/schemas/photos.ts';
 import { imagesFileSchema } from '../src/lib/data/schemas/images.ts';
 import { parseCsv } from './lib/csv.ts';
 import { qidOf, readDesignFamilies, readWikidata } from './lib/sources.ts';
@@ -150,6 +152,17 @@ const prefixes = JSON.parse(readFileSync(PREFIXES, 'utf8')) as { aliases: { revi
 const unreviewedPrefixes = prefixes.aliases.filter((a) => !a.reviewed).length;
 if (unreviewedPrefixes) warnings.push(`${PREFIXES}: ${unreviewedPrefixes}/${prefixes.aliases.length} aliases not reviewed`);
 
+// ---------------------------------------------------------------- display-names.json
+{
+	const DISPLAY = 'data/manual/display-names.json';
+	const parsed = displayNamesFileSchema.safeParse(JSON.parse(readFileSync(DISPLAY, 'utf8')));
+	if (!parsed.success) errors.push(...parsed.error.issues.map((i) => `${DISPLAY}: ${i.path.join('.')}: ${i.message}`));
+	else {
+		const unreviewed = parsed.data.entries.filter((e) => !e.reviewed).length;
+		if (unreviewed) warnings.push(`${DISPLAY}: ${unreviewed}/${parsed.data.entries.length} display names not reviewed`);
+	}
+}
+
 // ---------------------------------------------------------------- origin-places.json
 const points = new Map<string, Set<string>>();
 for (const b of readWikidata(WD_PLACES).results.results.bindings) {
@@ -203,13 +216,21 @@ else if (namesParsed.success) {
 		const m = pt ? /^Point\((-?[\d.]+) (-?[\d.]+)\)$/.exec(pt) : null;
 		if (!m || Number(m[1]) !== lon || Number(m[2]) !== lat)
 			errors.push(`${where}: origin ${lon}, ${lat} is not the P625 point of ${pq ?? 'its source'} (${pt ?? 'none'})`);
-		const used = new Set(JSON.stringify(b).match(/"sourceId":"[^"]+"/g)?.map((m) => m.slice(12, -1)));
+		const used = new Set(JSON.stringify(b).match(/"(?:sourceId|[a-z]+SourceId)":"[^"]+"/g)?.map((m) => m.split('":"')[1].slice(0, -1)));
 		for (const s of b.sources) if (!used.has(s.id)) warnings.push(`${where}: source ${s.id} is never cited`);
 	}
 	for (const ab of leavesByBreed.keys()) if (!owner.has(ab)) errors.push(`${BREEDS}: tree leaf ${ab} belongs to no breed`);
 }
 
 // ---------------------------------------------------------------- images.json
+const PHOTOS = 'data/manual/photos.json';
+const photosParsed = photosFileSchema.safeParse(JSON.parse(readFileSync(PHOTOS, 'utf8')));
+if (!photosParsed.success) errors.push(...photosParsed.error.issues.map((i) => `${PHOTOS}: ${i.path.join('.')}: ${i.message}`));
+const photoChoices = new Map((photosParsed.data?.entries ?? []).map((e) => [e.breedId, e]));
+{
+	const unreviewed = (photosParsed.data?.entries ?? []).filter((e) => !e.reviewed).length;
+	if (unreviewed) warnings.push(`${PHOTOS}: ${unreviewed}/${photoChoices.size} photo choices not reviewed`);
+}
 const imagesParsed = imagesFileSchema.safeParse(JSON.parse(readFileSync(IMAGES, 'utf8')));
 if (!imagesParsed.success) errors.push(...imagesParsed.error.issues.map((i) => `${IMAGES}: ${i.path.join('.')}: ${i.message}`));
 else if (breedsParsed.success) {
@@ -219,7 +240,15 @@ else if (breedsParsed.success) {
 	for (const im of imagesParsed.data.images) {
 		const b = byId.get(im.breedId);
 		if (!b) errors.push(`${IMAGES}: unknown breed ${im.breedId}`);
-		else if (b.image?.commonsFile !== im.file) errors.push(`${IMAGES}: ${im.breedId} shows "${im.file}", ${BREEDS} says "${b.image?.commonsFile ?? 'no image'}"`);
+		else {
+			const picked = photoChoices.get(im.breedId);
+			const expected = picked?.file ?? b.image?.commonsFile;
+			if (expected !== im.file) errors.push(`${IMAGES}: ${im.breedId} shows "${im.file}", expected "${expected ?? 'no image'}" (${picked?.file ? PHOTOS : BREEDS})`);
+			if (im.chosenBy !== (picked?.file ? PHOTOS : 'wikidata-p18')) errors.push(`${IMAGES}: ${im.breedId}: chosenBy does not match ${PHOTOS}`);
+			if (im.authorFrom !== (picked?.author ? PHOTOS : 'commons-extmetadata') || (picked?.author && picked.author !== im.author))
+				errors.push(`${IMAGES}: ${im.breedId}: author does not match ${PHOTOS}`);
+		}
+		if (!existsSync(`static/${im.thumb.path}`)) errors.push(`${IMAGES}: ${im.breedId}: static/${im.thumb.path} is missing (run npm run data:credits)`);
 		if (!fetched.has(im.file.replace(/_/g, ' '))) errors.push(`${IMAGES}: ${im.file} not in ${COMMONS} (run npm run data:credits)`);
 	}
 	const missing = breedsParsed.data.breeds.length - imagesParsed.data.images.length;

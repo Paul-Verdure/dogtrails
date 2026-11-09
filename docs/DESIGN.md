@@ -154,7 +154,7 @@ Utilisés dans les maquettes car souvent cités, mais **non vérifiés** :
 - Légende de Guillaume d'Orange et du carlin (1572).
 - Légende des chiens normands de 1066.
 - Golden Retriever 1868, Kennel Club 1873, Berger allemand 1899.
-- Beagle : standard FCI n° 161, 33–40 cm.
+- Beagle : taille 33–40 cm (le n° FCI 161 est sourcé par l’export FCI, retiré de cette liste par Paul le 2026-11-09).
 - « 19 des 30 races viennent d'Europe » : compté d'après les pays FCI de l'échantillon, à recompter par le pipeline.
 
 L'ordre des branches de l'arbre dans les maquettes est schématique ; le vrai vient de `tree-30.json` / Parker.
