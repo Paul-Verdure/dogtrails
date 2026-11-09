@@ -1,18 +1,69 @@
 <!--
 	Radial dendrogram of the Parker 2017 breeds. D3 computes (tree-layout.ts), Svelte renders.
 	Reads the explorer store, writes only through its actions. Never talks to the other views.
+
+	The lantern (Paul, 2026-11-09, option B): a sector of consecutive breeds opens wide enough for
+	their names and 44 px targets; the rest of the circle is packed, named by clade. The lantern
+	follows the active breed (selection, keyboard, or a click on the packed rim) and glides there.
 -->
 <script lang="ts">
+	import { untrack } from 'svelte';
+	import { Tween, prefersReducedMotion } from 'svelte/motion';
+	import { cubicOut } from 'svelte/easing';
 	import { tree, breedByAbbrev } from '$lib/data';
 	import { families, STAR_PATH } from '$lib/data/families';
 	import { getExplore } from '$lib/state/explore.svelte';
-	import { isLit, layoutTree, polar, LOW_SUPPORT, NO_CLADE, type LayoutLeaf, type LayoutNode } from './tree-layout.ts';
+	import {
+		buildTree,
+		isLit,
+		labelReach,
+		lanternWarp,
+		polar,
+		projectTree,
+		LOW_SUPPORT,
+		NO_CLADE,
+		type LayoutLeaf,
+		type LayoutNode
+	} from './tree-layout.ts';
 
 	const explore = getExplore();
 
 	/** Show every grouping of the full tree, including the weakly supported ones. Local to the view. */
 	let showAll = $state(false);
-	const layout = $derived(layoutTree(tree, (a) => breedByAbbrev.get(a), { collapseWeak: !showAll }));
+	const base = $derived(buildTree(tree, (a) => breedByAbbrev.get(a), { collapseWeak: !showAll }));
+	const n = $derived(base.leaves.length);
+
+	/** Rendered width, to keep pointer targets at 44 CSS px whatever the scale. */
+	let width = $state(0);
+	/** Width of the viewBox: fixed by the radius and the longest name, not by the lantern. */
+	const span = $derived(2 * Math.ceil(base.radius + labelReach(base) + 8));
+	/** CSS px per tree unit; before the first measure (prerender), the desktop frame. */
+	const scale = $derived((width > 0 ? width : 960) / span);
+	/** Angle per breed inside the lantern: a 44 px square fits in each target, 80 units past the star. */
+	const step = $derived(44 / scale / (base.radius + 80));
+	/** Breeds in the lantern: about 150° of the circle, odd so the active breed sits in the middle. */
+	const size = $derived(Math.max(9, Math.min(25, 2 * Math.round(1.3 / step) + 1)));
+
+	// roving tabindex: one leaf in the tab order, arrows move along the circle and the lantern follows
+	let active = $state(0);
+	const leafEls: SVGGElement[] = $state([]);
+
+	const centre = new Tween(0.5, { easing: cubicOut });
+	$effect(() => {
+		const target = active + 0.5;
+		const cur = untrack(() => centre.target);
+		const delta = (((target - cur + n / 2) % n) + n) % n - n / 2;
+		if (delta === 0) return;
+		const duration = prefersReducedMotion.current ? 0 : Math.min(600, 160 + 20 * Math.abs(delta));
+		centre.set(cur + delta, { duration });
+	});
+
+	const layout = $derived(
+		projectTree(base, {
+			warp: lanternWarp(n, centre.current, size, step),
+			lantern: { centre: centre.current, size }
+		})
+	);
 
 	/** Leaves of each breed (a breed split across subtrees has several). */
 	const leavesByBreed = $derived.by(() => {
@@ -21,9 +72,7 @@
 		return m;
 	});
 
-	/** Rendered width, to keep pointer targets at 44 CSS px whatever the scale. */
-	let width = $state(0);
-	const hitR = $derived(22 * (width > 0 ? layout.viewBox[2] / width : 1));
+	const hitR = $derived(22 / scale);
 
 	/** Keys of the nodes in the light: the hovered branch or breed, else the selected breed. */
 	const focus = $derived.by((): string[] => {
@@ -34,17 +83,14 @@
 	});
 	const lit = (key: string) => focus.some((f) => isLit(key, f));
 
-	// roving tabindex: one leaf in the tab order, arrows move along the circle
-	let active = $state(0);
-	const leafEls: SVGGElement[] = $state([]);
+	// a new selection brings the lantern to it, unless the active star is already one of its fragments
 	$effect(() => {
 		const sel = explore.selectedBreed;
-		const l = sel ? leavesByBreed.get(sel)?.[0] : undefined;
-		if (l) active = l.index;
+		const l = sel ? base.leaves.find((x) => x.breed.id === sel) : undefined;
+		if (l && untrack(() => base.leaves[active]?.breed.id) !== sel) active = l.index;
 	});
 
 	function onKey(e: KeyboardEvent, leaf: LayoutLeaf) {
-		const n = layout.leaves.length;
 		const moves: Record<string, number> = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 };
 		let next: number | null = null;
 		if (e.key in moves) next = (leaf.index + moves[e.key] + n) % n;
@@ -65,11 +111,37 @@
 		showAll = !showAll;
 	}
 
+	/** The leaf under a pointer on the label ring, from its angle. */
+	function leafAt(e: MouseEvent): LayoutLeaf | undefined {
+		const svg = (e.currentTarget as SVGElement).ownerSVGElement;
+		const ctm = svg?.getScreenCTM();
+		if (!ctm) return undefined;
+		const p = new DOMPoint(e.clientX, e.clientY).matrixTransform(ctm.inverse());
+		const b = layout.bounds;
+		const a = b[0] + ((((Math.atan2(p.x, -p.y) - b[0]) % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI));
+		let i = 0;
+		while (i < n - 1 && b[i + 1] <= a) i++;
+		return layout.leaves[i];
+	}
+	function ringMove(e: PointerEvent) {
+		const l = leafAt(e);
+		const h = explore.hovered;
+		if (l && !(h?.kind === 'breed' && h.id === l.breed.id)) explore.hover(breedHover(l));
+	}
+	function ringClick(e: MouseEvent) {
+		const l = leafAt(e);
+		if (!l) return;
+		if (l.inLantern) explore.select(l.breed.id);
+		else active = l.index;
+	}
+
 	const nodeHover = (n: LayoutNode) => ({ kind: 'branch', id: n.key }) as const;
 	const breedHover = (l: LayoutLeaf) => ({ kind: 'breed', id: l.breed.id }) as const;
 
 	const cladeText = (l: LayoutLeaf) =>
 		l.clade === null ? 'no clade in Parker 2017' : `${l.clade} clade${l.cladeLowSupport ? ' (weakly supported)' : ''}`;
+	const splitText = (l: LayoutLeaf) =>
+		l.split ? `Its dogs form ${l.split.of} separate groups in the tree; this is group ${l.split.part}. ` : '';
 
 	const supportText = (s: number | null) =>
 		s === null ? 'no support value' : `DNA support ${s} / 100${s < LOW_SUPPORT ? ', weak' : ''}`;
@@ -85,7 +157,8 @@
 			return { title: `${n.size} breeds meet here`, text: `${supportText(n.support)}.` };
 		}
 		const id = h?.kind === 'breed' ? h.id : explore.selectedBreed;
-		const l = id ? leavesByBreed.get(id)?.[0] : undefined;
+		const all = id ? leavesByBreed.get(id) : undefined;
+		const l = all?.find((x) => x.index === active) ?? all?.[0];
 		if (!l) return null;
 		const k = l.relatives.length;
 		const rel =
@@ -94,18 +167,22 @@
 				: k <= 5
 					? `Closest in this tree: ${names(l.relatives)}.`
 					: `It sits in a group of ${k + 1} breeds whose order the DNA does not decide.`;
+		const move = h?.kind === 'breed' && !l.inLantern ? ' Click to bring the lantern here.' : '';
 		return {
 			title: l.breed.names.en,
-			text: `${cladeText(l)} · ${families[l.family].label}. ${rel}`
+			text: `${cladeText(l)} · ${families[l.family].label}. ${splitText(l)}${rel}${move}`
 		};
 	});
 
 	const leafLabel = (l: LayoutLeaf) =>
-		`${l.breed.names.en}: ${cladeText(l)}, ${families[l.family].label.toLowerCase()}`;
+		`${l.breed.names.en}: ${cladeText(l)}, ${families[l.family].label.toLowerCase()}${l.split ? `, group ${l.split.part} of ${l.split.of}` : ''}`;
+
+	const cladeLine = (l: LayoutLeaf) =>
+		`${l.clade ?? NO_CLADE}${l.cladeLowSupport ? ' *' : ''}${l.split ? ` · ${l.split.part}/${l.split.of}` : ''}`;
 
 	// text summary: consecutive leaves of one clade, in the order of the circle
 	const groups = $derived(
-		layout.leaves.reduce<{ clade: string; leaves: LayoutLeaf[] }[]>((acc, l) => {
+		base.leaves.reduce<{ clade: string; leaves: (typeof base.leaves)[number][] }[]>((acc, l) => {
 			const last = acc.at(-1);
 			const clade = l.clade ?? 'No clade in Parker 2017';
 			if (last && last.clade === clade) last.leaves.push(l);
@@ -113,10 +190,10 @@
 			return acc;
 		}, [])
 	);
-	const cladeCount = $derived(new Set(layout.leaves.flatMap((l) => (l.cladeId ? [l.cladeId] : []))).size);
+	const cladeCount = $derived(new Set(base.leaves.flatMap((l) => (l.cladeId ? [l.cladeId] : []))).size);
 	const breedCount = $derived(leavesByBreed.size);
 	const usedFamilies = $derived(
-		(Object.keys(families) as (keyof typeof families)[]).filter((f) => layout.leaves.some((l) => l.family === f))
+		(Object.keys(families) as (keyof typeof families)[]).filter((f) => base.leaves.some((l) => l.family === f))
 	);
 </script>
 
@@ -124,7 +201,8 @@
 	<div class="toolbar">
 		<p id="tree-guide" class="guide">
 			Each star is a breed. <strong>The closer to the rim two branches join, the closer their DNA.</strong>
-			Colours are families; the short arcs gather breeds of one clade.
+			Colours are families; the short arcs gather breeds of one clade. The lantern names {size} breeds at a
+			time: click the rim, pick a breed or use the arrow keys to move it.
 		</p>
 		<button type="button" class="toggle" aria-pressed={showAll} onclick={toggleAll}>
 			{showAll ? 'Merge weak groupings' : 'Show every grouping'}
@@ -135,7 +213,7 @@
 		{#if status}
 			<strong>{status.title}</strong> — {status.text}
 		{:else}
-			Hover a star or a branch, or Tab into the tree, to read it here.
+			Hover a star, a branch or the rim, or Tab into the tree, to read it here.
 		{/if}
 	</p>
 
@@ -144,12 +222,12 @@
 			bind:clientWidth={width}
 			viewBox={layout.viewBox.join(' ')}
 			role="group"
-			aria-label="Genetic tree of {layout.leaves.length} breeds. Arrow keys move between breeds, Enter selects, Escape clears."
+			aria-label="Genetic tree of {layout.leaves.length} breeds. Arrow keys move the lantern from breed to breed, Enter selects, Escape clears."
 			class:has-focus={focus.length > 0}
 		>
 			<g class="clades" aria-hidden="true">
 				{#each layout.clades as c, i (i)}
-					{#if c.leaves > 1}<path d={c.d} />{/if}
+					<path d={c.d} />
 				{/each}
 			</g>
 
@@ -187,13 +265,33 @@
 				{/each}
 			</g>
 
+			<!-- the label ring: in the packed part, the pointer reads the breed by its angle and a click
+			     brings the lantern there (keyboard: arrow keys) -->
+			<circle
+				class="ring"
+				r={(layout.ring.inner + layout.ring.outer) / 2}
+				stroke-width={layout.ring.outer - layout.ring.inner}
+				role="presentation"
+				onpointermove={ringMove}
+				onpointerleave={() => explore.unhover()}
+				onclick={ringClick}
+			/>
+
+			<g class="clade-labels" aria-hidden="true">
+				{#each layout.cladeLabels as c (c.key)}
+					<text transform="translate({c.x},{c.y}) rotate({c.rotate})" text-anchor={c.anchor} dy="3.5">{c.text}</text>
+				{/each}
+			</g>
+
 			{#each layout.leaves as leaf (leaf.key)}
 				{@const [x, y] = polar(leaf.x, leaf.y)}
 				{@const chosen = explore.selectedBreed === leaf.breed.id}
+				{@const on = lit(leaf.key)}
 				<g
 					bind:this={leafEls[leaf.index]}
 					class="leaf fam-{leaf.family}"
-					class:lit={lit(leaf.key)}
+					class:open={leaf.inLantern}
+					class:lit={on}
 					class:chosen
 					role="button"
 					tabindex={leaf.index === active ? 0 : -1}
@@ -206,26 +304,33 @@
 						explore.hover(breedHover(leaf));
 					}}
 					onblur={() => explore.unhover(breedHover(leaf))}
-					onclick={() => explore.select(leaf.breed.id)}
+					onclick={() => {
+						active = leaf.index;
+						explore.select(leaf.breed.id);
+					}}
 					onkeydown={(e) => onKey(e, leaf)}
 				>
-					<rect class="hit" x={leaf.hitRect.x} y={leaf.hitRect.y} width={leaf.hitRect.w} height={leaf.hitRect.h} rx="6" />
-					<circle class="hit" cx={x} cy={y} r={hitR} />
-					<path class="leader" d={leaf.label.leader} />
+					{#if leaf.inLantern}<path class="hit" d={leaf.hit} />{/if}
 					<g transform="translate({x},{y})">
 						{#if chosen}
 							<circle class="halo" r="14" />
-							<circle class="ring" r="10" />
+							<circle class="sel" r="10" />
 						{/if}
 						<g class="star">
-							<path class="glow" d={STAR_PATH} />
+							{#if leaf.inLantern || on || chosen}<path class="glow" d={STAR_PATH} />{/if}
 							<path class="body" d={STAR_PATH} />
 						</g>
 					</g>
-					<text class="label" x={leaf.label.x} y={leaf.label.y} text-anchor={leaf.label.anchor}>
-						<tspan class="name">{leaf.breed.names.en}</tspan>
-						<tspan class="clade" x={leaf.label.x} dy="14">{leaf.clade ?? NO_CLADE}{leaf.cladeLowSupport ? ' *' : ''}</tspan>
-					</text>
+					{#if leaf.inLantern}
+						<text
+							class="label"
+							transform="translate({leaf.label.x},{leaf.label.y}) rotate({leaf.label.rotate})"
+							text-anchor={leaf.label.anchor}
+						>
+							<tspan class="name" x="0" y="-1">{leaf.breed.names.en}</tspan>
+							<tspan class="clade" x="0" y="11">{cladeLine(leaf)}</tspan>
+						</text>
+					{/if}
 				</g>
 			{/each}
 		</svg>
@@ -266,7 +371,7 @@
 						<strong>{g.clade}</strong>:
 						{#each g.leaves as l, j (l.key)}{j > 0 ? ', ' : ''}{l.breed.names.en} ({families[l.family].label.toLowerCase()}{l.cladeLowSupport
 								? ', low support in the clade'
-								: ''}){/each}
+								: ''}{l.split ? `, group ${l.split.part} of ${l.split.of}` : ''}){/each}
 					</li>
 				{/each}
 			</ol>
@@ -411,9 +516,17 @@
 		cursor: pointer;
 		outline: none;
 	}
+	/* packed stars take no pointer: the label ring under them reads the angle */
+	.leaf:not(.open) {
+		pointer-events: none;
+	}
+	/* packed part of the circle: smaller stars, as in the dense zones of the map (§3) */
 	.star {
-		transform: scale(0.55);
+		transform: scale(0.42);
 		transition: transform var(--dt-dur-fast) var(--dt-ease-spring), opacity var(--dt-dur-base) var(--dt-ease);
+	}
+	.leaf.open .star {
+		transform: scale(0.55);
 	}
 	.leaf.lit .star,
 	.leaf.chosen .star {
@@ -445,7 +558,7 @@
 		opacity: calc(0.2 + 0.25 * var(--dt-star-glow));
 		filter: blur(calc(var(--dt-star-glow) * 4px));
 	}
-	.ring {
+	.sel {
 		fill: none;
 		stroke: var(--dt-select-ring);
 		stroke-width: 1.2;
@@ -454,17 +567,21 @@
 		vector-effect: non-scaling-stroke;
 	}
 
-	.leader {
+	/* the label ring: invisible, it only takes the pointer in the packed part */
+	.ring {
 		fill: none;
-		stroke: var(--dt-line-strong);
-		stroke-width: 0.8;
-		transition: opacity var(--dt-dur-base) var(--dt-ease);
+		stroke: transparent;
+		pointer-events: stroke;
+		cursor: pointer;
 	}
-	.has-focus .leaf:not(.lit) .leader {
-		opacity: 0.4;
-	}
-	.leaf.lit .leader {
-		stroke: var(--dt-accent-text);
+	.clade-labels text {
+		font-family: var(--dt-font-sans);
+		font-size: 10px;
+		font-weight: 600;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		fill: var(--dt-ink-3);
+		pointer-events: none;
 	}
 
 	/* labels stay AA when dimmed: they step down to ink-3 instead of fading */
@@ -472,7 +589,7 @@
 		font-family: var(--dt-font-sans);
 	}
 	.label .name {
-		font-size: 14px;
+		font-size: 15px;
 		fill: var(--dt-ink);
 		transition: fill var(--dt-dur-base) var(--dt-ease);
 	}
@@ -490,7 +607,7 @@
 	.leaf.chosen .label .name {
 		font-weight: 600;
 	}
-	.leaf:focus-visible rect.hit {
+	.leaf:focus-visible path.hit {
 		stroke: var(--dt-accent-text);
 		stroke-width: 1.5;
 		vector-effect: non-scaling-stroke;
