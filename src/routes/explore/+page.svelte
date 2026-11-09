@@ -11,14 +11,14 @@
 
 <svelte:head>
 	<title>Explore the tree · Dogtrails</title>
-	<meta name="description" content="A radial genetic tree of 30 dog breeds (Parker et al. 2017), coloured by family." />
+	<meta name="description" content="A radial genetic tree of the {breeds.length} dog breeds of Parker et al. 2017, coloured by family." />
 </svelte:head>
 
 <div class="page">
 	<header>
 		<p class="eyebrow">Explorer</p>
 		<h1>The family tree</h1>
-		<p class="lede">Thirty breeds placed by their DNA, after Parker et al. (2017). Light a branch to see who stands with whom.</p>
+		<p class="lede">{breeds.length} breeds placed by their DNA, after Parker et al. (2017). Light a branch to see who stands with whom.</p>
 	</header>
 	<div class="layout">
 		<TreeView />

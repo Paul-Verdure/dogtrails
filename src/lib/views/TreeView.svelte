@@ -1,12 +1,12 @@
 <!--
-	Radial dendrogram of the Parker 2017 sample. D3 computes (tree-layout.ts), Svelte renders.
+	Radial dendrogram of the Parker 2017 breeds. D3 computes (tree-layout.ts), Svelte renders.
 	Reads the explorer store, writes only through its actions. Never talks to the other views.
 -->
 <script lang="ts">
 	import { tree, breedByAbbrev } from '$lib/data';
 	import { families, STAR_PATH } from '$lib/data/families';
 	import { getExplore } from '$lib/state/explore.svelte';
-	import { isLit, layoutTree, polar, LOW_SUPPORT, type LayoutLeaf, type LayoutNode } from './tree-layout.ts';
+	import { isLit, layoutTree, polar, LOW_SUPPORT, NO_CLADE, type LayoutLeaf, type LayoutNode } from './tree-layout.ts';
 
 	const explore = getExplore();
 
@@ -68,6 +68,9 @@
 	const nodeHover = (n: LayoutNode) => ({ kind: 'branch', id: n.key }) as const;
 	const breedHover = (l: LayoutLeaf) => ({ kind: 'breed', id: l.breed.id }) as const;
 
+	const cladeText = (l: LayoutLeaf) =>
+		l.clade === null ? 'no clade in Parker 2017' : `${l.clade} clade${l.cladeLowSupport ? ' (weakly supported)' : ''}`;
+
 	const supportText = (s: number | null) =>
 		s === null ? 'no support value' : `DNA support ${s} / 100${s < LOW_SUPPORT ? ', weak' : ''}`;
 	const names = (bs: { names: { en: string } }[]) => bs.map((b) => b.names.en).join(', ');
@@ -87,29 +90,31 @@
 		const k = l.relatives.length;
 		const rel =
 			k === 0
-				? 'No well-supported group holds it with other breeds of this sample.'
+				? 'No well-supported group holds it with other breeds of this tree.'
 				: k <= 5
 					? `Closest in this tree: ${names(l.relatives)}.`
 					: `It sits in a group of ${k + 1} breeds whose order the DNA does not decide.`;
 		return {
 			title: l.breed.names.en,
-			text: `${l.clade} clade${l.cladeLowSupport ? ' (weakly supported)' : ''} · ${families[l.family].label}. ${rel}`
+			text: `${cladeText(l)} · ${families[l.family].label}. ${rel}`
 		};
 	});
 
 	const leafLabel = (l: LayoutLeaf) =>
-		`${l.breed.names.en}: ${l.clade} clade${l.cladeLowSupport ? ' (low support)' : ''}, ${families[l.family].label.toLowerCase()}`;
+		`${l.breed.names.en}: ${cladeText(l)}, ${families[l.family].label.toLowerCase()}`;
 
 	// text summary: consecutive leaves of one clade, in the order of the circle
 	const groups = $derived(
 		layout.leaves.reduce<{ clade: string; leaves: LayoutLeaf[] }[]>((acc, l) => {
 			const last = acc.at(-1);
-			if (last && last.clade === l.clade) last.leaves.push(l);
-			else acc.push({ clade: l.clade, leaves: [l] });
+			const clade = l.clade ?? 'No clade in Parker 2017';
+			if (last && last.clade === clade) last.leaves.push(l);
+			else acc.push({ clade, leaves: [l] });
 			return acc;
 		}, [])
 	);
-	const cladeCount = $derived(new Set(layout.leaves.map((l) => l.cladeId)).size);
+	const cladeCount = $derived(new Set(layout.leaves.flatMap((l) => (l.cladeId ? [l.cladeId] : []))).size);
+	const breedCount = $derived(leavesByBreed.size);
 	const usedFamilies = $derived(
 		(Object.keys(families) as (keyof typeof families)[]).filter((f) => layout.leaves.some((l) => l.family === f))
 	);
@@ -219,7 +224,7 @@
 					</g>
 					<text class="label" x={leaf.label.x} y={leaf.label.y} text-anchor={leaf.label.anchor}>
 						<tspan class="name">{leaf.breed.names.en}</tspan>
-						<tspan class="clade" x={leaf.label.x} dy="14">{leaf.clade}{leaf.cladeLowSupport ? ' *' : ''}</tspan>
+						<tspan class="clade" x={leaf.label.x} dy="14">{leaf.clade ?? NO_CLADE}{leaf.cladeLowSupport ? ' *' : ''}</tspan>
 					</text>
 				</g>
 			{/each}
@@ -250,8 +255,9 @@
 		<details class="summary">
 			<summary>Text summary of the tree</summary>
 			<p>
-				A radial genetic tree of {layout.leaves.length} dog breeds from Parker et al. (2017), one star per breed,
-				arranged in {cladeCount} clades. {layout.weakInFull} of its {layout.internalsInFull} groupings have a DNA
+				A radial genetic tree of {breedCount} dog breeds from Parker et al. (2017), one star per breed, or one per
+				fragment for the breeds whose dogs fall into several subtrees ({layout.leaves.length} stars), arranged in
+				{cladeCount} clades. {layout.weakInFull} of its {layout.internalsInFull} groupings have a DNA
 				support below {LOW_SUPPORT} / 100. Around the circle, clockwise from the top:
 			</p>
 			<ol>

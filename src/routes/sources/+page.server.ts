@@ -10,6 +10,7 @@ import { treeFileSchema } from '$lib/data/schemas/tree';
 import { breedsFileSchema, type BreedSource } from '$lib/data/schemas/breeds';
 import { breedNamesFileSchema } from '$lib/data/schemas/breed-names';
 import { displayNamesFileSchema } from '$lib/data/schemas/display-names';
+import { familiesFileSchema } from '$lib/data/schemas/families';
 import { originPlacesFileSchema } from '$lib/data/schemas/places';
 import { imagesFileSchema } from '$lib/data/schemas/images';
 import treeJson from '$lib/data/tree.json';
@@ -20,6 +21,7 @@ import wikidataBreedsJson from '../../../data/raw/wikidata-breeds.json';
 import wikidataPlacesJson from '../../../data/raw/wikidata-places.json';
 import breedNamesJson from '../../../data/manual/breed-names.json';
 import displayNamesJson from '../../../data/manual/display-names.json';
+import familiesJson from '../../../data/manual/families.json';
 import originPlacesJson from '../../../data/manual/origin-places.json';
 import leafPrefixesJson from '../../../data/manual/parker-leaf-prefixes.json';
 import type { PageServerLoad } from './$types';
@@ -56,6 +58,7 @@ export const load: PageServerLoad = () => {
 	const wdPlaces = wikidataRawSchema.parse(wikidataPlacesJson);
 	const names = breedNamesFileSchema.parse(breedNamesJson);
 	const displayNames = displayNamesFileSchema.parse(displayNamesJson);
+	const families = familiesFileSchema.parse(familiesJson);
 	const places = originPlacesFileSchema.parse(originPlacesJson);
 	const prefixes = leafPrefixesSchema.parse(leafPrefixesJson);
 	const imagesFile = imagesFileSchema.parse(imagesJson);
@@ -184,6 +187,13 @@ export const load: PageServerLoad = () => {
 				about: displayNames._about,
 				entries: displayNames.entries.length,
 				reviewed: displayNames.entries.filter((e) => e.reviewed).length,
+				sources: []
+			},
+			{
+				file: 'data/manual/families.json',
+				about: families._about,
+				entries: families.entries.length,
+				reviewed: families.entries.filter((e) => e.reviewed).length,
 				sources: []
 			},
 			{

@@ -41,7 +41,7 @@
 	const relatives = $derived(leaf?.relatives ?? []);
 	const sameClade = $derived(
 		breeds
-			.filter((b) => b.id !== breed.id && b.parker.cladeId === breed.parker.cladeId)
+			.filter((b) => b.id !== breed.id && breed.parker.cladeId !== null && b.parker.cladeId === breed.parker.cladeId)
 			.sort((a, b) => a.names.en.localeCompare(b.names.en))
 	);
 
@@ -62,7 +62,9 @@
 	<title>{breed.names.en} · Dogtrails</title>
 	<meta
 		name="description"
-		content="{breed.names.en}: origin {breed.origin.place.label}, {breed.parker.clade} clade (Parker et al. 2017). Every fact with its source."
+		content="{breed.names.en}: {breed.origin ? `origin ${breed.origin.place.label}, ` : ''}{breed.parker.clade
+			? `${breed.parker.clade} clade`
+			: 'no clade'} (Parker et al. 2017). Every fact with its source."
 	/>
 </svelte:head>
 
@@ -82,7 +84,7 @@
 			<p class="eyebrow">{families[breed.family.id].label} · {families[breed.family.id].constellation}</p>
 			<h1>{breed.names.en}{@render ref(breed.names.enSourceId)}</h1>
 			{#if parkerNames.length}
-				<p class="aside">In the Parker 2017 sample as {parkerNames.join(', ')}{@render ref(breed.parker.sourceId)}</p>
+				<p class="aside">In Parker et al. 2017 as {parkerNames.join(', ')}{@render ref(breed.parker.sourceId)}</p>
 			{/if}
 			<p class="actions">
 				<a class="pill" href="{resolve('/explore')}?breed={breed.id}">See it in the tree</a>
@@ -121,7 +123,12 @@
 
 				<dt>Clade</dt>
 				<dd>
-					{breed.parker.clade}{@render ref(breed.parker.sourceId)}
+					{#if breed.parker.clade}
+						{breed.parker.clade}{@render ref(breed.parker.sourceId)}
+					{:else}
+						None{@render ref(breed.parker.sourceId)}
+						<span class="note">Parker et al. 2017 place it in none of their clades</span>
+					{/if}
 					{#if breed.parker.cladeLowSupport}<span class="note">in this clade with low support (below 50 / 100)</span>{/if}
 				</dd>
 
@@ -129,7 +136,7 @@
 				<dd>
 					{#if breed.fci.number !== null}
 						Standard no. {breed.fci.number}, group {breed.fci.group}{@render ref(breed.fci.sourceId)}
-						<span class="note">{breed.fci.section}</span>
+						{#if breed.fci.section}<span class="note">{breed.fci.section}</span>{/if}
 						{#if breed.fci.provisional}<span class="note">provisionally accepted on {breed.fci.provisional}</span>{/if}
 					{:else}
 						Not in the FCI nomenclature <span class="note">{breed.fci.reason}</span>
@@ -138,10 +145,14 @@
 
 				<dt>Origin</dt>
 				<dd>
-					<span class="place">{breed.origin.place.label}</span>{@render ref(breed.origin.place.sourceId)}
-					<span class="note coords"
-						>Map point {coords(breed.origin.coords.lonLat)}{@render ref(breed.origin.coords.sourceId)}</span
-					>
+					{#if breed.origin}
+						<span class="place">{breed.origin.place.label}</span>{@render ref(breed.origin.place.sourceId)}
+						<span class="note coords"
+							>Map point {coords(breed.origin.coords.lonLat)}{@render ref(breed.origin.coords.sourceId)}</span
+						>
+					{:else}
+						{@render notYet()}
+					{/if}
 				</dd>
 
 				<dt>Developed in</dt>
@@ -192,7 +203,7 @@
 			</div>
 			<p>
 				{#if relatives.length === 0}
-					No well-supported group holds the {breed.names.en} with other breeds of this sample.
+					No well-supported group holds the {breed.names.en} with other breeds of this tree.
 				{:else if relatives.length <= 5}
 					Closest in this tree:
 					{#each relatives as r, i (r.id)}{i > 0 ? (i === relatives.length - 1 ? ' and ' : ', ') : ''}<a
@@ -212,8 +223,8 @@
 				</p>
 			{/if}
 			<p class="note">
-				Groupings with a DNA support below 50 / 100 are merged, as in the explorer. The sample holds
-				{layout.leaves.length} breeds.
+				Groupings with a DNA support below 50 / 100 are merged, as in the explorer. The tree holds
+				{new Set(layout.leaves.map((l) => l.breed.id)).size} breeds.
 			</p>
 		</section>
 	</div>

@@ -31,8 +31,9 @@ export type LayoutLeaf = LayoutNode & {
 	breed: Breed;
 	abbrev: string;
 	family: Family;
-	cladeId: string;
-	clade: string;
+	/** `null` for the breeds Parker et al. 2017 place in no clade. */
+	cladeId: string | null;
+	clade: string | null;
 	cladeLowSupport: boolean;
 	/** Other breeds of the smallest supported group holding this one (empty if that group is the root). */
 	relatives: Breed[];
@@ -44,6 +45,9 @@ export type LayoutLeaf = LayoutNode & {
 };
 
 export type LayoutLink = { key: string; d: string; lowSupport: boolean; family: Family | null };
+
+/** Label of a breed outside every Parker clade. */
+export const NO_CLADE = 'no clade';
 
 /** Run of consecutive leaves of one clade, drawn as an arc just outside the stars. */
 export type CladeArc = { cladeId: string; clade: string; d: string; leaves: number };
@@ -141,7 +145,7 @@ export function layoutTree(
 			abbrev: d.abbrev,
 			family: breed.family.id,
 			cladeId: d.cladeId,
-			clade: summary?.clade ?? d.cladeId,
+			clade: summary ? summary.clade : d.cladeId,
 			cladeLowSupport: summary?.cladeLowSupport ?? false,
 			relatives,
 			label: { x: 0, y: 0, anchor: 'start' as 'start' | 'end', leader: '' },
@@ -166,7 +170,7 @@ export function layoutTree(
 			const x = side * (dx + 8);
 			const [sx, sy] = polar(l.x, radius);
 			const [ex, ey] = polar(l.x, radius + 10);
-			const w = Math.max(l.breed.names.en.length * LABEL_W, l.clade.length * 7.2 + 8) + 12;
+			const w = Math.max(l.breed.names.en.length * LABEL_W, (l.clade ?? NO_CLADE).length * 7.2 + 8) + 12;
 			l.label = {
 				x,
 				y,
@@ -220,9 +224,14 @@ export function layoutTree(
 	for (let i = 0; i < leaves.length; ) {
 		let j = i;
 		while (j + 1 < leaves.length && leaves[j + 1].cladeId === leaves[i].cladeId) j++;
+		const { cladeId, clade } = leaves[i];
+		if (cladeId === null || clade === null) {
+			i = j + 1; // no clade: no arc
+			continue;
+		}
 		clades.push({
-			cladeId: leaves[i].cladeId,
-			clade: leaves[i].clade,
+			cladeId,
+			clade,
 			leaves: j - i + 1,
 			d: band({ a0: leaves[i].x - step * 0.4, a1: leaves[j].x + step * 0.4 }) ?? ''
 		});

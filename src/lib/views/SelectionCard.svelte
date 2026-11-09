@@ -21,13 +21,13 @@
 		</p>
 		<h2 id="card-title">{breed.names.en}</h2>
 		{#if parkerNames.length}
-			<p class="aside">In the Parker 2017 sample as {parkerNames.join(', ')}</p>
+			<p class="aside">In Parker et al. 2017 as {parkerNames.join(', ')}</p>
 		{/if}
 		<dl>
 			<dt>Origin</dt>
-			<dd class="place">{breed.origin.place.label}</dd>
+			<dd class="place">{breed.origin?.place.label ?? 'Not yet sourced'}</dd>
 			<dt>Clade</dt>
-			<dd>{breed.parker.clade}{breed.parker.cladeLowSupport ? ' (low support)' : ''}</dd>
+			<dd>{breed.parker.clade ?? 'None in Parker 2017'}{breed.parker.cladeLowSupport ? ' (low support)' : ''}</dd>
 		</dl>
 		<p class="more"><a href={resolve('/breed/[id]', { id: breed.id })}>Open the {breed.names.en} page</a></p>
 		<h3>Sources</h3>
