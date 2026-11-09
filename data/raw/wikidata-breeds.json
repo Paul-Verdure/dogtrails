@@ -1,47 +1,187 @@
 {
 	"source": "Wikidata Query Service",
 	"endpoint": "https://query.wikidata.org/sparql",
-	"fetchedAt": "2026-11-04T12:38:12.960Z",
+	"fetchedAt": "2026-11-09T10:20:14.738Z",
 	"licence": "CC0 1.0 (Wikidata structured data)",
 	"qids": [
 		"Q653",
+		"Q5414",
+		"Q17504",
+		"Q17510",
+		"Q21074",
+		"Q21080",
+		"Q21082",
+		"Q21098",
 		"Q21102",
+		"Q21206",
 		"Q29013",
+		"Q29022",
+		"Q29072",
+		"Q29099",
+		"Q29149",
 		"Q29164",
+		"Q29177",
+		"Q29195",
+		"Q29200",
+		"Q37508",
+		"Q37510",
+		"Q37514",
+		"Q37520",
+		"Q37524",
+		"Q37530",
 		"Q37534",
+		"Q37541",
+		"Q37550",
+		"Q37558",
+		"Q37582",
+		"Q37589",
+		"Q37595",
+		"Q37600",
+		"Q37608",
+		"Q37617",
+		"Q37619",
+		"Q37624",
+		"Q37629",
+		"Q37635",
+		"Q37688",
+		"Q37699",
+		"Q37704",
 		"Q37710",
 		"Q37716",
+		"Q37722",
+		"Q37755",
+		"Q37782",
+		"Q37789",
+		"Q37803",
+		"Q37811",
 		"Q37821",
+		"Q37859",
+		"Q37866",
+		"Q37871",
+		"Q37878",
+		"Q37888",
 		"Q37892",
+		"Q37896",
+		"Q37925",
+		"Q37929",
+		"Q37946",
+		"Q37967",
+		"Q38025",
+		"Q38036",
+		"Q38047",
 		"Q38055",
 		"Q38063",
+		"Q38072",
+		"Q38080",
 		"Q38084",
 		"Q38090",
+		"Q38115",
+		"Q38121",
+		"Q38146",
+		"Q38156",
+		"Q38162",
+		"Q38189",
+		"Q38196",
+		"Q38262",
 		"Q38280",
+		"Q38287",
+		"Q38295",
+		"Q38301",
+		"Q38309",
+		"Q38322",
+		"Q38352",
+		"Q38358",
+		"Q38375",
+		"Q38383",
+		"Q38387",
+		"Q38399",
 		"Q38418",
 		"Q38431",
+		"Q38449",
+		"Q38467",
+		"Q38487",
+		"Q38494",
+		"Q38496",
+		"Q38503",
+		"Q38508",
+		"Q38515",
+		"Q38529",
+		"Q38533",
+		"Q38559",
+		"Q38571",
+		"Q38634",
 		"Q38644",
+		"Q38650",
 		"Q38655",
+		"Q38668",
+		"Q38675",
+		"Q38679",
 		"Q38686",
+		"Q38688",
 		"Q38698",
+		"Q38706",
 		"Q38710",
+		"Q38726",
+		"Q38751",
+		"Q38761",
+		"Q38777",
+		"Q38783",
+		"Q38790",
+		"Q38796",
+		"Q38803",
+		"Q38808",
+		"Q38819",
+		"Q38820",
 		"Q38824",
+		"Q38843",
 		"Q38856",
 		"Q38864",
+		"Q38869",
+		"Q38874",
+		"Q38880",
 		"Q38889",
 		"Q38904",
+		"Q38919",
+		"Q38922",
+		"Q38934",
+		"Q38940",
+		"Q38959",
+		"Q38961",
+		"Q38965",
+		"Q38972",
 		"Q38990",
 		"Q38999",
+		"Q39002",
+		"Q39010",
+		"Q39026",
+		"Q39035",
 		"Q39058",
+		"Q39075",
+		"Q39080",
 		"Q39093",
 		"Q39108",
+		"Q39122",
+		"Q39161",
+		"Q39181",
+		"Q39285",
+		"Q39295",
+		"Q39315",
+		"Q39322",
+		"Q39330",
 		"Q39357",
+		"Q39407",
+		"Q39491",
 		"Q39579",
+		"Q39605",
 		"Q3514138",
+		"Q3851647",
+		"Q5032220",
+		"Q6535835",
+		"Q10874713",
 		"Q11831662",
 		"Q13631411"
 	],
-	"query": "SELECT ?item ?labelEn ?labelFr ?labelNl ?origin ?originLabel ?originIso ?fci ?image WHERE {\n  VALUES ?item { wd:Q653 wd:Q21102 wd:Q29013 wd:Q29164 wd:Q37534 wd:Q37710 wd:Q37716 wd:Q37821 wd:Q37892 wd:Q38055 wd:Q38063 wd:Q38084 wd:Q38090 wd:Q38280 wd:Q38418 wd:Q38431 wd:Q38644 wd:Q38655 wd:Q38686 wd:Q38698 wd:Q38710 wd:Q38824 wd:Q38856 wd:Q38864 wd:Q38889 wd:Q38904 wd:Q38990 wd:Q38999 wd:Q39058 wd:Q39093 wd:Q39108 wd:Q39357 wd:Q39579 wd:Q3514138 wd:Q11831662 wd:Q13631411 }\n  OPTIONAL { ?item rdfs:label ?labelEn FILTER(LANG(?labelEn) = \"en\") }\n  OPTIONAL { ?item rdfs:label ?labelFr FILTER(LANG(?labelFr) = \"fr\") }\n  OPTIONAL { ?item rdfs:label ?labelNl FILTER(LANG(?labelNl) = \"nl\") }\n  OPTIONAL {\n    ?item wdt:P495 ?origin .\n    OPTIONAL { ?origin rdfs:label ?originLabel FILTER(LANG(?originLabel) = \"en\") }\n    OPTIONAL { ?origin wdt:P297 ?originIso }\n  }\n  OPTIONAL { ?item p:P528 ?cat . ?cat ps:P528 ?fci ; pq:P972 wd:Q38603 . }\n  OPTIONAL { ?item wdt:P18 ?image }\n}\nORDER BY ?item",
+	"query": "SELECT ?item ?labelEn ?labelFr ?labelNl ?origin ?originLabel ?originIso ?fci ?image WHERE {\n  VALUES ?item { wd:Q653 wd:Q5414 wd:Q17504 wd:Q17510 wd:Q21074 wd:Q21080 wd:Q21082 wd:Q21098 wd:Q21102 wd:Q21206 wd:Q29013 wd:Q29022 wd:Q29072 wd:Q29099 wd:Q29149 wd:Q29164 wd:Q29177 wd:Q29195 wd:Q29200 wd:Q37508 wd:Q37510 wd:Q37514 wd:Q37520 wd:Q37524 wd:Q37530 wd:Q37534 wd:Q37541 wd:Q37550 wd:Q37558 wd:Q37582 wd:Q37589 wd:Q37595 wd:Q37600 wd:Q37608 wd:Q37617 wd:Q37619 wd:Q37624 wd:Q37629 wd:Q37635 wd:Q37688 wd:Q37699 wd:Q37704 wd:Q37710 wd:Q37716 wd:Q37722 wd:Q37755 wd:Q37782 wd:Q37789 wd:Q37803 wd:Q37811 wd:Q37821 wd:Q37859 wd:Q37866 wd:Q37871 wd:Q37878 wd:Q37888 wd:Q37892 wd:Q37896 wd:Q37925 wd:Q37929 wd:Q37946 wd:Q37967 wd:Q38025 wd:Q38036 wd:Q38047 wd:Q38055 wd:Q38063 wd:Q38072 wd:Q38080 wd:Q38084 wd:Q38090 wd:Q38115 wd:Q38121 wd:Q38146 wd:Q38156 wd:Q38162 wd:Q38189 wd:Q38196 wd:Q38262 wd:Q38280 wd:Q38287 wd:Q38295 wd:Q38301 wd:Q38309 wd:Q38322 wd:Q38352 wd:Q38358 wd:Q38375 wd:Q38383 wd:Q38387 wd:Q38399 wd:Q38418 wd:Q38431 wd:Q38449 wd:Q38467 wd:Q38487 wd:Q38494 wd:Q38496 wd:Q38503 wd:Q38508 wd:Q38515 wd:Q38529 wd:Q38533 wd:Q38559 wd:Q38571 wd:Q38634 wd:Q38644 wd:Q38650 wd:Q38655 wd:Q38668 wd:Q38675 wd:Q38679 wd:Q38686 wd:Q38688 wd:Q38698 wd:Q38706 wd:Q38710 wd:Q38726 wd:Q38751 wd:Q38761 wd:Q38777 wd:Q38783 wd:Q38790 wd:Q38796 wd:Q38803 wd:Q38808 wd:Q38819 wd:Q38820 wd:Q38824 wd:Q38843 wd:Q38856 wd:Q38864 wd:Q38869 wd:Q38874 wd:Q38880 wd:Q38889 wd:Q38904 wd:Q38919 wd:Q38922 wd:Q38934 wd:Q38940 wd:Q38959 wd:Q38961 wd:Q38965 wd:Q38972 wd:Q38990 wd:Q38999 wd:Q39002 wd:Q39010 wd:Q39026 wd:Q39035 wd:Q39058 wd:Q39075 wd:Q39080 wd:Q39093 wd:Q39108 wd:Q39122 wd:Q39161 wd:Q39181 wd:Q39285 wd:Q39295 wd:Q39315 wd:Q39322 wd:Q39330 wd:Q39357 wd:Q39407 wd:Q39491 wd:Q39579 wd:Q39605 wd:Q3514138 wd:Q3851647 wd:Q5032220 wd:Q6535835 wd:Q10874713 wd:Q11831662 wd:Q13631411 }\n  OPTIONAL { ?item rdfs:label ?labelEn FILTER(LANG(?labelEn) = \"en\") }\n  OPTIONAL { ?item rdfs:label ?labelFr FILTER(LANG(?labelFr) = \"fr\") }\n  OPTIONAL { ?item rdfs:label ?labelNl FILTER(LANG(?labelNl) = \"nl\") }\n  OPTIONAL {\n    ?item wdt:P495 ?origin .\n    OPTIONAL { ?origin rdfs:label ?originLabel FILTER(LANG(?originLabel) = \"en\") }\n    OPTIONAL { ?origin wdt:P297 ?originIso }\n  }\n  OPTIONAL { ?item p:P528 ?cat . ?cat ps:P528 ?fci ; pq:P972 wd:Q38603 . }\n  OPTIONAL { ?item wdt:P18 ?image }\n}\nORDER BY ?item",
 	"results": {
 		"head": {
 			"vars": [
@@ -58,6 +198,17 @@
 		},
 		"results": {
 			"bindings": [
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q10874713"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Xigou"
+					}
+				},
 				{
 					"item": {
 						"type": "uri",
@@ -142,6 +293,385 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q3851647"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Abruzzese Mastiff"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Italy"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "IT"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Abruzzese Mastiff"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q5032220"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Cane Toccatore"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Cane%20Paratore.jpg"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q6535835"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Levriero meridionale"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q17504"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Dalmatian"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q224"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Croatia"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "HR"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Dalmatien.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Dalmatiër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Dalmatien"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "153"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q17510"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "West Highland White Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q22"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Scotland"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/West%20Highland%20White%20Terrier%20Krakow.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "West Highland white terriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "West Highland white terrier"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "085"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21074"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Abruzzo-Maremma Sheepdog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Italy"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "IT"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Cane%20Pastore%20Abruzzese%20Abruzzo.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Berghond van de Maremmen en Abruzzen"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Berger de Abruzzes et Maremme"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "201"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21080"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Afghan Hound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q889"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Afghanistan"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "AF"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Afghan%20Hound%20in%20Tallinn.JPG"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Afghaanse windhond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Lévrier afghan"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21080"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Afghan Hound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q889"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Afghanistan"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "AF"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/AKC%20Helena%20Fall%20Dog%20Show%202011.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Afghaanse windhond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Lévrier afghan"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21082"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Cane Corso"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Italy"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "IT"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Anita%20Cane%20Corso%20Italiano%20allevato%20in%20Italia.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Cane corso"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "chien de cour italien"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "343"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21082"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Cane Corso"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Italy"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "IT"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/FINLEY%20DE%20LA%20MIRAGE%20DE%20TORRELLAS%2001.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Cane corso"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "chien de cour italien"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "343"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21098"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "bloodhound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q31"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgium"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "BE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Perro%20de%20San%20Huberto.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "bloedhond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "chien de Saint-Hubert"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "084"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q21102"
 					},
 					"labelEn": {
@@ -184,6 +714,40 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21206"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Alaskan Malamute"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q797"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Alaska"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Alaskan%20Malamute.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Alaska-malamute"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "malamute de l’Alaska"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q29013"
 					},
 					"labelEn": {
@@ -221,6 +785,157 @@
 					"fci": {
 						"type": "literal",
 						"value": "205"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q29022"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "English Springer Spaniel"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Englishspringerspaniel%20Winston.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Engelse springerspaniel"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "springer anglais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "125"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q29072"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Cardigan Welsh Corgi"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q25"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Wales"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Cardigan%20Welsh%20Corgi%20600.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Welsh corgi Cardigan"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Welsh Corgi Cardigan"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "038"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q29099"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "dachshund"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/MiniDachshund1%20wb.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "teckel"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "teckel"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "148"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q29149"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "French Bulldog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q142"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "France"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "FR"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%B8%D0%B5%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B4%D0%BE%D0%B3%D0%B8%202013-09-02%2011-36.JPG"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Franse buldog"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "bouledogue français"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "101"
 					}
 				},
 				{
@@ -302,6 +1017,397 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q29177"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Field Spaniel"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Field%20spaniel%20581.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Fieldspaniël"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Field Spaniel"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "123"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q29195"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Finnish Spitz"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q33"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Finland"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "FI"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Finnish%20Spitz%20600.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Finse spits"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Spitz finlandais"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q29200"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Flat-Coated Retriever"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Flat%20Coated%20Retriever.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Flatcoated retriever"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Flat-Coated Retriever"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "121"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q29200"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Flat-Coated Retriever"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Flat%20Coated%20Retriever%20-%20black.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Flatcoated retriever"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Flat-Coated Retriever"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "121"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37508"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "American Hairless Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q30"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United States"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "US"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/American%20Hairless%20Terrier%20Adelor.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Amerikaanse naakthond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "American Hairless Terrier"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37510"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Toy Fox Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q30"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United States"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "US"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Toy%20Fox%20Terrier%202.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Amerikaanse toyterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "American Fox Terrier"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37514"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "American foxhound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q30"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United States"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "US"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/AmericanFoxhound2.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "American foxhound"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "foxhound américain"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "303"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37520"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Australian Kelpie"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q408"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Australia"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "AU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bashyr.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Kelpie"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Australian Kelpie"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "293"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37524"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Australian Silky Terrier"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/02%20Australian%20Silky%20Terrier%2C%20Zack%2C%20spring%202012.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Australische silkyterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Terrier australien à poil soyeux"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "236"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37530"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Australian Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q408"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Australia"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "AU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Australian%20Terrier%20002%20U.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Australische terriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Terrier australien"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "008"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q37534"
 					},
 					"labelEn": {
@@ -335,6 +1441,712 @@
 						"xml:lang": "fr",
 						"type": "literal",
 						"value": "Akita américain"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37541"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Anatolian Shepherd"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q43"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Turkey"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "TR"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Kangal-welpen-de%20003.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Anatolische herder"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "berger d'Anatolie"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "331"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37550"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Boston Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q30"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United States"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "US"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/BOSTON%20TERRIER%2C%20Ving%C3%A5rdens%20Essi%20von%20Richards%20%2823995273800%29.2.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Bostonterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Terrier de Boston"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "140"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37558"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Border Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Border%20Terri%C3%ABr.JPG"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "borderterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Border Terrier"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "010"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37582"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Bedlington Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bedlington%20terrier.jpeg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Bedlingtonterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Bedlington terrier"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "009"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37589"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Boerboel"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q258"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "South Africa"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "ZA"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Boerboel.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Boerboel"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Boerboel"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37595"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Australian Cattle Dog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q408"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Australia"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "AU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/ACD-blue-spud.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Australische veedrijvershond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Bouvier australien"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "287"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37600"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Bichon Frisé"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bichon%20Fris%C3%A9%20-%20studdogbichon.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Bichon frisé"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Bichon à poil frisé"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "2 15 900"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37600"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Bichon Frisé"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bichon%20Fris%C3%A9%20sitting.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Bichon frisé"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Bichon à poil frisé"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "2 15 900"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37608"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Bernese Mountain Dog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Switzerland"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "CH"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bouviers%20Bernois%20Ganjo.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Berner sennenhond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Bouvier bernois"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "045"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37617"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Airedale Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Airedale%20Terrier.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Airedaleterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Airedale Terrier"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37619"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Bearded Collie"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q22"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Scotland"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bearded%20Collie.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Bearded collie"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Colley barbu"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "271"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37624"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgian Shepherd"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q31"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgium"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "BE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/04%20-%20Belgian%20shepherd%20dog%20varieties%20-%20Groenendael%2CTervuren%2C%20Malinois%2C%20Laekenois.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Belgische herder"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Berger belge"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "015"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37629"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Australian Shepherd"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q408"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Australia"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "AU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Aussi.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Australische herder"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Berger australien"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "342"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37629"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Australian Shepherd"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q30"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United States"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "US"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Aussi.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Australische herder"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Berger australien"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "342"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37635"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Picardy Shepherd"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q142"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "France"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "FR"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Owczarek%20pikardyjski%2063.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Picardische herdershond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Berger picard"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "176"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37688"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "American Staffordshire Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q30"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United States"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "US"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/AMERICAN%20STAFFORDSHIRE%20TERRIER%2C%20Zican%E2%80%99s%20Bz%20Ez%20Dragon%20%2824208348891%29.2.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Amerikaanse staffordshireterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "american staffordshire terrier"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "286"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37699"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "American Eskimo Dog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q30"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United States"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "US"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/American%20Eskimo%20Dog%201.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "American Eskimo Dog"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "American Eskimo"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37704"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Old English sheepdog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bobtail.JPG"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Bobtail"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Bobtail"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "016"
 					}
 				},
 				{
@@ -500,6 +2312,275 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37722"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Chinook"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q30"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United States"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "US"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Mountan%20Laurel%20Ajax%20the%20Chinook%20dog.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Chinook"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Chinook"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37755"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Ibizan Hound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q52631"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Ibiza"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/AdemasAout2021.ret.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Podenco ibicenco"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Podenco d'Ibiza"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "089"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37755"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Ibizan Hound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q52631"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Ibiza"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Podenco%20z%20ibizy%20645.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Podenco ibicenco"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Podenco d'Ibiza"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "089"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37782"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "English Toy Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/English%20Toy%20Terrier%20600%2001.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Engelse toyterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Terrier d'agrément anglais noir et feu"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "013"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37789"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "English Foxhound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/English%20Foxhound.jpg"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Foxhound anglais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "159"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37803"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Pyrenean Mountain Dog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q29"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Spain"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "ES"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Pyrenean%20Mountain%20Dog%20600.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Pyrenese berghond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "chien de montagne des Pyrénées"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "137"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37811"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "German Wirehaired Pointer"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/GermanWirehrPtr1%20wb.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Duitse staande hond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Drahthaar"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "098"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q37821"
 					},
 					"labelEn": {
@@ -542,6 +2623,212 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37859"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Azawakh"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q912"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Mali"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "ML"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Azawakh%20bitch%20Shira-tb.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Azawakh"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Azawakh"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "307"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37866"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Borzoi"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q159"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Russia"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "RU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Borzoi%20female.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Barzoi"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Barzoï"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "193"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37871"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Basenji"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q974"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Democratic Republic of the Congo"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "CD"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/%D0%91%D0%B0%D1%81%D0%B5%D0%BD%D0%B4%D0%B6%D0%B8%20%28Basenji%29%2002.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Basenji"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Basenji"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "043"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37878"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Dogue de Bordeaux"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q142"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "France"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "FR"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/DJT%200086.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Bordeauxdog"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Dogue de Bordeaux"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "116"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37888"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Cairn Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q22"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Scotland"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Cairn-Terrier-Garten1.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Cairnterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Cairn terrier"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "004"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q37892"
 					},
 					"labelEn": {
@@ -579,6 +2866,333 @@
 					"fci": {
 						"type": "literal",
 						"value": "288"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37896"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Bouvier des Flandres"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q31"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgium"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "BE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bouvier.JPG"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Vlaamse koehond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Bouvier des Flandres"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "191"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37925"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Sloughi"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q27381"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "North Africa"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Sloughi.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Sloughi"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "lévrier arabe"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37929"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Scottish Deerhound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q22"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Scotland"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Deerhound%20305.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Deerhound"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Deerhound"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "164"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37929"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Scottish Deerhound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q22"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Scotland"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Grupp%2010%2C%20SKOTSK%20HJORTHUND%2C%20SEJV-12%20SE%20UCH%20Necesse%E2%80%99s%20Ars%20Amandi%20%2823664806293%29.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Deerhound"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Deerhound"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "164"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37946"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Eurasier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Eurasier.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Eurasiër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Eurasier"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "291"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q37967"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Miniature Bull Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bull%20Terrier%20Miniature.jpg"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Bull Terrier miniature"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "359"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38025"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Kerry Blue Terrier"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Kerry%20Blue%20Terrier.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Kerry blue-terriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Terrier Kerry Blue"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "003"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38036"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Small Münsterländer"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Kleiner%20Munsterlander%20edit.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Kleine Münsterländer"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Petit épagneul de Münster"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "102"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38047"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Soft-coated Wheaten Terrier"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Soft%20Coated%20Wheaten%20Terrier%20600.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Ierse softcoated wheaten terriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Terrier irlandais à poil doux"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "040"
 					}
 				},
 				{
@@ -693,6 +3307,132 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38072"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Cavalier King Charles Spaniel"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Betty%20Verdure.Photo%20Ph.BRIZARD.JPG"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Cavalier King Charles-spaniël"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Cavalier King Charles Spaniel"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "136"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38072"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Cavalier King Charles Spaniel"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/CavalierKgChas2%20wb.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Cavalier King Charles-spaniël"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Cavalier King Charles Spaniel"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "136"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38080"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Bullmastiff"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Dog%20Bullmastiff%20600.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "bullmastiff"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "bullmastiff"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "157"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q38084"
 					},
 					"labelEn": {
@@ -802,6 +3542,325 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38115"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Papillon"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q31"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgium"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "BE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Outdoor%20Continental%20Toy%20Spaniel%20Papillon.jpeg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Épagneul nain continental"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Papillon"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "077"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38121"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Greater Swiss Mountain Dog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Switzerland"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "CH"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Swissy-2009-11-02.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Grote Zwitserse sennenhond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Grand bouvier suisse"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "058"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38146"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Japanese Chin"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q17"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Japan"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "JP"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Japanese%20Chin%20adult.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Japanse spaniël"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Épagneul japonais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "206"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38156"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Brittany"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q327"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Brittany"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/American%20Brittany%20standing.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Epagneul breton"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "épagneul breton"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "095"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38162"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Irish Water Spaniel"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Irlandzki%20spaniel%20wodny%20676.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Ierse waterspaniël"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Épagneul d'eau irlandais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "124"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38189"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Glen of Imaal Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q27"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Ireland"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "IE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Adult%20Glen%20of%20Imaal%20terrier.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Glen of Imaalterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Terrier irlandais Glen of Imaal"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "302"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38196"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Volpino Italiano"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Italy"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "IT"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Volpino04.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Volpino italiano"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Volpino Italiano"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "195"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38262"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Cirneco dell'Etna"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Italy"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "IT"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Cirneco%20dell%20Etna%20611.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Cirneco dell'Etna"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Cirneco de l'Etna"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "199"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q38280"
 					},
 					"labelEn": {
@@ -835,6 +3894,486 @@
 						"xml:lang": "fr",
 						"type": "literal",
 						"value": "berger allemand"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38287"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Jack Russell Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q408"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Australia"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "AU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Jack%20Russell%20Terrier%201.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Jackrussellterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Jack Russell"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "345"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38287"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Jack Russell Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Jack%20Russell%20Terrier%201.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Jackrussellterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Jack Russell"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "345"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38295"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Coton de Tulear"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q1019"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Madagascar"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "MG"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Coton%20de%20Tular%202.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Coton de Tuléar"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Coton de Tuléar"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "283"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38301"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Gordon Setter"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q22"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Scotland"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Orrvilas%20enska%20w800px.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Gordon setter"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Setter Gordon"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "006"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38309"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "English Setter"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/English%20setter.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Engelse setter"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Setter anglais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "002"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38322"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Bull Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bullterier%20089%20LM.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Bulterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Bull Terrier"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "011"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38352"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Lhasa Apso"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q17252"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Tibet"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Grupp%209%2C%20LHASA%20APSO%2C%20DK%20JV-13%20DK%20V-14%20DK%20V-15%20NO%20UCH%20NO%20V-15%20SE%20UCH%20Chic%20Choix%20Some%20Like%20It%20Chic%20%2824014621720%29.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Lhasa apso"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Lhassa Apso"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "227"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38358"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Dobermann"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Dobermann%20Father-and-son.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Dobermann"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Dobermann"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "143"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38375"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Curly Coated Retriever"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Curley%20coated%20retriever5.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Curly coated retriever"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Retriever à poil bouclé"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "110"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38383"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Bulldog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Racib%C3%B3rz%202007%20082.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Engelse buldog"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Bulldog anglais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "149"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38387"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Manchester Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Manchesterterrier.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Manchesterterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Manchester Terrier"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "071"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38399"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Groenendael"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q31"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgium"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "BE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/European%20Groenendael%20male.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Groenendaeler"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Berger belge Groenendael"
 					}
 				},
 				{
@@ -916,6 +4455,641 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38449"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Havanese"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q241"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Cuba"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "CU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/A%20havanese%20dog.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Havanezer"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Bichon havanais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "250"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38467"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Kuvasz"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q28"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Hungary"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "HU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/2-kuvasz.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Kuvasz"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Kuvasz"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "054"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38487"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Leonberger"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonberger%20male.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Leonberger"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Leonberg"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "145"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38494"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgian Malinois"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q31"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgium"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "BE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Grupp%201%2C%20BELGISK%20VALLHUND%2C%20MALINOIS%2C%20Krokasmedens%20Epic%20%2824014622180%29.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Mechelse herder"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "malinois"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38494"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgian Malinois"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q31"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgium"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "BE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/HMKC%20Christmas%20Fun%20Run%202012%20%288265428196%29.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Mechelse herder"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "malinois"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38496"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Boxer"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q43287"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "German Empire"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Boxer%20female%20brown.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "boxer"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Boxer"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "144"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38503"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Italian Greyhound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Italy"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "IT"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Charciki%20W%C5%82oskie%2C%20doros%C5%82y%20i%20szczeniak.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Italiaans windhondje"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Petit lévrier italien"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "200"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38508"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Kangal Shepherd Dog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q43"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Turkey"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "TR"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Kangal%20dog%20with%20spikey%20collar%2C%20Turkey.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Kangal dog"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "chien de berger Kangal"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38508"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Kangal Shepherd Dog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q43"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Turkey"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "TR"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Kangal1.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Kangal dog"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "chien de berger Kangal"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38515"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Greenland Dog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q223"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Greenland"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GL"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Greenland%20dog%20upernavik%202007-06-02%20sample.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Groenlandse hond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Groenlandais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "274"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38529"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Neapolitan Mastiff"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q1747689"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Ancient Rome"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Neapolitan%20Mastiff%20Male%20Head.JPG"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Mastino napoletano"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Mâtin napolitain"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "197"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38533"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "English Cocker Spaniel"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/%22Bill%22%20-%20Cocker%20spaniel%20anglais%201.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Engelse cockerspaniël"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Cocker spaniel anglais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "005"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38559"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Portuguese water dog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q45"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Portugal"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "PT"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/C%C3%A3o%20de%20agua%20Portugu%C3%AAs%202.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Portugese waterhond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "chien d'eau portugais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "037"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38571"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "greyhound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/GraceTheGreyhound.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Greyhound"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Lévrier greyhound"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "158"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38634"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Black Russian Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q15180"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Soviet Union"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "SU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Malahovkaja%20Serenada.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Zwarte Russische terriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Terrier noir de Russie"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "327"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38634"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Black Russian Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q15180"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Soviet Union"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "SU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Russianblack.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Zwarte Russische terriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Terrier noir de Russie"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "327"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q38644"
 					},
 					"labelEn": {
@@ -940,6 +5114,90 @@
 					"fci": {
 						"type": "literal",
 						"value": "139"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38650"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Rough Collie"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/AmericanCollie2.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Rough Collie"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Colley"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "156"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38650"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Rough Collie"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Rough%20Collie%20head.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Rough Collie"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Colley"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "156"
 					}
 				},
 				{
@@ -982,6 +5240,166 @@
 					"fci": {
 						"type": "literal",
 						"value": "097"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38668"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Irish wolfhound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q22890"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Ireland"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Irish%20wolfhound%20giaccomo.JPG"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Ierse wolfshond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Lévrier irlandais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "160"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38675"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Komondor"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q28"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Hungary"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "HU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Komondor%20dog%20breed.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Komondor"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Komondor"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "053"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38675"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Komondor"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q28"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Hungary"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "HU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Komondor%20Westminster%20Dog%20Show%20crop.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Komondor"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Komondor"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "053"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38679"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Tervuren"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q31"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgium"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "BE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Tervuren.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Tervuerense herder"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Berger belge Tervueren"
 					}
 				},
 				{
@@ -1067,6 +5485,90 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38688"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Giant Schnauzer"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bvdb-riesen%20schnauzer.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Giant Schnauzer"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Schnauzer géant"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "181"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38688"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Giant Schnauzer"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Stablemaster%27s%20NORTHERN%20HOPE%28Poznan2006%29.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Giant Schnauzer"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Schnauzer géant"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "181"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q38698"
 					},
 					"labelEn": {
@@ -1100,6 +5602,35 @@
 					"fci": {
 						"type": "literal",
 						"value": "253"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38706"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Newfoundland dog"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/201210071658d.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Newfoundlander"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Terre-neuve"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "050"
 					}
 				},
 				{
@@ -1147,6 +5678,515 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38726"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Labrador Retriever"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Yellow%20Labrador%20Retriever%202.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "labrador retriever"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "labrador retriever"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "122"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38726"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Labrador Retriever"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Yellow%20Labrador%20Retriever%202.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "labrador retriever"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "labrador retriever"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "122"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38726"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Labrador Retriever"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q16"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Canada"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "CA"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Yellow%20Labrador%20Retriever%202.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "labrador retriever"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "labrador retriever"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "122"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38751"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Maltese"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Maltezer%20Vereniging%20Belgie.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Maltezer"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Bichon maltais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "065"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38761"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Irish Setter"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q22890"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Ireland"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Can%20Setter%20dog%20GFDL.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Ierse setter"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Setter irlandais"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "120"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38777"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Large Münsterländer"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/GrosserMuensterlaender.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Grote Münsterländer"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Grand Münsterländer"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "118"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38783"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Pembroke Welsh Corgi"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q25"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Wales"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Welsh%20Pembroke%20Corgi.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Welsh Corgi Pembroke"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Welsh Corgi Pembroke"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "039"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38790"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Smooth Collie"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q22"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Scotland"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Smooth%20Collie%20600.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Smooth Collie"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Colley à poil court"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "296"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38796"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Tibetan Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q17252"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Tibet"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Tibetan%20Terrier%20Image%20001.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Tibetaanse terriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Terrier tibétain"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "209"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38803"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Norwegian Elkhound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q20"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Norway"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "NO"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Norwegian%20Elkhound.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Noorse elandhond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Chien d'élan norvégien gris"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "242"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38808"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Pharaoh Hound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q79"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Egypt"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "EG"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Pies%20faraona%20e34.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Pharaohond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Chien du Pharaon"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "248"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38819"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Vizsla"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q28"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Hungary"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "HU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Wy%C5%BCe%C5%82%20w%C4%99gierski%20g%C5%82adkow%C5%82osy%20500.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Vizsla"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Braque hongrois à poil court"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "057"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38820"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Redbone Coonhound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q30"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United States"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "US"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Memphis%20the%20Redbone%20Coonhound%20%287%20Nov%202004%29.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Redbone Coonhound"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Redbone"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q38824"
 					},
 					"labelEn": {
@@ -1184,6 +6224,78 @@
 					"fci": {
 						"type": "literal",
 						"value": "312"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38843"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Keeshond"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Keeshond%20Majic%20standing%20cropped.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "keeshond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Keeshond"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38843"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Keeshond"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q55"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Netherlands"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Keeshond%20Majic%20standing%20cropped.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "keeshond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Keeshond"
 					}
 				},
 				{
@@ -1268,6 +6380,132 @@
 					"fci": {
 						"type": "literal",
 						"value": "055"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38869"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Wirehaired Pointing Griffon"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q142"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "France"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "FR"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Korthalsgriffon.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Griffon Korthals"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Korthals"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "107"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38874"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Peruvian Hairless Dog"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q419"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Peru"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "PE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Taru%20metsa.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Peruaanse naakthond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "chien nu du Pérou"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "310"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38880"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Parson Russell Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Parson%20Russell%20Terrier.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Parson Russell-terriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Parson Russell terrier"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "339"
 					}
 				},
 				{
@@ -1457,6 +6695,338 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38919"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Pumi"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q28"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Hungary"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "HU"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Hungarianpumi.JPG"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Pumi"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Pumi"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "056"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38922"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Otterhound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Two%20otterhounds.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Otterhound"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Chien à loutre"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "294"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38934"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Norwich Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Norwichterrier.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Norwichterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Norwich Terrier"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "072"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38940"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Norfolk Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q145"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United Kingdom"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "GB"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Charmonty%20Norfolkterrier.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Norfolkterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Norfolk Terrier"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "272"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38959"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Pekingese"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q148"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "People's Republic of China"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "CN"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/1AKC%20Pekingese%20Dog%20Show%202011.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Pekingees"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Pékinois"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "207"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38961"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Black Norwegian Elkhound"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q20"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Norway"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "NO"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/BlackNorwegianElkhound.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Black Norwegian Elkhound"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Chien d'élan norvégien noir"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "268"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38965"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Weimaraner"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Weimaraner%20Amigo.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Weimarse staande hond"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Braque de Weimar"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "099"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38972"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Shar Pei"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q148"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "People's Republic of China"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "CN"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Shar%20pei.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Shar-pei"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Shar Pei"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "309"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q38990"
 					},
 					"labelEn": {
@@ -1583,6 +7153,179 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39002"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Samoyed"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Samojed00.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Samojeed"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Samoyède"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39010"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Schipperke"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q31"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgium"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "BE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Schipperke0001.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Schipperke"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Schipperke"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39010"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Schipperke"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q31"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Belgium"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "BE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Schipperke1.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Schipperke"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Schipperke"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39026"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Rhodesian Ridgeback"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q217169"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Rhodesia"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Grupp%206%20RHODESIAN%20RIDGEBACK%2C%20NO%20JV-15%20SE%20VCH%20Kadamo%20I%E2%80%99m%20In%20It%20For%20The%20Gold%20%2823920356649%29.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "pronkrug"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Chien de Rhodésie à crête dorsale"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "146"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39035"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Scottish Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q22"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Scotland"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Scotish%20terrier%20burleska%202005.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Schotse terriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "terrier écossais"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q39058"
 					},
 					"labelEn": {
@@ -1616,6 +7359,90 @@
 						"xml:lang": "fr",
 						"type": "literal",
 						"value": "Shetland"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39075"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Swedish Vallhund"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q34"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Sweden"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "SE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/SwedishVallhundAgility%20wb.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Västgötaspets"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Vallhund suédois"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "014"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39080"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Petit Basset Griffon Vendéen"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q142"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "France"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "FR"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/P%20Basset%20Griffon%20Vendeen%20600.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Petit Basset griffon vendéen"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Petit basset griffon Vendéen"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "067"
 					}
 				},
 				{
@@ -1697,6 +7524,306 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39122"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Whippet"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Whippet%20stacked.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Whippet"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Lévrier whippet"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "162"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39161"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Spinone Italiano"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q38"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Italy"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "IT"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Spinone%20italiano%20Daisy.JPG"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Spinone italiano"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Spinone italiano"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39181"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Tibetan Spaniel"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q17252"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Tibet"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Tibetansk%20spaniel.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Tibetaanse spaniël"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "épagneul tibétain"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "231"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39285"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Staffordshire Bull Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Staffie.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Staffordshire-bulterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Staffordshire Bull Terrier"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39295"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Siberian Husky"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q5428"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Siberia"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Siberian%20Husky%20-%20Mika.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Siberische husky"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Husky sibérien"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39315"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Shiba Inu"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q17"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Japan"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "JP"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Shiba%20inu%20taiki.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Shiba"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Shiba Inu"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39322"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Tibetan Mastiff"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q148"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "People's Republic of China"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "CN"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/2013%20Westminster%20Kennel%20Club%20Dog%20Show-%20Tibetan%20Mastiff%20GCH%20Sierras%27Sasha-Yakone%20Nanuk%20%288469240739%29%20%28cropped%29.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Tibetaanse mastiff"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Dogue du Tibet"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "230"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39330"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Yorkshire Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Imageyorkie.png"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Yorkshireterriër"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Yorkshire"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "086"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q39357"
 					},
 					"labelEn": {
@@ -1735,6 +7862,67 @@
 				{
 					"item": {
 						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39407"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Toy Manchester Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q30"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "United States"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "US"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Toy-manchester-terrier-weave.png"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39491"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Wire Fox Terrier"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q21"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "England"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Elias1%C4%8Derven2006.jpg"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "fox-terrier à poil dur"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "169"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
 						"value": "http://www.wikidata.org/entity/Q39579"
 					},
 					"labelEn": {
@@ -1768,6 +7956,90 @@
 						"xml:lang": "fr",
 						"type": "literal",
 						"value": "Loulou de Poméranie"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q39605"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Standard Schnauzer"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/Emppumenossa.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Standard Schnauzer"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "schnauzer moyen"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "182"
+					}
+				},
+				{
+					"item": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q5414"
+					},
+					"labelEn": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Great Dane"
+					},
+					"origin": {
+						"type": "uri",
+						"value": "http://www.wikidata.org/entity/Q183"
+					},
+					"originLabel": {
+						"xml:lang": "en",
+						"type": "literal",
+						"value": "Germany"
+					},
+					"originIso": {
+						"type": "literal",
+						"value": "DE"
+					},
+					"image": {
+						"type": "uri",
+						"value": "http://commons.wikimedia.org/wiki/Special:FilePath/8675eds%20win.jpg"
+					},
+					"labelNl": {
+						"xml:lang": "nl",
+						"type": "literal",
+						"value": "Duitse dog"
+					},
+					"labelFr": {
+						"xml:lang": "fr",
+						"type": "literal",
+						"value": "Dogue allemand"
+					},
+					"fci": {
+						"type": "literal",
+						"value": "235"
 					}
 				},
 				{

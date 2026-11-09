@@ -19,7 +19,8 @@ export const sourceSchema = z.strictObject({
 export const treeLeafSchema = z.strictObject({
 	name: z.string().min(1),
 	abbrev: abbrevSchema,
-	cladeId: cladeIdSchema,
+	/** `null` for the breeds supplement 1 places in no clade (Basenji, Samoyed…). */
+	cladeId: cladeIdSchema.nullable(),
 	dogs: z.int().min(1),
 	dogIds: z.array(z.string().min(1)).min(1),
 	split: z.strictObject({ part: z.int().min(1), of: z.int().min(2) }).optional()
@@ -42,13 +43,14 @@ export const treeNodeSchema: z.ZodType<TreeNode> = z.union([treeLeafSchema, tree
 export const breedSummarySchema = z.strictObject({
 	abbrev: abbrevSchema,
 	name: z.string().min(1),
-	clade: z.string().min(1),
-	cladeId: cladeIdSchema,
+	/** `null` when supplement 1 places the breed in no clade. */
+	clade: z.string().min(1).nullable(),
+	cladeId: cladeIdSchema.nullable(),
 	/** Marked `*` in supplement 1: included in the clade with < 50 % bootstrap support. */
 	cladeLowSupport: z.boolean(),
 	dogs: z.int().min(1),
-	/** Number of separate subtrees the breed's dogs form, in the sample tree and in the full tree. */
-	fragments: z.strictObject({ sample: z.int().min(1), full: z.int().min(1) }),
+	/** Number of separate subtrees the breed's dogs form, in this tree (the breed set) and in the full tree. */
+	fragments: z.strictObject({ tree: z.int().min(1), full: z.int().min(1) }),
 	/** Other breeds found inside the breed's most recent common ancestor in the full tree. */
 	fullTreeIntruders: z.array(abbrevSchema),
 	/** Other supplement-1 entries with the same base name (e.g. `MXOL` for `XOLO`): NOT merged. */
@@ -58,6 +60,12 @@ export const breedSummarySchema = z.strictObject({
 export const treeFileSchema = z.strictObject({
 	source: sourceSchema,
 	generatedBy: z.string().min(1),
+	/** Which breeds the tree holds: the whole supplement 1 (minus wild canids) or a sample file. */
+	breedSet: z.strictObject({
+		rule: z.enum(['all-supplement-1-with-leaves', 'sample']),
+		sample: z.string().min(1).nullable(),
+		excluded: z.array(z.strictObject({ abbrev: abbrevSchema, reason: z.string().min(1) }))
+	}),
 	breeds: z.array(breedSummarySchema).min(1),
 	/** Breeds split into several leaves in `root`: reported, never silently merged. */
 	splitBreeds: z.array(abbrevSchema),

@@ -1,0 +1,988 @@
+{
+	"_about": "Colour family (docs/DESIGN.md §2) of every breed that is not in the 30-breed table of DESIGN.md §2, which stays the source for those 30. Family is an editorial choice per breed, not a datum: the draft follows the breed type and FCI group first, then the Parker clade, and leans on the 30 choices Paul already made (Akita and Chow Chow ancient, Miniature Schnauzer and Pinscher terrier, Saint Bernard and Rottweiler mastiff). Drafted with Claude Code on 2026-11-09; every entry is reviewed=false until Paul checks it.",
+	"entries": [
+		{
+			"id": "afghan-hound",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 228, group 10 (Sighthounds); Parker clade Mediterranean. Sighthound by type and FCI group.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "airedale-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 7, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "alaskan-malamute",
+			"family": "ancient",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 243, group 5 (Spitz and primitive types); Parker clade Asian Spitz. Asian Spitz clade, like the Akita and the Chow Chow (ancient).",
+			"doubts": [
+				"Sled dog of the spitz type: spitz would also fit."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "american-eskimo-dog",
+			"family": "spitz",
+			"basis": "Draft (Claude Code, 2026-11-09). no FCI standard; Parker clade Nordic Spitz. Spitz type descended from German Spitz.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "american-hairless-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). no FCI standard; Parker clade American Terrier. Terrier by name and use (ratting); same clade as the Rat Terrier (terrier).",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "american-staffordshire-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 286, group 3 (Terriers); Parker clade European Mastiff. FCI group 3 (bull-type terriers).",
+			"doubts": [
+				"Parker places it in the European Mastiff clade: mastiff would follow the DNA."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "anatolian-shepherd",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 331, group 2 (Pinscher and Schnauzer); Parker clade Mediterranean. Large flock guardian, FCI group 2 like the Saint Bernard (mastiff).",
+			"doubts": [
+				"Flock guardians could go to herding (they work with flocks), as Komondor and Kuvasz do in this draft."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "australian-cattle-dog",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 287, group 1 (Sheepdogs and Cattledogs); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "australian-kelpie",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 293, group 1 (Sheepdogs and Cattledogs); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "australian-shepherd",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 342, group 1 (Sheepdogs and Cattledogs); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "australian-silky-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 236, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "australian-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 8, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "azawakh",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 307, group 10 (Sighthounds); Parker clade Mediterranean.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "basenji",
+			"family": "ancient",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 43, group 5 (Spitz and primitive types); no Parker clade. No clade in Parker 2017 (outside every clade, like other old lineages); FCI group 5 primitive type.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "bearded-collie",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 271, group 1 (Sheepdogs and Cattledogs); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "bedlington-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 9, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "belgian-groenendael",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 15, group 1 (Sheepdogs and Cattledogs); Parker clade Continental Herder.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "belgian-malinois",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 15, group 1 (Sheepdogs and Cattledogs); Parker clade Continental Herder.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "belgian-tervuren",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 15, group 1 (Sheepdogs and Cattledogs); Parker clade Continental Herder.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "berger-picard",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 176, group 1 (Sheepdogs and Cattledogs); Parker clade New World.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "bernese-mountain-dog",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 45, group 2 (Pinscher and Schnauzer); Parker clade Alpine. Swiss mountain dog, FCI group 2 and Alpine clade like the Saint Bernard (mastiff).",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "bichon-frise",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 215, group 9 (Companion and Toy Dogs); Parker clade Poodle.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "black-russian-terrier",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 327, group 2 (Pinscher and Schnauzer); Parker clade Drover. Guard dog of FCI group 2, Drover clade like the Rottweiler (mastiff).",
+			"doubts": [
+				"Called a terrier: terrier would follow the name."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "bloodhound",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 84, group 6 (Scent hounds and related breeds); Parker clade Scent Hound. Scent hound, like the Beagle and the Basset Hound (hunting).",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "boerboel",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). no FCI standard; Parker clade European Mastiff.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "border-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 10, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "borzoi",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 193, group 10 (Sighthounds); Parker clade UK Rural.",
+			"doubts": [
+				"Parker places it in the UK Rural clade (with herders): the family follows the type, not the DNA."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "boston-terrier",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 140, group 9 (Companion and Toy Dogs); Parker clade European Mastiff. FCI group 9 (companion).",
+			"doubts": [
+				"Parker places it in the European Mastiff clade."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "bouvier-des-flandres",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 191, group 1 (Sheepdogs and Cattledogs); Parker clade Continental Herder. FCI group 1 (cattle dogs).",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "boxer",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 144, group 2 (Pinscher and Schnauzer); Parker clade European Mastiff.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "brittany",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 95, group 7 (Pointing Dogs); Parker clade Pointer Setter.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "bull-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 11, group 3 (Terriers); Parker clade European Mastiff. FCI group 3 (bull-type terriers).",
+			"doubts": [
+				"Parker places it in the European Mastiff clade."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "bulldog",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 149, group 2 (Pinscher and Schnauzer); Parker clade European Mastiff. FCI group 2 (molossoid).",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "bullmastiff",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 157, group 2 (Pinscher and Schnauzer); Parker clade European Mastiff.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "cairn-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 4, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "cane-corso",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 343, group 2 (Pinscher and Schnauzer); Parker clade European Mastiff.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "cane-paratore",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). no FCI standard; Parker clade New World. Italian herding dog.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "cardigan-welsh-corgi",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 38, group 1 (Sheepdogs and Cattledogs); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "cavalier-king-charles-spaniel",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 136, group 9 (Companion and Toy Dogs); Parker clade Spaniel.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "chinook",
+			"family": "spitz",
+			"basis": "Draft (Claude Code, 2026-11-09). no FCI standard; Parker clade New World. Sled dog.",
+			"doubts": [
+				"Parker places it in the New World clade: herding (with the German Shepherd) would follow the DNA."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "cirneco-dell-etna",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 199, group 5 (Spitz and primitive types); Parker clade Mediterranean. Mediterranean hunting dog of the podenco type, FCI group 5 primitive; Mediterranean clade like the Saluki (sighthound).",
+			"doubts": [
+				"Hunts by scent and sight: hunting or ancient would also fit."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "coton-de-tulear",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 283, group 9 (Companion and Toy Dogs); Parker clade Poodle.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "curly-coated-retriever",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 110, group 8 (Retrievers); Parker clade Retriever. Retriever, like the Golden Retriever (hunting).",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "dachshund",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 148, group 4 (Dachshunds); Parker clade Scent Hound.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "dalmatian",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 153, group 6 (Scent hounds and related breeds); Parker clade Pointer Setter. FCI group 6, Pointer Setter clade.",
+			"doubts": [
+				"Carriage dog: companion would follow today's use."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "dobermann",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 143, group 2 (Pinscher and Schnauzer); Parker clade Drover. Guard dog, Drover clade like the Rottweiler (mastiff).",
+			"doubts": [
+				"FCI files it with the pinschers, which this site puts with the terriers (Miniature Pinscher)."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "dogue-de-bordeaux",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 116, group 2 (Pinscher and Schnauzer); Parker clade European Mastiff.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "english-cocker-spaniel",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 5, group 8 (Retrievers); Parker clade Spaniel.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "english-foxhound",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 159, group 6 (Scent hounds and related breeds); Parker clade Scent Hound.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "english-setter",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 2, group 7 (Pointing Dogs); Parker clade Pointer Setter.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "english-springer-spaniel",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 125, group 8 (Retrievers); Parker clade Spaniel.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "eurasier",
+			"family": "spitz",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 291, group 5 (Spitz and primitive types); no Parker clade. Modern spitz (Wolfspitz × Chow Chow, 1960s), FCI group 5.",
+			"doubts": [
+				"No clade in Parker 2017."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "field-spaniel",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 123, group 8 (Retrievers); Parker clade Spaniel.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "finnish-spitz",
+			"family": "spitz",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 49, group 5 (Spitz and primitive types); no Parker clade.",
+			"doubts": [
+				"No clade in Parker 2017: ancient would also fit."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "flat-coated-retriever",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 121, group 8 (Retrievers); Parker clade Retriever.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "french-bulldog",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 101, group 9 (Companion and Toy Dogs); Parker clade European Mastiff. FCI group 9 (companion).",
+			"doubts": [
+				"Parker places it in the European Mastiff clade."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "german-wirehaired-pointer",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 98, group 7 (Pointing Dogs); Parker clade Pointer Setter.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "giant-schnauzer",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 181, group 2 (Pinscher and Schnauzer); Parker clade Drover. Schnauzer, like the Miniature Schnauzer (terrier).",
+			"doubts": [
+				"A large working dog in the Drover clade: mastiff would follow the DNA."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "glen-of-imaal-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 302, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "gordon-setter",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 6, group 7 (Pointing Dogs); Parker clade Pointer Setter.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "great-dane",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 235, group 2 (Pinscher and Schnauzer); Parker clade European Mastiff.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "greater-swiss-mountain-dog",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 58, group 2 (Pinscher and Schnauzer); Parker clade Alpine. Swiss mountain dog, FCI group 2 and Alpine clade like the Saint Bernard (mastiff).",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "greenland-dog",
+			"family": "ancient",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 274, group 5 (Spitz and primitive types); Parker clade Asian Spitz. Asian Spitz clade, like the Akita (ancient).",
+			"doubts": [
+				"Sled dog of the spitz type: spitz would also fit."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "greyhound",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 158, group 10 (Sighthounds); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "havanese",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 250, group 9 (Companion and Toy Dogs); Parker clade Poodle.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "ibizan-hound",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 89, group 5 (Spitz and primitive types); Parker clade Mediterranean. Podenco, FCI group 5 primitive; Mediterranean clade like the Saluki.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "irish-setter",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 120, group 7 (Pointing Dogs); Parker clade Pointer Setter.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "irish-water-spaniel",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 124, group 8 (Retrievers); Parker clade Retriever.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "irish-wolfhound",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 160, group 10 (Sighthounds); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "italian-greyhound",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 200, group 10 (Sighthounds); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "jack-russell-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 345, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "japanese-chin",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 206, group 9 (Companion and Toy Dogs); Parker clade Asian Toy.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "keeshond",
+			"family": "spitz",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 97, group 5 (Spitz and primitive types); Parker clade Nordic Spitz.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "kerry-blue-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 3, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "komondor",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 53, group 1 (Sheepdogs and Cattledogs); Parker clade Mediterranean. FCI group 1 (sheepdogs), Hungarian like the Puli (herding).",
+			"doubts": [
+				"Flock guardian: mastiff would match the Anatolian Shepherd of this draft."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "kuvasz",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 54, group 1 (Sheepdogs and Cattledogs); Parker clade Mediterranean. FCI group 1 (sheepdogs).",
+			"doubts": [
+				"Flock guardian: mastiff would match the Anatolian Shepherd of this draft."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "labrador-retriever",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 122, group 8 (Retrievers); Parker clade Retriever.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "large-munsterlander",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 118, group 7 (Pointing Dogs); Parker clade Pointer Setter.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "leonberger",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 145, group 2 (Pinscher and Schnauzer); Parker clade Mediterranean.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "levriero-meridionale",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). no FCI standard; Parker clade Mediterranean.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "lhasa-apso",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 227, group 9 (Companion and Toy Dogs); Parker clade Asian Toy.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "maltese",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 65, group 9 (Companion and Toy Dogs); Parker clade Poodle.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "mastino-abruzzese",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). no FCI standard; Parker clade Mediterranean. Large flock guardian.",
+			"doubts": [
+				"Flock guardians could go to herding."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "miniature-bull-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 359, group 3 (Terriers); Parker clade European Mastiff. FCI group 3.",
+			"doubts": [
+				"Parker places it in the European Mastiff clade."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "neapolitan-mastiff",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 197, group 2 (Pinscher and Schnauzer); Parker clade European Mastiff.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "newfoundland",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 50, group 2 (Pinscher and Schnauzer); Parker clade Retriever. FCI group 2 (molossoid).",
+			"doubts": [
+				"Parker places it in the Retriever clade: hunting would follow the DNA."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "norfolk-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 272, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "norwegian-elkhound",
+			"family": "spitz",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 242, group 5 (Spitz and primitive types); Parker clade Nordic Spitz.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "norwich-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 72, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "old-english-sheepdog",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 16, group 1 (Sheepdogs and Cattledogs); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "otterhound",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 294, group 6 (Scent hounds and related breeds); Parker clade Scent Hound.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "papillon",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 77, group 9 (Companion and Toy Dogs); Parker clade Toy Spitz. Toy breed, FCI group 9, Toy Spitz clade like the Brussels Griffon (companion).",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "parson-russell-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 339, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "pekingese",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 207, group 9 (Companion and Toy Dogs); Parker clade Asian Toy.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "pembroke-welsh-corgi",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 39, group 1 (Sheepdogs and Cattledogs); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "peruvian-hairless-dog",
+			"family": "ancient",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 310, group 5 (Spitz and primitive types); Parker clade New World. Hairless American dog in the New World clade, like the Xoloitzcuintle (ancient).",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "petit-basset-griffon-vendeen",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 67, group 6 (Scent hounds and related breeds); Parker clade Scent Hound.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "pharaoh-hound",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 248, group 5 (Spitz and primitive types); Parker clade Mediterranean. FCI group 5 primitive; Mediterranean clade like the Saluki.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "portuguese-water-dog",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 37, group 8 (Retrievers); Parker clade Poodle. Working water dog, FCI group 8.",
+			"doubts": [
+				"Poodle clade, and the Poodle is a companion here."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "pumi",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 56, group 1 (Sheepdogs and Cattledogs); Parker clade Hungarian.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "pyrenean-mountain-dog",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 137, group 2 (Pinscher and Schnauzer); Parker clade Mediterranean. Large flock guardian, FCI group 2.",
+			"doubts": [
+				"Flock guardians could go to herding."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "redbone-coonhound",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). no FCI standard; Parker clade Scent Hound.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "rhodesian-ridgeback",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 146, group 6 (Scent hounds and related breeds); Parker clade European Mastiff. FCI group 6 (scent hounds and related breeds).",
+			"doubts": [
+				"Parker places it in the European Mastiff clade."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "rough-collie",
+			"family": "herding",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 156, group 1 (Sheepdogs and Cattledogs); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "samoyed",
+			"family": "ancient",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 212, group 5 (Spitz and primitive types); no Parker clade. No clade in Parker 2017; northern spitz of an old lineage.",
+			"doubts": [
+				"Spitz would also fit."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "schipperke",
+			"family": "spitz",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 83, group 1 (Sheepdogs and Cattledogs); Parker clade Toy Spitz. FCI group 1 but a small spitz type, Toy Spitz clade.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "scottish-deerhound",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 164, group 10 (Sighthounds); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "scottish-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 73, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "shar-pei",
+			"family": "ancient",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 309, group 2 (Pinscher and Schnauzer); Parker clade Asian Spitz. Asian Spitz clade, like the Chow Chow (ancient).",
+			"doubts": [
+				"FCI group 2 (molossoid): mastiff would follow the FCI."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "shiba-inu",
+			"family": "ancient",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 257, group 5 (Spitz and primitive types); Parker clade Asian Spitz. Asian Spitz clade, like the Akita (ancient).",
+			"doubts": [
+				"Spitz would also fit."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "siberian-husky",
+			"family": "ancient",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 270, group 5 (Spitz and primitive types); Parker clade Asian Spitz. Asian Spitz clade, like the Akita (ancient).",
+			"doubts": [
+				"Sled dog of the spitz type: spitz would also fit."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "sloughi",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 188, group 10 (Sighthounds); Parker clade Mediterranean.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "soft-coated-wheaten-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 40, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "spinone-italiano",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 165, group 7 (Pointing Dogs); Parker clade Pointer Setter.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "staffordshire-bull-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 76, group 3 (Terriers); Parker clade European Mastiff.",
+			"doubts": [
+				"Parker places it in the European Mastiff clade."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "standard-schnauzer",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 182, group 2 (Pinscher and Schnauzer); Parker clade Schnauzer. Schnauzer, like the Miniature Schnauzer (terrier).",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "swedish-vallhund",
+			"family": "spitz",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 14, group 5 (Spitz and primitive types); Parker clade Nordic Spitz. Nordic Spitz clade, like the Icelandic Sheepdog (spitz).",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "tibetan-mastiff",
+			"family": "mastiff",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 230, group 2 (Pinscher and Schnauzer); Parker clade Asian Spitz. Large guardian, FCI group 2.",
+			"doubts": [
+				"Asian Spitz clade, like the Akita (ancient): ancient would follow the DNA."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "tibetan-spaniel",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 231, group 9 (Companion and Toy Dogs); Parker clade Asian Toy.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "tibetan-terrier",
+			"family": "companion",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 209, group 9 (Companion and Toy Dogs); no Parker clade. Tibetan companion, FCI group 9.",
+			"doubts": [
+				"No clade in Parker 2017: ancient would also fit."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "toy-fox-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). no FCI standard; Parker clade American Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "toy-manchester-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 71, group 3 (Terriers); Parker clade Pinscher.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "vizsla",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 57, group 7 (Pointing Dogs); Parker clade Pointer Setter.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "volpino-italiano",
+			"family": "spitz",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 195, group 5 (Spitz and primitive types); Parker clade Small Spitz.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "weimaraner",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 99, group 7 (Pointing Dogs); Parker clade Pointer Setter.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "west-highland-white-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 85, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "whippet",
+			"family": "sighthound",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 162, group 10 (Sighthounds); Parker clade UK Rural.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "wire-fox-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 169, group 3 (Terriers); Parker clade Terrier.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "wirehaired-pointing-griffon",
+			"family": "hunting",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 107, group 7 (Pointing Dogs); Parker clade Pointer Setter.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"id": "xigou",
+			"family": "ancient",
+			"basis": "Draft (Claude Code, 2026-11-09). no FCI standard; Parker clade Asian Spitz. Asian Spitz clade, like the Akita (ancient).",
+			"doubts": [
+				"A sighthound by type: sighthound would follow the type."
+			],
+			"reviewed": false
+		},
+		{
+			"id": "yorkshire-terrier",
+			"family": "terrier",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI 86, group 3 (Terriers); Parker clade Terrier. FCI group 3 (toy terriers).",
+			"doubts": [
+				"Companion would follow today's use."
+			],
+			"reviewed": false
+		}
+	]
+}

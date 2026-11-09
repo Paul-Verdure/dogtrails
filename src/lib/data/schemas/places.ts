@@ -13,7 +13,7 @@ export const originPlaceSchema = z.strictObject({
 	kind: z.enum(['country', 'region']),
 	/** ISO 3166-1 alpha-2 for a country, `null` for a region. */
 	iso: z.string().regex(/^[A-Z]{2}$/).nullable(),
-	/** Wikidata item whose P625 gives the point drawn on the map. */
+	/** Wikidata item whose P625 gives the point drawn on the map (a region may borrow a country's item). */
 	wikidata: qidSchema,
 	basis: z.string().min(1),
 	doubts: z.array(z.string().min(1)),
@@ -33,8 +33,11 @@ export const originPlacesFileSchema = z
 				if (fci.has(e.fciCountry)) ctx.addIssue({ code: 'custom', path: ['entries', i], message: `duplicate FCI country ${e.fciCountry}` });
 				fci.add(e.fciCountry);
 			}
-			if (qids.has(e.wikidata)) ctx.addIssue({ code: 'custom', path: ['entries', i], message: `duplicate QID ${e.wikidata}` });
-			qids.add(e.wikidata);
+			// a region may borrow the point of a country (two-country FCI regions); two countries may not share an item
+			if (e.kind === 'country') {
+				if (qids.has(e.wikidata)) ctx.addIssue({ code: 'custom', path: ['entries', i], message: `duplicate QID ${e.wikidata}` });
+				qids.add(e.wikidata);
+			}
 		});
 	});
 

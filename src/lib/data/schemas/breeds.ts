@@ -61,7 +61,8 @@ export const breedSchema = z.strictObject({
 		z.strictObject({
 			number: fciNumberSchema,
 			group: z.int().min(1).max(10),
-			section: z.string().min(1),
+			/** `null` when the group has no sections (group 4, Dachshunds). */
+			section: z.string().min(1).nullable(),
 			/** Date of provisional acceptance, `null` when definitive. */
 			provisional: z.iso.date().nullable(),
 			...sourced
@@ -76,19 +77,21 @@ export const breedSchema = z.strictObject({
 					abbrev: abbrevSchema,
 					name: z.string().min(1),
 					variant: z.string().min(1).nullable(),
-					/** The entry has a leaf in tree.json (the 30-breed sample). */
+					/** The entry has a leaf in tree.json. */
 					inTree: z.boolean()
 				})
 			)
 			.min(1),
-		clade: z.string().min(1),
-		cladeId: cladeIdSchema,
+		/** `null` when supplement 1 places the breed in no clade (Basenji, Samoyed…). */
+		clade: z.string().min(1).nullable(),
+		cladeId: cladeIdSchema.nullable(),
 		/** Marked `*` in supplement 1: in the clade with < 50 % bootstrap. */
 		cladeLowSupport: z.boolean(),
 		...sourced
 	}),
 	family: z.strictObject({ id: familySchema, ...sourced }),
-	origin: z.strictObject({ place: placeSchema, coords: coordsSchema }),
+	/** `null` when no source gives an origin (no FCI standard and no Wikidata P495): reported, never guessed. */
+	origin: z.strictObject({ place: placeSchema, coords: coordsSchema }).nullable(),
 	development: z.array(z.strictObject({ place: placeSchema, period: z.string().min(1).nullable() })),
 	fixedAround: z
 		.strictObject({ year: z.int().min(-20000).max(2100), approximate: z.boolean(), ...sourced })

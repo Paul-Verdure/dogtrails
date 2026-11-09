@@ -3,8 +3,9 @@
  *
  * tree.json:
  *   - matches the Zod schema (including a non-empty `source`);
- *   - every leaf is a breed of data/sample-30.json, and every sample breed has a leaf;
- *   - leaf clade and name agree with the sample;
+ *   - the breed set is the one `breedSet` declares: every supplement-1 breed with leaves (wild canids
+ *     excluded), or the breeds of the sample file; every breed of the set has a leaf;
+ *   - leaf clade and name agree with breeds[] (and with the sample in sample mode);
  *   - split leaves are coherent with `splitBreeds` and `breeds[].fragments`;
  *   - dog ids are unique and `dogs` matches `dogIds`.
  *
@@ -19,15 +20,18 @@
  * src/lib/data/breeds.json:
  *   - matches the Zod schema: every factual field carries a sourceId naming one of the breed's sources;
  *   - every breed has a leaf in tree.json and every leaf belongs to exactly one breed;
- *   - id, QID, FCI number and variants agree with breed-names.json; family agrees with docs/DESIGN.md §2;
+ *   - id, QID, FCI number and variants agree with breed-names.json; family agrees with docs/DESIGN.md §2
+ *     for the 30 first breeds and with data/manual/families.json for the others;
  *   - origin coordinates are the P625 point of the place in data/raw/wikidata-places.json.
+
+ * data/manual/families.json: matches its schema, one entry per breed outside docs/DESIGN.md §2.
  *
  * src/lib/data/images.json:
  *   - matches the Zod schema: free licence, author, file page and Wikimedia thumbnail for every image;
  *   - every image belongs to a known breed and is that breed's `image.commonsFile`;
  *   - every file is in data/raw/commons-imageinfo.json.
  *
- * usage: node scripts/validate.ts [sample.json] [tree.json]
+ * usage: node scripts/validate.ts [tree.json]
  */
 import { existsSync, readFileSync } from 'node:fs';
 import { isLeaf, treeFileSchema, type TreeLeaf, type TreeNode } from '../src/lib/data/schemas/tree.ts';
@@ -36,12 +40,14 @@ import { breedsFileSchema } from '../src/lib/data/schemas/breeds.ts';
 import { displayNamesFileSchema } from '../src/lib/data/schemas/display-names.ts';
 import { originPlacesFileSchema } from '../src/lib/data/schemas/places.ts';
 import { photosFileSchema } from '../src/lib/data/schemas/photos.ts';
+import { familiesFileSchema } from '../src/lib/data/schemas/families.ts';
 import { imagesFileSchema } from '../src/lib/data/schemas/images.ts';
 import { parseCsv } from './lib/csv.ts';
 import { qidOf, readDesignFamilies, readWikidata } from './lib/sources.ts';
 
-const SAMPLE = process.argv[2] ?? 'data/sample-30.json';
-const TREE = process.argv[3] ?? 'src/lib/data/tree.json';
+const TREE = process.argv[2] ?? 'src/lib/data/tree.json';
+const S1 = 'data/raw/parker2017-s1.csv';
+const FAMILIES = 'data/manual/families.json';
 const NAMES = 'data/manual/breed-names.json';
 const WIKIDATA = 'data/raw/wikidata-breeds.json';
 const FCI_CSV = 'data/raw/fci-breeds/fci-breeds.csv';
@@ -52,10 +58,6 @@ const BREEDS = 'src/lib/data/breeds.json';
 const IMAGES = 'src/lib/data/images.json';
 const COMMONS = 'data/raw/commons-imageinfo.json';
 
-type SampleRow = { abbrev: string; name: string; clade: string };
-const sample = new Map(
-	(JSON.parse(readFileSync(SAMPLE, 'utf8')) as SampleRow[]).map((s) => [s.abbrev, s])
-);
 const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 const errors: string[] = [];
@@ -66,6 +68,22 @@ if (!parsed.success) {
 }
 const tree = parsed.data;
 
+// ---------------------------------------------------------------- breed set
+type SampleRow = { abbrev: string; name: string; clade: string };
+const SAMPLE = tree.breedSet.sample;
+const sample = SAMPLE
+	? new Map((JSON.parse(readFileSync(SAMPLE, 'utf8')) as SampleRow[]).map((s) => [s.abbrev, s]))
+	: null;
+if ((tree.breedSet.rule === 'sample') !== (SAMPLE !== null)) errors.push(`${TREE}: breedSet.rule and breedSet.sample disagree`);
+const excluded = new Set(tree.breedSet.excluded.map((e) => e.abbrev));
+const [s1Header, ...s1Rows] = parseCsv(readFileSync(S1, 'utf8'));
+const s1 = new Map(
+	s1Rows
+		.filter((r) => /^[A-Z0-9]*[A-Z][A-Z0-9]*$/.test(r[s1Header.indexOf('Abrev.')] ?? ''))
+		.map((r) => [r[s1Header.indexOf('Abrev.')], r[s1Header.indexOf('Breed')].trim()])
+);
+for (const ab of excluded) if (!s1.has(ab)) errors.push(`${TREE}: excluded ${ab} is not in ${S1}`);
+
 const leaves: TreeLeaf[] = [];
 (function walk(n: TreeNode) {
 	if (isLeaf(n)) leaves.push(n);
@@ -74,10 +92,16 @@ const leaves: TreeLeaf[] = [];
 
 const seenDogs = new Set<string>();
 const leavesByBreed = new Map<string, TreeLeaf[]>();
+const summaries = new Map(tree.breeds.map((b) => [b.abbrev, b]));
 for (const l of leaves) {
-	const s = sample.get(l.abbrev);
-	if (!s) errors.push(`leaf ${l.abbrev} "${l.name}" matches no breed of ${SAMPLE}`);
-	else {
+	const b = summaries.get(l.abbrev);
+	if (!b) errors.push(`leaf ${l.abbrev} "${l.name}" is not in breeds[]`);
+	else if (b.cladeId !== l.cladeId || b.name !== l.name) errors.push(`leaf ${l.abbrev}: name or clade differs from breeds[]`);
+	if (s1.get(l.abbrev) !== l.name) errors.push(`leaf ${l.abbrev}: name "${l.name}", ${S1} says "${s1.get(l.abbrev)}"`);
+	if (excluded.has(l.abbrev)) errors.push(`leaf ${l.abbrev}: excluded from the breed set (${TREE} breedSet)`);
+	const s = sample?.get(l.abbrev);
+	if (sample && !s) errors.push(`leaf ${l.abbrev} "${l.name}" matches no breed of ${SAMPLE}`);
+	else if (s) {
 		if (slug(s.clade) !== l.cladeId) errors.push(`leaf ${l.abbrev}: cladeId ${l.cladeId}, sample says "${s.clade}"`);
 		if (s.name !== l.name) errors.push(`leaf ${l.abbrev}: name "${l.name}", sample says "${s.name}"`);
 	}
@@ -89,13 +113,13 @@ for (const l of leaves) {
 	leavesByBreed.set(l.abbrev, [...(leavesByBreed.get(l.abbrev) ?? []), l]);
 }
 
-for (const ab of sample.keys()) if (!leavesByBreed.has(ab)) errors.push(`sample breed ${ab} has no leaf in the tree`);
+const expected = sample ? [...sample.keys()] : [...s1.keys()].filter((ab) => !excluded.has(ab));
+for (const ab of expected) if (!leavesByBreed.has(ab)) errors.push(`breed ${ab} of the breed set has no leaf in the tree`);
 
-const summaries = new Map(tree.breeds.map((b) => [b.abbrev, b]));
 for (const [ab, ls] of leavesByBreed) {
 	const isSplit = ls.length > 1;
 	if (isSplit !== tree.splitBreeds.includes(ab)) errors.push(`${ab}: ${ls.length} leaves but splitBreeds says ${!isSplit}`);
-	if (summaries.get(ab)?.fragments.sample !== ls.length) errors.push(`${ab}: breeds[].fragments.sample != ${ls.length} leaves`);
+	if (summaries.get(ab)?.fragments.tree !== ls.length) errors.push(`${ab}: breeds[].fragments.tree != ${ls.length} leaves`);
 	const parts = ls.map((l) => l.split);
 	if (isSplit) {
 		const ok = parts.every((p, i) => p && p.part === i + 1 && p.of === ls.length);
@@ -104,7 +128,7 @@ for (const [ab, ls] of leavesByBreed) {
 	const total = ls.reduce((s, l) => s + l.dogs, 0);
 	if (summaries.get(ab)?.dogs !== total) errors.push(`${ab}: breeds[].dogs != ${total} dogs in leaves`);
 }
-for (const ab of summaries.keys()) if (!sample.has(ab)) errors.push(`breeds[] lists ${ab}, not in ${SAMPLE}`);
+for (const ab of summaries.keys()) if (!leavesByBreed.has(ab)) errors.push(`breeds[] lists ${ab}, which has no leaf`);
 
 // ---------------------------------------------------------------- breed-names.json
 const warnings: string[] = [];
@@ -186,6 +210,13 @@ if (!breedsParsed.success) errors.push(...breedsParsed.error.issues.map((i) => `
 else if (namesParsed.success) {
 	const nameEntries = new Map(namesParsed.data.entries.map((e) => [e.abbrev, e]));
 	const families = readDesignFamilies();
+	const famParsed = familiesFileSchema.safeParse(JSON.parse(readFileSync(FAMILIES, 'utf8')));
+	if (!famParsed.success) errors.push(...famParsed.error.issues.map((i) => `${FAMILIES}: ${i.path.join('.')}: ${i.message}`));
+	const drafted = new Map((famParsed.data?.entries ?? []).map((e) => [e.id, e]));
+	const ids = new Set(breedsParsed.data.breeds.map((b) => b.id));
+	for (const id of drafted.keys()) if (!ids.has(id)) errors.push(`${FAMILIES}: unknown breed ${id}`);
+	const unreviewedFamilies = [...drafted.values()].filter((e) => !e.reviewed).length;
+	if (unreviewedFamilies) warnings.push(`${FAMILIES}: ${unreviewedFamilies}/${drafted.size} families not reviewed`);
 	const owner = new Map<string, string>();
 	for (const b of breedsParsed.data.breeds) {
 		const where = `${BREEDS}: ${b.id}`;
@@ -203,19 +234,26 @@ else if (namesParsed.success) {
 			if (pe.inTree) {
 				if (owner.has(pe.abbrev)) errors.push(`${where}: leaf ${pe.abbrev} already belongs to ${owner.get(pe.abbrev)}`);
 				owner.set(pe.abbrev, b.id);
-				if (families.get(pe.abbrev) !== b.family.id) errors.push(`${where}: family ${b.family.id}, docs/DESIGN.md §2 says ${families.get(pe.abbrev)}`);
 				if (summaries.get(pe.abbrev)?.cladeId !== b.parker.cladeId) errors.push(`${where}: clade ${b.parker.cladeId} disagrees with ${TREE}`);
 			}
 		}
+		const design = [...new Set(b.parker.entries.flatMap((pe) => (families.has(pe.abbrev) ? [families.get(pe.abbrev)] : [])))];
+		const expectedFamily = design.length ? design : drafted.has(b.id) ? [drafted.get(b.id)!.family] : [];
+		if (design.length && drafted.has(b.id)) errors.push(`${where}: family set in docs/DESIGN.md §2 and in ${FAMILIES}`);
+		if (expectedFamily.length !== 1 || expectedFamily[0] !== b.family.id)
+			errors.push(`${where}: family ${b.family.id}, expected ${expectedFamily.join(' or ') || 'none'} (docs/DESIGN.md §2, ${FAMILIES})`);
 		for (const ne of nameEntries.values())
 			if (ne.id === b.id && !b.parker.entries.some((pe) => pe.abbrev === ne.abbrev)) errors.push(`${where}: misses Parker entry ${ne.abbrev}`);
-		const coordsSource = b.sources.find((s) => s.id === b.origin.coords.sourceId);
-		const pq = coordsSource?.url ? qidOf(coordsSource.url) : undefined;
-		const [lon, lat] = b.origin.coords.lonLat;
-		const pt = pq ? [...(points.get(pq) ?? [])][0] : undefined;
-		const m = pt ? /^Point\((-?[\d.]+) (-?[\d.]+)\)$/.exec(pt) : null;
-		if (!m || Number(m[1]) !== lon || Number(m[2]) !== lat)
-			errors.push(`${where}: origin ${lon}, ${lat} is not the P625 point of ${pq ?? 'its source'} (${pt ?? 'none'})`);
+		if (b.origin) {
+			const coordsSource = b.sources.find((s) => s.id === b.origin!.coords.sourceId);
+			const pq = coordsSource?.url ? qidOf(coordsSource.url) : undefined;
+			const [lon, lat] = b.origin.coords.lonLat;
+			const pt = pq ? [...(points.get(pq) ?? [])][0] : undefined;
+			const m = pt ? /^Point\((-?[\d.]+) (-?[\d.]+)\)$/.exec(pt) : null;
+			if (!m || Number(m[1]) !== lon || Number(m[2]) !== lat)
+				errors.push(`${where}: origin ${lon}, ${lat} is not the P625 point of ${pq ?? 'its source'} (${pt ?? 'none'})`);
+		} else if (b.fci.number !== null) errors.push(`${where}: has an FCI number but no origin`);
+		else warnings.push(`${where}: no origin (no FCI number, no Wikidata P495)`);
 		const used = new Set(JSON.stringify(b).match(/"(?:sourceId|[a-z]+SourceId)":"[^"]+"/g)?.map((m) => m.split('":"')[1].slice(0, -1)));
 		for (const s of b.sources) if (!used.has(s.id)) warnings.push(`${where}: source ${s.id} is never cited`);
 	}
@@ -260,7 +298,7 @@ if (errors.length) {
 	console.error(`${errors.length} error(s)\n  ${errors.join('\n  ')}`);
 	process.exit(1);
 }
-console.log(`${TREE}: OK (${leaves.length} leaves, ${sample.size} breeds, ${seenDogs.size} dogs, split: ${tree.splitBreeds.join(', ') || 'none'})`);
+console.log(`${TREE}: OK (${leaves.length} leaves, ${tree.breeds.length} breeds, ${seenDogs.size} dogs, split: ${tree.splitBreeds.join(', ') || 'none'})`);
 console.log(`${NAMES}: OK (every tree leaf and variant has an entry; QIDs and FCI numbers found in data/raw)`);
 console.log(`${BREEDS}: OK (${breedsParsed.data?.breeds.length} breeds, one per tree leaf, every fact sourced)`);
 console.log(`${IMAGES}: OK (${imagesParsed.data?.images.length} credited photos, free licences only)`);

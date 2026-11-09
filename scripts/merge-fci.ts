@@ -3,16 +3,17 @@
  *
  *   data/manual/breed-names.json     Parker abbreviation -> id, variant, QID, FCI number (reviewed)
  *   data/manual/origin-places.json   FCI country -> place (kind, ISO, Wikidata item of the point)
- *   src/lib/data/tree.json           Parker clade of the sample breeds
+ *   src/lib/data/tree.json           Parker clade of the tree breeds
  *   data/raw/fci-breeds/             FCI group, section, country, provisional date
  *   data/raw/wikidata-breeds.json    labels EN/FR/NL, P495 (cross-check only), P18 image
  *   data/raw/wikidata-places.json    P625 point of each origin place
- *   docs/DESIGN.md §2                family (editorial choice, not a datum)
+ *   docs/DESIGN.md §2                family of the 30 first breeds (editorial choice, not a datum)
+ *   data/manual/families.json        family of every other breed (editorial, drafts reviewed by Paul)
  *   data/manual/display-names.json   English display name when the Wikidata label is not the usual one
  *
  * Origin rule (Paul, 2026-11-04): origin = FCI country; Wikidata P495 only cross-checks; FCI regions
  * stay regions; a breed without FCI number takes its origin from P495. `development` and `fixedAround`
- * stay empty until a source gives them. Disagreements go to data/reports/breeds.md, never resolved here.
+ * stay empty until a source gives them. A breed with neither FCI number nor P495 gets origin = null. Disagreements go to data/reports/breeds.md, never resolved here.
  *
  * usage: node scripts/merge-fci.ts
  */
@@ -21,6 +22,7 @@ import { breedNamesFileSchema, type BreedNameEntry } from '../src/lib/data/schem
 import { displayNamesFileSchema } from '../src/lib/data/schemas/display-names.ts';
 import { originPlacesFileSchema, type OriginPlace } from '../src/lib/data/schemas/places.ts';
 import { treeFileSchema } from '../src/lib/data/schemas/tree.ts';
+import { familiesFileSchema, type FamilyEntry } from '../src/lib/data/schemas/families.ts';
 import { breedsFileSchema, familySchema, type Breed, type BreedSource } from '../src/lib/data/schemas/breeds.ts';
 import {
 	FCI_GROUPS,
@@ -40,6 +42,7 @@ const WD_BREEDS = 'data/raw/wikidata-breeds.json';
 const WD_PLACES = 'data/raw/wikidata-places.json';
 const DESIGN = 'docs/DESIGN.md';
 const DISPLAY = 'data/manual/display-names.json';
+const FAMILIES = 'data/manual/families.json';
 const OUT = 'src/lib/data/breeds.json';
 const REPORT = 'data/reports/breeds.md';
 /** Parker supplements were added to data/raw in commit 52b4587. */
@@ -54,6 +57,7 @@ const fci = readFci();
 const wdBreeds = readWikidata(WD_BREEDS);
 const wdPlaces = readWikidata(WD_PLACES);
 const families = readDesignFamilies(DESIGN);
+const familyTable = new Map(familiesFileSchema.parse(JSON.parse(readFileSync(FAMILIES, 'utf8'))).entries.map((e) => [e.id, e]));
 const plan = readPlanSample();
 const day = (iso: string) => iso.slice(0, 10);
 
@@ -81,7 +85,7 @@ for (const b of wdPlaces.results.results.bindings) {
 	wdp.set(q, it);
 }
 const placeByFci = new Map(places.entries.filter((p) => p.fciCountry).map((p) => [p.fciCountry!, p]));
-const placeByQid = new Map(places.entries.map((p) => [p.wikidata, p]));
+const placeByQid = new Map(places.entries.filter((p) => p.kind === 'country').map((p) => [p.wikidata, p]));
 
 // ---------------------------------------------------------------- helpers
 const capitalise = (s: string | undefined) => (s ? s[0].toUpperCase() + s.slice(1) : null);
@@ -115,6 +119,8 @@ const treeBreeds = new Map(tree.breeds.map((b) => [b.abbrev, b]));
 const byId = new Map<string, BreedNameEntry[]>();
 for (const e of names.entries) byId.set(e.id, [...(byId.get(e.id) ?? []), e]);
 for (const id of display.keys()) if (!byId.has(id)) errors.push(`${DISPLAY}: unknown breed id ${id}`);
+for (const id of familyTable.keys()) if (!byId.has(id)) errors.push(`${FAMILIES}: unknown breed id ${id}`);
+for (const ab of families.keys()) if (!names.entries.some((e) => e.abbrev === ab)) errors.push(`${DESIGN} §2: unknown abbreviation ${ab}`);
 for (const ab of treeBreeds.keys()) if (!names.entries.some((e) => e.abbrev === ab)) errors.push(`tree breed ${ab} has no entry in ${NAMES}`);
 
 type ReportRow = { id: string; abbrevs: string; family: string; fciCountry: string; origin: string; continents: string; p495: string; plan: string; flags: string[] };
@@ -135,17 +141,32 @@ for (const [id, entries] of byId) {
 	const tb = treeBreeds.get(inTree[0].abbrev)!;
 	const parkerId = use({ id: 'parker2017', kind: 'parker2017', citation: tree.source.citation, url: tree.source.url, retrieved: PARKER_RETRIEVED });
 
-	// family: editorial, docs/DESIGN.md §2
-	const fams = new Set(inTree.map((e) => families.get(e.abbrev)));
-	const fam = familySchema.safeParse([...fams][0]);
-	if (fams.size !== 1 || !fam.success) errors.push(`${id}: no single family in ${DESIGN} §2 for ${inTree.map((e) => e.abbrev).join(', ')}`);
-	const familyId = use({
-		id: 'dogtrails-design-families',
-		kind: 'editorial',
-		citation: 'Dogtrails visual system, docs/DESIGN.md §2 "Attribution des 30 races": editorial choice by breed, not a datum',
-		path: DESIGN,
-		retrieved: PARKER_RETRIEVED
-	});
+	// family: editorial, docs/DESIGN.md §2 for the 30 first breeds, data/manual/families.json for the others
+	const designFams = new Set(entries.flatMap((e) => (families.has(e.abbrev) ? [families.get(e.abbrev)] : [])));
+	const drafted: FamilyEntry | undefined = familyTable.get(id);
+	if (designFams.size > 1) errors.push(`${id}: several families in ${DESIGN} §2`);
+	if (designFams.size && drafted) errors.push(`${id}: family set both in ${DESIGN} §2 and in ${FAMILIES}`);
+	if (!designFams.size && !drafted) errors.push(`${id}: no family in ${DESIGN} §2 nor in ${FAMILIES}`);
+	const fam = familySchema.safeParse(designFams.size ? [...designFams][0] : drafted?.family);
+	const familyId = use(
+		drafted
+			? {
+					id: 'dogtrails-families',
+					kind: 'editorial',
+					// one citation for every breed (sources are deduplicated by id on /sources); the per-breed basis stays in the table
+					citation: `Dogtrails families, ${FAMILIES}: editorial choice by breed, not a datum; drafted 2026-11-09, under review by Paul`,
+					path: FAMILIES,
+					retrieved: '2026-11-09'
+				}
+			: {
+					id: 'dogtrails-design-families',
+					kind: 'editorial',
+					citation: 'Dogtrails visual system, docs/DESIGN.md §2 "Attribution des 30 races": editorial choice by breed, not a datum',
+					path: DESIGN,
+					retrieved: PARKER_RETRIEVED
+				}
+	);
+	if (drafted && !drafted.reviewed) flags.push(`family "${drafted.family}" is a draft (${FAMILIES})`);
 
 	// Wikidata names and image
 	const w = wd.get(head.wikidata);
@@ -186,7 +207,7 @@ for (const [id, entries] of byId) {
 			url: row.url,
 			retrieved: day(fci.meta.fetchedAt)
 		});
-		fciField = { number: row.number, group, section: row.section, provisional: isoDate(row.provisional), sourceId: fId };
+		fciField = { number: row.number, group, section: row.section || null, provisional: isoDate(row.provisional), sourceId: fId };
 		fciCountry = row.country;
 		place = placeByFci.get(row.country);
 		if (!place) errors.push(`${id}: FCI country "${row.country}" missing from ${PLACES}`);
@@ -194,11 +215,13 @@ for (const [id, entries] of byId) {
 	} else {
 		fciField = { number: null, reason: head.fci.reason };
 		const origins = [...(w?.origins.keys() ?? [])];
-		if (origins.length !== 1) errors.push(`${id}: no FCI number and ${origins.length} Wikidata P495 values`);
-		place = placeByQid.get(origins[0]);
-		if (!place) errors.push(`${id}: P495 ${origins[0]} missing from ${PLACES}`);
 		placeSourceId = wId;
-		flags.push('no FCI number: origin from Wikidata P495');
+		if (origins.length > 1) errors.push(`${id}: no FCI number and ${origins.length} Wikidata P495 values`);
+		else if (origins.length === 1) {
+			place = placeByQid.get(origins[0]);
+			if (!place) errors.push(`${id}: P495 ${origins[0]} missing from ${PLACES}`);
+			flags.push('no FCI number: origin from Wikidata P495');
+		} else flags.push('no FCI number and no Wikidata P495: origin left empty (no source)');
 	}
 	if (place) {
 		const lonLat = point(place);
@@ -232,7 +255,8 @@ for (const [id, entries] of byId) {
 	}
 	for (const e of entries) if (e.doubts.length) flags.push(`${e.abbrev}: ${e.doubts.length} open doubt(s) in ${NAMES}`);
 
-	if (!origin || !fam.success) continue;
+	if (place && !origin) continue; // P625 error already reported
+	if (!fam.success) continue;
 	breeds.push({
 		id,
 		names: {
@@ -264,7 +288,7 @@ for (const [id, entries] of byId) {
 		abbrevs: entries.map((e) => (treeBreeds.has(e.abbrev) ? e.abbrev : `(${e.abbrev})`)).join(', '),
 		family: fam.data,
 		fciCountry,
-		origin: origin.place.kind === 'country' ? `${origin.place.label} (${origin.place.iso})` : `${origin.place.label} (region)`,
+		origin: !origin ? '—' : origin.place.kind === 'country' ? `${origin.place.label} (${origin.place.iso})` : `${origin.place.label} (region)`,
 		continents: [...(place ? (wdp.get(place.wikidata)?.continents ?? []) : [])].sort().join(', ') || '—',
 		p495: p495.join(', ') || '—',
 		plan: planRows.map((p) => p.country).join(', ') || '—',
@@ -283,11 +307,11 @@ const file = breedsFileSchema.parse({
 	source: {
 		description:
 			'Breeds of the Parker 2017 sample with their FCI classification, Wikidata names and image, Parker clade, origin point and editorial colour family. Each fact names its source in sources[].',
-		inputs: [NAMES, DISPLAY, PLACES, TREE, 'data/raw/fci-breeds/fci-breeds.csv', WD_BREEDS, WD_PLACES, `${DESIGN} §2`],
+		inputs: [NAMES, DISPLAY, FAMILIES, PLACES, TREE, 'data/raw/fci-breeds/fci-breeds.csv', WD_BREEDS, WD_PLACES, `${DESIGN} §2`],
 		notes: [
 			'origin = FCI country (Paul, 2026-11-04); Wikidata P495 is a cross-check only, its disagreements are in data/reports/breeds.md.',
 			'Names are Wikidata labels with the first letter upper-cased, except English names overridden by data/manual/display-names.json (editorial, Paul 2026-11-09).',
-			'family is an editorial choice (docs/DESIGN.md §2), not genetic data.',
+			'family is an editorial choice (docs/DESIGN.md §2 for the 30 first breeds, data/manual/families.json for the others, drafts until Paul reviews them), not genetic data.',
 			'development and fixedAround stay empty until a source gives them.'
 		]
 	},
@@ -313,7 +337,7 @@ const md = `# breeds.json — merge report
 
 Generated by \`scripts/merge-fci.ts\`. Do not edit by hand: rerun \`npm run data:merge\`.
 
-${breeds.length} breeds from ${tree.breeds.length} tree leaves. Origin = FCI country (Paul, 2026-11-04);
+${breeds.length} breeds from ${tree.breeds.length} Parker entries with tree leaves. Origin = FCI country (Paul, 2026-11-04);
 Wikidata P495 and docs/PLAN.md are cross-checks only. Places of ${PLACES}: ${places.entries.filter((p) => p.reviewed).length}/${places.entries.length} reviewed.
 
 ## Flags (reported, not resolved)
@@ -326,7 +350,7 @@ ${report.filter((r) => r.flags.length).map((r) => `- **${r.id}**: ${r.flags.join
 | --- | --- | --- | --- | --- | --- | --- | --- |
 ${report.map((r) => `| ${r.id} | ${r.abbrevs} | ${r.family} | ${r.fciCountry} | ${r.origin} | ${r.continents} | ${r.p495} | ${r.plan} |`).join('\n')}
 
-Parker entries in parentheses have no leaf in tree.json (size varieties outside the sample).
+Parker entries in parentheses have no leaf in tree.json (none in the full breed set).
 
 ## Unverified facts of docs/DESIGN.md §10
 

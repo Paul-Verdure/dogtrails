@@ -1,5 +1,5 @@
 {
-	"_about": "FCI country (or Wikidata P495 value) -> place on the map: kind, ISO 3166-1 alpha-2, Wikidata item whose P625 gives the point and P30 the continent. Drafted with Claude Code on 2026-11-04; reviewed=false until Paul checks it.",
+	"_about": "FCI country (or Wikidata P495 value) -> place on the map: kind, ISO 3166-1 alpha-2, Wikidata item whose P625 gives the point and P30 the continent. Drafted with Claude Code on 2026-11-04; reviewed=false until Paul checks it. Extended to the full Parker breed set on 2026-11-09: new places are drafts (reviewed=false).",
 	"entries": [
 		{
 			"fciCountry": "JAPAN",
@@ -158,6 +158,244 @@
 				"Wikidata P30 of Q7204 lists Africa, Asia, Europe and Afro-Eurasia: no single continent."
 			],
 			"reviewed": true
+		},
+		{
+			"fciCountry": "AFGHANISTAN",
+			"label": "Afghanistan",
+			"kind": "country",
+			"iso": "AF",
+			"wikidata": "Q889",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "TURKEY",
+			"label": "Turkey",
+			"kind": "country",
+			"iso": "TR",
+			"wikidata": "Q43",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "AUSTRALIA",
+			"label": "Australia",
+			"kind": "country",
+			"iso": "AU",
+			"wikidata": "Q408",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "MALI",
+			"label": "Mali",
+			"kind": "country",
+			"iso": "ML",
+			"wikidata": "Q912",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "RUSSIAN FEDERATION",
+			"label": "Russia",
+			"kind": "country",
+			"iso": "RU",
+			"wikidata": "Q159",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "ITALY",
+			"label": "Italy",
+			"kind": "country",
+			"iso": "IT",
+			"wikidata": "Q38",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "MADAGASCAR",
+			"label": "Madagascar",
+			"kind": "country",
+			"iso": "MG",
+			"wikidata": "Q1019",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "CROATIA",
+			"label": "Croatia",
+			"kind": "country",
+			"iso": "HR",
+			"wikidata": "Q224",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "FINLAND",
+			"label": "Finland",
+			"kind": "country",
+			"iso": "FI",
+			"wikidata": "Q33",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "CUBA",
+			"label": "Cuba",
+			"kind": "country",
+			"iso": "CU",
+			"wikidata": "Q241",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "SPAIN",
+			"label": "Spain",
+			"kind": "country",
+			"iso": "ES",
+			"wikidata": "Q29",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "PERU",
+			"label": "Peru",
+			"kind": "country",
+			"iso": "PE",
+			"wikidata": "Q419",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "NORWAY",
+			"label": "Norway",
+			"kind": "country",
+			"iso": "NO",
+			"wikidata": "Q20",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "MALTA",
+			"label": "Malta",
+			"kind": "country",
+			"iso": "MT",
+			"wikidata": "Q233",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "PORTUGAL",
+			"label": "Portugal",
+			"kind": "country",
+			"iso": "PT",
+			"wikidata": "Q45",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "SOUTH AFRICA",
+			"label": "South Africa",
+			"kind": "country",
+			"iso": "ZA",
+			"wikidata": "Q258",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "MOROCCO",
+			"label": "Morocco",
+			"kind": "country",
+			"iso": "MA",
+			"wikidata": "Q1028",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "SWEDEN",
+			"label": "Sweden",
+			"kind": "country",
+			"iso": "SE",
+			"wikidata": "Q34",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "GREENLAND",
+			"label": "Greenland",
+			"kind": "country",
+			"iso": "GL",
+			"wikidata": "Q223",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI country name; Wikidata item found by label, P625 gives the point.",
+			"doubts": [
+				"Greenland is an autonomous territory of the Kingdom of Denmark with its own ISO code (GL): shown as a country, as the FCI writes it."
+			],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "BELGIUM, FRANCE",
+			"label": "Belgium and France",
+			"kind": "region",
+			"iso": null,
+			"wikidata": "Q31",
+			"basis": "Draft (Claude Code, 2026-11-09). The FCI names two countries: kept as a two-country region with no ISO code. Wikidata Q2052849 (Belgium–France border) has two P625 points, so the point is the P625 of Q31 Belgium, the first country the FCI names.",
+			"doubts": [
+				"Two countries for one breed (Bichon Frise, Bouvier des Flandres, Papillon), drawn at the Belgium point: alternatives are one star per country, or a point on the border."
+			],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "CENTRAL AFRICA",
+			"label": "Central Africa",
+			"kind": "region",
+			"iso": null,
+			"wikidata": "Q27433",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI region kept as a region (Paul, 2026-11-04 rule for Middle East); P625 of Q27433 Central Africa gives the point.",
+			"doubts": [],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "CENTRAL MEDITERRANEAN BASIN",
+			"label": "Central Mediterranean",
+			"kind": "region",
+			"iso": null,
+			"wikidata": "Q72499",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI region kept as a region; Wikidata has no item for the central part, so the point is the P625 of Q72499 Mediterranean Basin.",
+			"doubts": [
+				"The Mediterranean Basin point may sit far from the central Mediterranean (Malta, Sicily) the FCI means."
+			],
+			"reviewed": false
+		},
+		{
+			"fciCountry": "NORTHERN RUSSIA, SIBERIA",
+			"label": "Northern Russia and Siberia",
+			"kind": "region",
+			"iso": null,
+			"wikidata": "Q5428",
+			"basis": "Draft (Claude Code, 2026-11-09). FCI region kept as a region; point from Q5428 Siberia (P625).",
+			"doubts": [
+				"The FCI wording names two areas; only Siberia gives the point."
+			],
+			"reviewed": false
 		}
 	]
 }

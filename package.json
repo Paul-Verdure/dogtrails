@@ -19,7 +19,8 @@
 		"data:merge": "node scripts/merge-fci.ts",
 		"validate": "node scripts/validate.ts",
 		"maps": "node scripts/make-maps.ts",
-		"data:credits": "node scripts/fetch-credits.ts"
+		"data:credits": "node scripts/fetch-credits.ts",
+		"data:review": "node scripts/report-review.ts"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.10",

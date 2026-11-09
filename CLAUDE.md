@@ -64,12 +64,13 @@ npm run dev            dev server
 npm run check          svelte-check + type-check of scripts/ + token sync check
 npm run build          static build into build/ (runs validate first)
 npm run data:extract   Parker supplements (PDF/XLSX) -> data/raw/parker2017-s5.nex, -s1.csv
-npm run data:tree      -> src/lib/data/tree.json (+ report: splits, variants, warnings)
+npm run data:tree      -> src/lib/data/tree.json, all Parker breeds (--sample data/sample-30.json to restrict)
 npm run data:fci       paiv/fci-breeds CSV at a pinned commit -> data/raw/fci-breeds/
 npm run data:wikidata  SPARQL on the QIDs of breed-names.json -> data/raw/wikidata-breeds.json
 npm run data:names-report  -> data/reports/breed-names.md (FCI vs Wikidata vs docs/PLAN.md)
 npm run data:merge     -> src/lib/data/breeds.json + data/reports/breeds.md (flags, DESIGN.md §10 status)
 npm run data:credits   Commons API on breeds.json / photos.json -> images.json, static/photos/, data/reports/images.md
+npm run data:review    -> data/reports/review.md (one review report for Paul, sorted by priority)
 npm run validate       Zod + cross-checks on generated JSON
 npm run maps           -> static/maps/{world,atlantic}-{night,day}.svg (Natural Earth via world-atlas)
 ```
@@ -89,6 +90,8 @@ npm run maps           -> static/maps/{world,atlantic}-{night,day}.svg (Natural 
   usual name or casing; breeds.json keeps the Wikidata label in `names.wikidataEn`.
 - `data/manual/photos.json` (Paul, 2026-11-09): hand-picked Commons file and/or author credit per breed, used
   by `fetch-credits` over Wikidata P18. Thumbnails are self-hosted in `static/photos/` (no request to Wikimedia).
+- `data/manual/families.json` (2026-11-09): drafted family per breed outside the 30-breed table of
+  `docs/DESIGN.md` §2, which stays the source for those 30. Wild canids (WOLF, GDJK) are not breeds.
 - Parker 2017 is CC BY 4.0 (Crossref, version of record); recorded in the `source` block of tree.json.
 - `*` after a clade in supplement 1 = in that clade with < 50 % bootstrap: kept as `cladeLowSupport`.
 

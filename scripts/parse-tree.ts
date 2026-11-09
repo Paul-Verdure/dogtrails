@@ -1,19 +1,23 @@
 /**
- * Builds src/lib/data/tree.json: the Parker et al. 2017 tree restricted to the breeds of
- * data/sample-30.json, with ALL dogs of each breed grouped together.
+ * Builds src/lib/data/tree.json: the Parker et al. 2017 tree restricted to a breed set, with ALL
+ * dogs of each breed grouped together.
+ *
+ * Breed set (explicit input): by default every supplement-1 abbreviation that has leaves in the
+ * tree, except the wild canids (NOT_BREEDS: grey wolf, golden jackal, the outgroups). With
+ * `--sample <file>` (e.g. data/sample-30.json) the tree is restricted to that sample instead.
  *
  * Inputs (produced by extract-parker.ts, plus one manual table):
  *   data/raw/parker2017-s5.nex                 individual-level NEXUS tree (supplement 5)
  *   data/raw/parker2017-s1.csv                 breed table: name, abbreviation, clade (supplement 1)
  *   data/manual/parker-leaf-prefixes.json      leaf prefixes that are not supplement-1 abbreviations
- *   data/sample-30.json                        the sample
+ *   --sample <file>                            optional sample ([{abbrev, name, clade}])
  *
  * Grouping rule: the tree is pruned to the sample's dogs, then every maximal subtree whose dogs
  * all belong to one breed becomes one leaf. A breed whose dogs end up in several such subtrees
  * is NOT merged: it yields one leaf per fragment (`split: {part, of}`) and is listed in
  * `splitBreeds`. Monophyly in the full 1 355-leaf tree is reported too.
  *
- * usage: node scripts/parse-tree.ts [sample.json] [out.json]
+ * usage: node scripts/parse-tree.ts [--sample data/sample-30.json] [--out src/lib/data/tree.json]
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { parseCsv } from './lib/csv.ts';
@@ -28,8 +32,17 @@ import {
 const NEX = 'data/raw/parker2017-s5.nex';
 const CSV = 'data/raw/parker2017-s1.csv';
 const PREFIXES = 'data/manual/parker-leaf-prefixes.json';
-const SAMPLE = process.argv[2] ?? 'data/sample-30.json';
-const OUT = process.argv[3] ?? 'src/lib/data/tree.json';
+const arg = (name: string) => {
+	const i = process.argv.indexOf(name);
+	return i < 0 ? null : (process.argv[i + 1] ?? null);
+};
+const SAMPLE = arg('--sample');
+const OUT = arg('--out') ?? 'src/lib/data/tree.json';
+/** Supplement-1 rows that are not dog breeds: wild canids sampled as outgroups. Never shown. */
+const NOT_BREEDS: Record<string, string> = {
+	WOLF: 'Grey Wolf (Canis lupus): wild canid, outgroup of the Parker tree, not a breed',
+	GDJK: 'Golden Jackal (Canis aureus): wild canid, outgroup of the Parker tree, not a breed'
+};
 
 const warnings: string[] = [];
 const errors: string[] = [];
@@ -85,11 +98,11 @@ for (const a of aliases.values()) {
 	if (!table.has(a.abbrev)) errors.push(`${PREFIXES}: alias ${a.prefix} -> unknown abbreviation ${a.abbrev}`);
 }
 
-// ---------------------------------------------------------------- sample
+// ---------------------------------------------------------------- breed set
+for (const ab of Object.keys(NOT_BREEDS)) if (!table.has(ab)) errors.push(`NOT_BREEDS: ${ab} is not in supplement 1`);
 type SampleRow = { abbrev: string; name: string; clade: string };
-const sample = JSON.parse(readFileSync(SAMPLE, 'utf8')) as SampleRow[];
-const sampleSet = new Set(sample.map((s) => s.abbrev));
-for (const s of sample) {
+const sample: SampleRow[] | null = SAMPLE ? JSON.parse(readFileSync(SAMPLE, 'utf8')) : null;
+for (const s of sample ?? []) {
 	const b = table.get(s.abbrev);
 	if (!b) errors.push(`${SAMPLE}: ${s.abbrev} is not in supplement 1`);
 	else if (b.clade !== canonicalClade(s.clade))
@@ -158,6 +171,12 @@ for (const [prefix, n] of usedAliases) {
 
 const dogsByBreed = new Map<string, RawNode[]>();
 for (const [l, ab] of abbrevOf) dogsByBreed.set(ab, [...(dogsByBreed.get(ab) ?? []), l]);
+const sampleSet = new Set(
+	sample ? sample.map((s) => s.abbrev) : [...table.keys()].filter((ab) => dogsByBreed.has(ab) && !(ab in NOT_BREEDS))
+);
+for (const ab of table.keys()) if (!dogsByBreed.has(ab) && !(ab in NOT_BREEDS)) warn(`${ab}: in supplement 1 but no leaf in the tree, left out`);
+for (const ab of sampleSet) if (ab in NOT_BREEDS) errors.push(`${SAMPLE}: ${ab} is not a breed (${NOT_BREEDS[ab]})`);
+const setAbbrevs = [...table.keys()].filter((ab) => sampleSet.has(ab));
 for (const ab of sampleSet) {
 	const n = dogsByBreed.get(ab)?.length ?? 0;
 	const b = table.get(ab);
@@ -264,7 +283,7 @@ function emit(w: Work): TreeNode {
 		const leaf: TreeLeaf = {
 			name: b.name,
 			abbrev: b.abbrev,
-			cladeId: slug(b.clade!),
+			cladeId: b.clade ? slug(b.clade) : null,
 			dogs: w.leaf.dogIds.length,
 			dogIds: w.leaf.dogIds
 		};
@@ -275,23 +294,24 @@ function emit(w: Work): TreeNode {
 }
 
 // ---------------------------------------------------------------- output
-const breeds: BreedSummary[] = sample.map((s) => {
-	const b = table.get(s.abbrev)!;
-	const stats = fullTreeStats(s.abbrev);
+const breeds: BreedSummary[] = setAbbrevs.map((ab) => {
+	const b = table.get(ab)!;
+	const stats = fullTreeStats(ab);
+	if (!b.clade) warn(`${ab} (${b.name}): no clade in supplement 1`);
 	return {
 		abbrev: b.abbrev,
 		name: b.name,
-		clade: b.clade!,
-		cladeId: slug(b.clade!),
+		clade: b.clade,
+		cladeId: b.clade ? slug(b.clade) : null,
 		cladeLowSupport: b.lowSupport,
-		dogs: dogsByBreed.get(s.abbrev)!.length,
-		fragments: { sample: fragmentLeaves.get(s.abbrev)?.length ?? 0, full: stats.fragments },
-		fullTreeIntruders: stats.intruders,
-		variants: variantsOf(s.abbrev)
+		dogs: dogsByBreed.get(ab)!.length,
+		fragments: { tree: fragmentLeaves.get(ab)?.length ?? 0, full: stats.fragments },
+		fullTreeIntruders: stats.intruders.filter((k) => !(k in NOT_BREEDS)),
+		variants: variantsOf(ab)
 	};
 });
 
-const splitBreeds = breeds.filter((b) => b.fragments.sample > 1).map((b) => b.abbrev);
+const splitBreeds = breeds.filter((b) => b.fragments.tree > 1).map((b) => b.abbrev);
 
 const file = treeFileSchema.parse({
 	source: {
@@ -310,12 +330,19 @@ const file = treeFileSchema.parse({
 			'NIHMS866262-supplement-1 (breed table: name, abbreviation, clade)'
 		],
 		notes: [
-			'Restricted to the breeds of data/sample-30.json; every dog of each breed is kept.',
+			sample
+				? `Restricted to the breeds of ${SAMPLE}; every dog of each breed is kept.`
+				: 'Every breed of supplement 1 with leaves in the tree, wild canids excluded; every dog of each breed is kept.',
 			'support = bootstrap of the same node in the full tree; on the pruned tree it does not measure the displayed grouping exactly.',
 			`Leaf prefixes from the Vaysse 2011 dataset mapped through ${PREFIXES}.`
 		]
 	},
 	generatedBy: 'scripts/parse-tree.ts',
+	breedSet: {
+		rule: sample ? 'sample' : 'all-supplement-1-with-leaves',
+		sample: SAMPLE,
+		excluded: Object.entries(NOT_BREEDS).map(([abbrev, reason]) => ({ abbrev, reason }))
+	},
 	breeds,
 	splitBreeds,
 	root: emit(grouped) as TreeInternal
@@ -325,12 +352,12 @@ writeFileSync(OUT, JSON.stringify(file, null, '\t') + '\n');
 
 // ---------------------------------------------------------------- report
 console.log(`full tree: ${leaves.length} leaves, ${table.size} abbreviations in supplement 1`);
-console.log(`sample: ${breeds.length} breeds, ${breeds.reduce((s, b) => s + b.dogs, 0)} dogs -> ${OUT}`);
+console.log(`breed set (${sample ? SAMPLE : 'all'}): ${breeds.length} breeds, ${breeds.reduce((s, b) => s + b.dogs, 0)} dogs -> ${OUT}`);
 console.log('\nbreed  dogs  fragments(sample/full)  clade');
 for (const b of breeds) {
-	const flag = b.fragments.sample > 1 ? '  << SPLIT' : b.fragments.full > 1 ? '  < split in full tree' : '';
+	const flag = b.fragments.tree > 1 ? '  << SPLIT' : b.fragments.full > 1 ? '  < split in full tree' : '';
 	console.log(
-		`${b.abbrev.padEnd(6)} ${String(b.dogs).padStart(4)}  ${`${b.fragments.sample}/${b.fragments.full}`.padStart(9)}              ${b.clade}${b.cladeLowSupport ? ' (*<50%)' : ''}${flag}`
+		`${b.abbrev.padEnd(6)} ${String(b.dogs).padStart(4)}  ${`${b.fragments.tree}/${b.fragments.full}`.padStart(9)}              ${b.clade ?? '(no clade)'}${b.cladeLowSupport ? ' (*<50%)' : ''}${flag}`
 	);
 }
 const printFull = (ab: string) => {
@@ -338,16 +365,16 @@ const printFull = (ab: string) => {
 	console.log(`  full tree: ${st.fragments} fragment(s); other breeds under the MRCA: ${st.intruders.length > 12 ? `${st.intruders.length} breeds` : st.intruders.join(', ') || 'none'}`);
 	st.parts.forEach((p, i) => console.log(`    fragment ${i + 1}: ${p.dogs} dogs, sister group: ${p.sister}`));
 };
-for (const b of breeds.filter((x) => x.fragments.sample > 1 || x.fragments.full > 1)) {
+for (const b of breeds.filter((x) => x.fragments.tree > 1 || x.fragments.full > 1)) {
 	const parts = (fragmentLeaves.get(b.abbrev) ?? []).map((w) => w.leaf!.dogIds.join(' '));
-	console.log(`\n${b.fragments.sample > 1 ? 'SPLIT in sample tree' : 'split in full tree only'}: ${b.abbrev} (${b.name})`);
-	parts.forEach((p, i) => console.log(`  sample fragment ${i + 1}/${parts.length}: ${p}`));
+	console.log(`\n${b.fragments.tree > 1 ? 'SPLIT in this tree' : 'split in full tree only'}: ${b.abbrev} (${b.name})`);
+	parts.forEach((p, i) => console.log(`  tree fragment ${i + 1}/${parts.length}: ${p}`));
 	printFull(b.abbrev);
 }
 for (const b of breeds.filter((x) => x.variants.length)) {
 	for (const v of b.variants) {
 		const vb = table.get(v)!;
-		console.log(`\nVARIANT not merged: ${v} "${vb.name}" (${vb.clade ?? 'no clade'}${vb.lowSupport ? ', *<50%' : ''}) next to sample breed ${b.abbrev} "${b.name}"`);
+		console.log(`\nVARIANT not merged: ${v} "${vb.name}" (${vb.clade ?? 'no clade'}${vb.lowSupport ? ', *<50%' : ''}) next to breed ${b.abbrev} "${b.name}"`);
 		printFull(v);
 	}
 }
