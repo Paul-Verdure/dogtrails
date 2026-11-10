@@ -292,6 +292,7 @@
 					class="leaf fam-{leaf.family}"
 					class:open={leaf.inLantern}
 					class:lit={on}
+					class:grow={on && explore.hovered?.kind !== 'branch'}
 					class:chosen
 					role="button"
 					tabindex={leaf.index === active ? 0 : -1}
@@ -416,8 +417,10 @@
 	.toggle[aria-pressed='true'] {
 		border-color: var(--dt-accent-text);
 	}
+	/* room for the longest status (3 lines down to 640 px: the serif title line, then two body lines),
+	   so hovering never changes its height and never moves the tree under the pointer */
 	.status {
-		min-height: 3.2em;
+		min-height: calc(18px * 1.6 + 2 * 1.6em);
 		margin: var(--dt-space-4) 0 0;
 		padding: var(--dt-space-2) var(--dt-space-4);
 		border-left: 2px solid var(--dt-accent);
@@ -528,7 +531,9 @@
 	.leaf.open .star {
 		transform: scale(0.55);
 	}
-	.leaf.lit .star,
+	/* a lit branch only recolours its stars: growing them all would make the tree quiver as the
+	   pointer crosses the overlapping branch targets; the hovered or chosen breed still grows */
+	.leaf.lit.grow .star,
 	.leaf.chosen .star {
 		transform: scale(0.65);
 	}
