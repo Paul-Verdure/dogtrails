@@ -9,7 +9,9 @@ export default defineConfig({
 				// Force runes mode for the project, except for libraries. Can be removed in svelte 6.
 				runes: ({ filename }) => filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
-			adapter: adapter(),
+			// 404.html: Cloudflare Pages serves it for any unknown path (without it, Pages would answer
+			// every unknown path with index.html, as for a single-page app)
+			adapter: adapter({ fallback: '404.html' }),
 			// a missing page, a broken internal link or anchor, or an entries() mismatch fails the build
 			prerender: {
 				handleHttpError: 'fail',

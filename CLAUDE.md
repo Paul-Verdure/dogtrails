@@ -75,6 +75,14 @@ npm run validate       Zod + cross-checks on generated JSON
 npm run maps           -> static/maps/{world,atlantic}-{night,day}.svg (Natural Earth via world-atlas)
 ```
 
+## Deploy
+
+- Cloudflare Pages, built from GitHub `Paul-Verdure/dogtrails` on every push (`main` = production,
+  other branches = preview URLs). Build command `npm run build`, output `build`, Node from `.node-version`.
+- `static/_headers`: cache (hashed `_app/immutable` 1 year; `photos/`, `maps/` 1 week) and security headers.
+  `build/404.html` is the adapter-static fallback; `/sitemap.xml` is prerendered (`src/lib/site.ts`: site URL).
+- Plausible is off unless the build sets `PLAUSIBLE_DOMAIN` (`src/hooks.server.ts`). No other tracking.
+
 ## Data notes
 
 - Parker leaf names are `PREFIX_id`. Some prefixes (`Rtw`, `BoC`, `GSh`…) are Vaysse 2011 codes,

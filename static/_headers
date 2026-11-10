@@ -1,0 +1,21 @@
+# Cloudflare Pages response headers (https://developers.cloudflare.com/pages/configuration/headers/).
+# HTML keeps the Pages default (revalidated on every visit), so a deploy shows at once.
+
+# hashed by Vite: a new build gives new names, so they never change
+/_app/immutable/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# fixed names: cached a week, refreshed in the background after a regenerated photo or map
+/photos/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+/maps/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+
+# preview deployments and the pages.dev address stay out of search engines
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
